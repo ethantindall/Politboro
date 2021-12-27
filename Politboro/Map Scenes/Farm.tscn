@@ -1,15 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://World Objects/Accessories/Statue.tscn" type="PackedScene" id=1]
-[ext_resource path="res://World Objects/Building Scenes/Apartments/Apartments.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/farm.png" type="Texture" id=1]
+[ext_resource path="res://World Objects/Accessories/haystack.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://World Objects/Building Scenes/Narrow Building/Narrow Building.tscn" type="PackedScene" id=4]
-[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=5]
-[ext_resource path="res://World Objects/Building Scenes/Factory/Factory.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Images/road2.png" type="Texture" id=7]
 [ext_resource path="res://Images/background.png" type="Texture" id=8]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=9]
-[ext_resource path="res://World Objects/Characters/OfficialA.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -72,6 +68,20 @@
 2/shape_one_way_margin = 0.0
 2/shapes = [  ]
 2/z_index = 0
+3/name = "farm.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
 
 [node name="Town Square" type="Node2D"]
 
@@ -89,7 +99,7 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -262135, 2, 0, -131063, 2, 0, 9, 2, 0, 65545, 2, 0, 196615, 2, 0, 196617, 2, 0, 196619, 2, 0, 393210, 2, 0, 393212, 2, 0, 393214, 2, 0, 327680, 2, 0, 327682, 2, 0, 327684, 2, 0, 327686, 2, 0, 327688, 2, 0, 327690, 2, 0, 327692, 2, 0, 327694, 2, 0, 327696, 2, 0, 327698, 2, 0, 327700, 2, 0, 327702, 2, 0, 458759, 2, 0, 458761, 2, 0, 458763, 2, 0 )
+tile_data = PoolIntArray( -1, 3, 0, -65535, 3, 0, -65533, 3, 0, -65531, 3, 0, -65529, 3, 0, -65522, 3, 0, -65520, 3, 0, -65518, 3, 0, 131071, 3, 0, 65537, 3, 0, 65539, 3, 0, 65541, 3, 0, 65543, 3, 0, 65550, 3, 0, 65552, 3, 0, 65554, 3, 0, 262143, 3, 0, 196609, 3, 0, 196611, 3, 0, 196613, 3, 0, 196615, 3, 0, 196622, 3, 0, 196624, 3, 0, 196626, 3, 0, 524287, 3, 0, 458753, 3, 0, 458755, 3, 0, 458757, 3, 0, 458759, 3, 0, 458766, 3, 0, 458768, 3, 0, 458770, 3, 0, 655359, 3, 0, 589825, 3, 0, 589827, 3, 0, 589829, 3, 0, 589831, 3, 0, 589838, 3, 0, 589840, 3, 0, 589842, 3, 0, 786431, 3, 0, 720897, 3, 0, 720899, 3, 0, 720901, 3, 0, 720903, 3, 0, 720910, 3, 0, 720912, 3, 0, 720914, 3, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -97,7 +107,7 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 168, 20 )
+position = Vector2( 308.829, 97.2114 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -113,42 +123,41 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Apartments" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 24, 56 )
+[node name="Bush" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 27.0373, 36.2597 )
 
-[node name="OfficialA" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 202.376, 61.0906 )
+[node name="Bush2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 52.8734, 6.41458 )
 
-[node name="Portal" parent="YSort/OfficialA" instance=ExtResource( 9 )]
-position = Vector2( -205.178, 34.196 )
-next_scene_path = "res://Map Scenes/Farm.tscn"
+[node name="Bush3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 28.3736, 144.058 )
 
-[node name="Narrow Building" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 80, 120 )
+[node name="Bush4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 42.628, 140.495 )
 
-[node name="Narrow Building2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 214.835, 124.483 )
+[node name="Bush5" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 33.719, 132.922 )
 
-[node name="Factory" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 264, 56 )
+[node name="Bush6" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 266.244, 179.694 )
 
-[node name="Statue" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 160, 80 )
+[node name="Bush7" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 280.943, 147.622 )
 
-[node name="Apartments2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 76, 56 )
+[node name="Bush8" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 134.391, 174.349 )
 
-[node name="Apartments3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 120, 8 )
+[node name="Bush9" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 261.789, 45.6141 )
 
-[node name="Soldier" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 186.845, 59.3188 )
+[node name="Bush10" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 297.425, 16.6599 )
 
 [node name="Future UI Canvas" type="CanvasLayer" parent="."]
 
 [node name="PortalKremlin" parent="." instance=ExtResource( 9 )]
 position = Vector2( 328, 96 )
-next_scene_path = "res://Map Scenes/Kremlin.tscn"
+next_scene_path = "res://Map Scenes/TownSquare.tscn"
 
 [node name="PortalTrain" parent="." instance=ExtResource( 9 )]
 position = Vector2( 160, -8 )

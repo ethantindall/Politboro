@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Images/bookshelf.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.9864, 24.5098 )
+
+[node name="Bookshelf" type="StaticBody2D"]
+position = Vector2( 8, -1 )
+scale = Vector2( 0.6, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -6.66666, 0 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -6.66667, 6.22487 )
+scale = Vector2( 0.5, 0.4 )
+shape = SubResource( 1 )

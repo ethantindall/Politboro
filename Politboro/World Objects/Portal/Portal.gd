@@ -12,11 +12,12 @@ func _get_configuration_warning() -> String:
 		return ""
 
 
-func _on_Portal_body_entered(_body):
-	ScreenChanger.change_scene(next_scene_path)
+func _on_Portal_body_entered(body):
+	if body.name == "Player":
+		ScreenChanger.change_scene(next_scene_path)
 
 	print($"/root/Global".player.get_position())
-	$"/root/Global".player.set_position(Vector2(100,100))
+	#$"/root/Global".player.set_position(Vector2(100,100))
 	
 
 

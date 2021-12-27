@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/OfficeC.png" type="Texture" id=3]
+[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World Objects/Accessories/Bookshelf.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World Objects/Characters/OfficialC.tscn" type="PackedScene" id=6]
+
+[node name="OfficeA" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 320, 180 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 41.9297, 94.6059 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 180
+smoothing_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Soldier" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 94.8835, 89.6201 )
+
+[node name="Soldier2" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 132.166, 70.7426 )
+
+[node name="Soldier3" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 140.661, 108.025 )
+
+[node name="Portal" parent="." instance=ExtResource( 1 )]
+position = Vector2( 26.3831, 96.5354 )
+next_scene_path = "res://Map Scenes/Kremlin_Inside.tscn"
+
+[node name="Bookshelf" parent="Portal" instance=ExtResource( 5 )]
+position = Vector2( 29.7782, -56.9967 )
+
+[node name="Bookshelf2" parent="Portal" instance=ExtResource( 5 )]
+position = Vector2( 43.4644, -56.9967 )
+
+[node name="Bookshelf3" parent="Portal" instance=ExtResource( 5 )]
+position = Vector2( 55.7348, -56.9967 )
+
+[node name="OfficialC" parent="." instance=ExtResource( 6 )]
+position = Vector2( 115.176, 89.1479 )
