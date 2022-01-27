@@ -7,7 +7,7 @@ extents = Vector2( 15.9864, 24.5098 )
 
 [node name="Bookshelf" type="StaticBody2D"]
 position = Vector2( 8, -1 )
-scale = Vector2( 0.6, 0.5 )
+scale = Vector2( 0.75, 0.6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -6.66666, 0 )

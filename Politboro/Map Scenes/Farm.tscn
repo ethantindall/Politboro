@@ -107,7 +107,7 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 308.829, 97.2114 )
+position = Vector2( 308.829, 94.383 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -155,11 +155,6 @@ position = Vector2( 297.425, 16.6599 )
 
 [node name="Future UI Canvas" type="CanvasLayer" parent="."]
 
-[node name="PortalKremlin" parent="." instance=ExtResource( 9 )]
-position = Vector2( 328, 96 )
+[node name="PortalTown" parent="." instance=ExtResource( 9 )]
+position = Vector2( 327.625, 96 )
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
-
-[node name="PortalTrain" parent="." instance=ExtResource( 9 )]
-position = Vector2( 160, -8 )
-rotation = 1.5708
-next_scene_path = "res://Map Scenes/TrainStation.tscn"

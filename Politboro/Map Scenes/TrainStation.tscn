@@ -163,29 +163,26 @@ __meta__ = {
 position = Vector2( 128, 26 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="StaticBody2D" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 48, 48 )
+[node name="LargeCrate" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( -16.5987, -60.912 )
 
-[node name="StaticBody2D2" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 24, 48 )
+[node name="SmallCrate" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 198.75, 36 )
 
-[node name="StaticBody2D3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 188, 36 )
+[node name="SmallCrate2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 190.25, 36 )
 
-[node name="StaticBody2D4" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 200, 40 )
+[node name="SmallCrate3" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 193.486, 44.0042 )
 
-[node name="StaticBody2D5" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 200, 32 )
+[node name="SmallCrate4" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 201.802, 44.0644 )
 
-[node name="StaticBody2D6" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 208, 40 )
+[node name="LargeCrate2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 45.6655, 45 )
 
-[node name="StaticBody2D11" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 40, -104 )
-
-[node name="StaticBody2D12" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 48, -104 )
+[node name="LargeCrate3" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 21.6655, 46.25 )
 
 [node name="Soldier" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 48.5442, -66.2897 )
@@ -196,16 +193,13 @@ position = Vector2( -70.6199, -82.5715 )
 [node name="Soldier2" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 30.3746, -108.528 )
 
-[node name="TownPortal" parent="." instance=ExtResource( 6 )]
+[node name="SmallCrate5" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 185.427, 43.9748 )
+
+[node name="Portal_Town_N" parent="." instance=ExtResource( 6 )]
 position = Vector2( 192, 186 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
 
-[node name="BasePortal" parent="." instance=ExtResource( 6 )]
+[node name="Portal_Base_E" parent="." instance=ExtResource( 6 )]
 position = Vector2( -112, -96 )
-
-[node name="StaticBody2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( -16, -56 )
-
-[node name="StaticBody2D2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 48, -112 )

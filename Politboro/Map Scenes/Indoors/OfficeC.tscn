@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World Objects/Characters/OfficialC.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World Objects/Characters/OfficeWorker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World Objects/Characters/OfficeWorker_F.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World Objects/Accessories/Desk.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World Objects/Accessories/Bookshelf.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Images/OfficeC.png" type="Texture" id=9]
+
+[node name="OfficeA" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 9 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 320, 180 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Desk3" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 78.5901, 88.4345 )
+
+[node name="Desk4" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 138.628, 88.9307 )
+
+[node name="Bookshelf" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 56.1613, 40.0106 )
+
+[node name="Bookshelf2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 69.16, 40.0106 )
+
+[node name="Bookshelf3" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 82.1179, 40.0106 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 41.9297, 94.6059 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 180
+smoothing_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="OfficialC" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 133.7, 62.1889 )
+
+[node name="Soldier2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 52.943, 108.121 )
+
+[node name="Soldier3" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 47.545, 74.4503 )
+
+[node name="Desk" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 77.4323, 64.618 )
+
+[node name="Desk2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 138.462, 64.7834 )
+
+[node name="Employee" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 73.5672, 87.119 )
+
+[node name="Employee2" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 72.9056, 63.6333 )
+
+[node name="FemaleEmployee" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 133.935, 88.7729 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 26.3831, 97.6026 )
+next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 39.3551, 82.6822, 38.7932, 38.8567, 187.875, 39.044, 188.062, 119.953, 38.7932, 119.953, 38.7932, 109.464, 29.8034, 109.277, 30.178, 123.886, 191.621, 122.949, 190.497, 35.1109, 35.2348, 35.6728, 28.6797, 82.6822 )
