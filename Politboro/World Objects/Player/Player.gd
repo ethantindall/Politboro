@@ -10,8 +10,26 @@ onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
+signal player_stats_changed
+
+
+#PLAYER STATS
+var health = 100
+var health_max = 100
+var health_regeneration = 1
+var rank = "Noob"
+
 func _ready():
+	self.global_position = Global.player_initial_map_position
 	$"/root/Global".register_player(self)
+	emit_signal("player_stats_changed", self)
+
+func _process(delta):
+	# Regenerates health
+	var new_health = min(health + health_regeneration * delta, health_max)
+	if new_health != health:
+		health = new_health
+		emit_signal("player_stats_changed", self)
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO

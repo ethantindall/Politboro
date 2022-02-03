@@ -4,7 +4,7 @@
 [ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Images/OfficeB.png" type="Texture" id=5]
+[ext_resource path="res://Images/Bldgs/OfficeB.png" type="Texture" id=5]
 
 [node name="OfficeA" type="Node2D"]
 
@@ -51,6 +51,7 @@ position = Vector2( 140.661, 108.025 )
 position = Vector2( 166.644, 130.812 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
+player_spawn_location = Vector2( 203, 10 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

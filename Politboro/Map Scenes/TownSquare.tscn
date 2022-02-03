@@ -1,15 +1,22 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://World Objects/Accessories/Statue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Building Scenes/Apartments.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World Objects/Building Scenes/Narrow Building.tscn" type="PackedScene" id=4]
-[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Images/Tiles/airstrip.png" type="Texture" id=5]
 [ext_resource path="res://World Objects/Building Scenes/Factory.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Images/road2.png" type="Texture" id=7]
-[ext_resource path="res://Images/background.png" type="Texture" id=8]
+[ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Tiles/background.png" type="Texture" id=8]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=9]
-[ext_resource path="res://World Objects/Characters/OfficialA.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Images/Tiles/airstrip64V.png" type="Texture" id=10]
+[ext_resource path="res://World Objects/Building Scenes/Church.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Images/Tiles/airstrip64H.png" type="Texture" id=12]
+[ext_resource path="res://Images/Tiles/airstripV.png" type="Texture" id=13]
+[ext_resource path="res://World Objects/Accessories/Streetlight.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=15]
+[ext_resource path="res://World Objects/Accessories/Tree.tscn" type="PackedScene" id=16]
+[ext_resource path="res://World Objects/Accessories/TreeGroup.tscn" type="PackedScene" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -72,6 +79,62 @@
 2/shape_one_way_margin = 0.0
 2/shapes = [  ]
 2/z_index = 0
+3/name = "airstrip.png 3"
+3/texture = ExtResource( 5 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "airstripV.png 4"
+4/texture = ExtResource( 13 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "airstrip64V.png 5"
+5/texture = ExtResource( 10 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "airstrip64H.png 6"
+6/texture = ExtResource( 12 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
 
 [node name="Town Square" type="Node2D"]
 
@@ -89,7 +152,7 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -262135, 2, 0, -131063, 2, 0, 9, 2, 0, 65545, 2, 0, 196615, 2, 0, 196617, 2, 0, 196619, 2, 0, 393210, 2, 0, 393212, 2, 0, 393214, 2, 0, 327680, 2, 0, 327682, 2, 0, 327684, 2, 0, 327686, 2, 0, 327688, 2, 0, 327690, 2, 0, 327692, 2, 0, 327694, 2, 0, 327696, 2, 0, 327698, 2, 0, 327700, 2, 0, 327702, 2, 0, 458759, 2, 0, 458761, 2, 0, 458763, 2, 0 )
+tile_data = PoolIntArray( -851950, 4, 0, -720878, 4, 0, -589806, 4, 0, -458734, 4, 0, 28, 4, 0, 131086, 2, 0, 131088, 2, 0, 131090, 2, 0, 131092, 2, 0, 131094, 2, 0, 131096, 2, 0, 131098, 2, 0, 131100, 4, 0, 196621, 2, 0, 262152, 2, 0, 262154, 2, 0, 262156, 2, 0, 262172, 4, 0, 327687, 2, 0, 393222, 2, 0, 393242, 2, 0, 393244, 4, 0, 393246, 2, 0, 393248, 2, 0, 393250, 2, 0, 393252, 2, 0, 393254, 2, 0, 458768, 2, 0, 458770, 2, 0, 458772, 2, 0, 524294, 2, 0, 524303, 0, 0, 524310, 0, 0, 524316, 4, 0, 524326, 2, 0, 589838, 2, 0, 589840, 2, 0, 589842, 2, 0, 589844, 2, 0, 589846, 2, 0, 720894, 3, 0, 655360, 3, 0, 655362, 3, 0, 655364, 3, 0, 655366, 3, 0, 655368, 3, 0, 655370, 3, 0, 655372, 3, 0, 655384, 3, 0, 655386, 3, 0, 655388, 3, 0, 655390, 3, 0, 655392, 3, 0, 655394, 3, 0, 655396, 3, 0, 655398, 3, 0, 655400, 3, 0, 655402, 3, 0, 720910, 2, 0, 720912, 2, 0, 720914, 2, 0, 720916, 2, 0, 720918, 2, 0, 786438, 2, 0, 786460, 2, 0, 786470, 2, 0, 851983, 0, 0, 851984, 2, 0, 851986, 2, 0, 851988, 2, 0, 851990, 0, 0, 917510, 2, 0, 917529, 2, 0, 917530, 2, 0, 917532, 2, 0, 917534, 2, 0, 917536, 2, 0, 917538, 2, 0, 917540, 2, 0, 917542, 2, 0, 983058, 4, 0, 1048582, 2, 0, 1048584, 2, 0, 1048586, 2, 0, 1048588, 2, 0, 1048590, 2, 0, 1048592, 2, 0, 1048602, 2, 0, 1114130, 4, 0, 1114132, 2, 0, 1114133, 2, 0, 1179674, 2, 0, 1179676, 2, 0, 1179677, 2, 0, 1179678, 2, 0, 1179679, 2, 0, 1179680, 2, 0, 1179681, 2, 0, 1179682, 2, 0, 1179683, 2, 0, 1179684, 2, 0, 1179685, 2, 0, 1245202, 4, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -97,7 +160,7 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 168, 20 )
+position = Vector2( 304.087, 288.193 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -105,52 +168,260 @@ current = true
 zoom = Vector2( 0.75, 0.75 )
 limit_left = 0
 limit_top = 0
-limit_right = 320
-limit_bottom = 180
+limit_right = 655
+limit_bottom = 300
 limit_smoothed = true
 smoothing_enabled = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Apartments" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 24, 56 )
-
-[node name="OfficialA" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 202.376, 61.0906 )
-
-[node name="Portal" parent="YSort/OfficialA" instance=ExtResource( 9 )]
-position = Vector2( -205.178, 34.196 )
-next_scene_path = "res://Map Scenes/Farm.tscn"
-
-[node name="Narrow Building" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 80, 120 )
-
-[node name="Narrow Building2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 214.835, 124.483 )
-
-[node name="Factory" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 264, 56 )
+[node name="Church" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 302.869, 81.3538 )
 
 [node name="Statue" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 160, 80 )
+position = Vector2( 308.631, 170.484 )
+
+[node name="Apartments12" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 410.427, 4.44973 )
+
+[node name="Factory2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 592.329, 66.4702 )
+
+[node name="Apartments5" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 338.263, 306.708 )
+
+[node name="Apartments6" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 352.036, 245.789 )
+
+[node name="Apartments7" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 403.42, 205.53 )
+
+[node name="Narrow Building7" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 461.161, 262.741 )
+
+[node name="Apartments8" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 512.544, 263.8 )
+
+[node name="Factory" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 587.237, 265.654 )
+
+[node name="Narrow Building3" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 495.593, 130.308 )
+
+[node name="Narrow Building4" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 534.793, 130.308 )
+
+[node name="Narrow Building5" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 577.701, 130.308 )
+
+[node name="Narrow Building6" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 658.75, 131.897 )
+
+[node name="StaticBody2D2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 516.745, 67.9945 )
+
+[node name="Apartments9" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 497.537, 15.7472 )
+
+[node name="Apartments10" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 416.671, 133.181 )
+
+[node name="Apartments11" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 417.265, 70.1534 )
+
+[node name="Factory3" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 517.047, 193.876 )
+
+[node name="Apartments" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 200.533, 134.016 )
 
 [node name="Apartments2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 76, 56 )
+position = Vector2( 146.5, 134.546 )
 
 [node name="Apartments3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 120, 8 )
+position = Vector2( 148.619, 230.427 )
 
-[node name="Soldier" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 186.845, 59.3188 )
+[node name="Narrow Building" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 194.176, 228.308 )
 
-[node name="Future UI Canvas" type="CanvasLayer" parent="."]
+[node name="Streetlight" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 390.72, 148.495 )
+
+[node name="Streetlight2" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 483.323, 148.495 )
+
+[node name="Streetlight3" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 446.282, 21.0959 )
+
+[node name="Streetlight4" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 606.794, 145.689 )
+
+[node name="Streetlight5" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 483.884, 211.914 )
+
+[node name="Streetlight6" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 611.284, 211.914 )
+
+[node name="Streetlight7" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 288.014, 227.068 )
+
+[node name="Streetlight8" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 328.423, 228.751 )
+
+[node name="Streetlight9" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 389.597, 188.343 )
+
+[node name="Streetlight10" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 230.208, 145.689 )
+
+[node name="Streetlight11" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 226.84, 188.343 )
+
+[node name="Streetlight12" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 131.992, 246.15 )
+
+[node name="Streetlight13" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 129.186, 147.373 )
+
+[node name="Narrow Building2" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 237.084, 228.838 )
+
+[node name="Forest" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 6.62701, 249.309 )
+
+[node name="Apartments4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 577.437, 196.524 )
+
+[node name="TreeGroup" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 20.7169, 142.867 )
+
+[node name="TreeGroup2" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 23.7731, 112.693 )
+
+[node name="TreeGroup3" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 31.4673, 83.9067 )
+
+[node name="TreeGroup4" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 64.493, 55.8759 )
+
+[node name="TreeGroup8" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 108.938, 0.148621 )
+
+[node name="TreeGroup5" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 311.491, 7.70637 )
+
+[node name="TreeGroup9" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 81.547, 306.39 )
+
+[node name="TreeGroup10" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 176.089, 301.634 )
+
+[node name="Tree" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 277.442, 296.471 )
+
+[node name="TreeGroup6" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 216.089, 12.8614 )
+
+[node name="TreeGroup7" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 139.74, 34.6645 )
+
+[node name="Factory4" type="StaticBody2D" parent="YSort"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Factory4"]
+polygon = PoolVector2Array( -0.152863, 312.374, 0.0174713, 0.106812, 663.595, 0.404076, 663.892, 311.976, 0.162041, 312.495, 0.162041, 319.881, 680.514, 325.095, 675.175, -15.289, -16.2725, -13.9541, -8.95832, 312.505 )
+
+[node name="Tree2" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 396.362, 268.525 )
+
+[node name="Tree3" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 442.192, 196.983 )
+
+[node name="Forest2" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 589.068, -24.4968 )
+
+[node name="Tree4" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 649.127, 42.58 )
+
+[node name="Tree5" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 632.442, 59.9329 )
+
+[node name="Tree6" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 663.81, 117.998 )
+
+[node name="Tree7" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 661.808, 103.315 )
+
+[node name="Tree8" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 676.491, 91.9691 )
+
+[node name="TreeGroup11" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 657.5, 271.5 )
+
+[node name="Tree11" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 656, 243 )
+
+[node name="Tree9" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 663.143, 76.6184 )
+
+[node name="Tree10" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 649.127, 68.6094 )
+
+[node name="Tree12" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 673, 228.5 )
+
+[node name="Tree13" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 658.5, 213.5 )
+
+[node name="Tree14" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 652.5, 286 )
+
+[node name="Tree15" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 628, 311 )
+
+[node name="Tree16" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 504.5, 321.5 )
+
+[node name="TreeGroup12" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 538.5, 328.5 )
+
+[node name="TreeGroup13" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 153.841, 203.905 )
+
+[node name="TreeGroup14" parent="YSort" instance=ExtResource( 17 )]
+position = Vector2( 173.286, 106.678 )
+
+[node name="Tree17" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 389.176, 86.2325 )
+
+[node name="Tree18" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 395.893, 111.688 )
+
+[node name="Tree19" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 530.244, 42.7454 )
 
 [node name="PortalHQ" parent="." instance=ExtResource( 9 )]
-position = Vector2( 328, 96 )
+position = Vector2( 669.291, 175.37 )
+scale = Vector2( 0.8, 0.8 )
 next_scene_path = "res://Map Scenes/HQ.tscn"
+player_spawn_location = Vector2( 10, 110 )
 
 [node name="PortalTrain" parent="." instance=ExtResource( 9 )]
-position = Vector2( 160, -8 )
+position = Vector2( 463.987, -2 )
 rotation = 1.5708
+scale = Vector2( 0.6, 0.8 )
 next_scene_path = "res://Map Scenes/TrainStation.tscn"
+player_spawn_location = Vector2( 195, 170 )
+
+[node name="Portal" parent="." instance=ExtResource( 9 )]
+position = Vector2( 303.647, 314.991 )
+rotation = 1.5708
+scale = Vector2( 0.8, 0.8 )
+next_scene_path = "res://Map Scenes/Church.tscn"
+player_spawn_location = Vector2( 222, 15 )
+
+[node name="Portal2" parent="." instance=ExtResource( 9 )]
+position = Vector2( -3.59569, 176.244 )
+scale = Vector2( 0.8, 0.8 )
+next_scene_path = "res://Map Scenes/Farm.tscn"
+player_spawn_location = Vector2( 310, 93 )

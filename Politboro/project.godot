@@ -11,8 +11,8 @@ config_version=4
 [application]
 
 config/name="Politburo"
-run/main_scene="res://Map Scenes/HQ.tscn"
-config/icon="res://Images/icon.png"
+run/main_scene="res://Map Scenes/TownSquare.tscn"
+config/icon="res://Images/GUI/icon.png"
 
 [autoload]
 
@@ -27,6 +27,10 @@ window/size/test_width=1280
 window/size/test_height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/folder_node/plugin.cfg" )
 
 [importer_defaults]
 

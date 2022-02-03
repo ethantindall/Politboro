@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Images/farm.png" type="Texture" id=1]
+[ext_resource path="res://Images/Tiles/farm.png" type="Texture" id=1]
 [ext_resource path="res://World Objects/Accessories/haystack.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Images/road2.png" type="Texture" id=7]
-[ext_resource path="res://Images/background.png" type="Texture" id=8]
+[ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Tiles/background.png" type="Texture" id=8]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=1]
@@ -107,7 +107,7 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 308.829, 94.383 )
+position = Vector2( 310.32, 93.0784 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -158,3 +158,4 @@ position = Vector2( 297.425, 16.6599 )
 [node name="PortalTown" parent="." instance=ExtResource( 9 )]
 position = Vector2( 327.625, 96 )
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
+player_spawn_location = Vector2( 13, 175 )

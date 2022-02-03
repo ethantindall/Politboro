@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Images/SoldierSprite.png" type="Texture" id=1]
+[ext_resource path="res://Images/Sprites/SoldierSprite.png" type="Texture" id=1]
+[ext_resource path="res://World Objects/Characters/Soldier.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -138,8 +139,12 @@ tracks/0/keys = {
 "values": [ 9, 8, 7 ]
 }
 
-[node name="Soldier" type="KinematicBody2D"]
+[node name="Soldier" type="KinematicBody2D" groups=[
+"NPCs",
+]]
+pause_mode = 2
 collision_mask = 3
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.307755, 0.915455 )

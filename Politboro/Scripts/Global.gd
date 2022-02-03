@@ -4,9 +4,11 @@ var player
 
 var game_running = false
 
+var player_initial_map_position = Vector2(273,160)
+#var player_facing_direction = 1
 
 func _ready():
-	pass # Replace with function body.
+	OS.set_window_maximized(true)
 
 	
 func _input(event):

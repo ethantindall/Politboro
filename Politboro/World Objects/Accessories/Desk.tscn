@@ -3,7 +3,7 @@
 [ext_resource path="res://Images/desk.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.3725, 10.9335 )
+extents = Vector2( 32.0248, 11.7809 )
 
 [node name="Desk" type="StaticBody2D"]
 position = Vector2( 8, -1 )
@@ -17,6 +17,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -6.74091, 11.5108 )
+position = Vector2( -6.66667, 11.3509 )
 scale = Vector2( 0.5, 0.4 )
 shape = SubResource( 1 )

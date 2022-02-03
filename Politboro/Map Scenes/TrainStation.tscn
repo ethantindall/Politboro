@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Images/airstrip.png" type="Texture" id=2]
-[ext_resource path="res://Images/road2.png" type="Texture" id=3]
-[ext_resource path="res://Images/background.png" type="Texture" id=4]
-[ext_resource path="res://Images/traintrack.png" type="Texture" id=5]
+[ext_resource path="res://Images/Tiles/airstrip.png" type="Texture" id=2]
+[ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=3]
+[ext_resource path="res://Images/Tiles/background.png" type="Texture" id=4]
+[ext_resource path="res://Images/Tiles/traintrack.png" type="Texture" id=5]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World Objects/Building Scenes/station.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=8]
@@ -144,13 +144,13 @@ position = Vector2( -64, -128 )
 position = Vector2( 24, -96 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 184, 160 )
+position = Vector2( -95.3784, -97.2467 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
 zoom = Vector2( 0.75, 0.75 )
-limit_left = -125
+limit_left = -110
 limit_top = -128
 limit_right = 320
 limit_bottom = 180
@@ -200,6 +200,8 @@ position = Vector2( 185.427, 43.9748 )
 position = Vector2( 192, 186 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
+player_spawn_location = Vector2( 464, 10 )
 
 [node name="Portal_Base_E" parent="." instance=ExtResource( 6 )]
 position = Vector2( -112, -96 )
+player_spawn_location = Vector2( 312, 92 )

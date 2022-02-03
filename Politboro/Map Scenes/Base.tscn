@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Images/airstrip.png" type="Texture" id=2]
-[ext_resource path="res://Images/road2.png" type="Texture" id=3]
-[ext_resource path="res://Images/background.png" type="Texture" id=4]
+[ext_resource path="res://Images/Tiles/airstrip.png" type="Texture" id=2]
+[ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=3]
+[ext_resource path="res://Images/Tiles/background.png" type="Texture" id=4]
 [ext_resource path="res://World Objects/Building Scenes/Military/Bunker.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World Objects/Accessories/MiG.tscn" type="PackedScene" id=7]
@@ -108,7 +108,7 @@ tile_data = PoolIntArray( 131072, 3, 0, 131074, 3, 0, 131076, 3, 0, 131078, 3, 0
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 312, 96 )
+position = Vector2( 311.293, 91.0503 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -168,6 +168,7 @@ position = Vector2( 176, 144 )
 [node name="PortalTrain" parent="." instance=ExtResource( 6 )]
 position = Vector2( 328, 90 )
 next_scene_path = "res://Map Scenes/TrainStation.tscn"
+player_spawn_location = Vector2( -95, -97 )
 
 [node name="Soldier" parent="." instance=ExtResource( 11 )]
 position = Vector2( 253.798, 78.731 )
