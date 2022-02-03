@@ -1,16 +1,19 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Images/Tiles/airstrip.png" type="Texture" id=2]
 [ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=3]
 [ext_resource path="res://Images/Tiles/background.png" type="Texture" id=4]
-[ext_resource path="res://World Objects/Building Scenes/Military/Bunker.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Images/Tiles/wallparts.png" type="Texture" id=5]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=6]
-[ext_resource path="res://World Objects/Accessories/MiG.tscn" type="PackedScene" id=7]
-[ext_resource path="res://World Objects/Accessories/Tank_Immovable.tscn" type="PackedScene" id=8]
-[ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=9]
-[ext_resource path="res://World Objects/Accessories/SmallCrate.tscn" type="PackedScene" id=10]
-[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World Objects/Accessories/Streetlight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World Objects/Accessories/MiG.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World Objects/Accessories/SandbagThin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World Objects/Building Scenes/Military/Bunker.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World Objects/Accessories/GroupSmallCrate.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=13]
+[ext_resource path="res://World Objects/Accessories/SandbagLong.tscn" type="PackedScene" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -87,14 +90,192 @@
 3/shape_one_way_margin = 0.0
 3/shapes = [  ]
 3/z_index = 0
+4/name = "wallparts.png 4"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 32, 0, 32, 32 )
+4/tile_mode = 1
+4/autotile/bitmask_mode = 0
+4/autotile/bitmask_flags = [  ]
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 32, 32 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "wallparts.png 5"
+5/texture = ExtResource( 5 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 0, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "wallparts.png 6"
+6/texture = ExtResource( 5 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 32, 32, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "wallparts.png 7"
+7/texture = ExtResource( 5 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 32, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "wallparts.png 8"
+8/texture = ExtResource( 5 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 32, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "wallparts.png 9"
+9/texture = ExtResource( 5 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 64, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "wallparts.png 10"
+10/texture = ExtResource( 5 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 32, 64, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "wallparts.png 11"
+11/texture = ExtResource( 5 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 64, 64, 32, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "wallparts.png 12"
+12/texture = ExtResource( 5 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 96, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "wallparts.png 13"
+13/texture = ExtResource( 5 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 32, 96, 32, 32 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "wallparts.png 14"
+14/texture = ExtResource( 5 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 32, 32 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "wallparts.png 15"
+15/texture = ExtResource( 5 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 32, 0, 32, 32 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
 
 [node name="Army Base" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 320, 180 )
+region_rect = Rect2( -130, -44, 568, 330 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -103,7 +284,14 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 131072, 3, 0, 131074, 3, 0, 131076, 3, 0, 131078, 3, 0, 131080, 3, 0, 131082, 2, 0, 196618, 2, 0, 327690, 2, 0, 327692, 2, 0, 327694, 2, 0, 327696, 2, 0, 327698, 2, 0, 524287, 3, 0, 458753, 3, 0, 458755, 3, 0, 458757, 3, 0, 458759, 3, 0, 458761, 2, 0 )
+tile_data = PoolIntArray( 458805, 2, 0, 458806, 2, 0, 458807, 2, 0, 458808, 2, 0, 458809, 2, 0, 458810, 2, 0, 458811, 2, 0, 524341, 2, 0, 524342, 2, 0, 524343, 2, 0, 524344, 2, 0, 524345, 2, 0, 524346, 2, 0, 524348, 2, 0, 589884, 2, 0, 589885, 2, 0, 720957, 2, 0, 786475, 3, 0, 786477, 3, 0, 786479, 3, 0, 786481, 3, 0, 786483, 3, 0, 786485, 3, 0, 786487, 3, 0, 786493, 2, 0, 852030, 2, 0, 917567, 2, 0, 917569, 2, 0, 917571, 2, 0, 917573, 2, 0, 1114155, 3, 0, 1114157, 3, 0, 1114159, 3, 0, 1114161, 3, 0, 1114163, 3, 0, 1114165, 3, 0, 1114167, 3, 0 )
+
+[node name="WallTileMap" type="TileMap" parent="."]
+rotation = 1.5708
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -3932158, 6, 0, -3932156, 14, 0, -3932154, 10, 0, -3932151, 11, 0, -3932149, 14, 0, -3932147, 14, 0, -3932145, 14, 0, -3932143, 14, 0, -3932141, 14, 0, -3932139, 8, 0, -3801086, 4, 0, -3801067, 5, 0, -3735531, 5, 0, -3670014, 4, 0, -3669995, 5, 0, -3604459, 5, 0, -3538942, 4, 0, -3538923, 5, 0, -3473387, 5, 0, -3407870, 4, 0, -3407851, 5, 0, -3342315, 5, 0, -3276779, 5, 0, -3211243, 5, 0, -3145707, 5, 0, -3080171, 5, 0, -2949099, 5, 0, -2883563, 5, 0, -2818027, 5, 0, -2752491, 5, 0, -2686955, 5, 0, -2621419, 5, 0, -2555883, 5, 0, -2490347, 5, 0, -2424811, 5, 0, -2359275, 5, 0, -2293739, 5, 0, -2228203, 5, 0 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -123,55 +311,52 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Bunker" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 232, 48 )
+[node name="Mig" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 840.348, 272.866 )
 
-[node name="MiG1" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 96, 128 )
+[node name="Mig2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 848.537, 199.79 )
 
-[node name="Mig2" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 120, 40 )
+[node name="SandbagLong" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 995.318, 95.8469 )
 
-[node name="Tank1" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 280, 120 )
+[node name="SandbagThin" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 965.71, 185.931 )
 
-[node name="Tank2" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 216, 120 )
+[node name="Streetlight" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 968.67, 91.0672 )
 
-[node name="Tank3" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 248, 144 )
+[node name="Streetlight2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 968.04, 172.332 )
 
-[node name="Crate1" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 156, 152 )
+[node name="Forest" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 1033.86, 309.165 )
 
-[node name="StaticBody2D2" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 164, 152 )
-
-[node name="StaticBody2D3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 136, 80 )
-
-[node name="StaticBody2D4" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 120, 88 )
-
-[node name="StaticBody2D5" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 96, 88 )
-
-[node name="StaticBody2D6" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 88, 88 )
-
-[node name="StaticBody2D7" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 92, 80 )
-
-[node name="StaticBody2D" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 176, 144 )
+[node name="Forest2" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 1083.65, 141.24 )
 
 [node name="PortalTrain" parent="." instance=ExtResource( 6 )]
-position = Vector2( 328, 90 )
+position = Vector2( 1139.17, 241.231 )
 next_scene_path = "res://Map Scenes/TrainStation.tscn"
 player_spawn_location = Vector2( -95, -97 )
 
-[node name="Soldier" parent="." instance=ExtResource( 11 )]
-position = Vector2( 253.798, 78.731 )
+[node name="LargeCrate" parent="." instance=ExtResource( 12 )]
+position = Vector2( 923.673, 335.054 )
 
-[node name="Soldier" parent="Soldier" instance=ExtResource( 11 )]
-position = Vector2( 31.8113, 0.445961 )
+[node name="LargeCrate2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 900.969, 330.849 )
+
+[node name="LargeCrate3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 923.253, 316.134 )
+
+[node name="GroupSmallCrate" parent="." instance=ExtResource( 11 )]
+position = Vector2( 862.923, 341.798 )
+
+[node name="GroupSmallCrate2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 912.718, 243.268 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 862.129, 78.7864 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 706.36, 77.6422 )
