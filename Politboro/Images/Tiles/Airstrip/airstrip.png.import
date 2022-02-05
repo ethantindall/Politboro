@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/airstrip64V.png-ef65488d5e32aec06f27b96926fab436.stex"
+path="res://.import/airstrip.png-ba784937ac6b1782ba962b41249dcae8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Tiles/airstrip64V.png"
-dest_files=[ "res://.import/airstrip64V.png-ef65488d5e32aec06f27b96926fab436.stex" ]
+source_file="res://Images/Tiles/Airstrip/airstrip.png"
+dest_files=[ "res://.import/airstrip.png-ba784937ac6b1782ba962b41249dcae8.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

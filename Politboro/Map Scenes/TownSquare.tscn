@@ -4,15 +4,15 @@
 [ext_resource path="res://World Objects/Building Scenes/Apartments.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World Objects/Building Scenes/Narrow Building.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Images/Tiles/airstrip.png" type="Texture" id=5]
+[ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=5]
 [ext_resource path="res://World Objects/Building Scenes/Factory.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=7]
 [ext_resource path="res://Images/Tiles/background.png" type="Texture" id=8]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Images/Tiles/airstrip64V.png" type="Texture" id=10]
+[ext_resource path="res://Images/Tiles/Airstrip/airstrip64V.png" type="Texture" id=10]
 [ext_resource path="res://World Objects/Building Scenes/Church.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Images/Tiles/airstrip64H.png" type="Texture" id=12]
-[ext_resource path="res://Images/Tiles/airstripV.png" type="Texture" id=13]
+[ext_resource path="res://Images/Tiles/Airstrip/airstrip64H.png" type="Texture" id=12]
+[ext_resource path="res://Images/Tiles/Airstrip/airstripV.png" type="Texture" id=13]
 [ext_resource path="res://World Objects/Accessories/Streetlight.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World Objects/Accessories/Tree.tscn" type="PackedScene" id=16]
@@ -411,7 +411,7 @@ position = Vector2( 463.987, -2 )
 rotation = 1.5708
 scale = Vector2( 0.6, 0.8 )
 next_scene_path = "res://Map Scenes/TrainStation.tscn"
-player_spawn_location = Vector2( 195, 170 )
+player_spawn_location = Vector2( -29, 2 )
 
 [node name="Portal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 303.647, 314.991 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Images/Tiles/airstrip.png" type="Texture" id=2]
+[ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=2]
 [ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=3]
 [ext_resource path="res://Images/Tiles/background.png" type="Texture" id=4]
 [ext_resource path="res://Images/Tiles/wallparts.png" type="Texture" id=5]
@@ -296,7 +296,7 @@ tile_data = PoolIntArray( -3932158, 6, 0, -3932156, 14, 0, -3932154, 10, 0, -393
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 311.293, 91.0503 )
+position = Vector2( 1116.87, 232.321 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -304,8 +304,8 @@ current = true
 zoom = Vector2( 0.75, 0.75 )
 limit_left = 0
 limit_top = 0
-limit_right = 320
-limit_bottom = 180
+limit_right = 1125
+limit_bottom = 375
 smoothing_enabled = true
 __meta__ = {
 "_edit_lock_": true
@@ -335,28 +335,28 @@ position = Vector2( 1033.86, 309.165 )
 [node name="Forest2" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 1083.65, 141.24 )
 
+[node name="LargeCrate" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 923.673, 335.054 )
+
+[node name="LargeCrate2" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 900.969, 330.849 )
+
+[node name="LargeCrate3" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 923.253, 316.134 )
+
+[node name="GroupSmallCrate" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 862.923, 341.798 )
+
+[node name="GroupSmallCrate2" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 912.718, 243.268 )
+
+[node name="StaticBody2D" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 862.129, 78.7864 )
+
+[node name="StaticBody2D2" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 706.36, 77.6422 )
+
 [node name="PortalTrain" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1139.17, 241.231 )
 next_scene_path = "res://Map Scenes/TrainStation.tscn"
 player_spawn_location = Vector2( -95, -97 )
-
-[node name="LargeCrate" parent="." instance=ExtResource( 12 )]
-position = Vector2( 923.673, 335.054 )
-
-[node name="LargeCrate2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 900.969, 330.849 )
-
-[node name="LargeCrate3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 923.253, 316.134 )
-
-[node name="GroupSmallCrate" parent="." instance=ExtResource( 11 )]
-position = Vector2( 862.923, 341.798 )
-
-[node name="GroupSmallCrate2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 912.718, 243.268 )
-
-[node name="StaticBody2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 862.129, 78.7864 )
-
-[node name="StaticBody2D2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 706.36, 77.6422 )

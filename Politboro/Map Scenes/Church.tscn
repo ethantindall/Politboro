@@ -4,9 +4,10 @@
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=3]
 [ext_resource path="res://Images/Tiles/background.png" type="Texture" id=4]
-[ext_resource path="res://Images/Tiles/airstrip.png" type="Texture" id=5]
+[ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=5]
 [ext_resource path="res://World Objects/Building Scenes/Church.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Images/Tiles/cemetary.png" type="Texture" id=7]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"

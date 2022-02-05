@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/airstrip64H.png-debe9523ae7f6054e69f89f015a94348.stex"
+path="res://.import/coalcar.png-ddbe771c0d58e478122f1b41ec2ff793.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Tiles/airstrip64H.png"
-dest_files=[ "res://.import/airstrip64H.png-debe9523ae7f6054e69f89f015a94348.stex" ]
+source_file="res://Images/coalcar.png"
+dest_files=[ "res://.import/coalcar.png-ddbe771c0d58e478122f1b41ec2ff793.stex" ]
 
 [params]
 

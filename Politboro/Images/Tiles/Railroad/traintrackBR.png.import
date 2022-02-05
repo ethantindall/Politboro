@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/airstripV.png-3ea8b85a44747d4005c45ffc4402b03b.stex"
+path="res://.import/traintrackBR.png-63bd495d408cb98972e0210f7b0656a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Tiles/airstripV.png"
-dest_files=[ "res://.import/airstripV.png-3ea8b85a44747d4005c45ffc4402b03b.stex" ]
+source_file="res://Images/Tiles/Railroad/traintrackBR.png"
+dest_files=[ "res://.import/traintrackBR.png-63bd495d408cb98972e0210f7b0656a0.stex" ]
 
 [params]
 
