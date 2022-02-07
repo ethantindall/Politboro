@@ -411,7 +411,7 @@ position = Vector2( 463.987, -2 )
 rotation = 1.5708
 scale = Vector2( 0.6, 0.8 )
 next_scene_path = "res://Map Scenes/TrainStation.tscn"
-player_spawn_location = Vector2( -29, 2 )
+player_spawn_location = Vector2( 268, 204 )
 
 [node name="Portal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 303.647, 314.991 )

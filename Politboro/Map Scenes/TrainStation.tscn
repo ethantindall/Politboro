@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Images/Tiles/Railroad/traincurve1.png" type="Texture" id=9]
 [ext_resource path="res://World Objects/Accessories/CoalCar.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World Objects/Accessories/BoxCar.tscn" type="PackedScene" id=11]
+[ext_resource path="res://World Objects/Accessories/CoalPile.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World Objects/Building Scenes/TrainTower.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Images/Tiles/Airstrip/airstripV.png" type="Texture" id=14]
 [ext_resource path="res://Images/Tiles/Railroad/traintrackV.png" type="Texture" id=15]
 [ext_resource path="res://Images/Tiles/Railroad/traintrackB.png" type="Texture" id=16]
@@ -268,6 +270,15 @@ position = Vector2( 306.512, -11.0896 )
 
 [node name="CoalCar3" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 377.576, -10.736 )
+
+[node name="CoalPile2" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 47.9966, 156.513 )
+
+[node name="CoalPile" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 84.5214, 154.944 )
+
+[node name="TrainTower" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 117.563, 128.276 )
 
 [node name="Portal_Town_N" parent="." instance=ExtResource( 6 )]
 position = Vector2( 271.677, 231.19 )

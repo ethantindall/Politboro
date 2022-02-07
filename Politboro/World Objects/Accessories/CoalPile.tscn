@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Images/coalpile.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.39919
+height = 63.8587
+
+[node name="CoalPile" type="StaticBody2D"]
+position = Vector2( 8, -1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -6.66666, 0 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -6.39674, 12.1469 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.4 )
+shape = SubResource( 1 )
