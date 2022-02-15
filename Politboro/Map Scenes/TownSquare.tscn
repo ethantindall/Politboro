@@ -326,9 +326,9 @@ position = Vector2( 216.089, 12.8614 )
 [node name="TreeGroup7" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 139.74, 34.6645 )
 
-[node name="Factory4" type="StaticBody2D" parent="YSort"]
+[node name="Outside Edge" type="StaticBody2D" parent="YSort"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Factory4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Outside Edge"]
 polygon = PoolVector2Array( -0.152863, 312.374, 0.0174713, 0.106812, 663.595, 0.404076, 663.892, 311.976, 0.162041, 312.495, 0.162041, 319.881, 680.514, 325.095, 675.175, -15.289, -16.2725, -13.9541, -8.95832, 312.505 )
 
 [node name="Tree2" parent="YSort" instance=ExtResource( 16 )]

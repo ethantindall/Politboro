@@ -278,7 +278,7 @@ position = Vector2( 47.9966, 156.513 )
 position = Vector2( 84.5214, 154.944 )
 
 [node name="TrainTower" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 117.563, 128.276 )
+position = Vector2( 124.044, 136.581 )
 
 [node name="Portal_Town_N" parent="." instance=ExtResource( 6 )]
 position = Vector2( 271.677, 231.19 )

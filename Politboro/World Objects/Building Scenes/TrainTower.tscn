@@ -3,15 +3,16 @@
 [ext_resource path="res://Images/Bldgs/TrainYardTower.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 21.8869, 25.2003 )
+extents = Vector2( 21.8869, 15.4097 )
 
 [node name="TrainTower" type="StaticBody2D"]
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 2.77727, 0 )
+position = Vector2( -35.0204, -127.462 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2.99999, 38.7315 )
+position = Vector2( 0.00559521, -15.4709 )
 shape = SubResource( 1 )

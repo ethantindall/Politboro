@@ -10,14 +10,14 @@ height = 63.8587
 position = Vector2( 8, -1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -6.66666, 0 )
+position = Vector2( -8.11437, -15.2566 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -6.39674, 12.1469 )
+position = Vector2( -7.95581, -2.66429 )
 rotation = 1.5708
 scale = Vector2( 0.5, 0.4 )
 shape = SubResource( 1 )
