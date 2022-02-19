@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Images/Tiles/wallparts.png" type="Texture" id=3]
 [ext_resource path="res://World Objects/Building Scenes/Military/Bunker.tscn" type="PackedScene" id=4]
-
+[ext_resource path="res://World Objects/Accessories/Tent.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World Objects/Characters/PrisonerA.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "wallparts.png 0"
@@ -191,7 +194,7 @@ position = Vector2( 249.195, 65.1011 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 272.298, 162.053 )
+position = Vector2( 263.389, 162.498 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -207,26 +210,88 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TileMapSnow" type="TileMap" parent="YSort"]
-tile_set = SubResource( 1 )
-cell_size = Vector2( 32, 32 )
-format = 1
-tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0 )
+[node name="Tent" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 50.0779, 28.5872 )
 
-[node name="Wall" type="TileMap" parent="YSort"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-format = 1
-tile_data = PoolIntArray( 0, 4, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 3, 0, 65536, 1, 0, 65545, 2, 0, 131072, 1, 0, 131081, 2, 0, 196608, 1, 0, 196617, 2, 0, 262144, 5, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 9, 0, 262152, 8, 0, 262153, 7, 0 )
+[node name="Tent2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 49.4479, 51.8958 )
+
+[node name="Tent3" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 49.133, 75.2043 )
+
+[node name="Tent4" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 50.3929, 98.5128 )
+
+[node name="Tent5" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 50.3929, 120.561 )
+
+[node name="Tent6" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 105.514, 120.246 )
+
+[node name="Tent7" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 161.266, 120.876 )
+
+[node name="Tent8" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 103.94, 28.5872 )
+
+[node name="Tent9" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 162.841, 27.9573 )
+
+[node name="Soldier" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 232.567, 160.343 )
+
+[node name="Soldier2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 290.921, 158.562 )
+
+[node name="LargeCrate" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 285.558, 102.663 )
+
+[node name="Soldier3" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 262.412, 95.3078 )
+
+[node name="Soldier4" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 230.785, 90.4078 )
+
+[node name="PrisonerA" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 113.186, 71.6989 )
+
+[node name="PrisonerA2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 91.8048, 90.8533 )
+
+[node name="PrisonerA3" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 143.031, 61.8991 )
+
+[node name="PrisonerA4" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 92.6957, 52.9901 )
+
+[node name="PrisonerA5" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 116.75, 108.226 )
+
+[node name="PrisonerA6" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 150.159, 91.7442 )
 
 [node name="Future UI Canvas" type="CanvasLayer" parent="."]
 
 [node name="PortalTrain" parent="." instance=ExtResource( 2 )]
 position = Vector2( 261.885, 184.532 )
 rotation = 1.5708
-next_scene_path = "res://Map Scenes/TrainStation.tscn"
+next_scene_path = "res://Map Scenes/CitySouth.tscn"
+player_spawn_location = Vector2( 440, 200 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 18.4682, 17.4902, 302.753, 17.4902, 303.752, 140.325, 271.129, 139.659, 270.463, 135.665, 265.47, 134.666, 265.137, 141.324, 270.13, 149.313, 284.777, 149.646, 284.444, 145.651, 305.083, 145.651, 305.416, 147.982, 318.732, 148.315, 318.732, 134.666, 313.405, 134.999, 313.738, 16.4915, 316.069, 17.4902, 316.401, 9.50092, 4.15411, 9.50092, 4.15411, 17.4902, 7.15008, 17.4902, 7.15008, 134, 0.15947, 134.333, -0.173416, 148.315, 14.4736, 148.315, 14.4736, 145.651, 227.521, 145.319, 227.188, 148.647, 241.502, 148.647, 247.827, 141.99, 246.495, 133.668, 241.169, 135.998, 240.836, 138.994, 17.4696, 139.327 )
+
+[node name="TileMapSnow" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0 )
+
+[node name="Wall" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 3, 0, 65536, 1, 0, 65545, 2, 0, 131072, 1, 0, 131081, 2, 0, 196608, 1, 0, 196617, 2, 0, 262144, 5, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 9, 0, 262152, 8, 0, 262153, 7, 0 )

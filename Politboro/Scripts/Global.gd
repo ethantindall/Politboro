@@ -15,7 +15,10 @@ func _input(event):
 	if game_running == true:
 		if event is InputEventKey and event.scancode == KEY_I and not event.echo:
 			print("Open inventory")
-	
+		if event is InputEventKey and event.scancode == KEY_ESCAPE:
+			get_tree().paused = true
+			print("paused")
+
 func register_player(in_player):
 	 player = in_player
 	

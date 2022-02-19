@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Images/Bldgs/kremlin_interior.png" type="Texture" id=4]
+[ext_resource path="res://Images/seal.png" type="Texture" id=5]
 
 [node name="Kremlin inside" type="Node2D"]
 
@@ -70,3 +71,7 @@ player_spawn_location = Vector2( 167, 113 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 135.629, 135.524, 136.47, 180.092, 271.434, 180.933, 272.275, 136.365, 320.626, 135.524, 321.467, 63.2073, 271.434, 63.6277, 272.163, -0.224243, 134.357, 0.247692, 135.773, 71.5102, 0.326706, 71.9821, 0.326706, 137.109, -14.7753, 137.109, -12.8875, 65.375, 124.918, 63.4873, 127.75, -7.3033, 282.073, -5.88749, 284.905, 56.4082, 330.211, 55.4643, 329.046, 107.606, 328.323, 139.941, 280.185, 142.301, 279.714, 185.247, 128.222, 186.663, 128.222, 139.469, -15.7192, 144.189, -14.7753, 136.166 )
+
+[node name="seal" type="Sprite" parent="."]
+position = Vector2( 203.684, 108.902 )
+texture = ExtResource( 5 )

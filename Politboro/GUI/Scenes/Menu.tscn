@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GUI/Scenes/Pause.gd" type="Script" id=1]
+[ext_resource path="res://GUI/fonts/propaganda/propaganda.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[node name="Pause" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = 2.0
+margin_right = -4.0
+margin_bottom = 2.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.57165
+margin_top = -2.02755
+margin_right = 3.57166
+margin_bottom = -2.02754
+color = Color( 0.00784314, 0, 0, 0.329412 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Control"]
+margin_left = 8.70711
+margin_top = 4.29288
+margin_right = 92.7071
+margin_bottom = 173.293
+color = Color( 0.298039, 0.168627, 0.0313726, 1 )
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer/Control"]
+margin_left = 14.7071
+margin_top = 10.7648
+margin_right = 86.7071
+margin_bottom = 168.765
+rect_pivot_offset = Vector2( 18.3412, 56.5182 )
+color = Color( 0.501961, 0.294118, 0.0705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer/Control"]
+margin_left = 101.0
+margin_top = 27.0
+margin_right = 315.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( -69.1896, 21.1146 )
+color = Color( 0.298039, 0.168627, 0.0313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer/Control"]
+margin_left = 110.0
+margin_top = 32.0
+margin_right = 308.0
+margin_bottom = 166.0
+rect_pivot_offset = Vector2( -69.1896, 21.1146 )
+color = Color( 0.501961, 0.294118, 0.0705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GamePaused" type="Label" parent="CanvasLayer/Control"]
+margin_left = 122.445
+margin_top = 9.48171
+margin_right = 242.445
+margin_bottom = 23.4817
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.784314, 0, 0, 1 )
+text = "Game Paused"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control"]
+margin_left = 18.6506
+margin_top = 34.8431
+margin_right = 69.6506
+margin_bottom = 53.8431
+rect_pivot_offset = Vector2( 35.3989, 38.3392 )
+custom_fonts/font = SubResource( 2 )
+text = "Quests"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="CanvasLayer/Control"]
+margin_left = 19.0091
+margin_top = 57.338
+margin_right = 70.0091
+margin_bottom = 76.338
+rect_pivot_offset = Vector2( 35.3989, 38.3392 )
+custom_fonts/font = SubResource( 2 )
+text = "Items"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control"]
+margin_left = 19.0
+margin_top = 14.0
+margin_right = 63.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 2 )
+text = "People"
+__meta__ = {
+"_edit_use_anchors_": false
+}

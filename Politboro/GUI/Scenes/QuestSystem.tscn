@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="QuestSystem" type="Node"]
+
+[node name="Available" type="Node" parent="."]
+
+[node name="TestQuest" type="Node" parent="Available"]
+
+[node name="Active" type="Node" parent="."]
+
+[node name="Completed" type="Node" parent="."]
+
+[node name="Delivered" type="Node" parent="."]

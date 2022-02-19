@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://World Objects/Accessories/Statue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Building Scenes/Apartments.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World Objects/Accessories/Tree.tscn" type="PackedScene" id=16]
 [ext_resource path="res://World Objects/Accessories/TreeGroup.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Images/Tiles/cobblestone.png" type="Texture" id=18]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -135,6 +136,20 @@
 6/shape_one_way_margin = 0.0
 6/shapes = [  ]
 6/z_index = 0
+7/name = "cobblestone.png 7"
+7/texture = ExtResource( 18 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
 
 [node name="Town Square" type="Node2D"]
 
@@ -143,7 +158,7 @@ texture = ExtResource( 8 )
 centered = false
 offset = Vector2( -200, -200 )
 region_enabled = true
-region_rect = Rect2( 208, -112, 864, 512 )
+region_rect = Rect2( 208, -112, 919.41, 546.778 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -152,7 +167,7 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -851950, 4, 0, -720878, 4, 0, -589806, 4, 0, -458734, 4, 0, 28, 4, 0, 131086, 2, 0, 131088, 2, 0, 131090, 2, 0, 131092, 2, 0, 131094, 2, 0, 131096, 2, 0, 131098, 2, 0, 131100, 4, 0, 196621, 2, 0, 262152, 2, 0, 262154, 2, 0, 262156, 2, 0, 262172, 4, 0, 327687, 2, 0, 393222, 2, 0, 393242, 2, 0, 393244, 4, 0, 393246, 2, 0, 393248, 2, 0, 393250, 2, 0, 393252, 2, 0, 393254, 2, 0, 458768, 2, 0, 458770, 2, 0, 458772, 2, 0, 524294, 2, 0, 524303, 0, 0, 524310, 0, 0, 524316, 4, 0, 524326, 2, 0, 589838, 2, 0, 589840, 2, 0, 589842, 2, 0, 589844, 2, 0, 589846, 2, 0, 720894, 3, 0, 655360, 3, 0, 655362, 3, 0, 655364, 3, 0, 655366, 3, 0, 655368, 3, 0, 655370, 3, 0, 655372, 3, 0, 655384, 3, 0, 655386, 3, 0, 655388, 3, 0, 655390, 3, 0, 655392, 3, 0, 655394, 3, 0, 655396, 3, 0, 655398, 3, 0, 655400, 3, 0, 655402, 3, 0, 720910, 2, 0, 720912, 2, 0, 720914, 2, 0, 720916, 2, 0, 720918, 2, 0, 786438, 2, 0, 786460, 2, 0, 786470, 2, 0, 851983, 0, 0, 851984, 2, 0, 851986, 2, 0, 851988, 2, 0, 851990, 0, 0, 917510, 2, 0, 917529, 2, 0, 917530, 2, 0, 917532, 2, 0, 917534, 2, 0, 917536, 2, 0, 917538, 2, 0, 917540, 2, 0, 917542, 2, 0, 983058, 4, 0, 1048582, 2, 0, 1048584, 2, 0, 1048586, 2, 0, 1048588, 2, 0, 1048590, 2, 0, 1048592, 2, 0, 1048602, 2, 0, 1114130, 4, 0, 1114132, 2, 0, 1114133, 2, 0, 1179674, 2, 0, 1179676, 2, 0, 1179677, 2, 0, 1179678, 2, 0, 1179679, 2, 0, 1179680, 2, 0, 1179681, 2, 0, 1179682, 2, 0, 1179683, 2, 0, 1179684, 2, 0, 1179685, 2, 0, 1245202, 4, 0 )
+tile_data = PoolIntArray( -851950, 4, 0, -720878, 4, 0, -589806, 4, 0, -458734, 4, 0, 28, 4, 0, 131086, 7, 0, 131088, 7, 0, 131090, 7, 0, 131092, 7, 0, 131094, 7, 0, 131096, 7, 0, 131098, 7, 0, 131100, 4, 0, 196621, 7, 0, 262152, 7, 0, 262154, 7, 0, 262156, 7, 0, 262172, 4, 0, 327687, 7, 0, 393222, 7, 0, 393242, 7, 0, 393244, 4, 0, 393246, 7, 0, 393248, 7, 0, 393250, 7, 0, 393252, 7, 0, 393254, 7, 0, 458768, 7, 0, 458770, 7, 0, 458772, 7, 0, 524294, 7, 0, 524316, 4, 0, 524326, 7, 0, 589838, 7, 0, 589840, 7, 0, 589842, 7, 0, 589844, 7, 0, 589846, 7, 0, 720894, 3, 0, 655360, 3, 0, 655362, 3, 0, 655364, 3, 0, 655366, 3, 0, 655368, 3, 0, 655370, 3, 0, 655372, 3, 0, 655384, 3, 0, 655386, 3, 0, 655388, 3, 0, 655390, 3, 0, 655392, 3, 0, 655394, 3, 0, 655396, 3, 0, 655398, 3, 0, 655400, 3, 0, 655402, 3, 0, 720910, 7, 0, 720912, 7, 0, 720914, 7, 0, 720916, 7, 0, 720918, 7, 0, 786438, 7, 0, 786460, 7, 0, 786470, 7, 0, 851984, 7, 0, 851986, 7, 0, 851988, 7, 0, 917510, 7, 0, 917529, 7, 0, 917530, 7, 0, 917532, 7, 0, 917534, 7, 0, 917536, 7, 0, 917538, 7, 0, 917540, 7, 0, 917542, 7, 0, 983058, 4, 0, 1048582, 7, 0, 1048584, 7, 0, 1048586, 7, 0, 1048588, 7, 0, 1048590, 7, 0, 1048592, 7, 0, 1048602, 7, 0, 1114130, 4, 0, 1114132, 7, 0, 1114133, 7, 0, 1179674, 7, 0, 1179676, 7, 0, 1179678, 7, 0, 1179679, 7, 0, 1179681, 7, 0, 1179683, 7, 0, 1179685, 7, 0, 1245202, 4, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -168,8 +183,8 @@ current = true
 zoom = Vector2( 0.75, 0.75 )
 limit_left = 0
 limit_top = 0
-limit_right = 655
-limit_bottom = 300
+limit_right = 680
+limit_bottom = 325
 limit_smoothed = true
 smoothing_enabled = true
 __meta__ = {
@@ -329,7 +344,7 @@ position = Vector2( 139.74, 34.6645 )
 [node name="Outside Edge" type="StaticBody2D" parent="YSort"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Outside Edge"]
-polygon = PoolVector2Array( -0.152863, 312.374, 0.0174713, 0.106812, 663.595, 0.404076, 663.892, 311.976, 0.162041, 312.495, 0.162041, 319.881, 680.514, 325.095, 675.175, -15.289, -16.2725, -13.9541, -8.95832, 312.505 )
+polygon = PoolVector2Array( -0.0378799, 320.868, 0.0174713, 0.106812, 692.782, -0.141487, 693.428, 323.74, -0.0378799, 320.868, -0.706047, 332.672, 708.409, 330.654, 705.747, -14.7273, -16.2725, -13.9541, -8.95832, 312.505 )
 
 [node name="Tree2" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 396.362, 268.525 )
@@ -356,7 +371,7 @@ position = Vector2( 661.808, 103.315 )
 position = Vector2( 676.491, 91.9691 )
 
 [node name="TreeGroup11" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 657.5, 271.5 )
+position = Vector2( 661.389, 271.146 )
 
 [node name="Tree11" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 656, 243 )
@@ -377,19 +392,19 @@ position = Vector2( 658.5, 213.5 )
 position = Vector2( 652.5, 286 )
 
 [node name="Tree15" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 628, 311 )
+position = Vector2( 640.033, 310.934 )
 
 [node name="Tree16" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 504.5, 321.5 )
+position = Vector2( 503.176, 326.003 )
 
 [node name="TreeGroup12" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 538.5, 328.5 )
+position = Vector2( 541.149, 334.857 )
 
 [node name="TreeGroup13" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 153.841, 203.905 )
 
 [node name="TreeGroup14" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 173.286, 106.678 )
+position = Vector2( 173.551, 113.3 )
 
 [node name="Tree17" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 389.176, 86.2325 )
@@ -401,7 +416,7 @@ position = Vector2( 395.893, 111.688 )
 position = Vector2( 530.244, 42.7454 )
 
 [node name="PortalHQ" parent="." instance=ExtResource( 9 )]
-position = Vector2( 669.291, 175.37 )
+position = Vector2( 697.019, 176.45 )
 scale = Vector2( 0.8, 0.8 )
 next_scene_path = "res://Map Scenes/HQ.tscn"
 player_spawn_location = Vector2( 10, 110 )
@@ -410,17 +425,17 @@ player_spawn_location = Vector2( 10, 110 )
 position = Vector2( 463.987, -2 )
 rotation = 1.5708
 scale = Vector2( 0.6, 0.8 )
-next_scene_path = "res://Map Scenes/TrainStation.tscn"
+next_scene_path = "res://Map Scenes/TrainYard.tscn"
 player_spawn_location = Vector2( 268, 204 )
 
-[node name="Portal" parent="." instance=ExtResource( 9 )]
-position = Vector2( 303.647, 314.991 )
+[node name="PortalSouth" parent="." instance=ExtResource( 9 )]
+position = Vector2( 304.177, 327.44 )
 rotation = 1.5708
 scale = Vector2( 0.8, 0.8 )
-next_scene_path = "res://Map Scenes/Church.tscn"
+next_scene_path = "res://Map Scenes/CitySouth.tscn"
 player_spawn_location = Vector2( 222, 15 )
 
-[node name="Portal2" parent="." instance=ExtResource( 9 )]
+[node name="PortalWest" parent="." instance=ExtResource( 9 )]
 position = Vector2( -3.59569, 176.244 )
 scale = Vector2( 0.8, 0.8 )
 next_scene_path = "res://Map Scenes/Farm.tscn"
