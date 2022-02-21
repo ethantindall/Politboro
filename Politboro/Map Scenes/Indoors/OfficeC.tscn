@@ -7,9 +7,8 @@
 [ext_resource path="res://World Objects/Characters/Police.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World Objects/Accessories/Desk.tscn" type="PackedScene" id=7]
-[ext_resource path="res://World Objects/Accessories/Tent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World Objects/Accessories/Bookshelf.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Images/Bldgs/OfficeC.png" type="Texture" id=9]
-
 
 [node name="OfficeA" type="Node2D"]
 

@@ -11,13 +11,12 @@ config_version=4
 [application]
 
 config/name="Politburo"
-run/main_scene="res://Map Scenes/TrainYard.tscn"
+run/main_scene="res://GUI/Scenes/MainMenu.tscn"
 config/icon="res://Images/GUI/icon.png"
 
 [autoload]
 
-ScreenChanger="*res://World Objects/Portal/ScreenChanger.tscn"
-Global="*res://Scripts/Global.gd"
+Global="*res://GlobalScripts/Global.gd"
 
 [display]
 
