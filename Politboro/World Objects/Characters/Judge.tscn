@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Images/Sprites/officialA.png" type="Texture" id=1]
+[ext_resource path="res://Images/Sprites/Judge.png" type="Texture" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -138,7 +138,7 @@ tracks/0/keys = {
 "values": [ 9, 8, 7 ]
 }
 
-[node name="OfficialA" type="KinematicBody2D"]
+[node name="Judge" type="KinematicBody2D"]
 collision_mask = 3
 
 [node name="Sprite" type="Sprite" parent="."]
