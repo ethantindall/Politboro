@@ -1,0 +1,18 @@
+{
+"Items": {
+	"Documents": {
+		"Document A": Text",
+		"Document B": Text",
+		"Document C": Text"
+		},
+	"Weapons": {
+		"Knife": {"Damage": 4}
+		},
+	"Valuables": {
+		"Gold Watch": {"Value": 100}
+		},
+	"Other": {
+		"Money": 0
+		}
+	}
+}

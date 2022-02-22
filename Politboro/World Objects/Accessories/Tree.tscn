@@ -7,12 +7,12 @@ position = Vector2( 8, -1 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -8.12897, -27.1415 )
+position = Vector2( -17.868, -11.4093 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( -4.24264, -26.163 )
+position = Vector2( -13.9816, -10.8053 )
 polygon = PoolVector2Array( -8.625, 31.375, -0.5, 31.375, -0.375, 23.5, 19.875, 23.25, 19.875, 15.875, 19.875, 15.875, 15.5673, 6.9066, -23.1468, 6.55304, -28.125, 15.5, -28.424, 23.0334, -8.5, 23.375 )

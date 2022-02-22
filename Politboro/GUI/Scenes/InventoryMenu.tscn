@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GUI/Scenes/Pause.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.733333, 0.588235, 0.356863, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.733333, 0.588235, 0.356863, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+anti_aliasing = false
+
+[node name="Pause" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = 2.0
+margin_right = -4.0
+margin_bottom = 2.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Folder" type="Panel" parent="CanvasLayer/Control"]
+margin_left = 175.0
+margin_top = 50.0
+margin_right = 300.0
+margin_bottom = 158.0
+rect_pivot_offset = Vector2( -270.698, 28 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FolderTab" type="Panel" parent="CanvasLayer/Control/Folder"]
+margin_left = 8.0
+margin_top = -10.0
+margin_right = 63.0
+margin_bottom = 16.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

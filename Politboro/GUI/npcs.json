@@ -1,0 +1,66 @@
+{
+"NPCs": {
+	"Ministers": {
+		"A" : {
+			"Name": "Vlad Vladostovovitch",
+			"Ministry": "Energy",
+			"Title": "Minister of Energy",
+			"Loyalty": 0,
+			"Fear": 0,
+			"Hatred": 0,
+			"Weakness": "Minister of Finance",
+			"Strength": "Minister of Transportation",
+			"Bio" : "Vlad came to power after his predecessor died in a mysterious nuclear accident.",
+			"Sprite": ""
+			},
+		"B" : {
+			"Name": "General Aleksi Butunov",
+			"Ministry": "War",
+			"Title": "Minister of War",
+			"Loyalty": 0,
+			"Fear": 0,
+			"Hatred": 0,
+			"Weakness": "Minister of Transportation",
+			"Strength": "Minister of Justice",
+			"Bio" : "A loyal nationalist. Highly admired by his troops. They will follow him to the grave.",
+			"Sprite": ""
+			},
+		"C" : {
+			"Name": "Valery Unchok",
+			"Ministry": "Justice",
+			"Title": "Minister of Justice",
+			"Loyalty": 0,
+			"Fear": 0,
+			"Hatred": 0,
+			"Weakness": "Minister of War",
+			"Strength": "Minister of Finance",
+			"Bio" : "Minister of Justice is a misnomer if ever their was one. His sole responsibility is to run the Secret Police.",
+			"Sprite": ""
+			},
+		"D" : {
+			"Name": "Petya Belov",
+			"Ministry": "Finance",
+			"Title": "Minister of Finance",
+			"Loyalty": 0,
+			"Fear": 0,
+			"Hatred": 0,
+			"Weakness": "Minister of Justice",
+			"Strength": "Minister of Energy",
+			"Bio" : "From a long family of bankers. Rumor has it he has ties to the international banking community.",
+			"Sprite": ""
+			},
+		"E" : {
+			"Name": "Gleb Tarasov",
+			"Ministry": "Transportation",
+			"Title": "Minister of Transportation",
+			"Loyalty": 0,
+			"Fear": 0,
+			"Hatred": 0,
+			"Weakness": "Minister of Energy",
+			"Strength": "Minister of War",
+			"Bio" : "He makes the trains run on time, but is primarily famous for his use of slave labor to build infrastructure.",
+			"Sprite": ""
+			}
+		}
+	}
+}

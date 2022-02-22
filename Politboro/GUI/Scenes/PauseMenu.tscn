@@ -22,7 +22,7 @@ font_data = ExtResource( 3 )
 size = 5
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.733333, 0.588235, 0.356863, 1 )
 corner_radius_top_left = 6
 corner_radius_top_right = 6
@@ -30,18 +30,18 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.733333, 0.588235, 0.356863, 1 )
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 anti_aliasing = false
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=7]
 size = 5
 extra_spacing_top = -3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=8]
 size = 10
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
@@ -56,6 +56,7 @@ font_data = ExtResource( 4 )
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 pause_mode = 2
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -4.0
@@ -173,6 +174,7 @@ __meta__ = {
 }
 
 [node name="PeopleScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control"]
+visible = false
 margin_left = 103.445
 margin_top = 34.2227
 margin_right = 305.445
@@ -409,7 +411,7 @@ margin_top = 50.0
 margin_right = 300.0
 margin_bottom = 158.0
 rect_pivot_offset = Vector2( -270.698, 28 )
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -419,14 +421,12 @@ margin_left = 8.0
 margin_top = -10.0
 margin_right = 63.0
 margin_bottom = 16.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BioControl" type="Control" parent="CanvasLayer/Control/Folder"]
-margin_right = 40.0
-margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -436,7 +436,7 @@ margin_left = 4.0
 margin_top = 26.0
 margin_right = 122.0
 margin_bottom = 49.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 __meta__ = {
@@ -476,7 +476,7 @@ margin_top = 3.0
 margin_right = 80.0
 margin_bottom = 15.0
 rect_pivot_offset = Vector2( 27.0195, 5 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
