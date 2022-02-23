@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Images/GUI/inventory.png" type="Texture" id=1]
-[ext_resource path="res://GUI/Scenes/PauseMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI/Scenes/Pause/PauseMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/GUI/inventory.png" type="Texture" id=2]
 
 [node name="Health" type="Node2D"]
 
@@ -11,7 +11,7 @@
 visible = false
 position = Vector2( 279.621, 90.2318 )
 scale = Vector2( 1, 1.00196 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="Health2" type="ColorRect" parent="CanvasLayer2"]
 visible = false
@@ -53,4 +53,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pause" parent="." instance=ExtResource( 3 )]
+[node name="Pause" parent="." instance=ExtResource( 1 )]

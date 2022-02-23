@@ -1,0 +1,213 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://GUI/fonts/fyodor/Fyodor-BoldCondensedOblique.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GUI/fonts/1942_report/1942.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://GUI/Scenes/Pause/PeopleMenu.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.733333, 0.588235, 0.356863, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.733333, 0.588235, 0.356863, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=4]
+size = 10
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 7
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 5
+extra_spacing_top = -3
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 5
+font_data = ExtResource( 1 )
+
+[node name="People" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Folder" type="Panel" parent="."]
+margin_left = 75.0
+margin_top = 50.0
+margin_right = 200.0
+margin_bottom = 158.0
+rect_pivot_offset = Vector2( -270.698, 28 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FolderTab" type="Panel" parent="Folder"]
+margin_left = 8.0
+margin_top = -10.0
+margin_right = 63.0
+margin_bottom = 16.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BioControl" type="Control" parent="Folder"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Photo" type="ColorRect" parent="Folder/BioControl"]
+margin_left = 75.0
+margin_top = 58.0
+margin_right = 121.0
+margin_bottom = 111.0
+rect_rotation = -12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Folder/BioControl/Photo"]
+margin_left = 2.51721
+margin_top = 3.47652
+margin_right = 42.5172
+margin_bottom = 43.4765
+rect_pivot_offset = Vector2( 7.05994, 5.7462 )
+color = Color( 0.270588, 0.270588, 0.270588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCimage" type="Sprite" parent="Folder/BioControl/Photo/ColorRect"]
+position = Vector2( 19.6291, 21.5627 )
+scale = Vector2( 1.20071, 1.20071 )
+hframes = 3
+vframes = 3
+
+[node name="NPCname" type="Label" parent="Folder/BioControl"]
+margin_left = 5.0
+margin_top = 3.0
+margin_right = 80.0
+margin_bottom = 15.0
+rect_pivot_offset = Vector2( 27.0195, 5 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCtitle" type="Label" parent="Folder/BioControl"]
+margin_left = 4.89922
+margin_top = 13.9783
+margin_right = 66.8992
+margin_bottom = 27.9783
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCbio" type="Label" parent="Folder/BioControl"]
+margin_left = 4.0
+margin_top = 26.0
+margin_right = 122.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCloyalty" type="Label" parent="Folder/BioControl"]
+margin_left = 3.0
+margin_top = 53.0
+margin_right = 37.0
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCfear" type="Label" parent="Folder/BioControl"]
+margin_left = 2.0
+margin_top = 49.0
+margin_right = 42.0
+margin_bottom = 63.0
+
+[node name="NPChatred" type="Label" parent="Folder/BioControl"]
+margin_left = 3.0
+margin_top = 70.0
+margin_right = 43.0
+margin_bottom = 84.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PeopleScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 3.0
+margin_top = 34.223
+margin_right = 205.0
+margin_bottom = 165.223
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PeopleScrollContainer"]
+margin_right = 66.0
+margin_bottom = 81.0
+
+[node name="VladButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+margin_right = 66.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 6 )
+text = "Vlad Vladostovovitch"
+
+[node name="GeneralButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+margin_top = 17.0
+margin_right = 66.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 6 )
+text = "General Aleksi Butunov"
+
+[node name="ValeryButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 66.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Valery Unchok"
+
+[node name="PetyaButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+margin_top = 51.0
+margin_right = 66.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 6 )
+text = "Petya Belov"
+
+[node name="GlebButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 66.0
+margin_bottom = 81.0
+custom_fonts/font = SubResource( 6 )
+text = "Gleb Tarasov"
+
+[connection signal="visibility_changed" from="." to="." method="_on_People_visibility_changed"]
+[connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/VladButton" to="." method="_on_VladButton_pressed"]
+[connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/GeneralButton" to="." method="_on_GeneralButton_pressed"]
+[connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/ValeryButton" to="." method="_on_ValeryButton_pressed"]
+[connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/PetyaButton" to="." method="_on_PetyaButton_pressed"]
+[connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/GlebButton" to="." method="_on_GlebButton_pressed"]

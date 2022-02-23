@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://GUI/Scenes/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://GUI/Scenes/Title/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://GUI/fonts/propaganda/propaganda.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Images/seal.png" type="Texture" id=3]
 
