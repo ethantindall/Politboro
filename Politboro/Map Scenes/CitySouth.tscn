@@ -278,3 +278,8 @@ rotation = 1.5708
 scale = Vector2( 0.5, 0.5 )
 next_scene_path = "res://Map Scenes/Gulag.tscn"
 player_spawn_location = Vector2( 263, 162 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 15.2681, 353.063, 11.7619, 1.3799, 642.754, 2.9673, 641.764, 344.611, 14.5189, 353.063, 3.09434, 358.869, 654.492, 355.925, 653.497, -9.57008, -3.24352, -7.88828, 2.64276, 352.856 )

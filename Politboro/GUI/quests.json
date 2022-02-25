@@ -1,7 +1,6 @@
 {
 "Quests": {
-	"Tutorial": {
-	"Q1": {
+	"Q0": {
 		"Title":"Meet the General", 
 		"Description":"General Butunov can be found at the military base, or in his office at the Party Headquarters.", 
 		"Completed" : "False",
@@ -9,7 +8,7 @@
 			"Objective 1": "Locate and speak with General Butunov"
 			}
 		},
-	"Q2": {
+	"Q1": {
 		"Title":"Locate Vladostovovitch's Missing Dossier", 
 		"Description":"Vlad has lost sensitive information. Find it before it's too late.", 
 		"Completed" : "False",
@@ -18,7 +17,7 @@
 			"Objective 2": "Return the Dossier to Vlad"
 			}
 		},
-	"Q3": {
+	"Q2": {
 		"Title":"Speak to all the Ministers",
 		"Description":"Get to know those in charge.",
 		"Completed" : "False",
@@ -30,7 +29,7 @@
 			"Objective 5": "Speak to Tarasov"
 			}
 		},
-	"Q4": {
+	"Q3": {
 		"Title":"Blackmail Petya Belov",
 		"Description":"Rumors have been floating around that Petya has been associating with the international burgeouise.",
 		"Completed" : "False",
@@ -39,7 +38,7 @@
 			"Objective 2": "Confront Belov with the information."
 			}
 		},
-	"Q5": {
+	"Q4": {
 		"Title":"Gain Loyalty",
 		"Description":"Gather support.",
 		"Completed" : "False",
@@ -49,4 +48,3 @@
 			}
 		}
 	}
-}

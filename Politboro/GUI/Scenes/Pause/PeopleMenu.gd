@@ -24,41 +24,30 @@ func processJSON(rj):
 		print("Error String: ", rj.error_string)
 
 #Level2
+func populateData(selectedData, sprite):
+	get_node("Folder/BioControl/VBoxContainer/NPCname").text = str(selectedData.Name)
+	get_node("Folder/BioControl/VBoxContainer/NPCbio").text = str(selectedData.Bio)
+	get_node("Folder/BioControl/VBoxContainer/NPCtitle").text = str(selectedData.Title)
+	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(sprite)
+	get_node("Folder/BioControl/VBoxContainer/NPCfear").text = "Fear of You: " + str(selectedData.Fear) + "%"
+	get_node("Folder/BioControl/VBoxContainer/NPChatred").text ="Hatred of You: " + str(selectedData.Hatred) + "%"
+	get_node("Folder/BioControl/VBoxContainer/NPCloyalty").text = "Loyalty to You: " + str(selectedData.Loyalty) + "%"
+	
 func _on_VladButton_pressed():
-	selectedData = processJSON(result_json).NPCs.Ministers.A
-	get_node("Folder/BioControl/NPCname").text = str(selectedData.Name)
-	get_node("Folder/BioControl/NPCbio").text = str(selectedData.Bio)
-	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(vladSprite)
-	get_node("Folder/BioControl/NPCtitle").text = str(selectedData.Title)
+	populateData(processJSON(result_json).NPCs.Ministers.A, vladSprite)
 	
 func _on_GeneralButton_pressed():
-	selectedData = processJSON(result_json).NPCs.Ministers.B
-	get_node("Folder/BioControl/NPCname").text = str(selectedData.Name)
-	get_node("Folder/BioControl/NPCbio").text = str(selectedData.Bio)
-	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(generalSprite)
-	get_node("Folder/BioControl/NPCtitle").text = str(selectedData.Title)
+	populateData(processJSON(result_json).NPCs.Ministers.B,generalSprite)
 		
 func _on_ValeryButton_pressed():
-	selectedData = processJSON(result_json).NPCs.Ministers.C
-	get_node("Folder/BioControl/NPCname").text = str(selectedData.Name)
-	get_node("Folder/BioControl/NPCbio").text = str(selectedData.Bio)
-	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(valerySprite)
-	get_node("Folder/BioControl/NPCtitle").text = str(selectedData.Title)
-	
+
+	populateData(processJSON(result_json).NPCs.Ministers.C, valerySprite)
+		
 func _on_PetyaButton_pressed():
-	selectedData = processJSON(result_json).NPCs.Ministers.D
-	get_node("Folder/BioControl/NPCname").text = str(selectedData.Name)
-	get_node("Folder/BioControl/NPCbio").text = str(selectedData.Bio)
-	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(petyaSprite)
-	get_node("Folder/BioControl/NPCtitle").text = str(selectedData.Title)
+	populateData(processJSON(result_json).NPCs.Ministers.D, petyaSprite)
 	
 func _on_GlebButton_pressed():
-	selectedData = processJSON(result_json).NPCs.Ministers.E
-	get_node("Folder/BioControl/NPCname").text = str(selectedData.Name)
-	get_node("Folder/BioControl/NPCbio").text = str(selectedData.Bio)
-	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(glebSprite)
-	get_node("Folder/BioControl/NPCtitle").text = str(selectedData.Title)
-
+	populateData(processJSON(result_json).NPCs.Ministers.E, glebSprite)
 
 func _on_People_visibility_changed():
 	#GET JSON DATA

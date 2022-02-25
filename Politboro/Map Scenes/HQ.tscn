@@ -184,7 +184,7 @@ position = Vector2( 177.307, 72.0779 )
 texture = ExtResource( 12 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 1 )]
-position = Vector2( -8, 112 )
+position = Vector2( -6, 112 )
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
 player_spawn_location = Vector2( 654, 172 )
 
@@ -200,3 +200,8 @@ position = Vector2( 159.62, 183.235 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/CitySouth.tscn"
 player_spawn_location = Vector2( 497, 12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -0.0454044, 179.344, 320.776, 180.444, 319.865, -1.17316, 0.243462, -0.611923, -0.317772, 175.895, -10.9812, 174.212, -6.01172, -5.9934, 323.481, -4.40422, 323.91, 185.001, -1.82182, 184.509, -5.79973, 175.326, -0.243829, 176.318 )

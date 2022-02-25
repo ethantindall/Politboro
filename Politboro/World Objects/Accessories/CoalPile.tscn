@@ -7,7 +7,7 @@ radius = 7.39919
 height = 63.8587
 
 [node name="CoalPile" type="StaticBody2D"]
-position = Vector2( 8, -1 )
+position = Vector2( 8, 11 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -8.11437, -15.2566 )

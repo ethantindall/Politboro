@@ -153,7 +153,10 @@ position = Vector2( 261.789, 45.6141 )
 [node name="Bush10" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 297.425, 16.6599 )
 
-[node name="Future UI Canvas" type="CanvasLayer" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -18.5, 208, 321.5, 208.5, 319.725, -17.5558, -9.68761, -18.0277, -7.32793, -26.5226, 326.332, -24.6348, 326.962, 214.786, -26.2789, 213.895, -24.1562, -22.3151, -7.40168, -26.4763, -9.66861, -18.0404, -18.1227, -18.2344 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 9 )]
 position = Vector2( 327.625, 96 )

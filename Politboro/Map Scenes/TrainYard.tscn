@@ -301,3 +301,8 @@ player_spawn_location = Vector2( 464, 10 )
 [node name="Portal_Base_E" parent="." instance=ExtResource( 2 )]
 position = Vector2( -18.0526, -66.2698 )
 player_spawn_location = Vector2( 1116, 232 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -10.9042, -92.004, -3.60823, 218.918, 420.682, 217.234, 419.56, 223.408, -13.1492, 223.408, -21.0694, -108.33, 424.435, -111.509, 424.55, 204.355, 411.115, 202.234, 413.944, -107.479 )

@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Politburo"
-run/main_scene="res://Map Scenes/TownSquare.tscn"
+run/main_scene="res://Map Scenes/CitySouth.tscn"
 config/icon="res://Images/GUI/icon.png"
 
 [autoload]
