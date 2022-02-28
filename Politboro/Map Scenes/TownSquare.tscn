@@ -175,7 +175,7 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 304.087, 288.193 )
+position = Vector2( 322.965, 264.596 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -198,67 +198,37 @@ position = Vector2( 302.869, 81.3538 )
 position = Vector2( 308.631, 170.484 )
 
 [node name="Apartments12" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 410.427, 4.44973 )
-
-[node name="Factory2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 592.329, 66.4702 )
+position = Vector2( 400.363, -18.9326 )
 
 [node name="Apartments5" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 338.263, 306.708 )
+position = Vector2( 347.777, 335.665 )
 
 [node name="Apartments6" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 352.036, 245.789 )
-
-[node name="Apartments7" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 403.42, 205.53 )
-
-[node name="Narrow Building7" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 461.161, 262.741 )
-
-[node name="Apartments8" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 512.544, 263.8 )
+position = Vector2( 353.6, 225.502 )
 
 [node name="Factory" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 587.237, 265.654 )
+position = Vector2( 574.684, 243.702 )
 
 [node name="Narrow Building3" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 495.593, 130.308 )
-
-[node name="Narrow Building4" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 534.793, 130.308 )
+position = Vector2( 576.446, 177.446 )
 
 [node name="Narrow Building5" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 577.701, 130.308 )
+position = Vector2( 581.712, 45.3755 )
 
 [node name="Narrow Building6" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 658.75, 131.897 )
-
-[node name="StaticBody2D2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 516.745, 67.9945 )
+position = Vector2( 659.788, 109.811 )
 
 [node name="Apartments9" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 497.537, 15.7472 )
+position = Vector2( 507.382, 5.31133 )
 
 [node name="Apartments10" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 416.671, 133.181 )
-
-[node name="Apartments11" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 417.265, 70.1534 )
-
-[node name="Factory3" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 517.047, 193.876 )
-
-[node name="Apartments" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 200.533, 134.016 )
+position = Vector2( 413.675, 115.256 )
 
 [node name="Apartments2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 146.5, 134.546 )
-
-[node name="Apartments3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 148.619, 230.427 )
+position = Vector2( 159.6, 112.458 )
 
 [node name="Narrow Building" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 194.176, 228.308 )
+position = Vector2( 150.963, 206.318 )
 
 [node name="Streetlight" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 390.72, 148.495 )
@@ -299,14 +269,11 @@ position = Vector2( 131.992, 246.15 )
 [node name="Streetlight13" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 129.186, 147.373 )
 
-[node name="Narrow Building2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 237.084, 228.838 )
-
 [node name="Forest" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 6.62701, 249.309 )
 
 [node name="Apartments4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 577.437, 196.524 )
+position = Vector2( 474.735, 245.33 )
 
 [node name="TreeGroup" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 20.7169, 142.867 )
@@ -344,6 +311,7 @@ position = Vector2( 139.74, 34.6645 )
 [node name="Outside Edge" type="StaticBody2D" parent="YSort"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Outside Edge"]
+position = Vector2( 19.1034, -2.62204 )
 polygon = PoolVector2Array( -0.0378799, 320.868, 0.0174713, 0.106812, 692.782, -0.141487, 693.428, 323.74, -0.0378799, 320.868, -0.706047, 332.672, 708.409, 330.654, 705.747, -14.7273, -16.2725, -13.9541, -8.95832, 312.505 )
 
 [node name="Tree2" parent="YSort" instance=ExtResource( 16 )]
@@ -360,12 +328,6 @@ position = Vector2( 649.127, 42.58 )
 
 [node name="Tree5" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 632.442, 59.9329 )
-
-[node name="Tree6" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 663.81, 117.998 )
-
-[node name="Tree7" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 661.808, 103.315 )
 
 [node name="Tree8" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 676.491, 91.9691 )
@@ -403,17 +365,17 @@ position = Vector2( 541.149, 334.857 )
 [node name="TreeGroup13" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 153.841, 203.905 )
 
-[node name="TreeGroup14" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 173.551, 113.3 )
+[node name="Apartments" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 511.619, 111.189 )
+
+[node name="Apartments3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 214.468, 207.124 )
 
 [node name="Tree17" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 389.176, 86.2325 )
+position = Vector2( 389.176, 81.7298 )
 
 [node name="Tree18" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 395.893, 111.688 )
-
-[node name="Tree19" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 530.244, 42.7454 )
+position = Vector2( 432.974, 72.223 )
 
 [node name="PortalHQ" parent="." instance=ExtResource( 9 )]
 position = Vector2( 697.019, 176.45 )

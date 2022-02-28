@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=2]
@@ -11,7 +11,8 @@
 [ext_resource path="res://World Objects/Accessories/Streetlight.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Images/Tiles/Airstrip/airstripV.png" type="Texture" id=10]
 [ext_resource path="res://Images/Tiles/cobblestone.png" type="Texture" id=11]
-[ext_resource path="res://Images/seal.png" type="Texture" id=12]
+[ext_resource path="res://World Objects/Building Scenes/Factory.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World Objects/Building Scenes/Apartments.tscn" type="PackedScene" id=13]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -123,7 +124,7 @@
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 320, 180 )
+region_rect = Rect2( 0, 0, 371.695, 226.628 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -132,7 +133,10 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 458751, 3, 0, 393217, 3, 0, 524289, 4, 0, 524291, 3, 0, 524293, 3, 0, 524294, 5, 0, 524296, 5, 0, 524298, 5, 0, 524300, 5, 0, 655369, 5, 0 )
+tile_data = PoolIntArray( 458751, 3, 0, 393217, 3, 0, 393227, 5, 0, 393228, 5, 0, 393230, 5, 0, 524289, 4, 0, 524291, 3, 0, 524293, 3, 0, 524294, 5, 0, 524296, 5, 0, 524298, 5, 0, 524300, 5, 0, 524302, 5, 0, 655369, 5, 0 )
+
+[node name="Factory" parent="RoadTileMap" instance=ExtResource( 12 )]
+position = Vector2( 94.866, 185.274 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -153,7 +157,7 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 176, 72 )
+position = Vector2( 213.755, 63.5051 )
 
 [node name="Soldier" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 142.161, 131.556 )
@@ -179,9 +183,14 @@ position = Vector2( 75.7079, 141.907 )
 [node name="SecretPolice2" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 114.378, 153.296 )
 
-[node name="seal" type="Sprite" parent="YSort"]
-position = Vector2( 177.307, 72.0779 )
-texture = ExtResource( 12 )
+[node name="Apartments" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 22.143, 50.4723 )
+
+[node name="Apartments2" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 215.637, 192.997 )
+
+[node name="Apartments3" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 285.956, 191.581 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 1 )]
 position = Vector2( -6, 112 )
@@ -189,7 +198,7 @@ next_scene_path = "res://Map Scenes/TownSquare.tscn"
 player_spawn_location = Vector2( 654, 172 )
 
 [node name="PortalInside" parent="." instance=ExtResource( 1 )]
-position = Vector2( 178.833, 120.754 )
+position = Vector2( 216.588, 111.787 )
 rotation = 1.5708
 scale = Vector2( 1, 2 )
 next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"

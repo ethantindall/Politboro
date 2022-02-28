@@ -4,6 +4,8 @@
 		"Title":"Meet the General", 
 		"Description":"General Butunov can be found at the military base, or in his office at the Party Headquarters.", 
 		"Completed" : "False",
+		"Active": "True",
+		"Prereqs": {},
 		"Objectives": {
 			"Objective 1": "Locate and speak with General Butunov"
 			}
@@ -12,6 +14,8 @@
 		"Title":"Locate Vladostovovitch's Missing Dossier", 
 		"Description":"Vlad has lost sensitive information. Find it before it's too late.", 
 		"Completed" : "False",
+		"Active": "True",
+		"Prereqs": {},
 		"Objectives": {
 			"Objective 1": "Locate the Dossier",
 			"Objective 2": "Return the Dossier to Vlad"
@@ -21,6 +25,8 @@
 		"Title":"Speak to all the Ministers",
 		"Description":"Get to know those in charge.",
 		"Completed" : "False",
+		"Active": "False",
+		"Prereqs": {},
 		"Objectives": {
 			"Objective 1": "Speak to Vladostovovitch",
 			"Objective 2": "Speak to Butonov",
@@ -33,6 +39,8 @@
 		"Title":"Blackmail Petya Belov",
 		"Description":"Rumors have been floating around that Petya has been associating with the international burgeouise.",
 		"Completed" : "False",
+		"Active": "False",
+		"Prereqs": {},
 		"Objectives": {
 			"Objective 1": "Search Belov's office for dirt.",
 			"Objective 2": "Confront Belov with the information."
@@ -42,6 +50,8 @@
 		"Title":"Gain Loyalty",
 		"Description":"Gather support.",
 		"Completed" : "False",
+		"Active": "True",
+		"Prereqs": {},
 		 "Objectives": {
 			"Objective 1": "Obtain 50% Loyalty with at least one Minister."
 				}

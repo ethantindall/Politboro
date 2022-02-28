@@ -18,10 +18,15 @@ func _ready():
 func _on_Quests_visibility_changed():
 	var buttonCounter = 0
 	for q in result_json.Quests:
-		get_node("QuestsScrollContainer/VBoxContainer/Button" + str(buttonCounter)).text = result_json.Quests[q].Title
+		var x = get_node("QuestsScrollContainer/VBoxContainer/Button" + str(buttonCounter))
+		if result_json.Quests[q].Active == "True":
+			x.text = result_json.Quests[q].Title
+			x.visible = true
+			#populateQuestDeets(x)
+		else:
+			x.visible = false
 		buttonCounter += 1
-	
-
+"""
 func validateJSON(rj):
 	if rj.error == OK:  # If parse OK
 		var data = rj.result
@@ -30,31 +35,53 @@ func validateJSON(rj):
 		print("Error: ", rj.error)
 		print("Error Line: ", rj.error_line)
 		print("Error String: ", rj.error_string)
+"""
 
-
-
+#func populateQuestDeets(q):
+	
+	
+func populateData(q):
+	if q.Active == "True":
+		get_node("Folder/VBoxContainer/QuestName").text = q.Title
+		get_node("Folder/VBoxContainer/QuestCompletionState").text = "Completed: " + q.Completed
+		get_node("Folder/VBoxContainer/QuestDescription").text = q.Description
+	
 
 func _on_Button0_pressed():
-	get_node("Folder/VBoxContainer/QuestName").text = result_json.Quests.Q0.Title
-	get_node("Folder/VBoxContainer/QuestCompletionState").text = "Completed: " + result_json.Quests.Q0.Completed
-	get_node("Folder/VBoxContainer/QuestDescription").text = result_json.Quests.Q0.Description
-	
+	populateData(result_json.Quests.Q0)
+
 func _on_Button1_pressed():
-	get_node("Folder/VBoxContainer/QuestName").text = result_json.Quests.Q1.Title
-	get_node("Folder/VBoxContainer/QuestCompletionState").text = "Completed: " + result_json.Quests.Q1.Completed
-	get_node("Folder/VBoxContainer/QuestDescription").text = result_json.Quests.Q1.Description
+	populateData(result_json.Quests.Q1)
 	
 func _on_Button2_pressed():
-	get_node("Folder/VBoxContainer/QuestName").text = result_json.Quests.Q2.Title
-	get_node("Folder/VBoxContainer/QuestCompletionState").text = "Completed: " + result_json.Quests.Q2.Completed
-	get_node("Folder/VBoxContainer/QuestDescription").text = result_json.Quests.Q2.Description
-	
+	populateData(result_json.Quests.Q2)
+		
 func _on_Button3_pressed():
-	get_node("Folder/VBoxContainer/QuestName").text = result_json.Quests.Q3.Title
-	get_node("Folder/VBoxContainer/QuestCompletionState").text = "Completed: " + result_json.Quests.Q3.Completed
-	get_node("Folder/VBoxContainer/QuestDescription").text = result_json.Quests.Q3.Description
+	populateData(result_json.Quests.Q3)
 	
 func _on_Button4_pressed():
-	get_node("Folder/VBoxContainer/QuestName").text = result_json.Quests.Q4.Title
-	get_node("Folder/VBoxContainer/QuestCompletionState").text = "Completed: " + result_json.Quests.Q4.Completed
-	get_node("Folder/VBoxContainer/QuestDescription").text = result_json.Quests.Q4.Description
+	populateData(result_json.Quests.Q4)
+
+
+func _on_Button5_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button6_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button8_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button7_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button9_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button10_pressed():
+	pass # Replace with function body.

@@ -177,43 +177,34 @@ __meta__ = {
 position = Vector2( 381.623, 172.507 )
 
 [node name="Apartments" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 448.846, 32.0552 )
-
-[node name="Apartments2" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 383.015, 32.0552 )
+position = Vector2( 443.727, 16.0312 )
 
 [node name="Apartments3" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 330.825, 30.869 )
+position = Vector2( 334.262, 15.1184 )
 
 [node name="Apartments4" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 279.228, 31.4621 )
+position = Vector2( 267.121, 15.2911 )
 
 [node name="Apartments5" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 181.372, 21.3799 )
+position = Vector2( 168.759, -7.21058 )
 
 [node name="Factory" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 165.359, 80.0937 )
+position = Vector2( 156.53, 55.7077 )
 
 [node name="Factory2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 165.952, 139.994 )
+position = Vector2( 158.384, 137.051 )
 
 [node name="Factory3" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 278.635, 115.085 )
+position = Vector2( 291.181, 111.392 )
 
 [node name="Factory4" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 362.258, 112.119 )
+position = Vector2( 429.109, 100.553 )
 
 [node name="Narrow Building" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 533.655, 170.833 )
-
-[node name="Narrow Building2" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 531.282, 110.933 )
+position = Vector2( 530.292, 125.845 )
 
 [node name="Narrow Building3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 528.91, 48.068 )
-
-[node name="Factory5" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 440.543, 117.457 )
+position = Vector2( 528.069, 19.898 )
 
 [node name="TrainTower" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 594.741, 265.131 )
@@ -231,7 +222,7 @@ position = Vector2( 183.151, 303.533 )
 position = Vector2( 35.7309, 306.646 )
 
 [node name="Forest5" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 53.523, 152.448 )
+position = Vector2( 38.3869, 146.982 )
 
 [node name="Forest6" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 50.5576, 36.7997 )
@@ -246,7 +237,7 @@ position = Vector2( 629.893, 119.236 )
 position = Vector2( 449.927, 169.952 )
 
 [node name="TreeGroup" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 134.067, 202.266 )
+position = Vector2( 121.874, 194.698 )
 
 [node name="LargeCrate" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 233.697, 188.293 )
@@ -259,6 +250,9 @@ position = Vector2( 303.092, 192.184 )
 
 [node name="Forest9" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 598.461, 0.622559 )
+
+[node name="Narrow Building4" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 388.532, 13.0969 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 6 )]
 position = Vector2( 225.901, -0.783539 )
