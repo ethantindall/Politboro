@@ -9,28 +9,11 @@
 
 [node name="Kremlin inside" type="Node2D"]
 
-[node name="PortalR" parent="." instance=ExtResource( 3 )]
-position = Vector2( 323.301, 108.498 )
-next_scene_path = "res://Map Scenes/Indoors/OfficeC.tscn"
-player_spawn_location = Vector2( 42, 95 )
-
-[node name="PortalTR" parent="." instance=ExtResource( 3 )]
-position = Vector2( 202.485, -3.82344 )
-rotation = 1.5708
-next_scene_path = "res://Map Scenes/Indoors/OfficeB.tscn"
-player_spawn_location = Vector2( 167, 114 )
-
-[node name="PortalOutside" parent="." instance=ExtResource( 3 )]
-position = Vector2( 204.775, 182.428 )
-rotation = 1.5708
-next_scene_path = "res://Map Scenes/HQ.tscn"
-player_spawn_location = Vector2( 179, 135 )
-
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 320, 180 )
+region_rect = Rect2( 0, 0, 453.085, 228.34 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -46,8 +29,8 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
-limit_right = 320
-limit_bottom = 180
+limit_right = 410
+limit_bottom = 225
 smoothing_enabled = true
 __meta__ = {
 "_edit_lock_": true
@@ -60,7 +43,7 @@ position = Vector2( 143.965, 142.949 )
 position = Vector2( 262.421, 51.8651 )
 
 [node name="Soldier3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 7.57475, 102.362 )
+position = Vector2( 29.179, 117.507 )
 
 [node name="Judge" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 165.256, 89.0582 )
@@ -68,13 +51,31 @@ position = Vector2( 165.256, 89.0582 )
 [node name="General" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 143.837, 91.893 )
 
-[node name="Portal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 58.072, 68.2061 )
+[node name="PortalR" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 370.572, 88.2815 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/Indoors/OfficeC.tscn"
+player_spawn_location = Vector2( 42, 95 )
+
+[node name="PortalTR" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 203.077, 19.1827 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/Indoors/OfficeB.tscn"
+player_spawn_location = Vector2( 167, 114 )
+
+[node name="Portal" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 43.8015, 88.274 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/Indoors/OfficeA.tscn"
 player_spawn_location = Vector2( 167, 113 )
 
+[node name="PortalOutside" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 203.439, 214.946 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/HQ.tscn"
+player_spawn_location = Vector2( 179, 135 )
+
 [node name="Barrier" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barrier"]
-polygon = PoolVector2Array( 135.629, 135.524, 136.47, 180.092, 271.434, 180.933, 272.275, 136.365, 320.626, 135.524, 321.467, 63.2073, 271.434, 63.6277, 272.163, -0.224243, 134.357, 0.247692, 135.773, 71.5102, 0.326706, 71.9821, 0.326706, 137.109, -14.7753, 137.109, -12.8875, 65.375, 124.918, 63.4873, 127.75, -7.3033, 282.073, -5.88749, 284.905, 56.4082, 330.211, 55.4643, 329.046, 107.606, 328.323, 139.941, 280.185, 142.301, 279.714, 185.247, 128.222, 186.663, 128.222, 139.469, -15.7192, 144.189, -14.7753, 136.166 )
+polygon = PoolVector2Array( 135.395, 165.286, 135.82, 205.134, 192.211, 205.134, 191.858, 212.735, 215.723, 212.912, 216.076, 205.134, 272.291, 205.134, 272.63, 164.991, 400.107, 164.991, 399.549, 94.2724, 391.411, 93.9252, 391.711, 97.348, 383.576, 96.9511, 383.255, 93.5773, 359.729, 94.4116, 359.467, 97.348, 351.927, 97.6456, 351.928, 94.4972, 327.223, 94.7685, 323.949, 98.2409, 317.901, 94.4839, 296.544, 95.1514, 292.399, 97.9433, 288.535, 94.9597, 272.259, 94.5701, 271.516, 28.5762, 223.795, 28.2425, 223.628, 33.0813, 216.12, 32.9144, 215.786, 23.07, 191.926, 23.2369, 192.093, 33.0813, 184.417, 32.7476, 184.417, 28.4094, 135.862, 28.7431, 135.773, 71.5102, 135.732, 95.4896, 63.0975, 95.5661, 60.207, 97.6846, 56.1053, 95.5735, 31.7138, 96.0919, 28.1742, 97.6257, 24.5757, 96.0919, 16.0974, 96.157, 15.3467, 165.732, 11.7224, 164.73, 13.0572, 92.148, 128.855, 93.1491, 132.859, 21.7352, 276.855, 21.0677, 287.238, 86.1622, 404.543, 86.3724, 406.615, 171.832, 279.304, 171.499, 281.13, 215.917, 128.748, 214.857, 126.041, 170.854, 4.43318, 175.309, 15.7921, 165.286 )

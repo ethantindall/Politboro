@@ -279,7 +279,7 @@ scale = Vector2( 0.75, 0.75 )
 position = Vector2( 261.885, 184.532 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/CitySouth.tscn"
-player_spawn_location = Vector2( 440, 200 )
+player_spawn_location = Vector2( 700, 193 )
 
 [node name="TileMapSnow" type="TileMap" parent="."]
 z_index = -1

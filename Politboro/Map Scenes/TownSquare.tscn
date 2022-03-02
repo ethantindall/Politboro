@@ -390,15 +390,14 @@ scale = Vector2( 0.6, 0.8 )
 next_scene_path = "res://Map Scenes/TrainYard.tscn"
 player_spawn_location = Vector2( 268, 204 )
 
-[node name="PortalSouth" parent="." instance=ExtResource( 9 )]
-position = Vector2( 304.177, 327.44 )
-rotation = 1.5708
-scale = Vector2( 0.8, 0.8 )
-next_scene_path = "res://Map Scenes/CitySouth.tscn"
-player_spawn_location = Vector2( 222, 15 )
-
 [node name="PortalWest" parent="." instance=ExtResource( 9 )]
 position = Vector2( -3.59569, 176.244 )
 scale = Vector2( 0.8, 0.8 )
 next_scene_path = "res://Map Scenes/Farm.tscn"
 player_spawn_location = Vector2( 310, 93 )
+
+[node name="Portal" parent="." instance=ExtResource( 9 )]
+position = Vector2( 303.804, 324.916 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/CitySouth.tscn"
+player_spawn_location = Vector2( 223, 15 )
