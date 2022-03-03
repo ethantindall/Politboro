@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Images/Tiles/cemetary.png" type="Texture" id=1]
 [ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World Objects/Building Scenes/station.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=12]
-[ext_resource path="res://addons/folder_node/folder.gd" type="Script" id=13]
 [ext_resource path="res://Images/Tiles/background.png" type="Texture" id=14]
 [ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=15]
 [ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=16]
@@ -152,14 +151,11 @@ player_spawn_location = Vector2( 263, 162 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( -16.2738, -82.8833 )
-scale = Vector2( 2.96102, 3.1323 )
+scale = Vector2( 2.96102, 2.42892 )
 texture = ExtResource( 14 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 357.63, 202.239 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="RoadTileMap" type="TileMap" parent="."]
 position = Vector2( 0, 9 )
@@ -171,7 +167,7 @@ tile_data = PoolIntArray( -458739, 5, 0, -393186, 5, 0, -327667, 5, 0, -262114, 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 221.45, -52.9857 )
+position = Vector2( 225.142, -58.8165 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -209,100 +205,94 @@ position = Vector2( 930.401, 190.502 )
 position = Vector2( 370.738, 2.15122 )
 
 [node name="RedBlock" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 619.902, 49.1599 )
+position = Vector2( 630.22, 45.9851 )
 
 [node name="BlueBlock" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( 488.124, 116.59 )
 
-[node name="GreenBlock" parent="YSort" instance=ExtResource( 21 )]
-position = Vector2( 296.153, 135.56 )
-
-[node name="Trees" type="Node" parent="YSort"]
-script = ExtResource( 13 )
-
-[node name="Forest9" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest9" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 800, 72.5 )
 
-[node name="Forest10" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest10" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 933, 87 )
 
-[node name="Forest11" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest11" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 768, 310 )
 
-[node name="Forest12" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest12" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 896, 320 )
 
-[node name="Forest6" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest6" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 124.146, 23.9281 )
 
-[node name="Forest8" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest8" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 126.816, -85.5287 )
 
-[node name="Forest5" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest5" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 118.14, 142.061 )
 
-[node name="Forest7" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest7" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 620.997, 333.334 )
 
-[node name="Forest" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 481.465, 306.053 )
 
-[node name="Forest2" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest2" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 331.418, 306.053 )
 
-[node name="Forest3" parent="YSort/Trees" instance=ExtResource( 10 )]
+[node name="Forest3" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 183.151, 303.533 )
 
-[node name="Forest4" parent="YSort/Trees" instance=ExtResource( 10 )]
-position = Vector2( 35.7309, 306.646 )
-
-[node name="Municipal" type="Node" parent="YSort"]
-script = ExtResource( 13 )
-
-[node name="Trashcan" parent="YSort/Municipal" instance=ExtResource( 9 )]
+[node name="Trashcan" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 202.939, 189.999 )
 
-[node name="Streetlight" parent="YSort/Municipal" instance=ExtResource( 7 )]
+[node name="Streetlight" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 266.965, 56.2992 )
 
-[node name="Streetlight2" parent="YSort/Municipal" instance=ExtResource( 7 )]
+[node name="Streetlight2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 377.09, 187.113 )
 
-[node name="Streetlight3" parent="YSort/Municipal" instance=ExtResource( 7 )]
+[node name="Streetlight3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 478.537, 51.6272 )
 
-[node name="Streetlight4" parent="YSort/Municipal" instance=ExtResource( 7 )]
+[node name="Streetlight4" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 520.585, 52.2946 )
 
-[node name="Streetlight5" parent="YSort/Municipal" instance=ExtResource( 7 )]
+[node name="Streetlight5" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 588.662, 63.6408 )
 
-[node name="Streetlight6" parent="YSort/Municipal" instance=ExtResource( 7 )]
+[node name="Streetlight6" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 571.309, 159.082 )
 
-[node name="Streetlight7" parent="YSort/Municipal" instance=ExtResource( 7 )]
+[node name="Streetlight7" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 614.691, 161.084 )
 
-[node name="Trashcan2" parent="YSort/Municipal" instance=ExtResource( 9 )]
+[node name="Trashcan2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 195.391, 191.588 )
 
-[node name="Trashcan3" parent="YSort/Municipal" instance=ExtResource( 9 )]
+[node name="Trashcan3" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 195.126, 184.569 )
+
+[node name="Forest4" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 35.7309, 306.646 )
+
+[node name="GreenBlock" parent="YSort" instance=ExtResource( 21 )]
+position = Vector2( 296.153, 130.004 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 6 )]
 position = Vector2( 224.345, -73.144 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
-player_spawn_location = Vector2( 302, 296 )
+player_spawn_location = Vector2( 452, 344 )
 
 [node name="PortalHQ" parent="." instance=ExtResource( 6 )]
-position = Vector2( 496.244, -72.7767 )
+position = Vector2( 496.244, -72.3799 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/HQ.tscn"
-player_spawn_location = Vector2( 158, 164 )
+player_spawn_location = Vector2( 175, 305 )
 
 [node name="Barricade" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barricade"]
 position = Vector2( -22, -70.3337 )
-polygon = PoolVector2Array( 15.2681, 353.063, 11.7619, 1.3799, 982.902, 6.32782, 986.962, 356.02, 4.05462, 353.486, 3.09434, 358.869, 995.371, 363.588, 992.039, 0.124359, -3.24352, -7.88828, 2.64276, 352.856 )
+polygon = PoolVector2Array( 15.2681, 353.063, 11.7619, 1.3799, 982.902, 6.32782, 986.962, 356.02, 4.05462, 353.486, 3.09434, 358.869, 995.371, 363.588, 992.039, 0.124359, 518.8, -3.68552, -3.24352, -7.88828, 2.64276, 352.856 )

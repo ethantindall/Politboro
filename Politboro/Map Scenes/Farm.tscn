@@ -86,6 +86,8 @@
 [node name="Town Square" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
+position = Vector2( 53.8364, 68.8651 )
+scale = Vector2( 0.416314, 0.470269 )
 texture = ExtResource( 8 )
 centered = false
 offset = Vector2( -200, -200 )
@@ -161,4 +163,4 @@ polygon = PoolVector2Array( -18.5, 208, 321.5, 208.5, 319.725, -17.5558, -9.6876
 [node name="PortalTown" parent="." instance=ExtResource( 9 )]
 position = Vector2( 327.625, 96 )
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
-player_spawn_location = Vector2( 13, 175 )
+player_spawn_location = Vector2( 13, 190 )
