@@ -201,7 +201,7 @@ position = Vector2( 385, 13.5 )
 [node name="PortalTown" parent="." instance=ExtResource( 1 )]
 position = Vector2( -5.3919, 209.027 )
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
-player_spawn_location = Vector2( 654, 172 )
+player_spawn_location = Vector2( 685, 186 )
 
 [node name="PortalInside" parent="." instance=ExtResource( 1 )]
 position = Vector2( 216.588, 111.787 )
@@ -214,7 +214,7 @@ player_spawn_location = Vector2( 203, 165 )
 position = Vector2( 175.878, 324.373 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/CitySouth.tscn"
-player_spawn_location = Vector2( 497, -57 )
+player_spawn_location = Vector2( 753, -55 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

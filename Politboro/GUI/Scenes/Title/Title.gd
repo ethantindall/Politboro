@@ -14,7 +14,7 @@ func _input(event):
    # Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
 		print("Mouse Click/Unclick at: ", event.position)
-		ScreenChanger.change_scene("res://Map Scenes/TownSquare.tscn")
+		#ScreenChanger.change_scene("res://Map Scenes/TownSquare.tscn")
 		Global.game_running = true
 		print(Global.game_running)
 	

@@ -1,0 +1,279 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Images/Tiles/farm.png" type="Texture" id=1]
+[ext_resource path="res://Images/Tiles/river.png" type="Texture" id=2]
+[ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World Objects/Building Scenes/Plant.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/Tiles/cobblestone.png" type="Texture" id=5]
+[ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Tiles/background.png" type="Texture" id=8]
+[ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Images/Tiles/Railroad/traintrackH.png" type="Texture" id=10]
+[ext_resource path="res://Images/Tiles/Railroad/traintrackV.png" type="Texture" id=11]
+[ext_resource path="res://World Objects/Accessories/TunnelMouth.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Images/Tiles/cliffs.png" type="Texture" id=13]
+
+[sub_resource type="TileSet" id=1]
+0/name = "road2.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -16, 0, 16, 16 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 17, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "road2.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 1
+1/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 1, 1 ), 1 ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "road2.png 2"
+2/texture = ExtResource( 7 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "farm.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "river.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "cobblestone.png 5"
+5/texture = ExtResource( 5 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "traintrackV.png 6"
+6/texture = ExtResource( 11 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "traintrackH.png 7"
+7/texture = ExtResource( 10 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "cliffs.png 8"
+8/texture = ExtResource( 13 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 64, 128, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "cliffs.png 9"
+9/texture = ExtResource( 13 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 128, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+
+[node name="Town Square" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 53.8364, 68.8651 )
+scale = Vector2( 0.416314, 0.470269 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( -200, -200 )
+region_enabled = true
+region_rect = Rect2( -320.591, -112, 1392.59, 1236.08 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RoadTileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -196607, 4, 0, -131072, 4, 0, -131071, 4, 0, -131069, 4, 0, -65536, 4, 0, -65535, 4, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 65536, 4, 0, 65538, 4, 0, 131072, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 196609, 4, 0, 196610, 4, 0, 196612, 4, 0, 262146, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327684, 4, 0, 327707, 5, 0, 327709, 5, 0, 327711, 5, 0, 393216, 4, 0, 393217, 4, 0, 393218, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458756, 4, 0, 458779, 5, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 589824, 4, 0, 589825, 4, 0, 589827, 4, 0, 589851, 5, 0, 655360, 4, 0, 655361, 4, 0, 720896, 4, 0, 720899, 4, 0, 720918, 5, 0, 720919, 5, 0, 720923, 5, 0, 786432, 4, 0, 786433, 4, 0, 851968, 4, 0, 851969, 4, 0, 851971, 4, 0, 851972, 4, 0, 851991, 5, 0, 851993, 5, 0, 851995, 5, 0, 917506, 4, 0, 917507, 4, 0, 917509, 4, 0, 983042, 4, 0, 983046, 4, 0, 1048579, 4, 0, 1048581, 4, 0, 1114119, 4, 0, 1179651, 4, 0, 1179653, 4, 0, 1245190, 4, 0, 1245191, 4, 0, 1310724, 4, 0, 1310727, 4, 0, 1310728, 4, 0, 1376260, 4, 0, 1376262, 4, 0, 1376263, 4, 0, 1376264, 4, 0, 1441820, 8, 0, 1507332, 4, 0, 1507333, 4, 0, 1507335, 7, 0, 1507337, 4, 0, 1703933, 6, 0, 1703935, 6, 0, 1638401, 6, 0, 1638403, 6, 0, 1638405, 4, 0, 1638407, 7, 0, 1638409, 4, 0, 1638411, 6, 0, 1638413, 6, 0, 1638415, 6, 0, 1638417, 6, 0, 1638419, 6, 0, 1638421, 6, 0, 1638423, 6, 0, 1638425, 6, 0, 1638427, 6, 0, 1638429, 6, 0, 1638431, 6, 0, 1638433, 6, 0, 1638435, 6, 0, 1703945, 4, 0, 1769476, 4, 0, 1769477, 4, 0, 1769479, 7, 0, 1769499, 9, 0, 1835017, 4, 0, 1900548, 4, 0, 1900549, 4, 0, 1900550, 4, 0, 1900551, 4, 0, 1900553, 4, 0, 1966085, 4, 0, 1966086, 4, 0, 1966087, 4, 0, 1966089, 4, 0, 2031621, 4, 0, 2031623, 4, 0, 2031624, 4, 0, 2031625, 4, 0, 2031626, 4, 0, 2097157, 4, 0, 2097158, 4, 0, 2097160, 4, 0, 2097162, 4, 0, 2162694, 4, 0, 2162696, 4, 0, 2162697, 4, 0, 2162698, 4, 0, 2162699, 4, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 472.477, 411.561 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+limit_left = 0
+limit_top = 0
+limit_right = 500
+limit_bottom = 550
+limit_smoothed = true
+smoothing_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PowerPlant" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 247.665, 103.72 )
+
+[node name="Forest" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 213.754, 256.917 )
+
+[node name="Forest2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 357.561, 328.134 )
+
+[node name="Forest3" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 511.556, 291.595 )
+
+[node name="Forest4" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 505.57, 5.99615 )
+
+[node name="Forest5" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 364.772, 3.00864 )
+
+[node name="Forest6" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 234.678, -12.4094 )
+
+[node name="Forest7" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 551.819, 180.613 )
+
+[node name="Forest10" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 553.944, 524.856 )
+
+[node name="Forest11" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -25.246, 499.039 )
+
+[node name="Forest12" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -43.206, 329.548 )
+
+[node name="Forest8" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 419.829, 519.534 )
+
+[node name="Forest9" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 287.921, 501.284 )
+
+[node name="TunnelMouth" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 497.648, 416.667 )
+
+[node name="SceneBarrier" type="StaticBody2D" parent="."]
+
+[node name="World" type="CollisionPolygon2D" parent="SceneBarrier"]
+position = Vector2( 0.529724, 0 )
+polygon = PoolVector2Array( -7.34116, 532.893, 506.497, 533.212, 500.856, -22.301, -9.68761, -18.0277, -7.32793, -26.5226, 515.143, -30.238, 522.389, 541.687, -17.1411, 549.82, -24.1562, -22.3151, -7.40168, -26.4763, -9.66861, -18.0404, -18.1227, -18.2344 )
+
+[node name="River" type="CollisionPolygon2D" parent="SceneBarrier"]
+visible = false
+polygon = PoolVector2Array( 78.9945, -32.124, 80.1182, 48.41, 94.7267, 47.6608, 95.1013, 144.302, 80.4928, 143.552, 80.5576, 208.06, 96.114, 208.06, 96.8211, 224.677, 110.963, 223.616, 111.317, 239.526, 128.287, 239.172, 144.904, 273.467, 144.551, 319.783, 160.461, 320.843, 159.754, 366.805, 174.956, 367.512, 175.663, 496.206, 190.866, 496.206, 203.594, 502.57, 208.19, 554.896, 95.7604, 555.956, 64.2942, 496.206, 62.6184, 321.554, 0.214607, 227.782, -1.78766, 33.8962, 0.882027, -31.8447 )
+
+[node name="PortalTown" parent="." instance=ExtResource( 9 )]
+position = Vector2( 509.621, 96.49 )
+next_scene_path = "res://Map Scenes/Farm.tscn"
+player_spawn_location = Vector2( 13, 125 )
+
+[node name="Portal" parent="." instance=ExtResource( 9 )]
+position = Vector2( 493.387, 414.959 )
+next_scene_path = "res://Map Scenes/Tunnel.tscn"
+player_spawn_location = Vector2( 33, 30 )

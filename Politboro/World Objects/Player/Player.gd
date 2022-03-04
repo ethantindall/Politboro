@@ -23,6 +23,7 @@ func _ready():
 	self.global_position = Global.player_initial_map_position
 	$"/root/Global".register_player(self)
 	emit_signal("player_stats_changed", self)
+	
 
 func _process(delta):
 	# Regenerates health

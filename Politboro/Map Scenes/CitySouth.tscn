@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Images/Tiles/cemetary.png" type="Texture" id=1]
 [ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=2]
@@ -6,12 +6,13 @@
 [ext_resource path="res://World Objects/Building Scenes/YellowBlock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World Objects/Building Scenes/TrainTower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=6]
-[ext_resource path="res://World Objects/Accessories/Streetlight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World Objects/Accessories/Flowers.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World Objects/Accessories/CoalPile.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World Objects/Accessories/Trashcan.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World Objects/Building Scenes/station.tscn" type="PackedScene" id=11]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World Objects/Accessories/TunnelMouth.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Images/Tiles/background.png" type="Texture" id=14]
 [ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=15]
 [ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=16]
@@ -20,6 +21,7 @@
 [ext_resource path="res://World Objects/Building Scenes/BlueBlock.tscn" type="PackedScene" id=19]
 [ext_resource path="res://World Objects/Building Scenes/RedBlock.tscn" type="PackedScene" id=20]
 [ext_resource path="res://World Objects/Building Scenes/GreenBlock.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Images/Tiles/cliffs.png" type="Texture" id=22]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -138,11 +140,39 @@
 6/shape_one_way_margin = 0.0
 6/shapes = [  ]
 6/z_index = 0
+7/name = "cliffs.png 7"
+7/texture = ExtResource( 22 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 64, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "cliffs.png 8"
+8/texture = ExtResource( 22 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 64, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
 
-[node name="Kremlin" type="Node2D"]
+[node name="CitySouth" type="Node2D"]
 
 [node name="PortalGulag" parent="." instance=ExtResource( 6 )]
-position = Vector2( 777.153, 198.524 )
+position = Vector2( 805.185, 201.194 )
 rotation = 1.5708
 scale = Vector2( 0.5, 0.5 )
 z_index = 1
@@ -156,18 +186,21 @@ texture = ExtResource( 14 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 357.63, 202.239 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="RoadTileMap" type="TileMap" parent="."]
 position = Vector2( 0, 9 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -458739, 5, 0, -393186, 5, 0, -327667, 5, 0, -262114, 5, 0, -196595, 5, 0, -131042, 5, 0, -65523, 5, 0, 30, 5, 0, 65549, 5, 0, 131102, 5, 0, 196621, 5, 0, 196626, 5, 0, 196642, 5, 0, 262162, 5, 0, 262174, 5, 0, 327693, 5, 0, 327695, 5, 0, 327696, 5, 0, 327698, 5, 0, 327700, 5, 0, 327702, 5, 0, 327704, 5, 0, 327706, 5, 0, 327708, 5, 0, 327710, 5, 0, 327712, 5, 0, 327714, 5, 0, 327716, 5, 0, 458775, 5, 0, 458788, 5, 0, 589847, 5, 0, 589860, 5, 0, 655386, 5, 0, 720910, 5, 0, 720911, 5, 0, 720913, 5, 0, 720915, 5, 0, 720917, 5, 0, 720919, 5, 0, 720920, 5, 0, 720922, 5, 0, 720924, 5, 0, 720926, 5, 0, 720928, 5, 0, 720930, 5, 0, 720932, 5, 0, 720934, 5, 0, 720936, 5, 0, 720938, 5, 0, 720940, 5, 0, 720942, 5, 0, 917503, 6, 0, 851969, 6, 0, 851971, 6, 0, 851973, 6, 0, 851975, 6, 0, 851977, 6, 0, 851979, 6, 0, 851981, 6, 0, 851983, 6, 0, 851985, 6, 0, 851987, 6, 0, 851989, 6, 0, 851991, 6, 0, 851993, 6, 0, 851995, 6, 0, 851997, 6, 0, 851999, 6, 0, 852001, 6, 0, 852003, 6, 0, 852005, 6, 0, 852007, 6, 0, 852009, 6, 0, 852011, 6, 0, 852013, 6, 0, 852015, 6, 0, 852017, 6, 0, 852019, 6, 0, 852021, 6, 0, 852023, 6, 0, 852025, 6, 0, 852027, 6, 0, 852029, 6, 0, 852030, 6, 0, 852032, 6, 0 )
+tile_data = PoolIntArray( -458706, 5, 0, -393203, 5, 0, -327634, 5, 0, -262131, 5, 0, -196562, 5, 0, -131059, 5, 0, -65514, 5, 0, -65490, 5, 0, 13, 5, 0, 65554, 5, 0, 65570, 5, 0, 65582, 5, 0, 131085, 5, 0, 196621, 5, 0, 196622, 5, 0, 196624, 5, 0, 196626, 5, 0, 196628, 5, 0, 196630, 5, 0, 196632, 5, 0, 196634, 5, 0, 196636, 5, 0, 196638, 5, 0, 196640, 5, 0, 196642, 5, 0, 196644, 5, 0, 196645, 5, 0, 196654, 5, 0, 327704, 5, 0, 327708, 5, 0, 327712, 5, 0, 327717, 5, 0, 327726, 5, 0, 458776, 5, 0, 458789, 5, 0, 458798, 5, 0, 589848, 5, 0, 589861, 5, 0, 589870, 5, 0, 720895, 8, 0, 720909, 5, 0, 720910, 5, 0, 720912, 5, 0, 720914, 5, 0, 720916, 5, 0, 720918, 5, 0, 720920, 5, 0, 720922, 5, 0, 720924, 5, 0, 720926, 5, 0, 720927, 5, 0, 720929, 5, 0, 720931, 5, 0, 720933, 5, 0, 720934, 5, 0, 720935, 5, 0, 720936, 5, 0, 720938, 5, 0, 720940, 5, 0, 720942, 5, 0, 720944, 5, 0, 720946, 5, 0, 917503, 6, 0, 851969, 6, 0, 851971, 6, 0, 851973, 6, 0, 851975, 6, 0, 851977, 6, 0, 851979, 6, 0, 851981, 6, 0, 851983, 6, 0, 851985, 6, 0, 851987, 6, 0, 851989, 6, 0, 851991, 6, 0, 851993, 6, 0, 851995, 6, 0, 851997, 6, 0, 851999, 6, 0, 852001, 6, 0, 852003, 6, 0, 852005, 6, 0, 852007, 6, 0, 852009, 6, 0, 852011, 6, 0, 852013, 6, 0, 852015, 6, 0, 852017, 6, 0, 852019, 6, 0, 852021, 6, 0, 852023, 6, 0, 852025, 6, 0, 852027, 6, 0, 852029, 6, 0, 852030, 6, 0, 852032, 6, 0, 983038, 7, 0 )
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 225.142, -58.8165 )
+position = Vector2( 12.5113, 234.063 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -184,16 +217,16 @@ __meta__ = {
 }
 
 [node name="TrainStation" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 815.49, 182.37 )
+position = Vector2( 843.522, 183.037 )
 
 [node name="TrainTower" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 594.741, 265.131 )
 
 [node name="CoalPile" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 898.485, 164.56 )
+position = Vector2( 919.842, 262.003 )
 
 [node name="LargeCrate" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 861.006, 186.611 )
+position = Vector2( 938.427, 166.588 )
 
 [node name="GroupSmallCrate" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 886, 192.312 )
@@ -202,16 +235,16 @@ position = Vector2( 886, 192.312 )
 position = Vector2( 930.401, 190.502 )
 
 [node name="YellowBlock" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 370.738, 2.15122 )
+position = Vector2( 371.405, -9.86231 )
 
 [node name="RedBlock" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 630.22, 45.9851 )
+position = Vector2( 632.222, 32.6367 )
 
 [node name="BlueBlock" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 488.124, 116.59 )
+position = Vector2( 502.807, 127.269 )
 
 [node name="Forest9" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 800, 72.5 )
+position = Vector2( 894.106, -25.6105 )
 
 [node name="Forest10" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 933, 87 )
@@ -246,27 +279,6 @@ position = Vector2( 183.151, 303.533 )
 [node name="Trashcan" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 202.939, 189.999 )
 
-[node name="Streetlight" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 266.965, 56.2992 )
-
-[node name="Streetlight2" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 377.09, 187.113 )
-
-[node name="Streetlight3" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 478.537, 51.6272 )
-
-[node name="Streetlight4" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 520.585, 52.2946 )
-
-[node name="Streetlight5" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 588.662, 63.6408 )
-
-[node name="Streetlight6" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 571.309, 159.082 )
-
-[node name="Streetlight7" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 614.691, 161.084 )
-
 [node name="Trashcan2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 195.391, 191.588 )
 
@@ -274,10 +286,26 @@ position = Vector2( 195.391, 191.588 )
 position = Vector2( 195.126, 184.569 )
 
 [node name="Forest4" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 35.7309, 306.646 )
+position = Vector2( 42.3455, 365.547 )
 
 [node name="GreenBlock" parent="YSort" instance=ExtResource( 21 )]
-position = Vector2( 296.153, 130.004 )
+position = Vector2( 301.492, 127.334 )
+
+[node name="CoalPile2" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 872.838, 264.725 )
+
+[node name="CoalPile3" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 814.106, 258.718 )
+
+[node name="Flowers" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 501.095, 26.8026 )
+
+[node name="Flowers2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 679.296, 155.614 )
+
+[node name="TunnelMouth" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( -5.63895, 233.034 )
+rotation = 3.14159
 
 [node name="PortalTown" parent="." instance=ExtResource( 6 )]
 position = Vector2( 224.345, -73.144 )
@@ -286,13 +314,21 @@ next_scene_path = "res://Map Scenes/TownSquare.tscn"
 player_spawn_location = Vector2( 452, 344 )
 
 [node name="PortalHQ" parent="." instance=ExtResource( 6 )]
-position = Vector2( 496.244, -72.3799 )
+position = Vector2( 752.533, -70.3776 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/HQ.tscn"
 player_spawn_location = Vector2( 175, 305 )
 
 [node name="Barricade" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Barricade"]
 position = Vector2( -22, -70.3337 )
 polygon = PoolVector2Array( 15.2681, 353.063, 11.7619, 1.3799, 982.902, 6.32782, 986.962, 356.02, 4.05462, 353.486, 3.09434, 358.869, 995.371, 363.588, 992.039, 0.124359, 518.8, -3.68552, -3.24352, -7.88828, 2.64276, 352.856 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( -4.90812, 233.326 )
+next_scene_path = "res://Map Scenes/Tunnel.tscn"
+player_spawn_location = Vector2( 295, 144 )

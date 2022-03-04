@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Images/tunnelexit.png" type="Texture" id=1]
+
+[node name="TunnelMouth" type="StaticBody2D"]
+position = Vector2( 8, -1 )
+scale = Vector2( 2, 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -6.66666, 0 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -11.6719, 15.6156, -3.72595, 8.55252, -1.96018, 3.36556, -1.51873, -3.03536, -3.63766, -7.33943, -5.40343, -12.0849, -12.4665, -13.9611, -12.6431, -15.8372, 8.89932, -15.9476, 9.16418, 15.8363 )

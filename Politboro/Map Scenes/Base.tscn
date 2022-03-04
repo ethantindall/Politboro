@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World Objects/Accessories/SandbagLong.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World Objects/Building Scenes/TrainTower.tscn" type="PackedScene" id=15]
+[ext_resource path="res://World Objects/Accessories/TreeGroup.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -316,7 +317,7 @@ __meta__ = {
 position = Vector2( 840.348, 272.866 )
 
 [node name="Mig2" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 848.537, 199.79 )
+position = Vector2( 852.699, 192.06 )
 
 [node name="SandbagLong" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 995.318, 95.8469 )
@@ -363,12 +364,54 @@ position = Vector2( 588.08, 82.7761 )
 [node name="TrainTower" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 726.893, 248.397 )
 
+[node name="Forest3" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 956.789, 428.117 )
+
+[node name="Forest4" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 809.633, 431.481 )
+
+[node name="Forest5" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 670.044, 427.276 )
+
+[node name="Forest6" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 521.205, 433.162 )
+
+[node name="Forest7" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 389.184, 369.254 )
+
+[node name="Forest8" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 393.389, 260.779 )
+
+[node name="Forest9" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 399.275, 152.303 )
+
+[node name="Forest10" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 401.798, 40.4637 )
+
+[node name="Forest11" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 1085.45, 32.8956 )
+
+[node name="Forest12" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 955.948, -31.8534 )
+
+[node name="TreeGroup" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 844.109, 11.8732 )
+
+[node name="TreeGroup2" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 511.955, 12.7141 )
+
+[node name="TreeGroup3" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 612.863, 23.6458 )
+
+[node name="TreeGroup4" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 714.611, 16.0777 )
+
 [node name="PortalTrain" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1139.17, 241.231 )
 next_scene_path = "res://Map Scenes/TrainYard.tscn"
-player_spawn_location = Vector2( -95, -97 )
+player_spawn_location = Vector2( 1, -65 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="SceneBarrier" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SceneBarrier"]
 polygon = PoolVector2Array( 505.573, 350.127, 505.326, 49.3484, 942.296, 49.5669, 942.169, 99.2142, 939.649, 99.3717, 939.492, 113.703, 942.255, 113.672, 946.502, 118.71, 954.702, 118.533, 950.868, 113.578, 953.43, 113.546, 953.631, 110.267, 1044.36, 109.375, 953.831, 101.42, 953.638, 46.2177, 956.516, 46.6766, 956.436, 35.5631, 942.616, 35.3662, 942.616, 39.8547, 505.582, 40.0039, 505.582, 32.5231, 491.723, 32.6806, 491.408, 46.461, 494.4, 46.3035, 494.35, 353.179, 491.433, 353.444, 491.345, 367.763, 505.31, 367.233, 505.402, 361.223, 942.669, 361.555, 942.457, 364.344, 956.139, 364.511, 956.139, 353.832, 953.469, 353.749, 953.304, 315.374, 1137.88, 311.594, 1138.2, 304.035, 1140.4, 293.956, 1145.5, 196.056, 1133.91, 194.867, 1137.13, 201.704, 1135.36, 295.53, 1131.9, 303.72, 953.407, 303.404, 953.227, 158.412, 950.69, 158.445, 954.643, 153.162, 946.561, 152.985, 941.96, 158.294, 939.6, 158.589, 939.364, 172.452, 942.491, 172.452, 942.373, 350.662 )

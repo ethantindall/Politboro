@@ -6,6 +6,7 @@
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Images/Bldgs/OfficeB.png" type="Texture" id=5]
 
+
 [node name="OfficeA" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
