@@ -77,13 +77,32 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
 				"New Folder 1646765478": {
 					"files": [
 						"timeline-1646765448.json",
 						"timeline-1646765483.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": true
+					}
+				},
+				"New Folder 1647014913": {
+					"files": [
+						"timeline-1647014955.json",
+						"timeline-1647024233.json",
+						"timeline-1647024255.json",
+						"timeline-1647024315.json",
+						"timeline-1647024320.json",
+						"timeline-1647024325.json",
+						"timeline-1647024328.json",
+						"timeline-1647024331.json"
 					],
 					"folders": {
 

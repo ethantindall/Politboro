@@ -13,6 +13,9 @@ radius = 2.15203
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 itemName = "Pistol"
+imagePath = "res://Images/InvItems/pistol.png"
+description = "Don't get caught with this."
+pickupTimeline = "Pistol-1"
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.1, 0.1 )

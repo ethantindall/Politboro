@@ -13,6 +13,9 @@ radius = 2.04897
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 itemName = "Cash"
+imagePath = "res://Images/InvItems/cash.png"
+description = "Money, money, money by the pound."
+pickupTimeline = "Cash-1"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -0.666667 )
@@ -23,13 +26,14 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.00780392, 0.132663 )
+position = Vector2( -0.00262451, -0.637911 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
+position = Vector2( 0.0208569, -0.552707 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]

@@ -427,30 +427,34 @@ position = Vector2( 385.819, 14.841 )
 position = Vector2( 405.38, 220.521 )
 
 [node name="BloodyKnife" parent="YSort" instance=ExtResource( 29 )]
-position = Vector2( 531.922, 142.419 )
+position = Vector2( 542.25, 143 )
 
 [node name="Cash" parent="YSort" instance=ExtResource( 26 )]
-position = Vector2( 515.619, 143.175 )
+position = Vector2( 524.25, 135 )
 
 [node name="CleanKnife" parent="YSort" instance=ExtResource( 27 )]
-position = Vector2( 552.329, 146.856 )
-
-[node name="Folder" parent="YSort" instance=ExtResource( 30 )]
-position = Vector2( 532.058, 124.659 )
-
-[node name="LostDocument" parent="YSort" instance=ExtResource( 31 )]
-position = Vector2( 515.199, 173.021 )
+position = Vector2( 537.25, 162.5 )
 
 [node name="Filmreel" parent="YSort" instance=ExtResource( 33 )]
-position = Vector2( 539.963, 156.362 )
-scale = Vector2( 1.3, 1.3 )
+position = Vector2( 549, 152.5 )
+
+[node name="Folder" parent="YSort" instance=ExtResource( 30 )]
+position = Vector2( 546, 171.5 )
 
 [node name="IncriminatingPhoto" parent="YSort" instance=ExtResource( 32 )]
-position = Vector2( 518.403, 133.689 )
-scale = Vector2( 1.3, 1.3 )
+position = Vector2( 503.5, 157.25 )
+
+[node name="LostDocument" parent="YSort" instance=ExtResource( 31 )]
+position = Vector2( 533, 120.5 )
 
 [node name="Pistol" parent="YSort" instance=ExtResource( 28 )]
-position = Vector2( 547.102, 160.665 )
+position = Vector2( 499.75, 200 )
+
+[node name="IncriminatingPhoto2" parent="YSort" instance=ExtResource( 32 )]
+position = Vector2( 520.733, 181.432 )
+
+[node name="IncriminatingPhoto3" parent="YSort" instance=ExtResource( 32 )]
+position = Vector2( 507.369, 181.877 )
 
 [node name="PortalHQ" parent="." instance=ExtResource( 9 )]
 position = Vector2( 701.224, 189.904 )
