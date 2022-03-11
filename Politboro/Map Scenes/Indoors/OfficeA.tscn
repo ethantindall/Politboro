@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://World Objects/Characters/OfficialA.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World Objects/Characters/Ministers/Vlad.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Images/Bldgs/OfficeB.png" type="Texture" id=5]
-
 
 [node name="OfficeA" type="Node2D"]
 
@@ -38,15 +36,6 @@ smoothing_enabled = true
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Soldier" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 94.8835, 89.6201 )
-
-[node name="Soldier2" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 132.166, 70.7426 )
-
-[node name="Soldier3" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 140.661, 108.025 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 168.229, 131.901 )

@@ -24,14 +24,14 @@ func processJSON(rj):
 		print("Error String: ", rj.error_string)
 
 #Level2
-func populateData(selectedData, sprite):
-	get_node("Folder/BioControl/VBoxContainer/NPCname").text = str(selectedData.Name)
-	get_node("Folder/BioControl/VBoxContainer/NPCbio").text = str(selectedData.Bio)
-	get_node("Folder/BioControl/VBoxContainer/NPCtitle").text = str(selectedData.Title)
+func populateData(sd, sprite):
+	get_node("Folder/BioControl/VBoxContainer/NPCname").text = str(sd.Name)
+	get_node("Folder/BioControl/VBoxContainer/NPCbio").text = str(sd.Bio)
+	get_node("Folder/BioControl/VBoxContainer/NPCtitle").text = str(sd.Title)
 	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(sprite)
-	get_node("Folder/BioControl/VBoxContainer/NPCfear").text = "Fear of You: " + str(selectedData.Fear) + "%"
-	get_node("Folder/BioControl/VBoxContainer/NPChatred").text ="Hatred of You: " + str(selectedData.Hatred) + "%"
-	get_node("Folder/BioControl/VBoxContainer/NPCloyalty").text = "Loyalty to You: " + str(selectedData.Loyalty) + "%"
+	get_node("Folder/BioControl/VBoxContainer/NPCfear").text = "Fear of You: " + str(sd.Fear) + "%"
+	get_node("Folder/BioControl/VBoxContainer/NPChatred").text ="Hatred of You: " + str(sd.Hatred) + "%"
+	get_node("Folder/BioControl/VBoxContainer/NPCloyalty").text = "Loyalty to You: " + str(sd.Loyalty) + "%"
 	
 func _on_VladButton_pressed():
 	populateData(processJSON(result_json).NPCs.Ministers.A, vladSprite)

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Images/Sprites/General.png" type="Texture" id=1]
 [ext_resource path="res://World Objects/Characters/Ministers/General.gd" type="Script" id=2]
-[ext_resource path="res://Images/questionmark.png" type="Texture" id=3]
+[ext_resource path="res://World Objects/Characters/questionmark.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -173,18 +173,14 @@ anims/IdleU = SubResource( 5 )
 "anims/Move Right" = SubResource( 8 )
 "anims/Move Up" = SubResource( 9 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="EventArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
 position = Vector2( -0.1875, 4.375 )
 shape = SubResource( 10 )
 
-[node name="questionmark" type="Sprite" parent="."]
-position = Vector2( -0.396845, -10.8142 )
-scale = Vector2( 0.0196654, 0.0196654 )
-texture = ExtResource( 3 )
+[node name="questionmark" parent="." instance=ExtResource( 3 )]
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="area_exited" from="EventArea" to="." method="_on_Area2D_area_exited"]
+[connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
+[connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

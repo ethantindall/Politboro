@@ -155,9 +155,9 @@ __meta__ = {
 }
 
 [node name="Inventory" parent="CanvasLayer/Control" instance=ExtResource( 6 )]
-visible = false
 
 [node name="People" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
+visible = false
 
 [node name="Quests" parent="CanvasLayer/Control" instance=ExtResource( 5 )]
 visible = false

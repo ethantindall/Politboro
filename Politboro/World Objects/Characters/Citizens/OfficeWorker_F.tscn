@@ -1,6 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Images/Sprites/employee_f.png" type="Texture" id=1]
+[ext_resource path="res://World Objects/Characters/questionmark.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World Objects/Characters/Citizens/OfficeWorker_F.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -138,8 +140,12 @@ tracks/0/keys = {
 "values": [ 9, 8, 7 ]
 }
 
+[sub_resource type="CircleShape2D" id=10]
+radius = 6.43379
+
 [node name="OfficeWorker_F" type="KinematicBody2D"]
 collision_mask = 3
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.307755, 0.915455 )
@@ -167,3 +173,14 @@ anims/IdleU = SubResource( 5 )
 "anims/Move Left" = SubResource( 7 )
 "anims/Move Right" = SubResource( 8 )
 "anims/Move Up" = SubResource( 9 )
+
+[node name="EventArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
+position = Vector2( -0.0662155, 2.38379 )
+shape = SubResource( 10 )
+
+[node name="questionmark" parent="." instance=ExtResource( 2 )]
+
+[connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
+[connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

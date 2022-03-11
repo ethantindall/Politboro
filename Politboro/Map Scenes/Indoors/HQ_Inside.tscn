@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Images/Bldgs/kremlin_interior.png" type="Texture" id=4]
+[ext_resource path="res://World Objects/Characters/SecretPolice.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World Objects/Characters/Ministers/General.tscn" type="PackedScene" id=6]
-[ext_resource path="res://World Objects/Characters/Ministers/Judge.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World Objects/Characters/Ministers/Justice.tscn" type="PackedScene" id=7]
 
-[node name="Kremlin inside" type="Node2D"]
+[node name="HQinside" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 4 )
@@ -36,20 +37,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Soldier" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 143.965, 142.949 )
-
-[node name="Soldier2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 262.421, 51.8651 )
-
-[node name="Soldier3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 29.179, 117.507 )
-
 [node name="Judge" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 165.256, 89.0582 )
 
 [node name="General" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 143.837, 91.893 )
+position = Vector2( 208.921, 168.882 )
 
 [node name="PortalR" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 370.572, 88.2815 )
@@ -74,6 +66,15 @@ position = Vector2( 203.439, 214.946 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/HQ.tscn"
 player_spawn_location = Vector2( 179, 135 )
+
+[node name="Soldier" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 219.542, 112.423 )
+
+[node name="Soldier2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 233.401, 149.88 )
+
+[node name="SecretPolice" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 170.098, 145.011 )
 
 [node name="Barrier" type="StaticBody2D" parent="."]
 

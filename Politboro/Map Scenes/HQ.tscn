@@ -168,12 +168,6 @@ position = Vector2( 121.993, 177.331 )
 [node name="Streetlight4" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 21.6561, 177.53 )
 
-[node name="Soldier" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 171.906, 120.051 )
-
-[node name="Soldier2" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 247.2, 119.846 )
-
 [node name="SecretPolice" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 81.8815, 183.157 )
 
@@ -191,6 +185,12 @@ position = Vector2( 49.3586, 90.2455 )
 
 [node name="Flowers4" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 372.244, 95.8642 )
+
+[node name="Soldier" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 143.999, 177.023 )
+
+[node name="Soldier2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 239.861, 172.818 )
 
 [node name="Forest" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 24.5, 19 )

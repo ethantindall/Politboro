@@ -18,6 +18,7 @@ var health = 100
 var health_max = 100
 var health_regeneration = 1
 var rank = "Noob"
+var inventory = []
 
 func _ready():
 	self.global_position = Global.player_initial_map_position

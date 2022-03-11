@@ -1,23 +1,28 @@
 extends KinematicBody2D
 
+var active = false
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _process(delta):
+	$questionmark.visible = active
+	
 
+func _input(event):
+	if get_node_or_null('DialogNode') == null:
+		if event.is_action_pressed("ui_accept") and active:
+			get_tree().paused = true
+			var dialog = Dialogic.start('timeline-1')
+			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
+			dialog.connect('timeline_end', self, 'unpause')
+			add_child(dialog)
+			
+func unpause(timeline_name):
+	get_tree().paused = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	print("woah")
-
-
-func _on_Area2D_body_entered(body):
+func _on_EventArea_body_entered(body):
 	if body.name == "Player":
-		print("meow")
-		get_node("questionmark").visible = false
+		active = true
 
 
-func _on_Area2D_body_exited(body):
+func _on_EventArea_body_exited(body):
 	if body.name == "Player":
-		print("goodbye")
-		get_node("questionmark").visible = true
+		active = false

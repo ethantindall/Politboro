@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1646766157.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Busy day, eh, comrade?"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1646765448.json",
+		"name": "Citizen-1"
+	}
+}

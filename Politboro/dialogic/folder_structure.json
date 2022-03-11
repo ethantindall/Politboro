@@ -5,10 +5,30 @@
 	"folders": {
 		"Characters": {
 			"files": [
-
+				"character-1646696265.json",
+				"character-1646696583.json",
+				"character-1646752395.json",
+				"character-1646755669.json",
+				"character-1646765057.json",
+				"character-1646766157.json"
 			],
 			"folders": {
+				"New Folder 1646752599": {
+					"files": [
+						"character-1646676324.json",
+						"character-1646752690.json",
+						"character-1646752716.json",
+						"character-1646752733.json",
+						"character-1646752743.json"
+					],
+					"folders": {
 
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				}
 			},
 			"metadata": {
 				"color": null,
@@ -41,10 +61,38 @@
 		},
 		"Timelines": {
 			"files": [
-
+				"timeline-1646676936.json",
+				"timeline-1646695726.json",
+				"timeline-1646697319.json",
+				"timeline-1646752349.json",
+				"timeline-1646765070.json"
 			],
 			"folders": {
+				"New Folder 1646755565": {
+					"files": [
+						"timeline-1646755632.json"
+					],
+					"folders": {
 
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				},
+				"New Folder 1646765478": {
+					"files": [
+						"timeline-1646765448.json",
+						"timeline-1646765483.json"
+					],
+					"folders": {
+
+					},
+					"metadata": {
+						"color": null,
+						"folded": false
+					}
+				}
 			},
 			"metadata": {
 				"color": null,

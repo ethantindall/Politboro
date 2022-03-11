@@ -18,7 +18,7 @@ position = Vector2( 3.59393, 16.8302 )
 shape = SubResource( 1 )
 
 [node name="Trashcan" parent="." instance=ExtResource( 2 )]
-position = Vector2( 8, 24 )
+position = Vector2( 7.43877, 29.6123 )
 
 [node name="Trashcan2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 16, 24 )
+position = Vector2( 14.1292, 29.4252 )

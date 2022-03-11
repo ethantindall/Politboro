@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1646752395.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Seen any suspicious characters around here, comrade?"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1646752349.json",
+		"name": "Police-1"
+	}
+}
