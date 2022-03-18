@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Politburo"
-run/main_scene="res://Map Scenes/TownSquare.tscn"
+run/main_scene="res://GUI/Scenes/Title/MainMenu.tscn"
 config/icon="res://Images/GUI/icon.png"
 
 [autoload]
@@ -105,8 +105,8 @@ pause={
 
 [layer_names]
 
-2d_physics/layer_1="Player"
-2d_physics/layer_2="Portal"
+2d_physics/layer_5="Player"
+2d_physics/layer_6="Portal"
 
 [physics]
 

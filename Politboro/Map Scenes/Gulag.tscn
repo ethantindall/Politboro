@@ -3,7 +3,7 @@
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Images/Tiles/wallparts.png" type="Texture" id=3]
-[ext_resource path="res://World Objects/Building Scenes/Military/Bunker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World Objects/Buildings/Military/Bunker.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World Objects/Accessories/Tent.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World Objects/Characters/PrisonerA.tscn" type="PackedScene" id=7]

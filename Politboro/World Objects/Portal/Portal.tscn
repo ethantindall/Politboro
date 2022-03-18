@@ -6,7 +6,7 @@
 extents = Vector2( 8, 16 )
 
 [node name="Portal" type="Area2D"]
-collision_layer = 2
+collision_layer = 32
 script = ExtResource( 1 )
 next_scene_path = "res://Map Scenes/Base.tscn"
 

@@ -6,14 +6,6 @@ export(String) var description = ""
 export(String) var pickupTimeline = ""
 export var value = 0
 var active = false
-"""
-func _input(event):
-		if event.is_action_pressed("ui_accept") and active:
-			print("picked up")
-			get_parent().remove_child(self)
-			Global.player_inventory.append(imagePath)
-			print(Global.player_inventory)
-"""		
 			
 func _input(event):
 	if get_node_or_null('DialogNode') == null:

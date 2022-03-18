@@ -32,7 +32,7 @@ position = Vector2( 69.16, 40.0106 )
 position = Vector2( 82.1179, 40.0106 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 41.9297, 94.6059 )
+position = Vector2( 157.127, 115.186 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -59,15 +59,10 @@ position = Vector2( 72.9056, 63.6333 )
 [node name="FemaleEmployee" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 133.935, 88.7729 )
 
-[node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 26.3831, 97.4153 )
-next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
-player_spawn_location = Vector2( 310, 105 )
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( 39.3551, 82.6822, 38.7932, 38.8567, 187.875, 39.044, 188.062, 119.953, 38.7932, 119.953, 38.7932, 109.464, 29.8034, 109.277, 30.178, 123.886, 191.621, 122.949, 190.497, 35.1109, 35.2348, 35.6728, 28.6797, 82.6822 )
+polygon = PoolVector2Array( 38.8456, 118.707, 38.7932, 38.8567, 187.875, 39.044, 188.062, 119.953, 173.973, 120.294, 173.973, 128.827, 141.63, 128.628, 141.431, 120.691, 38.8456, 119.898, 29.718, 124.065, 132.304, 135.176, 174.965, 135.573, 191.621, 122.949, 190.497, 35.1109, 35.2348, 35.6728, 34.0834, 120.89 )
 
 [node name="Bookshelf" parent="." instance=ExtResource( 7 )]
 position = Vector2( 78.8016, 89.1918 )
@@ -80,3 +75,9 @@ position = Vector2( 139.108, 66.7172 )
 
 [node name="Bookshelf4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 140.045, 91.4393 )
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 158, 134 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
+player_spawn_location = Vector2( 108, 106 )

@@ -4,7 +4,7 @@ var player
 
 var game_running = false
 
-var player_initial_map_position = Vector2(407,192)
+var player_initial_map_position = Vector2(214,119)
 var player_inventory = []
 #var player_facing_direction = 1
 

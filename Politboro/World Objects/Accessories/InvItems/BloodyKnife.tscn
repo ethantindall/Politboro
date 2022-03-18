@@ -10,6 +10,7 @@ radius = 8.28917
 radius = 2.15203
 
 [node name="BloodyKnife" type="StaticBody2D"]
+light_mask = 8
 rotation = -1.90415
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
