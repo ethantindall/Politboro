@@ -14,9 +14,8 @@ scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 itemName = "Gold Watch"
 imagePath = "res://Images/InvItems/watch.png"
-description = "Looks like a family heirloom, passed down for generations."
-pickupTimeline = "GoldWatch-1"
-value = 1
+itemDesc = "Looks like a family heirloom, passed down for generations."
+itemPickupTimeline = "GoldWatch-1"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.324457, -0.238974 )

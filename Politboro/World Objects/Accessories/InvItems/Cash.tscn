@@ -14,9 +14,9 @@ scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 itemName = "Cash"
 imagePath = "res://Images/InvItems/cash.png"
-description = "Money, money, money by the pound."
-pickupTimeline = "Cash-1"
-value = 50
+itemDesc = "Money, money, money by the pound."
+itemPickupTimeline = "Cash-1"
+itemValue = 10
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -0.666667 )

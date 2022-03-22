@@ -2,24 +2,30 @@ extends StaticBody2D
 
 export(String) var itemName = ""
 export(String, FILE) var imagePath = ""
-export(String) var description = ""
-export(String) var pickupTimeline = ""
-export var value = 0
+export(String) var itemDesc = ""
+export(String) var itemPickupTimeline = ""
+export var itemValue = 1
+export(String) var itemContent = ""
 var active = false
 			
 func _input(event):
 	if get_node_or_null('DialogNode') == null:
 		if event.is_action_pressed("ui_accept") and active:
 			get_tree().paused = true
-			var dialog = Dialogic.start(pickupTimeline)
+			var dialog = Dialogic.start(itemPickupTimeline)
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
 			dialog.connect('timeline_end', self, 'unpause')
 			add_child(dialog)
-			
-			print("picked up")
 
-			Global.player_inventory.append(imagePath)
-			print(Global.player_inventory)
+			var unique = true
+			for item in Global.player_inventory:
+				if item.itemName == self.itemName:
+					item.itemValue += self.itemValue
+					unique = false
+			if unique == true:
+				Global.player_inventory.append(self)
+			
+
 
 			
 func unpause(timeline_name):
