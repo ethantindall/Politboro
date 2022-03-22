@@ -3,7 +3,7 @@
 [ext_resource path="res://Images/wastebin.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3.61962, 1.77848 )
+extents = Vector2( 3.61962, 2.66439 )
 
 [node name="Wastebin" type="StaticBody2D"]
 
@@ -15,5 +15,5 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.0115919, 0.0233085 )
+position = Vector2( -0.0705843, 1.32114 )
 shape = SubResource( 1 )

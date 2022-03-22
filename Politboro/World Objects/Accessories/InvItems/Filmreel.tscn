@@ -17,6 +17,7 @@ itemName = "Filmreel"
 imagePath = "res://Images/InvItems/filmreel.png"
 description = "A filmreel containing incriminating footage."
 pickupTimeline = "Filmreel-1"
+value = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.138494, 0.138494 )

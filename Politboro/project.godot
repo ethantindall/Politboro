@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Politburo"
-run/main_scene="res://GUI/Scenes/Title/MainMenu.tscn"
+run/main_scene="res://Map Scenes/TownSquare.tscn"
 config/icon="res://Images/GUI/icon.png"
 
 [autoload]

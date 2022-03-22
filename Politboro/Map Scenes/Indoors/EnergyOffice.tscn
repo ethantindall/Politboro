@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Characters/Ministers/Vlad.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://World Objects/Accessories/Bookshelf.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World Objects/Accessories/Desk.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World Objects/Accessories/InvItems/Folder.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World Objects/Accessories/InvItems/Incriminating Photo.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World Objects/Accessories/InvItems/Lost Document.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World Objects/Accessories/Wastebin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World Objects/Characters/Citizens/OfficeWorker.tscn" type="PackedScene" id=11]
 
 [node name="OfficeA" type="Node2D"]
 
@@ -49,9 +53,54 @@ position = Vector2( 169.838, 50.9409 )
 [node name="Bookshelf2" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 132.513, 37.5543 )
 
-[node name="Folder" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 172.232, 50.8385 )
-scale = Vector2( 1.3, 1.3 )
+[node name="OfficeWorker2" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 108.661, 80.0354 )
+
+[node name="OfficeWorker3" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 108.801, 57.5861 )
+
+[node name="OfficeWorker" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 108.24, 102.344 )
+
+[node name="Desk2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 114.276, 59.1117 )
+
+[node name="Desk3" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 113.855, 81.2803 )
+
+[node name="Desk4" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 113.715, 102.747 )
+
+[node name="Wastebin" parent="YSort" instance=ExtResource( 10 )]
+show_behind_parent = true
+position = Vector2( 90.7017, 108.237 )
+
+[node name="Folder" parent="YSort/Wastebin" instance=ExtResource( 7 )]
+show_behind_parent = true
+position = Vector2( 7.62939e-06, -0.701569 )
+
+[node name="Wastebin2" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 91.263, 86.4896 )
+
+[node name="Folder" parent="YSort/Wastebin2" instance=ExtResource( 7 )]
+show_behind_parent = true
+position = Vector2( 0.280624, -1.68372 )
+
+[node name="Wastebin3" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 91.6839, 64.4612 )
+
+[node name="IncriminatingPhoto" parent="YSort/Wastebin3" instance=ExtResource( 8 )]
+show_behind_parent = true
+position = Vector2( 0.140312, 0.84182 )
+
+[node name="Wastebin4" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 147.667, 55.7622 )
+
+[node name="LostDocument" parent="YSort/Wastebin4" instance=ExtResource( 9 )]
+show_behind_parent = true
+position = Vector2( 0.28064, -0.420944 )
+rotation = -0.198968
+scale = Vector2( 1.69, 1.69 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 168.229, 131.901 )

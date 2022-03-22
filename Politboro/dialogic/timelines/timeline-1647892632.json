@@ -1,0 +1,43 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Use the arrow keys to move around."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Use 'P' or 'Esc' to pause and unpause the game, and access the menu. The menu will provide you information about your missions, inventory, and the people you will meet"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If you come across an item that looks suspicious, try to pick it up. Press 'Enter' or 'Space'. The item will show up in your inventory located in the Menu."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You can speak with those you come across by pressing 'Enter' or 'Space'. They may provide you with valuable information, or ask you for help."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What is your purpose? Rise to the top of the government to become the Soviet Supreme. You can do this by eliminating your superiors and gathering votes from other officials. If the current Soviet Supreme is killed, or removed from office, a vote will be held to determine his successor. Will it be you?"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1647892632.json",
+		"name": "Tutorial-2"
+	}
+}

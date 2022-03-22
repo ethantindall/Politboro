@@ -18,7 +18,7 @@ func _ready():
 
 
 func _on_NewGameButton_pressed():
-	get_tree().change_scene("res://Map Scenes/TownSquare.tscn")
+	get_tree().change_scene("res://GUI/Scenes/Tutorial.tscn")
 
 
 func _on_LoadGameButton_pressed():

@@ -27,3 +27,11 @@ func _on_ItemsButton_pressed():
 	get_node("Inventory").visible = true
 
 	
+
+
+func _on_SaveButton_pressed():
+	pass # Replace with function body.
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit()

@@ -154,6 +154,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SaveButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+margin_top = 66.0
+margin_right = 60.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 3 )
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+margin_top = 88.0
+margin_right = 60.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 3 )
+text = "QUIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Inventory" parent="CanvasLayer/Control" instance=ExtResource( 6 )]
 
 [node name="People" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
@@ -165,3 +185,5 @@ visible = false
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/PeopleButton" to="CanvasLayer/Control" method="_on_PeopleButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/QuestsButton" to="CanvasLayer/Control" method="_on_QuestsButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/ItemsButton" to="CanvasLayer/Control" method="_on_ItemsButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/SaveButton" to="CanvasLayer/Control" method="_on_SaveButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/QuitButton" to="CanvasLayer/Control" method="_on_QuitButton_pressed"]

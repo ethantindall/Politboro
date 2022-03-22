@@ -1,40 +1,39 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Images/InvItems/cash.png" type="Texture" id=1]
-[ext_resource path="res://World Objects/Accessories/InvItems/invitem.gd" type="Script" id=2]
+[ext_resource path="res://World Objects/Accessories/InvItems/invitem.gd" type="Script" id=1]
+[ext_resource path="res://Images/InvItems/bloodyknife.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.0471, 7.80234 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.28917
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 2.04897
+radius = 2.15203
 
-[node name="Cash" type="StaticBody2D"]
+[node name="BloodyKnife" type="StaticBody2D"]
+light_mask = 8
+rotation = -1.90415
 scale = Vector2( 2, 2 )
-script = ExtResource( 2 )
-itemName = "Cash"
-imagePath = "res://Images/InvItems/cash.png"
-description = "Money, money, money by the pound."
-pickupTimeline = "Cash-1"
-value = 50
+script = ExtResource( 1 )
+itemName = "Bloody Knife"
+imagePath = "res://Images/InvItems/bloodyknife.png"
+description = "A knife covered in the blood of a murder victim. Perhaps you could plant it as evidence..."
+pickupTimeline = "BloodyKnife-1"
+value = 1
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -0.666667 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.00262451, -0.637911 )
 scale = Vector2( 0.1, 0.1 )
 shape = SubResource( 1 )
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
-position = Vector2( 0.0208569, -0.552707 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]

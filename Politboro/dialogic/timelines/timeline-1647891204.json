@@ -1,0 +1,179 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Congratulations on your promotion, comrade! We are very pleased to welcome you into the Ministry of Energy. I know you are more than up to the task."
+		},
+		{
+			"choice": "What will my job be?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Oh, you will be our new Nuclear Engineer! You will run the power for the whole capitol!"
+		},
+		{
+			"choice": "But I don't know anything about that!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Comrade, are you doubting the wisdom of the party? You were specially selected for this position based on your track record of loyalty. Do not disapoint us."
+		},
+		{
+			"choice": "Yes, Sir.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wonderful! Now, let me show you the basics."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "Sounds good to me!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wonderful! Now, let me show you the basics."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "Why was I selected?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Well, the previous Engineer mysteriously disappeared. Sad stuff. Good thing we have you!"
+		},
+		{
+			"choice": "Wait, what is my job?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Oh, you will be our new Nuclear Engineer! You will run the power for the whole capitol!"
+		},
+		{
+			"choice": "But I don't know anything about that!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Comrade, are you doubting the wisdom of the party? You were specially selected for this position based on your track record of loyalty. Do not disapoint us."
+		},
+		{
+			"choice": "Yes, Sir.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wonderful! Now, let me show you the basics."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "Sounds good to me!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Wonderful! Now, let me show you the basics."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"change_timeline": "timeline-1647892632.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "(Skip Tutorial)",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1647891204.json",
+		"name": "Tutorial-1"
+	}
+}
