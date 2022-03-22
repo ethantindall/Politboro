@@ -30,7 +30,6 @@ func _on_EventArea_body_entered(body):
 	if body.name == "Player":
 		active = true
 
-
 func _on_EventArea_body_exited(body):
 	if body.name == "Player":
 		active = false

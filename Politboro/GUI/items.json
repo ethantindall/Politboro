@@ -1,18 +1,43 @@
 {
 "Items": {
 	"Documents": {
-		"Document A": "Text",
-		"Document B": "Text",
-		"Document C": "Text"
+		"Lost Document A": {"Description": "A lost love letter from a high ranking party official to an illicit lover.",
+			"Content" : "Dearest Valentina, I send you my warmest regards, and my apologies that I have been unable to visit you these past few weeks. I have been very busy at work and my wife seems to have taken a suspicion to my constant extended absences. With good luck I shall see you again soon, Vlad."
 		},
+		"Lost Document B": {"Description": "A note from one official to another describing their discontent with the Party.",
+			"Content" : "I'm telling you it's not right. Poor old Mr. S was dragged out of his house last week kicking and screaming and sent off to Siberia. Of course Unchok refuses to tell us what his great crime was. I don't know if the Soviet Supreme just believes everything that man says, or if he's too scared to challenge him."
+		},
+		"Lost Document C": {"Description": "A burned piece of parchment. Looks like someone is selling State secrets to foreign countries.",
+			"Content" : "Mr. Johnson, Concerning your communication dated June 5th, I would be more than happy to provide you the requested information, provided I am compensated an adequate sum. Leave 5000 roubles in the East flowerbed in the South city at midnight. --Nighthawk"
+		},
+		"Incriminating Photo A" : {"Description": "An incriminating photograph. Leak this to the press and someone's career is over.",
+			"Content" : "path"
+		},
+		"Filmreel A": {"Description": "A filmreel containing incriminating footage. Perhaps you can use this to your advantage.",
+			"Content" : "path"
+		},
+		"Filmreel B": {"Description": "A filmreel containing incriminating footage. Perhaps you can use this to your advantage.",
+			"Content" : "path"
+		},
+		"Folder A": {"Description": "A folder. This dossier documents the secret corruption of the Party.",
+			"Content" : "path"
+		},
+		"Folder B": {"Description": "A folder. This dossier documents the secret corruption of the Party.",
+			"Content" : "path"
+		}
+	},
 	"Weapons": {
-		"Knife": {"Damage": 4}
-		},
+		"Bloody Knife": {"Description": "A knife covered in the blood of a murder victim. Perhaps you could plant it as evidence..."},
+		"Clean Knife": {"Description": "It's just a knife."},
+		"Pistol": {"Description": "A loaded revolver. Don't get caught with this."}
+	},
 	"Valuables": {
-		"Gold Watch": {"Value": 100}
-		},
+		"Gold Watch": {"Description": "Looks like a family heirloom, passed down for generations."}
+	},
 	"Other": {
-		"Money": 0
+		"Cash": {"Description": "Money, money, money by the pound.",
+			"Value": 0
 		}
 	}
+}
 }

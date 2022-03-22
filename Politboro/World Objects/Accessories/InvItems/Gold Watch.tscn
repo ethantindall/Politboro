@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/InvItems/watch.png" type="Texture" id=1]
+[ext_resource path="res://World Objects/Accessories/InvItems/invitem.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 0.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 2.04897
+
+[node name="Gold Watch" type="StaticBody2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+itemName = "Gold Watch"
+imagePath = "res://Images/InvItems/watch.png"
+description = "Looks like a family heirloom, passed down for generations."
+pickupTimeline = "GoldWatch-1"
+value = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.324457, -0.238974 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0711155, -0.431438 )
+scale = Vector2( 0.1, 0.1 )
+shape = SubResource( 1 )
+
+[node name="EventArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
+position = Vector2( 0.035605, -0.375731 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
+[connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

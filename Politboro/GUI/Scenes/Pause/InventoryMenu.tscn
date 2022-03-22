@@ -1,12 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Images/plate.png" type="Texture" id=1]
 [ext_resource path="res://GUI/Scenes/Pause/InventoryMenu.gd" type="Script" id=2]
 [ext_resource path="res://GUI/fonts/fyodor/fyodor.tres" type="DynamicFont" id=3]
+[ext_resource path="res://GUI/fonts/1942_report/1942.tres" type="DynamicFont" id=4]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=3]
 
 [node name="Inventory" type="Control"]
 anchor_right = 1.0
@@ -49,6 +60,7 @@ margin_top = 8.0
 margin_right = 216.0
 margin_bottom = 135.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -494,4 +506,48 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="DetailRect" type="ColorRect" parent="."]
+margin_left = 11.0
+margin_top = 29.0
+margin_right = 78.0
+margin_bottom = 79.0
+color = Color( 0.737255, 0.662745, 0.505882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClosePopupButton" type="Button" parent="DetailRect"]
+margin_left = 55.3363
+margin_top = 1.44093
+margin_right = 65.3363
+margin_bottom = 10.4409
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "X"
+
+[node name="ColorRect" type="ColorRect" parent="DetailRect"]
+margin_left = -0.148651
+margin_right = 9.85135
+margin_bottom = 10.0
+color = Color( 0.537255, 0.188235, 0.145098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="DetailRect"]
+margin_left = 3.5408
+margin_top = 3.71644
+margin_right = 13.5408
+margin_bottom = 13.7164
+color = Color( 0.737255, 0.662745, 0.505882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="visibility_changed" from="ColorRect4/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
+[connection signal="pressed" from="DetailRect/ClosePopupButton" to="." method="_on_ClosePopupButton_pressed"]
