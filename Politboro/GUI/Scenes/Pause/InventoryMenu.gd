@@ -23,7 +23,7 @@ func showDeets(event: InputEvent, slot):
 			get_node("DetailRect/DescLabel").text = slot.itemDesc
 			get_node("DetailRect/ValueLabel").text = str(slot.itemValue) + "x"
 			detailRect.visible = true
-			detailRect.set_global_position(Vector2(event.global_position[0]-20, event.global_position[1]))
+			detailRect.set_global_position(Vector2(event.global_position[0]-70, event.global_position[1]))
 
 
 func _on_ScrollContainer_visibility_changed():
@@ -41,3 +41,7 @@ func _on_ScrollContainer_visibility_changed():
 
 func _on_ClosePopupButton_pressed():
 		get_node("DetailRect").visible = false
+
+
+func _on_DropButton_pressed():
+	print("drop item")

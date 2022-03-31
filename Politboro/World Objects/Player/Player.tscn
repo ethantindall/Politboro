@@ -207,7 +207,7 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 1 )
 hframes = 4
 vframes = 4
-frame = 13
+frame = 4
 __meta__ = {
 "_edit_group_": true
 }
@@ -237,3 +237,5 @@ parameters/Idle/blend_position = Vector2( -0.206349, 0.195876 )
 parameters/Move/blend_position = Vector2( 0, 0 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="WalkingAudio" type="AudioStreamPlayer2D" parent="."]

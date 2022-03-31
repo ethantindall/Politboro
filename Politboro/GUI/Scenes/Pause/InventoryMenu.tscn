@@ -25,6 +25,7 @@ region_rect = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 4
+extra_spacing_bottom = -2
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=8]
@@ -538,9 +539,9 @@ __meta__ = {
 }
 
 [node name="DetailRect" type="ColorRect" parent="."]
-margin_left = 30.176
+margin_left = 30.3335
 margin_top = 40.2975
-margin_right = 97.176
+margin_right = 100.333
 margin_bottom = 90.2975
 color = Color( 0.737255, 0.662745, 0.505882, 1 )
 __meta__ = {
@@ -548,18 +549,18 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="DetailRect"]
-margin_right = 8.0
-margin_bottom = 8.0
+margin_left = 61.7337
+margin_top = 0.242397
+margin_right = 69.7337
+margin_bottom = 8.2424
 color = Color( 0.694118, 0.180392, 0.180392, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ClosePopupButton" type="Button" parent="DetailRect"]
-margin_left = 55.3363
-margin_top = 1.44093
-margin_right = 65.3363
-margin_bottom = 10.4409
+margin_right = 7.0
+margin_bottom = 7.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/focus = SubResource( 4 )
@@ -570,23 +571,24 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "X"
 
 [node name="ColorRect2" type="ColorRect" parent="DetailRect"]
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 10.0
-margin_bottom = 10.0
+margin_left = 59.8312
+margin_top = 1.82622
+margin_right = 67.8312
+margin_bottom = 9.82622
 color = Color( 0.737255, 0.662745, 0.505882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TitleLabel" type="Label" parent="DetailRect"]
-margin_left = 3.0
+margin_left = 12.0
 margin_top = 3.0
-margin_right = 53.0
+margin_right = 66.0
 margin_bottom = 20.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "title"
+align = 2
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -595,8 +597,8 @@ __meta__ = {
 [node name="DescLabel" type="Label" parent="DetailRect"]
 margin_left = 3.0
 margin_top = 21.0
-margin_right = 64.0
-margin_bottom = 32.0
+margin_right = 67.0
+margin_bottom = 34.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "test test test test test test"
@@ -606,9 +608,9 @@ __meta__ = {
 }
 
 [node name="ValueLabel" type="Label" parent="DetailRect"]
-margin_left = 42.0
+margin_left = 45.0
 margin_top = 39.0
-margin_right = 64.0
+margin_right = 67.0
 margin_bottom = 50.0
 custom_fonts/font = SubResource( 8 )
 text = "10"
@@ -617,5 +619,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="DropButton" type="Button" parent="DetailRect"]
+margin_top = 43.0
+margin_right = 7.0
+margin_bottom = 50.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DROP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="visibility_changed" from="ColorRect4/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
 [connection signal="pressed" from="DetailRect/ClosePopupButton" to="." method="_on_ClosePopupButton_pressed"]
+[connection signal="pressed" from="DetailRect/DropButton" to="." method="_on_DropButton_pressed"]

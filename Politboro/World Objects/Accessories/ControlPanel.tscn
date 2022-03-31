@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Images/knob.png" type="Texture" id=1]
+[ext_resource path="res://Images/controlpanel.png" type="Texture" id=2]
+
+[node name="ControlPanel" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 6.0
+margin_top = 93.0
+margin_right = 27.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( -96.7212, -132.876 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 6.0
+color = Color( 0.52549, 0.0470588, 0.0470588, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 31.0
+margin_top = 103.0
+margin_right = 52.0
+margin_bottom = 110.0
+rect_pivot_offset = Vector2( -96.7212, -132.876 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 6.0
+color = Color( 0.52549, 0.0470588, 0.0470588, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 56.0
+margin_top = 111.0
+margin_right = 78.0
+margin_bottom = 118.0
+rect_pivot_offset = Vector2( -96.7212, -132.876 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect3"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 21.0
+margin_bottom = 6.0
+color = Color( 0.52549, 0.0470588, 0.0470588, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="knob" type="Sprite" parent="."]
+position = Vector2( 17.6288, 140.216 )
+scale = Vector2( 0.879221, 0.879221 )
+texture = ExtResource( 1 )
