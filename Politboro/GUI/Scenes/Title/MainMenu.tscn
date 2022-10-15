@@ -1,21 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GUI/Scenes/Title/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://GUI/fonts/propaganda/propaganda.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GUI/fonts/Noto_Sans_KR/Korean2.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Images/seal.png" type="Texture" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 46
-font_data = ExtResource( 2 )
+[ext_resource path="res://GUI/fonts/KoreanBold.tres" type="DynamicFont" id=4]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -38,54 +26,81 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -85.5
+margin_left = -58.0
 margin_top = -75.0
-margin_right = 85.5
-margin_bottom = -10.0
+margin_right = 42.0
+margin_bottom = -7.0
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
-margin_right = 171.0
-margin_bottom = 19.0
-custom_fonts/font = SubResource( 1 )
+anchor_top = 0.0294118
+anchor_bottom = 0.0294118
+margin_right = 100.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "Start New Game"
+text = "개임 시작"
 
 [node name="LoadGameButton" type="Button" parent="VBoxContainer"]
-margin_top = 23.0
-margin_right = 171.0
-margin_bottom = 42.0
-custom_fonts/font = SubResource( 2 )
+anchor_top = 0.0294118
+anchor_bottom = 0.0294118
+margin_top = 24.0
+margin_right = 100.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "Load Saved Game"
+text = "게임을 로드하다"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
-margin_top = 46.0
-margin_right = 171.0
-margin_bottom = 65.0
-custom_fonts/font = SubResource( 3 )
+anchor_top = 0.0294118
+anchor_bottom = 0.0294118
+margin_top = 48.0
+margin_right = 100.0
+margin_bottom = 68.0
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "Options"
+text = "설정"
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 152.907, 64.5098 )
+position = Vector2( 152.907, 66.5098 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Label2" type="Label" parent="."]
 anchor_left = 1.05469
 anchor_top = -0.0444444
 anchor_right = 1.05469
 anchor_bottom = -0.0444444
-margin_left = -312.5
-margin_top = 20.0
-margin_right = -37.5
-margin_bottom = 57.0
-custom_fonts/font = SubResource( 4 )
+margin_left = -320.96
+margin_top = 20.8889
+margin_right = -45.9602
+margin_bottom = 90.8889
+rect_pivot_offset = Vector2( 574.999, -89 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "정치국"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Label2"]
+anchor_left = 1.05469
+anchor_top = -0.0444444
+anchor_right = 1.05469
+anchor_bottom = -0.0444444
+margin_left = -284.58
+margin_top = -1.77779
+margin_right = -9.58032
+margin_bottom = 68.2222
+rect_pivot_offset = Vector2( 574.999, -89 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "POLITBORO"
+text = "정치국"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
