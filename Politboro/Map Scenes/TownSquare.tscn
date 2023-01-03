@@ -379,7 +379,7 @@ position = Vector2( 589.078, 159.121 )
 position = Vector2( 660.997, 298.464 )
 
 [node name="Streetlight7" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 566.604, 310.45 )
+position = Vector2( 599, 310 )
 
 [node name="Streetlight8" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 426.512, 311.199 )
@@ -478,3 +478,37 @@ position = Vector2( 489.949, 209.553 )
 
 [node name="Watch" parent="." instance=ExtResource( 28 )]
 position = Vector2( 501.06, 163.915 )
+
+[node name="NightTime" type="Node2D" parent="."]
+visible = false
+
+[node name="NightShade" type="ColorRect" parent="NightTime"]
+margin_left = 6.0
+margin_top = 9.0
+margin_right = 855.0
+margin_bottom = 495.0
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="LampLight" type="Polygon2D" parent="NightTime"]
+position = Vector2( 432, 311 )
+color = Color( 1, 1, 1, 0.309804 )
+offset = Vector2( -440, -306 )
+polygon = PoolVector2Array( 475, 296, 479, 296, 490, 318, 488, 320, 486, 321, 482, 322, 472, 322, 469, 321, 467, 320, 465, 318 )
+
+[node name="LampLight2" type="Polygon2D" parent="NightTime"]
+position = Vector2( 555, 311 )
+color = Color( 1, 1, 1, 0.309804 )
+offset = Vector2( -440, -306 )
+polygon = PoolVector2Array( 475, 296, 479, 296, 490, 318, 488, 320, 486, 321, 482, 322, 472, 322, 469, 321, 467, 320, 465, 318, 472.218, 302.12 )
+
+[node name="LampLight3" type="Polygon2D" parent="NightTime"]
+position = Vector2( 382, 312 )
+color = Color( 1, 1, 1, 0.309804 )
+offset = Vector2( -440, -306 )
+polygon = PoolVector2Array( 475, 296, 479, 296, 490, 318, 488, 320, 486, 321, 482, 322, 472, 322, 469, 321, 467, 320, 465, 318 )
+
+[node name="LampLight4" type="Polygon2D" parent="NightTime"]
+position = Vector2( 245, 315 )
+color = Color( 1, 1, 1, 0.309804 )
+offset = Vector2( -440, -306 )
+polygon = PoolVector2Array( 475, 296, 479, 296, 490, 318, 488, 320, 486, 321, 482, 322, 472, 322, 469, 321, 467, 320, 465, 318 )

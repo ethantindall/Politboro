@@ -20,9 +20,9 @@ func unpause(timeline_name):
 
 func _on_EventArea_body_entered(body):
 	if body.name == "Player":
-		active = false
+		active = true
 
 
 func _on_EventArea_body_exited(body):
 	if body.name == "Player":
-		active = true
+		active = false

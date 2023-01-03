@@ -31,38 +31,29 @@ margin_top = -75.0
 margin_right = 42.0
 margin_bottom = -7.0
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
-anchor_top = 0.0294118
-anchor_bottom = 0.0294118
 margin_right = 100.0
 margin_bottom = 20.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "개임 시작"
+custom_fonts/font = ExtResource( 2 )
+text = "START GAME"
 
 [node name="LoadGameButton" type="Button" parent="VBoxContainer"]
-anchor_top = 0.0294118
-anchor_bottom = 0.0294118
 margin_top = 24.0
 margin_right = 100.0
 margin_bottom = 44.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "게임을 로드하다"
+custom_fonts/font = ExtResource( 2 )
+text = "LOAD GAME"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
-anchor_top = 0.0294118
-anchor_bottom = 0.0294118
 margin_top = 48.0
 margin_right = 100.0
 margin_bottom = 68.0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "설정"
+custom_fonts/font = ExtResource( 2 )
+text = "OPTIONS"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 152.907, 66.5098 )
@@ -74,36 +65,30 @@ anchor_left = 1.05469
 anchor_top = -0.0444444
 anchor_right = 1.05469
 anchor_bottom = -0.0444444
-margin_left = -320.96
+margin_left = -325.96
 margin_top = 20.8889
-margin_right = -45.9602
+margin_right = -29.96
 margin_bottom = 90.8889
 rect_pivot_offset = Vector2( 574.999, -89 )
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "정치국"
+custom_fonts/font = ExtResource( 4 )
+text = "Politburo"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Label2"]
 anchor_left = 1.05469
 anchor_top = -0.0444444
 anchor_right = 1.05469
 anchor_bottom = -0.0444444
-margin_left = -284.58
-margin_top = -1.77779
-margin_right = -9.58032
-margin_bottom = 68.2222
+margin_left = -362.729
+margin_top = 5.2222
+margin_right = 43.271
+margin_bottom = 75.2222
 rect_pivot_offset = Vector2( 574.999, -89 )
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
-text = "정치국"
+custom_fonts/font = ExtResource( 4 )
+text = "Politburo"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/LoadGameButton" to="." method="_on_LoadGameButton_pressed"]

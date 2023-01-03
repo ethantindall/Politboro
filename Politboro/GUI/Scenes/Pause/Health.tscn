@@ -3,6 +3,7 @@
 [ext_resource path="res://GUI/Scenes/Pause/PauseMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Images/GUI/inventory.png" type="Texture" id=2]
 
+
 [node name="Health" type="Node2D"]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
