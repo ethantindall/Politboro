@@ -1,15 +1,25 @@
 extends KinematicBody2D
 
-class_name NpcClass
+
+class_name NPC
 
 var active = false
 var introText = ''
+
 
 func getIntroText():
 	return introText
 func setIntroText(x):
 	introText = x
-	
+
+###Change sprite if needed	
+"""
+onready var spriteNode= get_node("Sprite")
+var textureSprite = ''
+
+func _ready():
+	spriteNode.texture = load(textureSprite)
+"""
 func _process(delta):
 	$questionmark.visible = active
 

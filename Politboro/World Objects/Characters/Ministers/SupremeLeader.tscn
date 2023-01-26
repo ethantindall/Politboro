@@ -1,6 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Images/Sprites/officialA.png" type="Texture" id=1]
+[ext_resource path="res://Images/Sprites/supremeleader.png" type="Texture" id=1]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 0.403922 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -20,7 +27,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [ 5, 12 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -138,18 +145,33 @@ tracks/0/keys = {
 "values": [ 9, 8, 7 ]
 }
 
-[node name="OfficialA" type="KinematicBody2D"]
+[sub_resource type="CircleShape2D" id=10]
+radius = 8.7465
+
+[node name="SupremeLeader" type="KinematicBody2D"]
+scale = Vector2( 1.5, 1.5 )
 collision_mask = 3
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.307755, 0.915455 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.18, 0.18 )
 texture = ExtResource( 1 )
-hframes = 3
-vframes = 3
-frame = 1
+hframes = 4
+vframes = 4
+frame = 5
 __meta__ = {
 "_edit_group_": true
+}
+
+[node name="Panel" type="Panel" parent="Sprite"]
+show_behind_parent = true
+margin_left = -11.0
+margin_top = 22.0
+margin_right = 10.0
+margin_bottom = 33.0
+custom_styles/panel = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -167,3 +189,11 @@ anims/IdleU = SubResource( 5 )
 "anims/Move Left" = SubResource( 7 )
 "anims/Move Right" = SubResource( 8 )
 "anims/Move Up" = SubResource( 9 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -0.320059, 5.85789 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -3.91946, -0.395271 )
+shape = SubResource( 10 )

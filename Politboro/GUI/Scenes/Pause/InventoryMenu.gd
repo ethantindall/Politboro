@@ -8,7 +8,7 @@ onready var inventory_slots = $ColorRect4/ScrollContainer/GridContainer
 func _ready():
 	for inv_slot in inventory_slots.get_children():
 		inv_slot.connect("gui_input", self, "showDeets", [inv_slot])
-		print("wow")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

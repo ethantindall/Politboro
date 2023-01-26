@@ -1,5 +1,7 @@
-extends NpcClass
+extends NPC
 
 class_name Priest 
 
-setIntroText('Priest-1')
+func _init():
+	introText = "Priest-1"
+	#textureSprite = 'res://Images/Sprites/priest.png'

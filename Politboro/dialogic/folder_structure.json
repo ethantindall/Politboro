@@ -32,7 +32,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Definitions": {
@@ -44,7 +44,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Themes": {
@@ -56,7 +56,7 @@
 			},
 			"metadata": {
 				"color": null,
-				"folded": false
+				"folded": true
 			}
 		},
 		"Timelines": {
@@ -64,8 +64,13 @@
 				"timeline-1646676936.json"
 			],
 			"folders": {
-				"Citizen": {
+				"IdleNPC": {
 					"files": [
+						"timeline-1646695726.json",
+						"timeline-1646697319.json",
+						"timeline-1646752349.json",
+						"timeline-1646765070.json",
+						"timeline-1646755632.json",
 						"timeline-1646765448.json",
 						"timeline-1646765483.json"
 					],
@@ -75,21 +80,6 @@
 					"metadata": {
 						"color": null,
 						"folded": true
-					}
-				},
-				"IdleNPC": {
-					"files": [
-						"timeline-1646695726.json",
-						"timeline-1646697319.json",
-						"timeline-1646752349.json",
-						"timeline-1646765070.json"
-					],
-					"folders": {
-
-					},
-					"metadata": {
-						"color": null,
-						"folded": false
 					}
 				},
 				"ItemPickup": {
@@ -109,19 +99,30 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				},
-				"Prisoner": {
+				"Quests": {
 					"files": [
-						"timeline-1646755632.json"
+
 					],
 					"folders": {
+						"Quest0": {
+							"files": [
+								"timeline-1673843735.json"
+							],
+							"folders": {
 
+							},
+							"metadata": {
+								"color": null,
+								"folded": false
+							}
+						}
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"Tutorial": {
@@ -134,7 +135,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": false
+						"folded": true
 					}
 				}
 			},

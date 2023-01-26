@@ -35,4 +35,5 @@ color = Color( 0.643137, 0.643137, 0.615686, 0.329412 )
 polygon = PoolVector2Array( 15, 23, 3, 1, 0, 1, -11.4, 23, 2, 23 )
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 texture = SubResource( 2 )

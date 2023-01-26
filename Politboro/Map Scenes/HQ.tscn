@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Images/Tiles/cobblestone.png" type="Texture" id=11]
 [ext_resource path="res://World Objects/Accessories/Flowers.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=13]
+[ext_resource path="res://World Objects/Characters/Police.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World Objects/Buildings/RedBlock.tscn" type="PackedScene" id=15]
+[ext_resource path="res://World Objects/Buildings/AIapts2.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -124,7 +127,7 @@
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
-region_rect = Rect2( -43.9817, -33.7736, 419.571, 332.835 )
+region_rect = Rect2( -43.9817, -188.758, 780.081, 487.819 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -133,7 +136,7 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 393227, 5, 0, 393228, 5, 0, 393230, 5, 0, 458762, 5, 0, 524298, 5, 0, 524299, 5, 0, 524300, 5, 0, 524302, 5, 0, 655370, 5, 0, 655372, 5, 0, 655374, 5, 0, 851966, 3, 0, 786432, 3, 0, 786434, 3, 0, 786436, 3, 0, 786438, 3, 0, 786440, 3, 0, 786442, 3, 0, 786444, 5, 0, 786446, 5, 0, 917514, 4, 0, 1048586, 4, 0, 1179658, 4, 0, 1310730, 4, 0 )
+tile_data = PoolIntArray( 589837, 5, 0, 589838, 5, 0, 589839, 5, 0, 589841, 5, 0, 589843, 5, 0, 720909, 5, 0, 720911, 5, 0, 720913, 5, 0, 720915, 5, 0, 851966, 3, 0, 786432, 3, 0, 786434, 3, 0, 786436, 3, 0, 786438, 3, 0, 786440, 3, 0, 786442, 3, 0, 786444, 3, 0, 851982, 5, 0, 851984, 5, 0, 851986, 5, 0, 983056, 4, 0, 1114128, 4, 0, 1245200, 4, 0, 1376272, 4, 0, 1507344, 4, 0, 1638416, 4, 0 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -146,78 +149,109 @@ current = true
 zoom = Vector2( 0.75, 0.75 )
 limit_left = 0
 limit_top = 0
-limit_right = 400
-limit_bottom = 325
+limit_right = 480
+limit_bottom = 400
 smoothing_enabled = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 207.009, 63.5051 )
+[node name="HQ" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 272.685, 105.698 )
+scale = Vector2( 0.7, 0.7 )
 
-[node name="Streetlight" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 260.195, 148.758 )
-
-[node name="Streetlight2" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 161.711, 145.98 )
-
-[node name="Streetlight3" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 121.993, 177.331 )
-
-[node name="Streetlight4" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 21.6561, 177.53 )
-
-[node name="SecretPolice" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 81.8815, 183.157 )
-
-[node name="SecretPolice2" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 261.701, 204.649 )
-
-[node name="Flowers" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 131.75, 124.75 )
-
-[node name="Flowers2" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 299.75, 125.75 )
-
-[node name="Flowers3" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 49.3586, 90.2455 )
-
-[node name="Flowers4" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 372.244, 95.8642 )
-
-[node name="Soldier" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 143.999, 177.023 )
-
-[node name="Soldier2" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 239.861, 172.818 )
+[node name="PortalInside" parent="YSort/HQ" instance=ExtResource( 1 )]
+position = Vector2( 3.3053, 69.2698 )
+rotation = 1.5708
+scale = Vector2( 1.42857, 2.85714 )
+next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
+player_spawn_location = Vector2( 203, 165 )
 
 [node name="Forest" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 24.5, 19 )
+position = Vector2( 14.4285, 48.5693 )
 
 [node name="Forest2" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 385, 13.5 )
+position = Vector2( 167.323, -8.38557 )
+
+[node name="Forest3" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 483.497, 34.8512 )
+
+[node name="Streetlight" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 34.9291, 212.718 )
+
+[node name="Streetlight2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 99.3154, 212.718 )
+
+[node name="Streetlight3" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 164.175, 213.428 )
+
+[node name="Streetlight4" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 242.291, 228.341 )
+
+[node name="Streetlight5" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 305.73, 227.631 )
+
+[node name="Apt3" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 383.879, 258.103 )
+
+[node name="Apt5" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( -0.697388, 340.968 )
+
+[node name="Flowers" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 179.471, 173.398 )
+
+[node name="Flowers2" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 366.387, 172.174 )
+
+[node name="Flowers3" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 180.916, 233.997 )
+
+[node name="Flowers4" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 62.4596, 236.829 )
+
+[node name="Flowers5" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 62.4596, 172.174 )
+
+[node name="Forest4" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 85.513, 323.339 )
+
+[node name="Streetlight6" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 293.658, 290.123 )
+
+[node name="Streetlight7" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 293.184, 357.824 )
+
+[node name="Soldier" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 225.25, 170.25 )
+
+[node name="Soldier2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 320, 171.25 )
+
+[node name="SecretPolice" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 137.25, 191.75 )
+
+[node name="Police" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 295.75, 265.75 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 1 )]
 position = Vector2( -5.3919, 209.027 )
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
 player_spawn_location = Vector2( 685, 186 )
 
-[node name="PortalInside" parent="." instance=ExtResource( 1 )]
-position = Vector2( 216.588, 111.787 )
-rotation = 1.5708
-scale = Vector2( 1, 2 )
-next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
-player_spawn_location = Vector2( 203, 165 )
-
 [node name="PortalChurch" parent="." instance=ExtResource( 1 )]
-position = Vector2( 175.878, 324.373 )
+position = Vector2( 274.277, 396.196 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/CitySouth.tscn"
 player_spawn_location = Vector2( 753, -55 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Border" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( -2.3811, 80.9574 )
-polygon = PoolVector2Array( 0.542709, 244.133, 406.696, 244.133, 408.381, -75.9574, 2.8811, -73.4574, -0.317772, 175.895, -10.9812, 174.212, -3.6189, -77.9574, 417.881, -81.9574, 414.684, 259.69, -5.34356, 257.587, -5.79973, 175.326, -0.243829, 176.318 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border"]
+position = Vector2( -3.13861, 80.9574 )
+polygon = PoolVector2Array( 1.47468, 307.911, 488.961, 313.332, 490.476, -71.4818, 2.8811, -73.4574, -0.317772, 175.895, -10.9812, 174.212, -3.6189, -77.9574, 501.839, -76.7843, 502.596, 323.179, -7.7177, 319.225, -5.79973, 175.326, -0.243829, 176.318 )
+
+[node name="RedBlock" parent="." instance=ExtResource( 15 )]
+position = Vector2( 150.936, 429.857 )

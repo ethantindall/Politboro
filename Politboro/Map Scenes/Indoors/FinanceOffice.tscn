@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://World Objects/Characters/Ministers/Gleb.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World Objects/Characters/Ministers/TransMinister.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Accessories/InvItems/Filmreel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World Objects/Characters/Citizens/OfficeWorker.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World Objects/Characters/Police.tscn" type="PackedScene" id=5]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Images/Bldgs/OfficeC.png" type="Texture" id=9]
 [ext_resource path="res://World Objects/Accessories/Wastebin.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World Objects/Accessories/InvItems/Folder.tscn" type="PackedScene" id=11]
+
 
 [node name="OfficeA" type="Node2D"]
 

@@ -4,6 +4,7 @@
 [ext_resource path="res://World Objects/Characters/questionmark.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World Objects/Characters/Citizens/OfficeWorker_F.gd" type="Script" id=3]
 
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
 height = 2.0

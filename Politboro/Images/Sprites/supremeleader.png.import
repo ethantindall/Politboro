@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SoldierSprite.png-e9873f5c9105536f109e2357c83e1ead.stex"
+path="res://.import/supremeleader.png-ea99b56610efdce9be48398d1a0f1744.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Sprites/SoldierSprite.png"
-dest_files=[ "res://.import/SoldierSprite.png-e9873f5c9105536f109e2357c83e1ead.stex" ]
+source_file="res://Images/Sprites/supremeleader.png"
+dest_files=[ "res://.import/supremeleader.png-ea99b56610efdce9be48398d1a0f1744.stex" ]
 
 [params]
 

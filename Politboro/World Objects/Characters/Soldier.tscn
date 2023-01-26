@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Images/Sprites/SoldierSprite.png" type="Texture" id=1]
+[ext_resource path="res://Images/Sprites/soldier.png" type="Texture" id=1]
 [ext_resource path="res://World Objects/Characters/Soldier.gd" type="Script" id=2]
 [ext_resource path="res://World Objects/Characters/questionmark.tscn" type="PackedScene" id=3]
 

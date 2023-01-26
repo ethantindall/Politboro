@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "NPC",
+"class": "Citizen1",
+"language": "GDScript",
+"path": "res://World Objects/Characters/Citizens/OfficeWorker.gd"
+}, {
+"base": "NPC",
+"class": "Citizen2",
+"language": "GDScript",
+"path": "res://World Objects/Characters/Citizens/OfficeWorker_F.gd"
+}, {
 "base": "Reference",
 "class": "DTS",
 "language": "GDScript",
@@ -39,36 +49,70 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 }, {
-"base": "KinematicBody2D",
-"class": "NpcClass",
+"base": "NPC",
+"class": "Minister",
 "language": "GDScript",
-"path": "res://World Objects/Characters/NpcClass.gd"
+"path": "res://World Objects/Characters/Ministers/Minister.gd"
 }, {
-"base": "NpcClass",
+"base": "KinematicBody2D",
+"class": "NPC",
+"language": "GDScript",
+"path": "res://World Objects/Characters/NPCtemplate/NPC.gd"
+}, {
+"base": "NPC",
+"class": "Police",
+"language": "GDScript",
+"path": "res://World Objects/Characters/Police.gd"
+}, {
+"base": "NPC",
 "class": "Priest",
 "language": "GDScript",
 "path": "res://World Objects/Characters/Priest.gd"
+}, {
+"base": "NPC",
+"class": "Prisoner",
+"language": "GDScript",
+"path": "res://World Objects/Characters/PrisonerA.gd"
+}, {
+"base": "NPC",
+"class": "SecretPolice",
+"language": "GDScript",
+"path": "res://World Objects/Characters/SecretPolice.gd"
+}, {
+"base": "NPC",
+"class": "Soldier",
+"language": "GDScript",
+"path": "res://World Objects/Characters/Soldier.gd"
 } ]
 _global_script_class_icons={
+"Citizen1": "",
+"Citizen2": "",
 "DTS": "",
 "Dialogic": "",
 "DialogicBackgroundMusic": "",
 "DialogicDefinitionsUtil": "",
 "DialogicResources": "",
 "DialogicUtil": "",
-"NpcClass": "",
-"Priest": ""
+"Minister": "",
+"NPC": "",
+"Police": "",
+"Priest": "",
+"Prisoner": "",
+"SecretPolice": "",
+"Soldier": ""
 }
 
 [application]
 
 config/name="Politburo"
-run/main_scene="res://GUI/Scenes/Title/MainMenu.tscn"
+run/main_scene="res://Map Scenes/TownSquare.tscn"
 config/icon="res://Images/GUI/icon.png"
 
 [autoload]
 
 Global="*res://GlobalScripts/Global.gd"
+QuestSystem="*res://GlobalScripts/QuestSystem.gd"
+ScreenChanger="*res://World Objects/Portal/ScreenChanger.gd"
 
 [display]
 
@@ -110,8 +154,8 @@ texture={
 
 pause={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
  ]
 }
 
