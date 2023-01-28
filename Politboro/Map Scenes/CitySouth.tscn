@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Images/Tiles/cemetary.png" type="Texture" id=1]
 [ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://World Objects/Buildings/RedBlock.tscn" type="PackedScene" id=20]
 [ext_resource path="res://World Objects/Buildings/GreenBlock.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Images/Tiles/cliffs.png" type="Texture" id=22]
+[ext_resource path="res://Characters/Ministers/Locomotive.tscn" type="PackedScene" id=23]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -200,7 +201,7 @@ tile_data = PoolIntArray( -458706, 5, 0, -393203, 5, 0, -327634, 5, 0, -262131, 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 774.764, 204.455 )
+position = Vector2( 760.855, 203.353 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -216,11 +217,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TrainStation" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( 843.522, 183.037 )
-
 [node name="TrainTower" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 594.741, 265.131 )
+
+[node name="TrainStation" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 843.522, 183.037 )
 
 [node name="CoalPile" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 919.842, 262.003 )
@@ -306,6 +307,10 @@ position = Vector2( 679.296, 155.614 )
 [node name="TunnelMouth" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( -5.63895, 233.034 )
 rotation = 3.14159
+
+[node name="Train" parent="YSort" instance=ExtResource( 23 )]
+position = Vector2( 952.386, 212.962 )
+scale = Vector2( 0.7, 0.7 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 6 )]
 position = Vector2( 224.345, -73.144 )

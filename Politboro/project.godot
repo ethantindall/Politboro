@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "NPC",
 "class": "Citizen1",
 "language": "GDScript",
-"path": "res://World Objects/Characters/Citizens/OfficeWorker.gd"
+"path": "res://Characters/Citizens/OfficeWorker.gd"
 }, {
 "base": "NPC",
 "class": "Citizen2",
 "language": "GDScript",
-"path": "res://World Objects/Characters/Citizens/OfficeWorker_F.gd"
+"path": "res://Characters/Citizens/OfficeWorker_F.gd"
 }, {
 "base": "Reference",
 "class": "DTS",
@@ -52,37 +52,37 @@ _global_script_classes=[ {
 "base": "NPC",
 "class": "Minister",
 "language": "GDScript",
-"path": "res://World Objects/Characters/Ministers/Minister.gd"
+"path": "res://Characters/Ministers/Minister.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "NPC",
 "language": "GDScript",
-"path": "res://World Objects/Characters/NPCtemplate/NPC.gd"
+"path": "res://Characters/NPCtemplate/NPC.gd"
 }, {
 "base": "NPC",
 "class": "Police",
 "language": "GDScript",
-"path": "res://World Objects/Characters/Police.gd"
+"path": "res://Characters/Police.gd"
 }, {
 "base": "NPC",
 "class": "Priest",
 "language": "GDScript",
-"path": "res://World Objects/Characters/Priest.gd"
+"path": "res://Characters/Priest.gd"
 }, {
 "base": "NPC",
 "class": "Prisoner",
 "language": "GDScript",
-"path": "res://World Objects/Characters/PrisonerA.gd"
+"path": "res://Characters/PrisonerA.gd"
 }, {
 "base": "NPC",
 "class": "SecretPolice",
 "language": "GDScript",
-"path": "res://World Objects/Characters/SecretPolice.gd"
+"path": "res://Characters/SecretPolice.gd"
 }, {
 "base": "NPC",
 "class": "Soldier",
 "language": "GDScript",
-"path": "res://World Objects/Characters/Soldier.gd"
+"path": "res://Characters/Soldier.gd"
 } ]
 _global_script_class_icons={
 "Citizen1": "",

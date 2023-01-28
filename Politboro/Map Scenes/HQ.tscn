@@ -6,16 +6,17 @@
 [ext_resource path="res://Images/Tiles/background.png" type="Texture" id=4]
 [ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=5]
 [ext_resource path="res://World Objects/Buildings/Military/Headquarters.tscn" type="PackedScene" id=6]
-[ext_resource path="res://World Objects/Characters/Soldier.tscn" type="PackedScene" id=7]
-[ext_resource path="res://World Objects/Characters/SecretPolice.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Characters/Soldier.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Characters/SecretPolice.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World Objects/Accessories/Streetlight.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Images/Tiles/Airstrip/airstripV.png" type="Texture" id=10]
 [ext_resource path="res://Images/Tiles/cobblestone.png" type="Texture" id=11]
 [ext_resource path="res://World Objects/Accessories/Flowers.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World Objects/Accessories/Forest.tscn" type="PackedScene" id=13]
-[ext_resource path="res://World Objects/Characters/Police.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Characters/Police.tscn" type="PackedScene" id=14]
 [ext_resource path="res://World Objects/Buildings/RedBlock.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World Objects/Buildings/AIapts2.tscn" type="PackedScene" id=16]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"

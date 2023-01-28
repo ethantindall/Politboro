@@ -1,6 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Images/Sprites/officialA.png" type="Texture" id=1]
+[ext_resource path="res://Images/Sprites/police.png" type="Texture" id=1]
+[ext_resource path="res://Characters/Police.gd" type="Script" id=2]
+[ext_resource path="res://Characters/questionmark.tscn" type="PackedScene" id=3]
+
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.0
@@ -139,9 +143,11 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=10]
+radius = 7.84242
 
-[node name="EnergyMinister" type="KinematicBody2D"]
+[node name="Police" type="KinematicBody2D"]
 collision_mask = 3
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.307755, 0.915455 )
@@ -155,7 +161,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.320059, 5.85789 )
+position = Vector2( -0.284254, 5.94179 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
@@ -170,9 +176,14 @@ anims/IdleU = SubResource( 5 )
 "anims/Move Right" = SubResource( 8 )
 "anims/Move Up" = SubResource( 9 )
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( -0.320059, 5.85789 )
-rotation = 1.5708
+[node name="EventArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
+position = Vector2( -0.198425, 3.47244 )
 shape = SubResource( 10 )
+
+[node name="questionmark" parent="." instance=ExtResource( 3 )]
+position = Vector2( -3.33786e-06, 0.396807 )
+
+[connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
+[connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

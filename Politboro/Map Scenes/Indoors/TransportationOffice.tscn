@@ -2,8 +2,9 @@
 
 [ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World Objects/Characters/Ministers/FinanceMinister.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/Ministers/FinanceMinister.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Images/Bldgs/OfficeB.png" type="Texture" id=4]
+
 
 
 [node name="OfficeA" type="Node2D"]
