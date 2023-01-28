@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/Bldgs/bedroom.png" type="Texture" id=2]
+[ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World Objects/Accessories/Bed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World Objects/Accessories/Wastebin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World Objects/Accessories/Dresser.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World Objects/Accessories/Bookshelf.tscn" type="PackedScene" id=7]
+
+[node name="PlayerApt" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 665.1, 374.802 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 100.658, 66.3628 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 180
+smoothing_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bed" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 75.4534, 31.918 )
+
+[node name="Dresser" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 88.0017, 24.3328 )
+
+[node name="Bookshelf" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 111.038, 23.49 )
+
+[node name="Wastebin" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 69.651, 67.4558 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 98.3681, 85.6428 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/Indoors/AptHallway.tscn"
+player_spawn_location = Vector2( 60, 55 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 124.745, 77.7245, 130.085, 9.6477, 58.3371, 10.3151, 60.7841, 78.9033, 106.569, 78.9033, 93.6645, 78.5497, 94.0181, 72.3626, 63.8434, 71.8846, 63.9885, 23.4599, 112.777, 23.3663, 112.398, 72.2183, 107.226, 71.8846, 106.558, 78.0582 )

@@ -270,7 +270,7 @@ __meta__ = {
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 466.284, 165.727 )
+position = Vector2( 451.784, 135.477 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -344,7 +344,7 @@ position = Vector2( 516.651, 354.152 )
 position = Vector2( 233.23, 158.372 )
 
 [node name="Streetlight2" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 378.566, 162.867 )
+position = Vector2( 381.484, 164.58 )
 
 [node name="Streetlight3" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 525.4, 159.121 )
@@ -474,3 +474,9 @@ position = Vector2( 245, 315 )
 color = Color( 1, 1, 1, 0.309804 )
 offset = Vector2( -440, -306 )
 polygon = PoolVector2Array( 475, 296, 479, 296, 490, 318, 488, 320, 486, 321, 482, 322, 472, 322, 469, 321, 467, 320, 465, 318 )
+
+[node name="PortalHomeAptBldg" parent="." instance=ExtResource( 9 )]
+position = Vector2( 451.125, 126.5 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/Indoors/AptHallway.tscn"
+player_spawn_location = Vector2( 95, 81 )

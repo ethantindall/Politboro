@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/Bldgs/apt_hallway.png" type="Texture" id=2]
+[ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=3]
+
+[node name="AptHallway" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 665.1, 374.802 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 93.9991, 65.3765 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 180
+smoothing_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 94.479, 98.901 )
+rotation = 1.5708
+next_scene_path = "res://Map Scenes/TownSquare.tscn"
+player_spawn_location = Vector2( 451, 135 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 79.75, 86, 14.5, 85.25, 14.75, 55.75, 52.3812, 55.5742, 53.5295, 53.56, 67.4949, 53.56, 68.202, 54.9742, 175.25, 55, 175.5, 86, 110.5, 86, 110.25, 92, 79.25, 92.25, 178.25, 96.25, 185, 20, 5.5, 20.75, 5.5, 103, 56, 98, 79.5, 96 )
+
+[node name="Portal2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 59.6286, 38.5635 )
+next_scene_path = "res://Map Scenes/Indoors/PlayerApt.tscn"
+player_spawn_location = Vector2( 100, 66 )

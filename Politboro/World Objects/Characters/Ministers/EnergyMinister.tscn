@@ -140,7 +140,7 @@ tracks/0/keys = {
 
 [sub_resource type="CircleShape2D" id=10]
 
-[node name="OfficialA" type="KinematicBody2D"]
+[node name="EnergyMinister" type="KinematicBody2D"]
 collision_mask = 3
 
 [node name="Sprite" type="Sprite" parent="."]

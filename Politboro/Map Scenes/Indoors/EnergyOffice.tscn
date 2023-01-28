@@ -12,8 +12,7 @@
 [ext_resource path="res://World Objects/Accessories/Wastebin.tscn" type="PackedScene" id=10]
 [ext_resource path="res://World Objects/Characters/Citizens/OfficeWorker.tscn" type="PackedScene" id=11]
 
-
-[node name="OfficeA" type="Node2D"]
+[node name="EnergyOfficeInside" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 4 )
@@ -25,9 +24,6 @@ __meta__ = {
 }
 
 [node name="YSort" type="YSort" parent="."]
-
-[node name="OfficialA" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 165.732, 48.83 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 166.993, 113.483 )
@@ -113,3 +109,6 @@ player_spawn_location = Vector2( 43, 106 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 156.04, 120.103, 76.5874, 120.093, 76.7649, 38.5216, 188.008, 38.7864, 188.273, 120.1, 177.944, 120.365, 178.208, 125.133, 190.657, 124.338, 191.452, 35.3432, 71.4675, 35.3432, 73.8513, 123.014, 155.96, 125.133 )
+
+[node name="EnergyMinister" parent="." instance=ExtResource( 2 )]
+position = Vector2( 163.676, 69.9718 )
