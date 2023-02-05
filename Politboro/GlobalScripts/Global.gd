@@ -3,9 +3,9 @@ extends Node
 var player
 
 var game_running = false
-var activeQuest = ''
+var activeQuest = 'Q0'
 
-var player_initial_map_position = Vector2(666,200)
+var player_initial_map_position = Vector2(452,147)
 var player_inventory = []
 #var player_facing_direction = 1
 

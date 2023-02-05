@@ -28,6 +28,7 @@ func drive():
 			frames = 1
 		counter -=1
 
+"""
 func _process(delta):
 	drive()
-	
+"""

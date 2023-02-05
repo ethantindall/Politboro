@@ -79,7 +79,7 @@
 					},
 					"metadata": {
 						"color": null,
-						"folded": true
+						"folded": false
 					}
 				},
 				"ItemPickup": {
@@ -109,7 +109,8 @@
 					"folders": {
 						"Quest0": {
 							"files": [
-								"timeline-1673843735.json"
+								"timeline-1673843735.json",
+								"timeline-1675573400.json"
 							],
 							"folders": {
 

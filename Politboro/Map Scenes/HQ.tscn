@@ -17,7 +17,6 @@
 [ext_resource path="res://World Objects/Buildings/RedBlock.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World Objects/Buildings/AIapts2.tscn" type="PackedScene" id=16]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
 0/texture = ExtResource( 3 )
@@ -142,8 +141,8 @@ tile_data = PoolIntArray( 589837, 5, 0, 589838, 5, 0, 589839, 5, 0, 589841, 5, 0
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 176.282, 305.509 )
-scale = Vector2( 1.5, 1.5 )
+position = Vector2( 235.41, 171.833 )
+scale = Vector2( 1.6, 1.6 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
@@ -220,7 +219,7 @@ position = Vector2( 85.513, 323.339 )
 position = Vector2( 293.658, 290.123 )
 
 [node name="Streetlight7" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 293.184, 357.824 )
+position = Vector2( 292.869, 339.555 )
 
 [node name="Soldier" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 225.25, 170.25 )

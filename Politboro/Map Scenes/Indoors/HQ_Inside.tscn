@@ -47,7 +47,7 @@ position = Vector2( 208.921, 168.882 )
 position = Vector2( 203.439, 214.946 )
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/HQ.tscn"
-player_spawn_location = Vector2( 179, 135 )
+player_spawn_location = Vector2( 272, 167 )
 
 [node name="Soldier" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 224.292, 88.673 )
