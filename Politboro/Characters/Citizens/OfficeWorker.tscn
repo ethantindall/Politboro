@@ -4,19 +4,18 @@
 [ext_resource path="res://Characters/questionmark.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Citizens/OfficeWorker.gd" type="Script" id=3]
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.403922 )
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 1.34602
 height = 2.0
 
-[sub_resource type="Animation" id=2]
-resource_name = "IdleD"
+[sub_resource type="Animation" id=3]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -32,8 +31,7 @@ tracks/0/keys = {
 "values": [ 5, 12 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "IdleL"
+[sub_resource type="Animation" id=4]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -49,8 +47,7 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "IdleR"
+[sub_resource type="Animation" id=5]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -66,8 +63,7 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "IdleU"
+[sub_resource type="Animation" id=6]
 length = 0.1
 loop = true
 tracks/0/type = "value"
@@ -83,7 +79,7 @@ tracks/0/keys = {
 "values": [ 7 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -99,7 +95,7 @@ tracks/0/keys = {
 "values": [ 2, 3, 5 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -115,7 +111,7 @@ tracks/0/keys = {
 "values": [ 4, 4 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -131,7 +127,7 @@ tracks/0/keys = {
 "values": [ 11, 10, 6 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -147,7 +143,7 @@ tracks/0/keys = {
 "values": [ 9, 8, 7 ]
 }
 
-[sub_resource type="CircleShape2D" id=10]
+[sub_resource type="CircleShape2D" id=11]
 radius = 6.43379
 
 [node name="OfficeWorker" type="KinematicBody2D"]
@@ -170,9 +166,9 @@ __meta__ = {
 show_behind_parent = true
 margin_left = -11.0
 margin_top = 22.0
-margin_right = 10.0
+margin_right = 11.0
 margin_bottom = 33.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -180,24 +176,24 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.284254, 5.94179 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "IdleD"
-anims/IdleD = SubResource( 2 )
-anims/IdleL = SubResource( 3 )
-anims/IdleR = SubResource( 4 )
-anims/IdleU = SubResource( 5 )
-"anims/Move Down" = SubResource( 6 )
-"anims/Move Left" = SubResource( 7 )
-"anims/Move Right" = SubResource( 8 )
-"anims/Move Up" = SubResource( 9 )
+anims/IdleD = SubResource( 3 )
+anims/IdleL = SubResource( 4 )
+anims/IdleR = SubResource( 5 )
+anims/IdleU = SubResource( 6 )
+"anims/Move Down" = SubResource( 7 )
+"anims/Move Left" = SubResource( 8 )
+"anims/Move Right" = SubResource( 9 )
+"anims/Move Up" = SubResource( 10 )
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
 position = Vector2( -0.331081, 2.51622 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="questionmark" parent="." instance=ExtResource( 2 )]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Images/Tiles/cemetary.png" type="Texture" id=1]
 [ext_resource path="res://World Objects/Accessories/LargeCrate.tscn" type="PackedScene" id=2]
@@ -26,6 +26,8 @@
 [ext_resource path="res://Characters/Citizens/OfficeWorker.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Characters/Ministers/EnergyMinister.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Characters/Police.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Characters/Ministers/WarMinister.tscn" type="PackedScene" id=27]
+[ext_resource path="res://World Objects/Buildings/AIapts2.tscn" type="PackedScene" id=28]
 
 [sub_resource type="TileSet" id=1]
 0/name = "road2.png 0"
@@ -199,12 +201,12 @@ position = Vector2( 0, 9 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -458706, 5, 0, -393203, 5, 0, -327634, 5, 0, -262131, 5, 0, -196562, 5, 0, -131059, 5, 0, -131038, 5, 0, -65514, 5, 0, -65502, 5, 0, -65490, 5, 0, 13, 5, 0, 36, 5, 0, 37, 5, 0, 65554, 5, 0, 65570, 5, 0, 65572, 5, 0, 65573, 5, 0, 65582, 5, 0, 131085, 5, 0, 196621, 5, 0, 196622, 5, 0, 196624, 5, 0, 196626, 5, 0, 196628, 5, 0, 196630, 5, 0, 196632, 5, 0, 196634, 5, 0, 196636, 5, 0, 196638, 5, 0, 196640, 5, 0, 196642, 5, 0, 196644, 5, 0, 196645, 5, 0, 196654, 5, 0, 262183, 5, 0, 262185, 5, 0, 262187, 5, 0, 262188, 5, 0, 327704, 5, 0, 327708, 5, 0, 327712, 5, 0, 327717, 5, 0, 327726, 5, 0, 458776, 5, 0, 458789, 5, 0, 458798, 5, 0, 589848, 5, 0, 589861, 5, 0, 589870, 5, 0, 720895, 8, 0, 720909, 5, 0, 720910, 5, 0, 720912, 5, 0, 720914, 5, 0, 720916, 5, 0, 720918, 5, 0, 720920, 5, 0, 720922, 5, 0, 720924, 5, 0, 720926, 5, 0, 720927, 5, 0, 720929, 5, 0, 720931, 5, 0, 720933, 5, 0, 720934, 5, 0, 720935, 5, 0, 720936, 5, 0, 720938, 5, 0, 720940, 5, 0, 720942, 5, 0, 720944, 5, 0, 720946, 5, 0, 917503, 6, 0, 851969, 6, 0, 851971, 6, 0, 851973, 6, 0, 851975, 6, 0, 851977, 6, 0, 851979, 6, 0, 851981, 6, 0, 851983, 6, 0, 851985, 6, 0, 851987, 6, 0, 851989, 6, 0, 851991, 6, 0, 851993, 6, 0, 851995, 6, 0, 851997, 6, 0, 851999, 6, 0, 852001, 6, 0, 852003, 6, 0, 852005, 6, 0, 852007, 6, 0, 852009, 6, 0, 852011, 6, 0, 852013, 6, 0, 852015, 6, 0, 852017, 6, 0, 852019, 6, 0, 852021, 6, 0, 852023, 6, 0, 852025, 6, 0, 852027, 6, 0, 852029, 6, 0, 852030, 6, 0, 852032, 6, 0, 983038, 7, 0 )
+tile_data = PoolIntArray( -458706, 5, 0, -393203, 5, 0, -327634, 5, 0, -262131, 5, 0, -196562, 5, 0, -131059, 5, 0, -131038, 5, 0, -65514, 5, 0, -65502, 5, 0, -65490, 5, 0, 13, 5, 0, 36, 5, 0, 37, 5, 0, 65554, 5, 0, 65570, 5, 0, 65572, 5, 0, 65573, 5, 0, 65582, 5, 0, 131085, 5, 0, 196621, 5, 0, 196622, 5, 0, 196624, 5, 0, 196626, 5, 0, 196628, 5, 0, 196630, 5, 0, 196632, 5, 0, 196634, 5, 0, 196636, 5, 0, 196638, 5, 0, 196640, 5, 0, 196642, 5, 0, 196644, 5, 0, 196645, 5, 0, 196654, 5, 0, 262183, 5, 0, 262185, 5, 0, 262187, 5, 0, 262188, 5, 0, 262192, 5, 0, 262194, 5, 0, 327704, 5, 0, 327708, 5, 0, 327712, 5, 0, 327717, 5, 0, 327726, 5, 0, 458776, 5, 0, 458789, 5, 0, 458798, 5, 0, 589848, 5, 0, 589861, 5, 0, 589870, 5, 0, 720895, 8, 0, 720909, 5, 0, 720910, 5, 0, 720912, 5, 0, 720914, 5, 0, 720916, 5, 0, 720918, 5, 0, 720920, 5, 0, 720922, 5, 0, 720924, 5, 0, 720926, 5, 0, 720927, 5, 0, 720929, 5, 0, 720931, 5, 0, 720933, 5, 0, 720934, 5, 0, 720935, 5, 0, 720936, 5, 0, 720938, 5, 0, 720940, 5, 0, 720942, 5, 0, 720944, 5, 0, 720946, 5, 0, 917503, 6, 0, 851969, 6, 0, 851971, 6, 0, 851973, 6, 0, 851975, 6, 0, 851977, 6, 0, 851979, 6, 0, 851981, 6, 0, 851983, 6, 0, 851985, 6, 0, 851987, 6, 0, 851989, 6, 0, 851991, 6, 0, 851993, 6, 0, 851995, 6, 0, 851997, 6, 0, 851999, 6, 0, 852001, 6, 0, 852003, 6, 0, 852005, 6, 0, 852007, 6, 0, 852009, 6, 0, 852011, 6, 0, 852013, 6, 0, 852015, 6, 0, 852017, 6, 0, 852019, 6, 0, 852021, 6, 0, 852023, 6, 0, 852025, 6, 0, 852027, 6, 0, 852029, 6, 0, 852030, 6, 0, 852032, 6, 0, 983038, 7, 0 )
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 12 )]
-position = Vector2( 760.855, 203.353 )
+position = Vector2( 810.393, 198.203 )
 scale = Vector2( 1.6, 1.6 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
@@ -248,10 +250,10 @@ position = Vector2( 636.342, -31.4159 )
 position = Vector2( 502.807, 127.269 )
 
 [node name="Forest9" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 894.106, -25.6105 )
+position = Vector2( 970.539, -50.9242 )
 
 [node name="Forest10" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( 933, 87 )
+position = Vector2( 980.311, 87.5632 )
 
 [node name="Forest11" parent="YSort" instance=ExtResource( 10 )]
 position = Vector2( 768, 310 )
@@ -312,7 +314,7 @@ position = Vector2( -5.63895, 233.034 )
 rotation = 3.14159
 
 [node name="Train" parent="YSort" instance=ExtResource( 23 )]
-position = Vector2( 952.386, 212.962 )
+position = Vector2( 830.509, 214.736 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="OfficeWorker" parent="YSort" instance=ExtResource( 24 )]
@@ -325,6 +327,12 @@ scale = Vector2( 1.5, 1.5 )
 
 [node name="Police" parent="YSort" instance=ExtResource( 26 )]
 position = Vector2( 773.965, 151.688 )
+
+[node name="WarMinister" parent="YSort" instance=ExtResource( 27 )]
+position = Vector2( 725.073, 200.417 )
+
+[node name="Apt3" parent="YSort" instance=ExtResource( 28 )]
+position = Vector2( 829.983, -24.7533 )
 
 [node name="PortalTown" parent="." instance=ExtResource( 6 )]
 position = Vector2( 224.345, -73.144 )
