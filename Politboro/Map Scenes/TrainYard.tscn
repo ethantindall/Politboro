@@ -1,311 +1,398 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=32 format=3 uid="uid://d3apbgmls04rm"]
 
-[ext_resource path="res://World Objects/Buildings/TrainTower.tscn" type="PackedScene" id=1]
-[ext_resource path="res://World Objects/Portal/Portal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World Objects/Accessories/CoalCar.tscn" type="PackedScene" id=3]
-[ext_resource path="res://World Objects/Accessories/CoalPile.tscn" type="PackedScene" id=4]
-[ext_resource path="res://World Objects/Accessories/BoxCar.tscn" type="PackedScene" id=5]
-[ext_resource path="res://World Objects/Player/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Images/Tiles/background.png" type="Texture" id=7]
-[ext_resource path="res://Images/Tiles/Railroad/traintrackBR.png" type="Texture" id=8]
-[ext_resource path="res://Images/Tiles/Railroad/traintrackBL.png" type="Texture" id=9]
-[ext_resource path="res://Images/Tiles/Airstrip/airstrip.png" type="Texture" id=10]
-[ext_resource path="res://Images/Tiles/road2.png" type="Texture" id=11]
-[ext_resource path="res://Images/Tiles/Railroad/traintrackH.png" type="Texture" id=12]
-[ext_resource path="res://Images/Tiles/Railroad/traincurve1.png" type="Texture" id=13]
-[ext_resource path="res://Images/Tiles/Airstrip/airstripV.png" type="Texture" id=14]
-[ext_resource path="res://Images/Tiles/Railroad/traintrackV.png" type="Texture" id=15]
-[ext_resource path="res://Images/Tiles/Railroad/traintrackB.png" type="Texture" id=16]
-[ext_resource path="res://Images/Tiles/cobblestone.png" type="Texture" id=17]
+[ext_resource type="PackedScene" path="res://World Objects/Buildings/TrainTower.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://World Objects/Accessories/CoalCar.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://World Objects/Accessories/CoalPile.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://World Objects/Accessories/BoxCar.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://nmsfkg1ncfsf" path="res://Images/Tiles/Railroad/traintrackBR.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://c3ihkaiqemgto" path="res://Images/Tiles/Railroad/traintrackBL.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://b1u5bt06174t" path="res://Images/Tiles/Airstrip/airstrip.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://ccgdt4chb1mrr" path="res://Images/Tiles/road2.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://ctv7rmmp720sl" path="res://Images/Tiles/Railroad/traintrackH.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://c3qcg5lwqi6w3" path="res://Images/Tiles/Railroad/traincurve1.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://dqctgiuow1lol" path="res://Images/Tiles/Airstrip/airstripV.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://cybsgw8818sgo" path="res://Images/Tiles/Railroad/traintrackV.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://b5abu8b5f3jrh" path="res://Images/Tiles/Railroad/traintrackB.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="17"]
 
-[sub_resource type="TileSet" id=1]
-0/name = "road2.png 0"
-0/texture = ExtResource( 11 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 32, 32 )
-0/tile_mode = 1
-0/autotile/bitmask_mode = 1
-0/autotile/bitmask_flags = [  ]
-0/autotile/icon_coordinate = Vector2( 0, 0 )
-0/autotile/tile_size = Vector2( 16, 16 )
-0/autotile/spacing = 0
-0/autotile/occluder_map = [  ]
-0/autotile/navpoly_map = [  ]
-0/autotile/priority_map = [  ]
-0/autotile/z_index_map = [  ]
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "airstrip.png 1"
-1/texture = ExtResource( 10 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 32, 32 )
-1/tile_mode = 1
-1/autotile/bitmask_mode = 1
-1/autotile/bitmask_flags = [ Vector2( 0, 0 ), 416, Vector2( 0, 1 ), 38, Vector2( 1, 0 ), 200, Vector2( 1, 1 ), 11 ]
-1/autotile/icon_coordinate = Vector2( 0, 0 )
-1/autotile/tile_size = Vector2( 16, 16 )
-1/autotile/spacing = 0
-1/autotile/occluder_map = [  ]
-1/autotile/navpoly_map = [  ]
-1/autotile/priority_map = [  ]
-1/autotile/z_index_map = [  ]
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "road2.png 2"
-2/texture = ExtResource( 11 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 32, 32 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "airstrip.png 3"
-3/texture = ExtResource( 10 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 32, 32 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "traintrack.png 4"
-4/texture = ExtResource( 12 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 32, 32 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "airstripV.png 5"
-5/texture = ExtResource( 14 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 13, 13, 1, 1 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-6/name = "airstripV.png 6"
-6/texture = ExtResource( 14 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 0, 32, 32 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
-7/name = "traintrackB.png 7"
-7/texture = ExtResource( 16 )
-7/tex_offset = Vector2( 0, 0 )
-7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 0, 0, 32, 32 )
-7/tile_mode = 0
-7/occluder_offset = Vector2( 0, 0 )
-7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
-7/z_index = 0
-8/name = "traintrackV.png 8"
-8/texture = ExtResource( 15 )
-8/tex_offset = Vector2( 0, 0 )
-8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( 0, 0, 32, 32 )
-8/tile_mode = 0
-8/occluder_offset = Vector2( 0, 0 )
-8/navigation_offset = Vector2( 0, 0 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape_one_way = false
-8/shape_one_way_margin = 0.0
-8/shapes = [  ]
-8/z_index = 0
-9/name = "traintrackBR.png 9"
-9/texture = ExtResource( 8 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 0, 0, 32, 32 )
-9/tile_mode = 0
-9/occluder_offset = Vector2( 0, 0 )
-9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
-10/name = "traintrackBL.png 10"
-10/texture = ExtResource( 9 )
-10/tex_offset = Vector2( 0, 0 )
-10/modulate = Color( 1, 1, 1, 1 )
-10/region = Rect2( 0, 0, 32, 32 )
-10/tile_mode = 0
-10/occluder_offset = Vector2( 0, 0 )
-10/navigation_offset = Vector2( 0, 0 )
-10/shape_offset = Vector2( 0, 0 )
-10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape_one_way = false
-10/shape_one_way_margin = 0.0
-10/shapes = [  ]
-10/z_index = 0
-11/name = "traincurve1.png 11"
-11/texture = ExtResource( 13 )
-11/tex_offset = Vector2( 0, 0 )
-11/modulate = Color( 1, 1, 1, 1 )
-11/region = Rect2( 0, 0, 32, 32 )
-11/tile_mode = 0
-11/occluder_offset = Vector2( 0, 0 )
-11/navigation_offset = Vector2( 0, 0 )
-11/shape_offset = Vector2( 0, 0 )
-11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape_one_way = false
-11/shape_one_way_margin = 0.0
-11/shapes = [  ]
-11/z_index = 0
-12/name = "cobblestone.png 12"
-12/texture = ExtResource( 17 )
-12/tex_offset = Vector2( 0, 0 )
-12/modulate = Color( 1, 1, 1, 1 )
-12/region = Rect2( 0, 0, 32, 32 )
-12/tile_mode = 0
-12/occluder_offset = Vector2( 0, 0 )
-12/navigation_offset = Vector2( 0, 0 )
-12/shape_offset = Vector2( 0, 0 )
-12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-12/shape_one_way = false
-12/shape_one_way_margin = 0.0
-12/shapes = [  ]
-12/z_index = 0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yq6p"]
+texture = ExtResource("11")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b206b"]
+texture = ExtResource("10")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqssg"]
+texture = ExtResource("9")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0t047"]
+texture = ExtResource("13")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t55ri"]
+texture = ExtResource("17")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0yjsc"]
+texture = ExtResource("11")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsjv3"]
+texture = ExtResource("10")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_af2rn"]
+texture = ExtResource("12")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7rdms"]
+texture = ExtResource("14")
+margins = Vector2i(13, 13)
+texture_region_size = Vector2i(1, 1)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpwfq"]
+texture = ExtResource("14")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n6qvw"]
+texture = ExtResource("16")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1003"]
+texture = ExtResource("15")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ki8un"]
+texture = ExtResource("8")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_7yq6p")
+sources/1 = SubResource("TileSetAtlasSource_b206b")
+sources/2 = SubResource("TileSetAtlasSource_0yjsc")
+sources/3 = SubResource("TileSetAtlasSource_qsjv3")
+sources/4 = SubResource("TileSetAtlasSource_af2rn")
+sources/5 = SubResource("TileSetAtlasSource_7rdms")
+sources/6 = SubResource("TileSetAtlasSource_xpwfq")
+sources/7 = SubResource("TileSetAtlasSource_n6qvw")
+sources/8 = SubResource("TileSetAtlasSource_v1003")
+sources/9 = SubResource("TileSetAtlasSource_ki8un")
+sources/10 = SubResource("TileSetAtlasSource_cqssg")
+sources/11 = SubResource("TileSetAtlasSource_0t047")
+sources/12 = SubResource("TileSetAtlasSource_t55ri")
 
 [node name="TrainStation" type="Node2D"]
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( -0.859373, 65.108 )
-scale = Vector2( 0.864268, 0.860195 )
-texture = ExtResource( 7 )
-offset = Vector2( 200, 0 )
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-0.859373, 65.108)
+scale = Vector2(0.864268, 0.860195)
+texture = ExtResource("7")
+offset = Vector2(200, 0)
 region_enabled = true
-region_rect = Rect2( 0, 0, 578.192, 485.268 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2(0, 0, 578.192, 485.268)
 
 [node name="RoadTileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( -589817, 2, 0, -589816, 2, 0, -524282, 2, 0, -524280, 2, 0, -458746, 2, 0, -458743, 2, 0, -393210, 2, 0, -393208, 2, 0, -393207, 2, 0, -393206, 2, 0, -262146, 12, 0, -327680, 12, 0, -327674, 2, 0, -327672, 2, 0, -327670, 2, 0, -262143, 12, 0, -262137, 2, 0, -262136, 2, 0, -262133, 2, 0, -196606, 12, 0, -196601, 2, 0, -196600, 2, 0, -196598, 2, 0, -196597, 2, 0, -131069, 12, 0, -131065, 2, 0, -131064, 2, 0, -131063, 2, 0, -131061, 2, 0, -65532, 12, 0, -65530, 2, 0, -65529, 2, 0, -65527, 2, 0, -65526, 2, 0, -65525, 2, 0, -65524, 2, 0, -65523, 2, 0, -65522, 2, 0, -65521, 2, 0, -65520, 2, 0, -65519, 2, 0, -65518, 2, 0, -65517, 2, 0, -65516, 2, 0, -65515, 2, 0, -65514, 2, 0, -65513, 2, 0, -65512, 2, 0, 4, 12, 0, 20, 2, 0, 21, 2, 0, 22, 2, 0, 65541, 12, 0, 65542, 12, 0, 65544, 12, 0, 65546, 12, 0, 65548, 12, 0, 65550, 12, 0, 65551, 12, 0, 65553, 2, 0, 65554, 2, 0, 65555, 2, 0, 65558, 2, 0, 65559, 2, 0, 65560, 2, 0, 131087, 12, 0, 131093, 2, 0, 196619, 2, 0, 196621, 2, 0, 196624, 12, 0, 196626, 2, 0, 196628, 2, 0, 327674, 2, 0, 262150, 2, 0, 262155, 2, 0, 262156, 2, 0, 262158, 2, 0, 393210, 2, 0, 393211, 2, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 327688, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327696, 12, 0, 327699, 2, 0, 327700, 2, 0, 327701, 2, 0, 327702, 2, 0, 327703, 2, 0, 327704, 2, 0, 458747, 2, 0, 458748, 2, 0, 458749, 2, 0, 458750, 2, 0, 458751, 2, 0, 393216, 2, 0, 393217, 2, 0, 393218, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 393230, 2, 0, 393234, 2, 0, 458752, 2, 0, 458753, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458768, 12, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524306, 2, 0, 524307, 2, 0, 589837, 2, 0, 589838, 2, 0, 589840, 12, 0, 589844, 2, 0, 589845, 2, 0, 589846, 2, 0, 589847, 2, 0, 589848, 2, 0, 589849, 2, 0, 655366, 2, 0, 655372, 2, 0, 655378, 2, 0, 655379, 2, 0, 655380, 2, 0, 786428, 2, 0, 786429, 2, 0, 786431, 2, 0, 720896, 2, 0, 720901, 2, 0, 720907, 2, 0, 720910, 2, 0, 720912, 12, 0, 720914, 2, 0, 720916, 2, 0, 720917, 2, 0, 851962, 2, 0, 851963, 2, 0, 851966, 2, 0, 786433, 2, 0, 786434, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786438, 2, 0, 786439, 2, 0, 786440, 2, 0, 786441, 2, 0, 786442, 2, 0, 786453, 2, 0, 917498, 2, 0, 917499, 2, 0, 917500, 2, 0, 851977, 2, 0, 851984, 12, 0, 983037, 2, 0, 983038, 2, 0, 983039, 2, 0, 917504, 2, 0, 917505, 2, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 917512, 2, 0, 983056, 12, 0 )
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(-589817, 2, 0, -589816, 2, 0, -524282, 2, 0, -524280, 2, 0, -458746, 2, 0, -458743, 2, 0, -393210, 2, 0, -393208, 2, 0, -393207, 2, 0, -393206, 2, 0, -262146, 12, 0, -327680, 12, 0, -327674, 2, 0, -327672, 2, 0, -327670, 2, 0, -262143, 12, 0, -262137, 2, 0, -262136, 2, 0, -262133, 2, 0, -196606, 12, 0, -196601, 2, 0, -196600, 2, 0, -196598, 2, 0, -196597, 2, 0, -131069, 12, 0, -131065, 2, 0, -131064, 2, 0, -131063, 2, 0, -131061, 2, 0, -65532, 12, 0, -65530, 2, 0, -65529, 2, 0, -65527, 2, 0, -65526, 2, 0, -65525, 2, 0, -65524, 2, 0, -65523, 2, 0, -65522, 2, 0, -65521, 2, 0, -65520, 2, 0, -65519, 2, 0, -65518, 2, 0, -65517, 2, 0, -65516, 2, 0, -65515, 2, 0, -65514, 2, 0, -65513, 2, 0, -65512, 2, 0, 4, 12, 0, 20, 2, 0, 21, 2, 0, 22, 2, 0, 65541, 12, 0, 65542, 12, 0, 65544, 12, 0, 65546, 12, 0, 65548, 12, 0, 65550, 12, 0, 65551, 12, 0, 65553, 2, 0, 65554, 2, 0, 65555, 2, 0, 65558, 2, 0, 65559, 2, 0, 65560, 2, 0, 131087, 12, 0, 131093, 2, 0, 196619, 2, 0, 196621, 2, 0, 196624, 12, 0, 196626, 2, 0, 196628, 2, 0, 327674, 2, 0, 262150, 2, 0, 262155, 2, 0, 262156, 2, 0, 262158, 2, 0, 393210, 2, 0, 393211, 2, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 327688, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327696, 12, 0, 327699, 2, 0, 327700, 2, 0, 327701, 2, 0, 327702, 2, 0, 327703, 2, 0, 327704, 2, 0, 458747, 2, 0, 458748, 2, 0, 458749, 2, 0, 458750, 2, 0, 458751, 2, 0, 393216, 2, 0, 393217, 2, 0, 393218, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 393230, 2, 0, 393234, 2, 0, 458752, 2, 0, 458753, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458768, 12, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 2, 0, 524294, 2, 0, 524295, 2, 0, 524306, 2, 0, 524307, 2, 0, 589837, 2, 0, 589838, 2, 0, 589840, 12, 0, 589844, 2, 0, 589845, 2, 0, 589846, 2, 0, 589847, 2, 0, 589848, 2, 0, 589849, 2, 0, 655366, 2, 0, 655372, 2, 0, 655378, 2, 0, 655379, 2, 0, 655380, 2, 0, 786428, 2, 0, 786429, 2, 0, 786431, 2, 0, 720896, 2, 0, 720901, 2, 0, 720907, 2, 0, 720910, 2, 0, 720912, 12, 0, 720914, 2, 0, 720916, 2, 0, 720917, 2, 0, 851962, 2, 0, 851963, 2, 0, 851966, 2, 0, 786433, 2, 0, 786434, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786438, 2, 0, 786439, 2, 0, 786440, 2, 0, 786441, 2, 0, 786442, 2, 0, 786453, 2, 0, 917498, 2, 0, 917499, 2, 0, 917500, 2, 0, 851977, 2, 0, 851984, 12, 0, 983037, 2, 0, 983038, 2, 0, 983039, 2, 0, 917504, 2, 0, 917505, 2, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 917512, 2, 0, 983056, 12, 0)
 
 [node name="trainTileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( -589816, 4, 0, -458744, 4, 0, -327672, 4, 0, -196600, 4, 0, -65528, 7, 0, -65526, 8, 0, -65524, 8, 0, -65522, 8, 0, -65520, 8, 0, -65518, 8, 0, -65516, 8, 0, -65514, 8, 0, -65512, 8, 0, -65510, 8, 0, -65508, 8, 0, 393211, 8, 0, 393213, 8, 0, 393215, 8, 0, 327681, 8, 0, 327683, 8, 0, 327685, 8, 0, 327687, 8, 0, 327689, 8, 0, 327691, 8, 0, 327693, 8, 0, 327695, 8, 0, 327697, 8, 0, 327699, 8, 0, 327701, 8, 0, 327703, 8, 0, 327705, 8, 0, 327707, 8, 0, 524297, 11, 0, 524299, 8, 0, 524301, 8, 0, 524303, 8, 0, 524305, 8, 0, 524307, 8, 0, 524309, 8, 0, 524311, 8, 0, 524313, 8, 0, 524315, 8, 0, 655369, 4, 0, 851963, 8, 0, 851965, 8, 0, 851967, 8, 0, 786433, 8, 0, 786435, 8, 0, 786437, 8, 0, 786439, 8, 0, 786441, 9, 0 )
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(-589816, 4, 0, -458744, 4, 0, -327672, 4, 0, -196600, 4, 0, -65528, 7, 0, -65526, 8, 0, -65524, 8, 0, -65522, 8, 0, -65520, 8, 0, -65518, 8, 0, -65516, 8, 0, -65514, 8, 0, -65512, 8, 0, -65510, 8, 0, -65508, 8, 0, 393211, 8, 0, 393213, 8, 0, 393215, 8, 0, 327681, 8, 0, 327683, 8, 0, 327685, 8, 0, 327687, 8, 0, 327689, 8, 0, 327691, 8, 0, 327693, 8, 0, 327695, 8, 0, 327697, 8, 0, 327699, 8, 0, 327701, 8, 0, 327703, 8, 0, 327705, 8, 0, 327707, 8, 0, 524297, 11, 0, 524299, 8, 0, 524301, 8, 0, 524303, 8, 0, 524305, 8, 0, 524307, 8, 0, 524309, 8, 0, 524311, 8, 0, 524313, 8, 0, 524315, 8, 0, 655369, 4, 0, 851963, 8, 0, 851965, 8, 0, 851967, 8, 0, 786433, 8, 0, 786435, 8, 0, 786437, 8, 0, 786439, 8, 0, 786441, 9, 0)
 
-[node name="YSort" type="YSort" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="Player" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 1.34869, -65.2351 )
-scale = Vector2( 1.5, 1.5 )
+[node name="Player" parent="Node2D" instance=ExtResource("6")]
+position = Vector2(1.34869, -65.2351)
+scale = Vector2(1.5, 1.5)
 
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
-zoom = Vector2( 0.75, 0.75 )
+[node name="Camera2D" type="Camera2D" parent="Node2D/Player"]
+zoom = Vector2(10, 10)
 limit_left = -20
 limit_top = -100
 limit_right = 350
 limit_bottom = 225
 limit_smoothed = true
-smoothing_enabled = true
-__meta__ = {
-"_edit_lock_": true
-}
+position_smoothing_enabled = true
 
-[node name="CoalCar" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 89.3385, 198.62 )
+[node name="CoalCar" parent="Node2D" instance=ExtResource("3")]
+position = Vector2(89.3385, 198.62)
 
-[node name="CoalCar2" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 229.537, 133.877 )
+[node name="CoalCar2" parent="Node2D" instance=ExtResource("3")]
+position = Vector2(229.537, 133.877)
 
-[node name="BoxCar" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 354.988, 133.294 )
+[node name="BoxCar" parent="Node2D" instance=ExtResource("5")]
+position = Vector2(354.988, 133.294)
 
-[node name="BoxCar2" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 17.8686, 199.22 )
+[node name="BoxCar2" parent="Node2D" instance=ExtResource("5")]
+position = Vector2(17.8686, 199.22)
 
-[node name="BoxCar4" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 240.044, -10.736 )
+[node name="BoxCar4" parent="Node2D" instance=ExtResource("5")]
+position = Vector2(240.044, -10.736)
 
-[node name="BoxCar5" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 306.512, -11.0896 )
+[node name="BoxCar5" parent="Node2D" instance=ExtResource("5")]
+position = Vector2(306.512, -11.0896)
 
-[node name="CoalCar3" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 377.576, -10.736 )
+[node name="CoalCar3" parent="Node2D" instance=ExtResource("3")]
+position = Vector2(377.576, -10.736)
 
-[node name="CoalPile2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 47.9966, 156.513 )
+[node name="CoalPile2" parent="Node2D" instance=ExtResource("4")]
+position = Vector2(47.9966, 156.513)
 
-[node name="CoalPile" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 84.5214, 154.944 )
+[node name="CoalPile" parent="Node2D" instance=ExtResource("4")]
+position = Vector2(84.5214, 154.944)
 
-[node name="TrainTower" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 124.044, 136.581 )
+[node name="TrainTower" parent="Node2D" instance=ExtResource("1")]
+position = Vector2(124.044, 136.581)
 
-[node name="Portal_Town_N" parent="." instance=ExtResource( 2 )]
-position = Vector2( 271.677, 231.19 )
+[node name="Portal_Town_N" parent="." instance=ExtResource("2")]
+position = Vector2(271.677, 231.19)
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/TownSquare.tscn"
-player_spawn_location = Vector2( 562, 12 )
+player_spawn_location = Vector2(562, 12)
 
-[node name="Portal_Base_E" parent="." instance=ExtResource( 2 )]
-position = Vector2( -16.0526, -66.2698 )
-player_spawn_location = Vector2( 1116, 232 )
+[node name="Portal_Base_E" parent="." instance=ExtResource("2")]
+position = Vector2(-16.0526, -66.2698)
+player_spawn_location = Vector2(1116, 232)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( -0.176788, 8.35356 )
-polygon = PoolVector2Array( -11.5634, -106, -11.1429, 218.586, 420.682, 217.234, 419.56, 223.408, -22.0746, 222.791, -20.2909, -75.7224, -22.0746, -111.045, 424.435, -111.509, 424.55, 204.355, 413.638, 215.913, 413.944, -107.479 )
+position = Vector2(-0.176788, 8.35356)
+polygon = PackedVector2Array(-11.5634, -106, -11.1429, 218.586, 420.682, 217.234, 419.56, 223.408, -22.0746, 222.791, -20.2909, -75.7224, -22.0746, -111.045, 424.435, -111.509, 424.55, 204.355, 413.638, 215.913, 413.944, -107.479)

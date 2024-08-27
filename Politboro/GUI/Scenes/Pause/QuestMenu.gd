@@ -4,20 +4,21 @@ extends Control
 var selectedData
 var buttonDict = {}
 var result_json = {}
+var file 
 
-onready var vbox = 	get_node("QuestsScrollContainer/VBoxContainer")
+@onready var vbox = 	get_node("QuestsScrollContainer/VBoxContainer")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
 	#GET JSON DATA
-	var file = File.new()
-	file.open("res://GUI/quests.json", file.READ)
+	file = FileAccess.open("res://GUI/quests.json", FileAccess.READ)
 	var text_json = file.get_as_text()
-	result_json = parse_json(text_json)
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(text_json)
+	result_json = test_json_conv.get_data()
 	file.close()
 
-	
+"""
 func _on_Quests_visibility_changed():
 	var buttonCounter = 0
 	for q in result_json.Quests:
@@ -29,7 +30,7 @@ func _on_Quests_visibility_changed():
 		else:
 			x.visible = false
 		buttonCounter += 1
-"""
+		
 func validateJSON(rj):
 	if rj.error == OK:  # If parse OK
 		var data = rj.result

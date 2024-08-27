@@ -10,10 +10,8 @@ var player_inventory = []
 #var player_facing_direction = 1
 
 func _ready():
-	OS.set_window_maximized(true)
+	get_window().mode = Window.MODE_MAXIMIZED if (true) else Window.MODE_WINDOWED
 
 
 func register_player(in_player):
-	 player = in_player
-	
-	
+	player = in_player

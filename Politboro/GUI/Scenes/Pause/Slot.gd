@@ -1,11 +1,11 @@
 extends Panel
 
-export(String) var itemName = ""
-export(String, FILE) var imagePath = ""
-export(String) var itemDesc = ""
-export(String) var itemPickupTimeline = ""
-export var itemValue = 1
-export(String) var itemContent = ""
+@export var itemName: String = ""
+@export var imagePath = "" # (String, FILE)
+@export var itemDesc: String = ""
+@export var itemPickupTimeline: String = ""
+@export var itemValue = 1
+@export var itemContent: String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

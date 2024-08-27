@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Images/InvItems/photo.png" type="Texture" id=1]
+[ext_resource path="res://Images/InvItems/photo.png" type="Texture2D" id=1]
 [ext_resource path="res://GlobalScripts/invitem.gd" type="Script" id=2]
 
 
@@ -19,7 +19,7 @@ imagePath = "res://Images/InvItems/photo.png"
 itemDesc = "An incriminating photograph. Leak this to the press and someone's career is over."
 itemPickupTimeline = "Photo-1"
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2( 0.138494, 0.138494 )
 texture = ExtResource( 1 )
 __meta__ = {

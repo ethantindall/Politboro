@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpii8gpw8adp8"]
+
+[ext_resource type="Script" path="res://UI/DayNightCycle/DayNightCycle.gd" id="1_44lwi"]
+[ext_resource type="PackedScene" uid="uid://b4mitotcubsj0" path="res://UI/DayNightCycle/daynightcycle_ui.tscn" id="2_qp1g5"]
+[ext_resource type="Script" path="res://UI/DayNightCycle/ModulateDayCycle.gd" id="2_u2jue"]
+[ext_resource type="Texture2D" uid="uid://uttx85uvpikp" path="res://UI/DayNightCycle/daynightcycle-gradient-texture.tres" id="3_2q5eo"]
+
+[node name="DayNightCycle" type="Node2D"]
+script = ExtResource("1_44lwi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DayNightCycleUI" parent="CanvasLayer" instance=ExtResource("2_qp1g5")]
+
+[node name="ModulateDayCycle" type="CanvasModulate" parent="."]
+script = ExtResource("2_u2jue")
+gradient_texture = ExtResource("3_2q5eo")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2

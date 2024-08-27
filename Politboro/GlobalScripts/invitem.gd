@@ -1,11 +1,11 @@
 extends StaticBody2D
 
-export(String) var itemName = ""
-export(String, FILE) var imagePath = ""
-export(String) var itemDesc = ""
-export(String) var itemPickupTimeline = ""
-export var itemValue = 1
-export(String) var itemContent = ""
+@export var itemName: String = ""
+@export var imagePath = "" # (String, FILE)
+@export var itemDesc: String = ""
+@export var itemPickupTimeline: String = ""
+@export var itemValue = 1
+@export var itemContent: String = ""
 var active = false
 			
 func _input(event):
@@ -13,8 +13,8 @@ func _input(event):
 		if event.is_action_pressed("ui_accept") and active:
 			get_tree().paused = true
 			var dialog = Dialogic.start(itemPickupTimeline)
-			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
-			dialog.connect('timeline_end', self, 'unpause')
+			dialog.process_mode = Node.PROCESS_MODE_ALWAYS
+			dialog.connect('timeline_end', Callable(self, 'unpause'))
 			add_child(dialog)
 
 			var unique = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GlobalScripts/invitem.gd" type="Script" id=1]
-[ext_resource path="res://Images/InvItems/bloodyknife.png" type="Texture" id=2]
+[ext_resource path="res://Images/InvItems/bloodyknife.png" type="Texture2D" id=2]
 
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -20,7 +20,7 @@ imagePath = "res://Images/InvItems/bloodyknife.png"
 itemDesc = "A knife covered in the blood of a murder victim. Perhaps you could plant it as evidence..."
 itemPickupTimeline = "BloodyKnife-1"
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 __meta__ = {

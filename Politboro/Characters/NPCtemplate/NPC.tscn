@@ -1,185 +1,191 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=3 uid="uid://6gff80srw2xg"]
 
-[ext_resource path="res://Characters/NPCtemplate/NPC.gd" type="Script" id=2]
-[ext_resource path="res://Characters/questionmark.tscn" type="PackedScene" id=3]
+[ext_resource type="Script" path="res://Characters/NPCtemplate/NPC.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="2_ya2wa"]
+[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="3"]
 
-
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "IdleD"
 length = 2.0
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [0, 1]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "IdleL"
 length = 0.1
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 4 ]
+"values": [4]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="3"]
 resource_name = "IdleR"
 length = 0.1
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 6 ]
+"values": [6]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id="4"]
 resource_name = "IdleU"
 length = 0.1
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 7 ]
-}
-
-[sub_resource type="Animation" id=5]
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 2, 3, 5 ]
+"values": [7]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id="5"]
 length = 0.6
-loop = true
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 3, 5]
+}
+
+[sub_resource type="Animation" id="6"]
+length = 0.6
+loop_mode = 1
 step = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ 4, 5 ]
+"values": [4, 5]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id="7"]
 length = 0.6
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ 11, 10, 6 ]
+"values": [11, 10, 6]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id="8"]
 length = 0.6
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ 9, 8, 7 ]
+"values": [9, 8, 7]
 }
 
-[sub_resource type="CapsuleShape2D" id=9]
-radius = 2.0
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_338aw"]
+_data = {
+"IdleD": SubResource("1"),
+"IdleL": SubResource("2"),
+"IdleR": SubResource("3"),
+"IdleU": SubResource("4"),
+"Move Down": SubResource("5"),
+"Move Left": SubResource("6"),
+"Move Right": SubResource("7"),
+"Move Up": SubResource("8")
+}
+
+[sub_resource type="CapsuleShape2D" id="9"]
+radius = 1.0
 height = 2.0
 
-[sub_resource type="CircleShape2D" id=10]
+[sub_resource type="CircleShape2D" id="10"]
 radius = 7.06941
 
-[node name="NPC" type="KinematicBody2D"]
+[node name="NPC" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.307755, 0.915455 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.307755, 0.915455)
+scale = Vector2(0.5, 0.5)
 hframes = 3
 vframes = 3
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_338aw")
+}
 autoplay = "IdleD"
-anims/IdleD = SubResource( 1 )
-anims/IdleL = SubResource( 2 )
-anims/IdleR = SubResource( 3 )
-anims/IdleU = SubResource( 4 )
-"anims/Move Down" = SubResource( 5 )
-"anims/Move Left" = SubResource( 6 )
-"anims/Move Right" = SubResource( 7 )
-"anims/Move Up" = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.284254, 5.94179 )
+position = Vector2(-0.284254, 5.94179)
 rotation = 1.5708
-shape = SubResource( 9 )
+shape = SubResource("9")
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
-position = Vector2( -0.1875, 4.375 )
-shape = SubResource( 10 )
+position = Vector2(-0.1875, 4.375)
+shape = SubResource("10")
 
-[node name="questionmark" parent="." instance=ExtResource( 3 )]
+[node name="questionmark" parent="." instance=ExtResource("3")]
+
+[node name="DialogueBox" parent="." instance=ExtResource("2_ya2wa")]
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
 [connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

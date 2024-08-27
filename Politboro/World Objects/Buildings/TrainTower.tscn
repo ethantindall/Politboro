@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Images/Bldgs/TrainYardTower.png" type="Texture" id=1]
+[ext_resource path="res://Images/Bldgs/TrainYardTower.png" type="Texture2D" id=1]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.8869, 15.4097 )
@@ -8,7 +9,7 @@ extents = Vector2( 21.8869, 15.4097 )
 [node name="TrainTower" type="StaticBody2D"]
 scale = Vector2( 0.75, 0.75 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2( -35.0204, -127.462 )
 texture = ExtResource( 1 )
 centered = false

@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/leaves02.ogg-f099874db0a5801c42444d66f74bbeda.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5057521od8e5"
+path="res://.godot/imported/leaves02.ogg-f099874db0a5801c42444d66f74bbeda.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/leaves02.ogg"
-dest_files=[ "res://.import/leaves02.ogg-f099874db0a5801c42444d66f74bbeda.oggstr" ]
+dest_files=["res://.godot/imported/leaves02.ogg-f099874db0a5801c42444d66f74bbeda.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

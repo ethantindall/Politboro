@@ -1,18 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://d0ft8dx230fvn"]
 
-[ext_resource path="res://Images/tree.png" type="Texture" id=1]
+[ext_resource type="Texture2D" uid="uid://bwvd6pu2u7lko" path="res://Images/tree.png" id="1_ocwrc"]
 
 [node name="Tree" type="StaticBody2D"]
-position = Vector2( 8, -1 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -17.868, -11.4093 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2(8, -1)
+scale = Vector2(0.5, 0.5)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( -13.9816, -10.8053 )
-polygon = PoolVector2Array( -8.625, 31.375, -0.5, 31.375, -0.375, 23.5, 19.875, 23.25, 19.875, 15.875, 19.875, 15.875, 15.5673, 6.9066, -23.1468, 6.55304, -28.125, 15.5, -28.424, 23.0334, -8.5, 23.375 )
+position = Vector2(-13.9816, -10.8053)
+polygon = PackedVector2Array(-8.625, 31.375, -0.5, 31.375, -0.375, 23.5, 19.875, 23.25, 19.875, 15.875, 19.875, 15.875, 15.5673, 6.9066, -23.1468, 6.55304, -28.125, 15.5, -28.424, 23.0334, -8.5, 23.375)
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-18, -12)
+texture = ExtResource("1_ocwrc")

@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkebl8ir7f5g8"]
+
+[ext_resource type="Script" path="res://GUI/DialogueBox.gd" id="1_l8fle"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_ekvdv"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_a2hi7"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_lm63s"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_nt46q"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_62c1j"]
+script = ExtResource("3_a2hi7")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_32b41"]
+script = ExtResource("4_lm63s")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_rnuim"]
+script = ExtResource("5_nt46q")
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_l8fle")
+
+[node name="DialogueBoxNode" type="Panel" parent="."]
+process_mode = 3
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.999996
+offset_top = 2.0
+offset_right = 452.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.17, 0.17)
+script = ExtResource("2_ekvdv")
+scroll_speed = 5
+skip_input_action = "ui_accept"
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_62c1j"), SubResource("RichTextEffect_32b41"), SubResource("RichTextEffect_rnuim")])
+options_alignment = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="dialogue_signal" from="DialogueBoxNode" to="." method="_on_dialogue_box_node_dialogue_signal"]

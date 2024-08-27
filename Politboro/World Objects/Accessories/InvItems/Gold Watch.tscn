@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Images/InvItems/watch.png" type="Texture" id=1]
+[ext_resource path="res://Images/InvItems/watch.png" type="Texture2D" id=1]
 [ext_resource path="res://GlobalScripts/invitem.gd" type="Script" id=2]
 
 
@@ -18,7 +18,7 @@ imagePath = "res://Images/InvItems/watch.png"
 itemDesc = "Looks like a family heirloom, passed down for generations."
 itemPickupTimeline = "GoldWatch-1"
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2( 0.324457, -0.238974 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )

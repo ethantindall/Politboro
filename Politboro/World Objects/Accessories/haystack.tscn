@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Images/hay.png" type="Texture" id=1]
+[ext_resource path="res://Images/hay.png" type="Texture2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.0939, 5.74349 )
@@ -9,7 +9,7 @@ extents = Vector2( 12.0939, 5.74349 )
 position = Vector2( 8, -1 )
 scale = Vector2( 1.2, 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2( -12.4668, 2.38037 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )

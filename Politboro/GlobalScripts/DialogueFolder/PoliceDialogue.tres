@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dqky5q6ceoh57"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_ssh0g"]
+
+[resource]
+script = ExtResource("1_ssh0g")
+starts = {
+"Police01": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-100, 160),
+"start_id": "Police01"
+},
+"1_1": {
+"dialogue": "See anything suspicious, comrade?",
+"offset": Vector2(180, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 275),
+"speaker": "Police"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(540, 300),
+"signalValue": "END"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

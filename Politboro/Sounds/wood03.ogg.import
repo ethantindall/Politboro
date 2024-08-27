@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/wood03.ogg-a6f2ded900a4364e403a39cbb2e8f88c.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4lwjj54ak81g"
+path="res://.godot/imported/wood03.ogg-a6f2ded900a4364e403a39cbb2e8f88c.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/wood03.ogg"
-dest_files=[ "res://.import/wood03.ogg-a6f2ded900a4364e403a39cbb2e8f88c.oggstr" ]
+dest_files=["res://.godot/imported/wood03.ogg-a6f2ded900a4364e403a39cbb2e8f88c.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

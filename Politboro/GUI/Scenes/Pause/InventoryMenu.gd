@@ -1,13 +1,13 @@
 extends Control
 
 
-onready var inventory_slots = $ColorRect4/ScrollContainer/GridContainer
+@onready var inventory_slots = $ColorRect4/ScrollContainer/GridContainer
 
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
 	for inv_slot in inventory_slots.get_children():
-		inv_slot.connect("gui_input", self, "showDeets", [inv_slot])
+		inv_slot.connect("gui_input", Callable(self, "showDeets").bind(inv_slot))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,7 +33,7 @@ func _on_ScrollContainer_visibility_changed():
 		var arraySize = Global.player_inventory.size()
 		for inv_slot in inventory_slots.get_children():
 			if itemNumber < arraySize:
-				inv_slot.get_node("Sprite").set_texture(load(Global.player_inventory[itemNumber].imagePath))
+				inv_slot.get_node("Sprite2D").set_texture(load(Global.player_inventory[itemNumber].imagePath))
 				inv_slot.itemName = Global.player_inventory[itemNumber].itemName
 				inv_slot.itemDesc = Global.player_inventory[itemNumber].itemDesc
 				inv_slot.itemValue = Global.player_inventory[itemNumber].itemValue

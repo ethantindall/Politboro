@@ -1,186 +1,164 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://bmknab031jnte"]
 
-[ext_resource path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://GUI/fonts/propaganda/propaganda.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://GUI/Scenes/Pause/PauseMenu.gd" type="Script" id=3]
-[ext_resource path="res://GUI/Scenes/Pause/PeopleMenu.tscn" type="PackedScene" id=4]
-[ext_resource path="res://GUI/Scenes/Pause/QuestMenu.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GUI/Scenes/Pause/InventoryMenu.tscn" type="PackedScene" id=6]
+[ext_resource type="FontFile" uid="uid://dynpsh0sdpi7l" path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="2"]
+[ext_resource type="Script" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
+[ext_resource type="PackedScene" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://GUI/Scenes/Pause/QuestMenu.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="6"]
 
-[sub_resource type="DynamicFont" id=1]
-size = 5
-font_data = ExtResource( 1 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="DynamicFont" id=2]
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="DynamicFont" id=3]
-size = 12
-extra_spacing_top = 2
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Pause" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
-pause_mode = 2
-visible = false
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -4.0
-margin_top = 2.0
-margin_right = -4.0
-margin_bottom = 2.0
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = -4.0
+offset_top = 2.0
+offset_right = -4.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3")
 
 [node name="GrayBackground" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 3.57165
-margin_top = -2.02755
-margin_right = 3.57166
-margin_bottom = -2.02754
-color = Color( 0.00784314, 0, 0, 0.329412 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 3.57165
+offset_top = -2.02755
+offset_right = 3.57166
+offset_bottom = -2.02754
+color = Color(0.00784314, 0, 0, 0.329412)
 
 [node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Control/GrayBackground"]
-margin_left = 5.42835
-margin_top = 6.02755
-margin_right = 82.4284
-margin_bottom = 175.028
-color = Color( 0.298039, 0.168627, 0.0313726, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_left = 5.42835
+offset_top = 6.02755
+offset_right = 82.4284
+offset_bottom = 175.028
+color = Color(0.298039, 0.168627, 0.0313726, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="CanvasLayer/Control/GrayBackground"]
-margin_left = 10.4284
-margin_top = 14.0275
-margin_right = 75.4284
-margin_bottom = 172.028
-rect_pivot_offset = Vector2( 18.3412, 56.5182 )
-color = Color( 0.501961, 0.294118, 0.0705882, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_left = 10.4284
+offset_top = 14.0275
+offset_right = 75.4284
+offset_bottom = 172.028
+pivot_offset = Vector2(18.3412, 56.5182)
+color = Color(0.501961, 0.294118, 0.0705882, 1)
 
 [node name="ExitLabel" type="Label" parent="CanvasLayer/Control/GrayBackground/ColorRect5"]
-margin_left = 8.5198
-margin_top = 147.394
-margin_right = 58.5198
-margin_bottom = 154.394
-custom_fonts/font = SubResource( 1 )
+layout_mode = 0
+offset_left = 8.5198
+offset_top = 147.394
+offset_right = 58.5198
+offset_bottom = 154.394
+theme_override_fonts/font = SubResource("1")
 text = "Press P or Esc to exit."
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect4" type="ColorRect" parent="CanvasLayer/Control/GrayBackground"]
-margin_left = 88.4284
-margin_top = 29.0275
-margin_right = 313.428
-margin_bottom = 174.028
-rect_pivot_offset = Vector2( -69.1896, 21.1146 )
-color = Color( 0.298039, 0.168627, 0.0313726, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_left = 88.4284
+offset_top = 29.0275
+offset_right = 313.428
+offset_bottom = 174.028
+pivot_offset = Vector2(-69.1896, 21.1146)
+color = Color(0.298039, 0.168627, 0.0313726, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="CanvasLayer/Control/GrayBackground"]
-margin_left = 95.4284
-margin_top = 34.0275
-margin_right = 307.428
-margin_bottom = 168.028
-rect_pivot_offset = Vector2( -69.1896, 21.1146 )
-color = Color( 0.501961, 0.294118, 0.0705882, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_left = 95.4284
+offset_top = 34.0275
+offset_right = 307.428
+offset_bottom = 168.028
+pivot_offset = Vector2(-69.1896, 21.1146)
+color = Color(0.501961, 0.294118, 0.0705882, 1)
 
 [node name="GamePaused" type="Label" parent="CanvasLayer/Control/GrayBackground"]
-margin_left = 118.873
-margin_top = 11.5093
-margin_right = 238.873
-margin_bottom = 25.5093
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.784314, 0, 0, 1 )
+layout_mode = 0
+offset_left = 118.873
+offset_top = 11.5093
+offset_right = 238.873
+offset_bottom = 25.5093
+theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
+theme_override_fonts/font = SubResource("2")
 text = "Game Paused"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 76.0
-margin_bottom = 81.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 76.0
+offset_bottom = 81.0
 
 [node name="PeopleButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
-margin_right = 60.0
-margin_bottom = 18.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
 text = "People"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="QuestsButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
-margin_top = 22.0
-margin_right = 60.0
-margin_bottom = 40.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
 text = "Quests"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ItemsButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
-margin_top = 44.0
-margin_right = 60.0
-margin_bottom = 62.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
 text = "Items"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SaveButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
-margin_top = 66.0
-margin_right = 60.0
-margin_bottom = 84.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
 text = "Save"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="QuitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
-margin_top = 88.0
-margin_right = 60.0
-margin_bottom = 106.0
-custom_fonts/font = SubResource( 3 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("3")
 text = "QUIT"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Inventory" parent="CanvasLayer/Control" instance=ExtResource( 6 )]
+[node name="Inventory" parent="CanvasLayer/Control" instance=ExtResource("6")]
+anchors_preset = 0
 
-[node name="People" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
+[node name="People" parent="CanvasLayer/Control" instance=ExtResource("4")]
 visible = false
+anchors_preset = 0
 
-[node name="Quests" parent="CanvasLayer/Control" instance=ExtResource( 5 )]
+[node name="Quests" parent="CanvasLayer/Control" instance=ExtResource("5")]
 visible = false
+anchors_preset = 0
 
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/PeopleButton" to="CanvasLayer/Control" method="_on_PeopleButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/QuestsButton" to="CanvasLayer/Control" method="_on_QuestsButton_pressed"]

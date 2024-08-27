@@ -48,12 +48,15 @@ func _on_PetyaButton_pressed():
 	
 func _on_GlebButton_pressed():
 	populateData(processJSON(result_json).NPCs.Ministers.E, glebSprite)
-
+"""
 func _on_People_visibility_changed():
 	#GET JSON DATA
 	var file = File.new()
 	file.open("res://GUI/npcs.json", file.READ)
 	var text_json = file.get_as_text()
-	result_json = JSON.parse(text_json)
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(text_json)
+	result_json = test_json_conv.get_data()
 	file.close()
 	#print(processJSON(result_json).NPCs.Ministers.A.Name)
+"""

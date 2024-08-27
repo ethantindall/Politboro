@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="Control" type="SubViewport"]
+size = Vector2( 1024, 512 )
+disable_3d = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

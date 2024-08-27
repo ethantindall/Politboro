@@ -1,40 +1,40 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://cph4w0y6t33g6"]
 
-[ext_resource path="res://Map Scenes/CitySouth.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Map Scenes/Base.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Map Scenes/Farm.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Map Scenes/HQ.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Map Scenes/TownSquare.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Map Scenes/TrainYard.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Map Scenes/Gulag.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Map Scenes/PowerPlant.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Map Scenes/Tunnel.tscn" type="PackedScene" id=9]
+[ext_resource type="PackedScene" uid="uid://dpbami1xapr7c" path="res://Map Scenes/CitySouth.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Map Scenes/Base.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Map Scenes/Farm.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c2ew5wouhhcx8" path="res://Map Scenes/HQ.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bdlj6guxck22k" path="res://Map Scenes/TownSquare.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://d3apbgmls04rm" path="res://Map Scenes/TrainYard.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://Map Scenes/Gulag.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bg1lf00qi4cnq" path="res://Map Scenes/PowerPlant.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://cmnqj262c4wf2" path="res://Map Scenes/Tunnel.tscn" id="9"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Kremlin" parent="." instance=ExtResource( 1 )]
-position = Vector2( -120.861, -218.823 )
+[node name="Kremlin" parent="." instance=ExtResource("1")]
+position = Vector2(-120.861, -218.823)
 
-[node name="Army Base" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1414.56, -1292.55 )
+[node name="Army Base" parent="." instance=ExtResource("2")]
+position = Vector2(-1414.56, -1292.55)
 
-[node name="Town Square" parent="." instance=ExtResource( 3 )]
-position = Vector2( -725.435, -595.494 )
+[node name="Town Square" parent="." instance=ExtResource("3")]
+position = Vector2(-725.435, -595.494)
 
-[node name="PartyHeadquarters" parent="." instance=ExtResource( 4 )]
-position = Vector2( 397.362, -674.054 )
+[node name="PartyHeadquarters" parent="." instance=ExtResource("4")]
+position = Vector2(397.362, -674.054)
 
-[node name="Town Square2" parent="." instance=ExtResource( 5 )]
-position = Vector2( -346.978, -691.863 )
+[node name="Town Square2" parent="." instance=ExtResource("5")]
+position = Vector2(-346.978, -691.863)
 
-[node name="TrainStation" parent="." instance=ExtResource( 6 )]
-position = Vector2( -189.438, -981.789 )
+[node name="TrainStation" parent="." instance=ExtResource("6")]
+position = Vector2(-189.438, -981.789)
 
-[node name="Gulag" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1070.44, -54.6992 )
+[node name="Gulag" parent="." instance=ExtResource("7")]
+position = Vector2(1070.44, -54.6992)
 
-[node name="Town Square3" parent="." instance=ExtResource( 8 )]
-position = Vector2( -1372.22, -591.784 )
+[node name="Town Square3" parent="." instance=ExtResource("8")]
+position = Vector2(-1372.22, -591.784)
 
-[node name="Town Square4" parent="." instance=ExtResource( 9 )]
-position = Vector2( -651.368, -137.05 )
+[node name="Town Square4" parent="." instance=ExtResource("9")]
+position = Vector2(-651.368, -137.05)

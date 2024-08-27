@@ -20,3 +20,7 @@ func completedTrigger():
 func reward():
 	pass
 	
+#Quest 0
+#talk to your boss in the Government HQ Bldg
+func quest0():
+	pass

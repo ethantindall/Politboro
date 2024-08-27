@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bpqve2l3ecp3l"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_iwm2u"]
+
+[resource]
+script = ExtResource("1_iwm2u")
+starts = {
+"Quest0-1": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-100, 120),
+"start_id": "Quest0-1"
+},
+"1_1": {
+"dialogue": "Ah, welcome to the capitol, comrade? Surely, you've never seen a city this grand before?",
+"offset": Vector2(155.235, 155.89),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Goverment Worker"
+},
+"1_2": {
+"dialogue": "You'll find that Capitol City is a marvelous machine, with trusty comrades from each of our governmental ministries working in beautiful harmony on behalf of our great Democratic Republic!",
+"offset": Vector2(480, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Goverment Worker"
+},
+"1_3": {
+"dialogue": "I know the Minister of Energy will be happy you've arrived. His last coffee boy mysteriously disappeared a few weeks ago!",
+"offset": Vector2(800, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Goverment Worker"
+},
+"1_4": {
+"dialogue": "What do you mean errand boy? I thought the job position said Executive Assistant.",
+"offset": Vector2(1120, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Player"
+},
+"1_5": {
+"dialogue": "Oh yes, of course, of course. That's what I meant. Well, you'd better run along. You shouldn't be lale your meeting with your new boss!",
+"offset": Vector2(1440, 160),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Goverment Worker"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

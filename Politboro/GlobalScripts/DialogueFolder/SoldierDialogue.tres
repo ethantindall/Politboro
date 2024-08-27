@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://cy4dvdbseswll"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_nd62j"]
+
+[resource]
+script = ExtResource("1_nd62j")
+starts = {
+"Soldier01": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-100, 160),
+"start_id": "Soldier01"
+},
+"1_1": {
+"dialogue": "Another beautiful day in this man's army, eh, comrade?",
+"offset": Vector2(180, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "Yes"
+},
+1: {
+"condition": {},
+"link": &"3_1",
+"text": "No"
+}
+},
+"size": Vector2(300, 275),
+"speaker": "Soldier"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(679, 296),
+"signalValue": "END"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = "res://Characters/Police.tscn"

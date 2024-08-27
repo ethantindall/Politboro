@@ -1,0 +1,10 @@
+res://default_env.tres
+res://GUI/DialogueBox.tscn
+res://Characters/Police.gd
+res://GUI/DialogueBox.gd
+res://Map Scenes/CitySouth.tscn
+res://Characters/NPCtemplate/NPC.tscn
+res://GUI/Scenes/Pause/PauseMenu.tscn
+res://Characters/Soldier.tscn
+res://GlobalScripts/Dialogic/Characters/Player.dch
+res://GlobalScripts/Dialogic/Characters/Soldier.dch
