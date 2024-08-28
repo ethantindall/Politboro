@@ -13,8 +13,8 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="CapsuleShape2D" id="2"]
-radius = 1.0
-height = 2.0
+radius = 2.72487
+height = 5.44975
 
 [sub_resource type="Animation" id="3"]
 length = 2.0
@@ -163,9 +163,6 @@ radius = 7.84242
 scale = Vector2(1.5, 1.5)
 collision_mask = 3
 script = ExtResource("2")
-startData = "Police01"
-dialogueDataPath = "res://GlobalScripts/DialogueFolder/PoliceDialogue.tres"
-sample_portrait = "res://Images/thumbnails/policeThumbnail.png"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.307755, 0.915455)

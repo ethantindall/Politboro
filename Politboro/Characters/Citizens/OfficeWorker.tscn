@@ -162,8 +162,6 @@ radius = 6.43379
 [node name="OfficeWorker" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("3")
-startData = "Quest0-1"
-dialogueDataPath = "res://GlobalScripts/DialogueFolder/q_0_dialogue.tres"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.307755, 0.915455)

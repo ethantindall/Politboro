@@ -20,24 +20,46 @@ config/icon="res://Images/GUI/icon.png"
 Global="*res://GlobalScripts/Global.gd"
 QuestSystem="*res://GlobalScripts/QuestSystem.gd"
 ScreenChanger="*res://World Objects/Portal/ScreenChanger.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"Characters/GovernmentWorker": "res://DialogicResources/Characters/GovernmentWorker.dch",
+"Characters/SecretPolice": "res://DialogicResources/Characters/SecretPolice.dch",
+"DialogicResources/Police": "res://DialogicResources/Characters/Police.dch",
 "GovernmentWorker": "res://GlobalScripts/Dialogic/Characters/GovernmentWorker.dch",
 "Player": "res://GlobalScripts/Dialogic/Characters/Player.dch",
 "Police": "res://GlobalScripts/Dialogic/Characters/Police.dch",
 "SecretPolice": "res://GlobalScripts/Dialogic/Characters/SecretPolice.dch",
-"Soldier": "res://GlobalScripts/Dialogic/Characters/Soldier.dch",
-"unit_test_character": "res://addons/dialogic-2.0-alpha-14/Tests/Resources/unit_test_character.dch"
+"Soldier": "res://GlobalScripts/Dialogic/Characters/Soldier.dch"
 }
 directories/dtl_directory={
 "quest0-1": "res://GlobalScripts/Dialogic/Timelines/quest0-1.dtl",
-"quest0-2": "res://GlobalScripts/Dialogic/Timelines/quest0-2.dtl"
+"quest0-2": "res://GlobalScripts/Dialogic/Timelines/quest0-2.dtl",
+"quest0_0": "res://DialogicResources/Timelines/Quest0/quest0_0.dtl",
+"timeline": "res://DialogicResources/Timelines/timeline.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://DialogicResources/Styles/PremadeStyle1.tres"]
+layout/default_style="res://DialogicResources/Styles/PremadeStyle1.tres"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+variables={}
 
 [display]
 
@@ -49,7 +71,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/dialogue_nodes/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [importer_defaults]
 

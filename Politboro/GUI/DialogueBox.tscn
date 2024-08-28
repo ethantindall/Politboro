@@ -1,10 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkebl8ir7f5g8"]
+[gd_scene load_steps=12 format=3 uid="uid://dkebl8ir7f5g8"]
 
 [ext_resource type="Script" path="res://GUI/DialogueBox.gd" id="1_l8fle"]
+[ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="2_6ln30"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_ekvdv"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_a2hi7"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_lm63s"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_nt46q"]
+
+[sub_resource type="Theme" id="Theme_b6for"]
+default_font = ExtResource("2_6ln30")
+default_font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8suj"]
+bg_color = Color(0, 0, 0, 0.607843)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_62c1j"]
 script = ExtResource("3_a2hi7")
@@ -22,19 +34,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(0.2, 0)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_l8fle")
 
 [node name="DialogueBoxNode" type="Panel" parent="."]
 process_mode = 3
-visible = false
 z_index = 10
-custom_minimum_size = Vector2(5, 5)
+clip_contents = true
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 1.825
+anchor_bottom = 0.933333
 offset_left = 0.999996
 offset_top = 2.0
 offset_right = 452.0
@@ -42,6 +56,8 @@ offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.17, 0.17)
+theme = SubResource("Theme_b6for")
+theme_override_styles/panel = SubResource("StyleBoxFlat_u8suj")
 script = ExtResource("2_ekvdv")
 scroll_speed = 5
 skip_input_action = "ui_accept"

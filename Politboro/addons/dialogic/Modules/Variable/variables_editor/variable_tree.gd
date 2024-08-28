@@ -29,7 +29,7 @@ func _ready() -> void:
 
 #region POPULATING THE TREE
 
-func load_info(dict:Dictionary, parent:TreeItem = null, is_new:=false) -> void:
+func load_info(dict:Dictionary, parent:TreeItem = null) -> void:
 	if parent == null:
 		clear()
 		parent = add_folder_item("VAR", null)
@@ -38,16 +38,12 @@ func load_info(dict:Dictionary, parent:TreeItem = null, is_new:=false) -> void:
 	sorted_keys.sort()
 	for key in sorted_keys:
 		if typeof(dict[key]) != TYPE_DICTIONARY:
-			var item := add_variable_item(key, dict[key], parent)
-			if is_new:
-				item.set_meta("new", true)
+			add_variable_item(key, dict[key], parent)
 
 	for key in sorted_keys:
 		if typeof(dict[key]) == TYPE_DICTIONARY:
 			var folder := add_folder_item(key, parent)
-			if is_new:
-				folder.set_meta("new", true)
-			load_info(dict[key], folder, is_new)
+			load_info(dict[key], folder)
 
 
 
@@ -121,21 +117,17 @@ func get_variable_item_default(item:TreeItem) -> Variant:
 func _on_button_clicked(item: TreeItem, column: int, id: int, mouse_button_index: int) -> void:
 	match id:
 		TreeButtons.ADD_FOLDER:
-			var new_item := add_folder_item("Folder", item)
-			new_item.select(0)
-			new_item.set_meta("new", true)
+			add_folder_item("Folder", item).select(0)
 			await get_tree().process_frame
 			edit_selected()
 		TreeButtons.ADD_VARIABLE:
-			var new_item := add_variable_item("Var", "", item)
-			new_item.select(0)
-			new_item.set_meta("new", true)
+			add_variable_item("Var", "", item).select(0)
 			await get_tree().process_frame
 			edit_selected()
 		TreeButtons.DELETE:
 			item.free()
 		TreeButtons.DUPLICATE_FOLDER:
-			load_info({item.get_text(0)+"(copy)":get_info(item)}, item.get_parent(), true)
+			load_info({item.get_text(0)+"(copy)":get_info(item)}, item.get_parent())
 		TreeButtons.CHANGE_TYPE:
 			%ChangeTypePopup.show()
 			%ChangeTypePopup.set_meta('item', item)
@@ -284,13 +276,9 @@ func _drop_data(position:Vector2, item:Variant) -> void:
 		"VARIABLE":
 			new_item = add_variable_item(item.get_text(0), item.get_metadata(2), parent)
 			new_item.set_meta('prev_path', get_item_path(item))
-			if item.get_meta("new", false):
-				new_item.set_meta("new", true)
 		"FOLDER":
 			new_item = add_folder_item(item.get_text(0), parent)
 			load_info(get_info(item), new_item)
-			if item.get_meta("new", false):
-				new_item.set_meta("new", true)
 
 	# If this was dropped on a variable (or the root node)
 	if to_item != parent:
@@ -310,11 +298,8 @@ func _drop_data(position:Vector2, item:Variant) -> void:
 ################################################################################
 
 func report_name_changes(item:TreeItem) -> void:
-	
 	match item.get_meta('type'):
 		"VARIABLE":
-			if item.get_meta("new", false):
-				return
 			var new_path := get_item_path(item)
 			editor.variable_renamed(item.get_meta('prev_path'), new_path)
 			item.set_meta('prev_path', new_path)

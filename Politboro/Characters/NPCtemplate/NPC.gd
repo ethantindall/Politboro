@@ -5,15 +5,8 @@ class_name NPC
 #don't remember what this does
 var QMactive = false
 var entered = false
+var dialogueTimeline = ""
 
-#this uses the Dialogue Node addon. It uses the dialogueBox Node that is on each NPC's scene. 
-#In order to use this node, you need the dialogue data save file and the start ID
-@onready var dialogue_box = $DialogueBox/DialogueBoxNode
-@export var startData = ""
-@export var dialogueDataPath = ""
-@export var sample_portrait = ""
-
-#IDK
 func _ready():
 	if true:
 		QMactive = true
@@ -24,17 +17,23 @@ func _process(delta):
 	
 #On input event
 func _input(event):
-	if event.is_action_pressed("ui_accept") and QMactive and entered:
-		#pause the game while the dialog box is up. 
-		#The dialog box has been whitelisted in the DialogueBox/DialogueBoxNode scene
-		get_tree().paused = true
-		dialogue_box.data = load(dialogueDataPath)
-		dialogue_box.sample_portrait = load(sample_portrait)
-		dialogue_box.start(startData)
+	if get_node_or_null('DialogNode') == null:
+		if event.is_action_pressed("ui_accept") and QMactive and entered:
+			#get the timeline ready
+			var dialog = Dialogic.start(load(dialogueTimeline))
+			#for some reason you have to set Dialogic game handler and dialogic timeline to always process even when game paused
+			#check out this resource: https://www.reddit.com/r/godot/comments/16oo1rc/dialogic_pausing/
+			dialog.process_mode = Node.PROCESS_MODE_ALWAYS
+			Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+			#add the timeline to the tree
+			add_child(dialog)
+			#pause the game so that the character can't move while talking
+			get_tree().paused = true
+			#when timeline is done unpause the game handler. Not the timeline.
+			Dialogic.timeline_ended.connect(_unpause)
+
 		
-		#The game is unpaused in DialogueBox.gd
-			
-func unpause():
+func _unpause():
 	get_tree().paused = false
 	QMactive = false
 	

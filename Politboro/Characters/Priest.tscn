@@ -1,13 +1,13 @@
 [gd_scene load_steps=16 format=3 uid="uid://o71yo2p2ehrf"]
 
 [ext_resource type="Texture2D" uid="uid://dxrdyw24k2col" path="res://Images/Sprites/Priest.png" id="1"]
-[ext_resource type="PackedScene" path="res://Characters/questionmark.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="2"]
 [ext_resource type="Script" path="res://Characters/Priest.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_3r5to"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
-radius = 1.0
-height = 2.0
+radius = 5.05821
+height = 10.1164
 
 [sub_resource type="Animation" id="2"]
 resource_name = "IdleD"

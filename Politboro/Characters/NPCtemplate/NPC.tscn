@@ -150,8 +150,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="9"]
-radius = 1.0
-height = 2.0
+radius = 1.05821
+height = 3.43149
 
 [sub_resource type="CircleShape2D" id="10"]
 radius = 7.06941
