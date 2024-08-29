@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq2gdrwy8fqsx"
-path="res://.godot/imported/businessman.png-30f73f2b8ad82b4a12053961dad760a5.ctex"
+uid="uid://d2t2mxsm3r1xc"
+path="res://.godot/imported/govtWorkerThumbnail.png-2f5eeaf0a05355bacfec75dd9e901327.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Sprites/businessman.png"
-dest_files=["res://.godot/imported/businessman.png-30f73f2b8ad82b4a12053961dad760a5.ctex"]
+source_file="res://Images/thumbnails/govtWorkerThumbnail.png"
+dest_files=["res://.godot/imported/govtWorkerThumbnail.png-2f5eeaf0a05355bacfec75dd9e901327.ctex"]
 
 [params]
 

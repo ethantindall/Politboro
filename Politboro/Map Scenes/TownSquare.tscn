@@ -20,9 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="18"]
 [ext_resource type="Texture2D" uid="uid://br5j55i15nk5w" path="res://Images/Tiles/cliffs.png" id="19"]
 [ext_resource type="PackedScene" path="res://Characters/Ministers/SupremeLeader.tscn" id="20"]
-[ext_resource type="PackedScene" path="res://Characters/Soldier.tscn" id="21"]
-[ext_resource type="PackedScene" path="res://Characters/Citizens/OfficeWorker.tscn" id="23"]
-[ext_resource type="PackedScene" path="res://Characters/Citizens/OfficeWorker_F.tscn" id="24"]
+[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier.tscn" id="21"]
+[ext_resource type="PackedScene" uid="uid://cdo5oinaqach4" path="res://Characters/Citizens/OfficeWorker.tscn" id="23"]
+[ext_resource type="PackedScene" uid="uid://b2t502sb8cf0v" path="res://Characters/Citizens/OfficeWorker_F.tscn" id="24"]
 [ext_resource type="PackedScene" path="res://Characters/Ministers/WarMinister.tscn" id="25"]
 [ext_resource type="PackedScene" path="res://World Objects/Buildings/AIApartments.tscn" id="27"]
 
@@ -542,7 +542,7 @@ position = Vector2(491.349, 164.581)
 [node name="PortalHQ" parent="." instance=ExtResource("9")]
 position = Vector2(701.224, 189.904)
 scale = Vector2(0.8, 0.8)
-next_scene_path = "res://Map Scenes/HQ.tscn"
+next_scene_path = "res://Map Scenes/HQoutside.tscn"
 player_spawn_location = Vector2(10, 206)
 
 [node name="PortalTrain" parent="." instance=ExtResource("9")]

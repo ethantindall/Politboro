@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://b4xd5xnnpc7pp"]
 
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://61qra8fjqxe4" path="res://Images/Bldgs/PlayerApt/bedroom.png" id="2"]
@@ -8,57 +8,49 @@
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Dresser.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Bookshelf.tscn" id="7"]
 
-
 [node name="PlayerApt" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 2 )
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2")
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 665.1, 374.802 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2(0, 0, 665.1, 374.802)
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Player" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 100.658, 66.3628 )
-scale = Vector2( 1.5, 1.5 )
+[node name="Player" parent="Node2D" instance=ExtResource("1")]
+position = Vector2(100.658, 66.3628)
+scale = Vector2(1.5, 1.5)
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player"]
-current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2(10, 10)
 limit_left = 0
 limit_top = 0
 limit_right = 320
 limit_bottom = 180
 position_smoothing_enabled = true
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Bed" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( 75.4534, 31.918 )
+[node name="Bed" parent="Node2D" instance=ExtResource("4")]
+position = Vector2(75.4534, 31.918)
 
-[node name="Dresser" parent="Node2D" instance=ExtResource( 6 )]
-position = Vector2( 88.0017, 24.3328 )
+[node name="Dresser" parent="Node2D" instance=ExtResource("6")]
+position = Vector2(88.0017, 24.3328)
 
-[node name="Bookshelf" parent="Node2D" instance=ExtResource( 7 )]
-position = Vector2( 111.038, 23.49 )
+[node name="Bookshelf" parent="Node2D" instance=ExtResource("7")]
+position = Vector2(111.038, 23.49)
 
-[node name="Wastebin" parent="Node2D" instance=ExtResource( 5 )]
-position = Vector2( 69.651, 67.4558 )
-scale = Vector2( 0.8, 0.8 )
+[node name="Wastebin" parent="Node2D" instance=ExtResource("5")]
+position = Vector2(69.651, 67.4558)
+scale = Vector2(0.8, 0.8)
 
-[node name="Portal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 98.3681, 85.6428 )
+[node name="Portal" parent="." instance=ExtResource("3")]
+position = Vector2(98.3681, 85.6428)
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/Indoors/AptHallway.tscn"
-player_spawn_location = Vector2( 60, 55 )
+player_spawn_location = Vector2(60, 55)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array( 124.745, 77.7245, 130.085, 9.6477, 58.3371, 10.3151, 60.7841, 78.9033, 106.569, 78.9033, 93.6645, 78.5497, 94.0181, 72.3626, 63.8434, 71.8846, 63.9885, 23.4599, 112.777, 23.3663, 112.398, 72.2183, 107.226, 71.8846, 106.558, 78.0582 )
+polygon = PackedVector2Array(124.745, 77.7245, 130.085, 9.6477, 58.3371, 10.3151, 60.7841, 78.9033, 106.569, 78.9033, 93.6645, 78.5497, 94.0181, 72.3626, 63.8434, 71.8846, 63.9885, 23.4599, 112.777, 23.3663, 112.398, 72.2183, 107.226, 71.8846, 106.558, 78.0582)

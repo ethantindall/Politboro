@@ -1,86 +1,76 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://dmgshiexcg58m"]
 
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://Characters/Ministers/TransMinister.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://Characters/Citizens/OfficeWorker.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://Characters/Police.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://cdo5oinaqach4" path="res://Characters/Citizens/OfficeWorker.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cyoqnn5j0fmbb" path="res://Characters/Police.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Desk.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Bookshelf.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://0l2cl2r2jjyf" path="res://Images/Bldgs/HQ/OfficeC.png" id="9"]
 
-
-
-
 [node name="OfficeA" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource( 9 )
+texture = ExtResource("9")
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 320, 180 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2(0, 0, 320, 180)
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Bookshelf" parent="Node2D" instance=ExtResource( 8 )]
-position = Vector2( 56.1613, 40.0106 )
+[node name="Bookshelf" parent="Node2D" instance=ExtResource("8")]
+position = Vector2(56.1613, 40.0106)
 
-[node name="Bookshelf2" parent="Node2D" instance=ExtResource( 8 )]
-position = Vector2( 69.16, 40.0106 )
+[node name="Bookshelf2" parent="Node2D" instance=ExtResource("8")]
+position = Vector2(69.16, 40.0106)
 
-[node name="Bookshelf3" parent="Node2D" instance=ExtResource( 8 )]
-position = Vector2( 82.1179, 40.0106 )
+[node name="Bookshelf3" parent="Node2D" instance=ExtResource("8")]
+position = Vector2(82.1179, 40.0106)
 
-[node name="Player" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 157.127, 115.186 )
-scale = Vector2( 1.5, 1.5 )
+[node name="Player" parent="Node2D" instance=ExtResource("1")]
+position = Vector2(157.127, 115.186)
+scale = Vector2(1.5, 1.5)
 
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player"]
-current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2(10, 10)
 limit_left = 0
 limit_top = 0
 limit_right = 320
 limit_bottom = 180
 position_smoothing_enabled = true
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="OfficialC" parent="Node2D" instance=ExtResource( 2 )]
-position = Vector2( 133.7, 62.1889 )
+[node name="OfficialC" parent="Node2D" instance=ExtResource("2")]
+position = Vector2(133.7, 62.1889)
 
-[node name="Employee" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( 73.5672, 87.119 )
+[node name="Employee" parent="Node2D" instance=ExtResource("4")]
+position = Vector2(73.5672, 87.119)
 
-[node name="Employee2" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( 72.9056, 63.6333 )
+[node name="Employee2" parent="Node2D" instance=ExtResource("4")]
+position = Vector2(72.9056, 63.6333)
 
-[node name="FemaleEmployee" parent="Node2D" instance=ExtResource( 5 )]
-position = Vector2( 133.935, 88.7729 )
+[node name="FemaleEmployee" parent="Node2D" instance=ExtResource("5")]
+position = Vector2(133.935, 88.7729)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array( 38.8456, 118.707, 38.7932, 38.8567, 187.875, 39.044, 188.062, 119.953, 173.973, 120.294, 173.973, 128.827, 141.63, 128.628, 141.431, 120.691, 38.8456, 119.898, 29.718, 124.065, 132.304, 135.176, 174.965, 135.573, 191.621, 122.949, 190.497, 35.1109, 35.2348, 35.6728, 34.0834, 120.89 )
+polygon = PackedVector2Array(38.8456, 118.707, 38.7932, 38.8567, 187.875, 39.044, 188.062, 119.953, 173.973, 120.294, 173.973, 128.827, 141.63, 128.628, 141.431, 120.691, 38.8456, 119.898, 29.718, 124.065, 132.304, 135.176, 174.965, 135.573, 191.621, 122.949, 190.497, 35.1109, 35.2348, 35.6728, 34.0834, 120.89)
 
-[node name="Bookshelf" parent="." instance=ExtResource( 7 )]
-position = Vector2( 78.8016, 89.1918 )
+[node name="Bookshelf" parent="." instance=ExtResource("7")]
+position = Vector2(78.8016, 89.1918)
 
-[node name="Bookshelf2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 79.1762, 68.2155 )
+[node name="Bookshelf2" parent="." instance=ExtResource("7")]
+position = Vector2(79.1762, 68.2155)
 
-[node name="Bookshelf3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 139.108, 66.7172 )
+[node name="Bookshelf3" parent="." instance=ExtResource("7")]
+position = Vector2(139.108, 66.7172)
 
-[node name="Bookshelf4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 140.045, 91.4393 )
+[node name="Bookshelf4" parent="." instance=ExtResource("7")]
+position = Vector2(140.045, 91.4393)
 
-[node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 158, 134 )
+[node name="Portal" parent="." instance=ExtResource("6")]
+position = Vector2(158, 134)
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
-player_spawn_location = Vector2( 108, 106 )
+player_spawn_location = Vector2(108, 106)

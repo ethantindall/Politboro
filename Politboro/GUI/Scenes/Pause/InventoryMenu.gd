@@ -5,9 +5,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 
-func _ready():
-	for inv_slot in inventory_slots.get_children():
-		inv_slot.connect("gui_input", Callable(self, "showDeets").bind(inv_slot))
+#func _ready():
+#	for inv_slot in inventory_slots.get_children():
+#		inv_slot.connect("gui_input", Callable(self, "showDeets").bind(inv_slot))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

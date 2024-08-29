@@ -1,639 +1,527 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=17 format=3 uid="uid://dlltdim06bgq6"]
 
-[ext_resource path="res://Images/plate.png" type="Texture2D" id=1]
-[ext_resource path="res://GUI/Scenes/Pause/InventoryMenu.gd" type="Script" id=2]
-[ext_resource path="res://GUI/fonts/fyodor/fyodor.tres" type="FontFile" id=3]
-[ext_resource path="res://GUI/fonts/1942_report/1942.tres" type="FontFile" id=4]
-[ext_resource path="res://GUI/fonts/propaganda/PropagandaFont.tres" type="FontFile" id=5]
-[ext_resource path="res://GUI/fonts/1942_report/1942.ttf" type="FontFile" id=6]
-[ext_resource path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" type="FontFile" id=7]
-[ext_resource path="res://GUI/Scenes/Pause/Slot.gd" type="Script" id=8]
+[ext_resource type="Texture2D" uid="uid://1pjh5ndbxtf7" path="res://Images/plate.png" id="1"]
+[ext_resource type="Script" path="res://GUI/Scenes/Pause/InventoryMenu.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://d1trfiuvy6saf" path="res://GUI/fonts/fyodor/fyodor.tres" id="3"]
+[ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="4"]
+[ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="5"]
+[ext_resource type="FontFile" uid="uid://dknqtnwoijfw6" path="res://GUI/fonts/1942_report/1942.ttf" id="6"]
+[ext_resource type="FontFile" uid="uid://dynpsh0sdpi7l" path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" id="7"]
+[ext_resource type="Script" path="res://GUI/Scenes/Pause/Slot.gd" id="8"]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 32, 32 )
+[sub_resource type="StyleBoxTexture" id="1"]
+texture = ExtResource("1")
+region_rect = Rect2(0, 0, 32, 32)
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id="6"]
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id="2"]
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id="3"]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id="5"]
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id="4"]
 
-[sub_resource type="FontFile" id=7]
-size = 4
-spacing_bottom = -2
-font_data = ExtResource( 6 )
+[sub_resource type="FontFile" id="7"]
+fallbacks = Array[Font]([ExtResource("6")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id=8]
-size = 9
-font_data = ExtResource( 7 )
+[sub_resource type="FontFile" id="8"]
+fallbacks = Array[Font]([ExtResource("7")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 80.0
 grow_horizontal = 0
 grow_vertical = 0
-pivot_offset = Vector2( -122.686, -39.0827 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pivot_offset = Vector2(-122.686, -39.0827)
+script = ExtResource("2")
 
 [node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 10.6176
 offset_top = 27.8383
 offset_right = 235.617
 offset_bottom = 172.839
-pivot_offset = Vector2( -69.1896, 21.1146 )
-color = Color( 0.298039, 0.168627, 0.0313726, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pivot_offset = Vector2(-69.1896, 21.1146)
+color = Color(0.298039, 0.168627, 0.0313726, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="ColorRect4"]
+layout_mode = 0
 offset_left = 7.0
 offset_top = 5.0
 offset_right = 219.0
 offset_bottom = 139.001
-pivot_offset = Vector2( -69.1896, 21.1146 )
-color = Color( 0.501961, 0.294118, 0.0705882, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+pivot_offset = Vector2(-69.1896, 21.1146)
+color = Color(0.501961, 0.294118, 0.0705882, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ColorRect4"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 8.0
 offset_right = 217.0
 offset_bottom = 139.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GridContainer" type="GridContainer" parent="ColorRect4/ScrollContainer"]
-offset_right = 188.0
-offset_bottom = 146.0
-theme_override_constants/v_separation = 6
+layout_mode = 2
 theme_override_constants/h_separation = 7
+theme_override_constants/v_separation = 6
 columns = 5
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
 
 [node name="Slot1" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_right = 32.0
-offset_bottom = 32.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot1"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot1"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot2" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 39.0
-offset_right = 71.0
-offset_bottom = 32.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot2"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot2"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot3" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 78.0
-offset_right = 110.0
-offset_bottom = 32.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot3"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot3"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot4" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 117.0
-offset_right = 149.0
-offset_bottom = 32.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot4"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot4"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot5" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 156.0
-offset_right = 188.0
-offset_bottom = 32.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot5"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot5"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot6" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_top = 38.0
-offset_right = 32.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot6"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot6"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot7" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 39.0
-offset_top = 38.0
-offset_right = 71.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot7"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot7"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot8" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 78.0
-offset_top = 38.0
-offset_right = 110.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot8"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot8"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot9" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 117.0
-offset_top = 38.0
-offset_right = 149.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot9"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot9"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot10" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 156.0
-offset_top = 38.0
-offset_right = 188.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot10"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot10"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot11" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_top = 76.0
-offset_right = 32.0
-offset_bottom = 108.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot11"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot11"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot12" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 39.0
-offset_top = 76.0
-offset_right = 71.0
-offset_bottom = 108.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot12"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot12"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot13" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 78.0
-offset_top = 76.0
-offset_right = 110.0
-offset_bottom = 108.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot13"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot13"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot14" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 117.0
-offset_top = 76.0
-offset_right = 149.0
-offset_bottom = 108.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot14"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot14"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot15" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 156.0
-offset_top = 76.0
-offset_right = 188.0
-offset_bottom = 108.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot15"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot15"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot16" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_top = 114.0
-offset_right = 32.0
-offset_bottom = 146.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot16"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot16"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot17" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 39.0
-offset_top = 114.0
-offset_right = 71.0
-offset_bottom = 146.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot17"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot17"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot18" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 78.0
-offset_top = 114.0
-offset_right = 110.0
-offset_bottom = 146.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot18"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot18"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot19" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 117.0
-offset_top = 114.0
-offset_right = 149.0
-offset_bottom = 146.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot19"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot19"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="Slot20" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
-offset_left = 156.0
-offset_top = 114.0
-offset_right = 188.0
-offset_bottom = 146.0
-custom_minimum_size = Vector2( 32, 32 )
-theme_override_styles/panel = SubResource( 1 )
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("8")
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot20"]
 centered = false
 
 [node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot20"]
+layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
 offset_right = 37.4454
 offset_bottom = 35.208
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
 
 [node name="DetailRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 30.3335
 offset_top = 40.2975
 offset_right = 100.333
 offset_bottom = 90.2975
-color = Color( 0.737255, 0.662745, 0.505882, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.737255, 0.662745, 0.505882, 1)
 
 [node name="ColorRect" type="ColorRect" parent="DetailRect"]
+layout_mode = 0
 offset_left = 61.7337
 offset_top = 0.242397
 offset_right = 69.7337
 offset_bottom = 8.2424
-color = Color( 0.694118, 0.180392, 0.180392, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.694118, 0.180392, 0.180392, 1)
 
 [node name="ClosePopupButton" type="Button" parent="DetailRect"]
+layout_mode = 0
 offset_right = 7.0
 offset_bottom = 7.0
-theme_override_styles/hover = SubResource( 2 )
-theme_override_styles/pressed = SubResource( 3 )
-theme_override_styles/focus = SubResource( 4 )
-theme_override_styles/disabled = SubResource( 5 )
-theme_override_styles/normal = SubResource( 6 )
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_styles/normal = SubResource("6")
+theme_override_styles/hover = SubResource("2")
+theme_override_styles/pressed = SubResource("3")
+theme_override_styles/disabled = SubResource("5")
+theme_override_styles/focus = SubResource("4")
 text = "X"
 
 [node name="ColorRect2" type="ColorRect" parent="DetailRect"]
+layout_mode = 0
 offset_left = 59.8312
 offset_top = 1.82622
 offset_right = 67.8312
 offset_bottom = 9.82622
-color = Color( 0.737255, 0.662745, 0.505882, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.737255, 0.662745, 0.505882, 1)
 
 [node name="TitleLabel" type="Label" parent="DetailRect"]
+layout_mode = 0
 offset_left = 12.0
 offset_top = 3.0
 offset_right = 66.0
 offset_bottom = 20.0
-theme_override_fonts/font = ExtResource( 5 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5")
 text = "title"
-align = 2
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DescLabel" type="Label" parent="DetailRect"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 21.0
 offset_right = 67.0
 offset_bottom = 34.0
-theme_override_fonts/font = SubResource( 7 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("7")
 text = "test test test test test test"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ValueLabel" type="Label" parent="DetailRect"]
+layout_mode = 0
 offset_left = 45.0
 offset_top = 39.0
 offset_right = 67.0
 offset_bottom = 50.0
-theme_override_fonts/font = SubResource( 8 )
+theme_override_fonts/font = SubResource("8")
 text = "10"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DropButton" type="Button" parent="DetailRect"]
+layout_mode = 0
 offset_top = 43.0
 offset_right = 7.0
 offset_bottom = 50.0
-theme_override_styles/hover = SubResource( 2 )
-theme_override_styles/pressed = SubResource( 3 )
-theme_override_styles/focus = SubResource( 4 )
-theme_override_styles/disabled = SubResource( 5 )
-theme_override_styles/normal = SubResource( 6 )
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_styles/normal = SubResource("6")
+theme_override_styles/hover = SubResource("2")
+theme_override_styles/pressed = SubResource("3")
+theme_override_styles/disabled = SubResource("5")
+theme_override_styles/focus = SubResource("4")
 text = "DROP"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="visibility_changed" from="ColorRect4/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
 [connection signal="pressed" from="DetailRect/ClosePopupButton" to="." method="_on_ClosePopupButton_pressed"]

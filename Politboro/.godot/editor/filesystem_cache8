@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724870853
-default_env.tres::Environment::6939528415303789581::1724870853::0::1::::<><>::
+::res://::1724954532
+default_env.tres::Environment::6939528415303789581::1724954431::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1697915304::0::1::::<><>::
 README.md::TextFile::-1::1724857843::0::1::::<><>::
 ::res://addons/::1724857843
@@ -566,7 +566,7 @@ index.gd::GDScript::-1::1724857893::0::1::::<>DialogicIndexer<>::
 event_wait_input.gd::GDScript::-1::1724857893::0::1::::DialogicWaitInputEvent<>DialogicEvent<>::
 icon.svg::CompressedTexture2D::2766149336681406939::1724857893::1724857896::1::::<><>::
 index.gd::GDScript::-1::1724857893::0::1::::<>DialogicIndexer<>::
-::res://addons/dialogic/Resources/::1724857894
+::res://addons/dialogic/Resources/::1724878992
 character.gd::GDScript::-1::1724857894::0::1::::DialogicCharacter<>Resource<>::
 CharacterResourceLoader.gd::GDScript::-1::1724857893::0::1::::DialogicCharacterFormatLoader<>ResourceFormatLoader<>::
 CharacterResourceSaver.gd::GDScript::-1::1724857893::0::1::::DialogicCharacterFormatSaver<>ResourceFormatSaver<>::
@@ -575,7 +575,7 @@ dialogic_layout_layer.gd::GDScript::-1::1724857894::0::1::::DialogicLayoutLayer<
 dialogic_style.gd::GDScript::-1::1724857894::0::1::::DialogicStyle<>Resource<>::
 dialogic_style_layer.gd::GDScript::-1::1724857894::0::1::::DialogicStyleLayer<>Resource<>::
 event.gd::GDScript::-1::1724857894::0::1::::DialogicEvent<>Resource<>::
-timeline.gd::GDScript::-1::1724857894::0::1::::DialogicTimeline<>Resource<>::
+timeline.gd::GDScript::-1::1724878992::0::1::::DialogicTimeline<>Resource<>::
 TimelineResourceLoader.gd::GDScript::-1::1724857894::0::1::::DialogicTimelineFormatLoader<>ResourceFormatLoader<>::
 TimelineResourceSaver.gd::GDScript::-1::1724857894::0::1::::DialogicTimelineFormatSaver<>ResourceFormatSaver<>::
 ::res://addons/dialogic/test-project/::1724857894
@@ -673,20 +673,20 @@ Poppins-Regular.ttf::FontFile::4214416702055673985::1724796849::1724857576::1:::
 README [INET].txt::TextFile::-1::1724796849::0::1::::<><>::
 tech-panel.png::CompressedTexture2D::5287935746960153760::1724796849::1724857577::1::::<><>::
 tech.theme::Theme::7237156549206226654::1724796849::0::1::::<><>::uid://brjuyem5xyah4::::res://addons/dialogue_nodes/themes/Poppins-Regular.ttf<>uid://og0o4cnb7vne::::res://addons/dialogue_nodes/themes/tech-panel.png
-::res://Characters/::1724870853
-Police.gd::GDScript::-1::1724870014::0::1::::Police<>NPC<>::
-Police.tscn::PackedScene::6487270320051065259::1724870853::0::1::::<><>::uid://d3so4qi626pic::::res://Images/Sprites/police.png<>res://Characters/Police.gd<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn
+::res://Characters/::1724954179
+Police.gd::GDScript::-1::1724885438::0::1::::Police<>NPC<>::
+Police.tscn::PackedScene::6487270320051065259::1724954178::0::1::::<><>::uid://d3so4qi626pic::::res://Images/Sprites/police.png<>res://Characters/Police.gd<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn
 Priest.gd::GDScript::-1::1724870238::0::1::::Priest<>NPC<>::
-Priest.tscn::PackedScene::1050326177682411347::1724870853::0::1::::<><>::uid://dxrdyw24k2col::::res://Images/Sprites/Priest.png<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn<>res://Characters/Priest.gd<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn
+Priest.tscn::PackedScene::1050326177682411347::1724954178::0::1::::<><>::uid://dxrdyw24k2col::::res://Images/Sprites/Priest.png<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn<>res://Characters/Priest.gd<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn
 PrisonerA.gd::GDScript::-1::1724870238::0::1::::Prisoner<>NPC<>::
 PrisonerA.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://Images/Sprites/prisonerA.png<>res://Characters/PrisonerA.gd<>res://Characters/questionmark.tscn
 questionmark.tscn::PackedScene::4271013238259072774::1724718866::0::1::::<><>::uid://gqcftyf33svi::::res://Images/Sprites/questionsheet.png
-SecretPolice.gd::GDScript::-1::1724870239::0::1::::SecretPolice<>NPC<>::
-SecretPolice.tscn::PackedScene::3459294954103745088::1724870853::0::1::::<><>::uid://cmlre600cnbd5::::res://Images/Sprites/secretpolice.png<>res://Characters/SecretPolice.gd<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn
-Soldier.gd::GDScript::-1::1724870239::0::1::::Soldier<>NPC<>::
+SecretPolice.gd::GDScript::-1::1724885681::0::1::::SecretPolice<>NPC<>::
+SecretPolice.tscn::PackedScene::3459294954103745088::1724954179::0::1::::<><>::uid://cmlre600cnbd5::::res://Images/Sprites/secretpolice.png<>res://Characters/SecretPolice.gd<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn
+Soldier.gd::GDScript::-1::1724885438::0::1::::Soldier<>NPC<>::
 Soldier.tscn::PackedScene::5477269081190026778::1724799804::0::1::::<><>::uid://lermkbqx8gw0::::res://Images/Sprites/soldier.png<>res://Characters/Soldier.gd<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn
-::res://Characters/Citizens/::1724870238
-OfficeWorker.gd::GDScript::-1::1724870238::0::1::::Citizen1<>NPC<>::
+::res://Characters/Citizens/::1724954292
+OfficeWorker.gd::GDScript::-1::1724954292::0::1::::Citizen1<>NPC<>::
 OfficeWorker.tscn::PackedScene::5014156138045441107::1724870015::0::1::::<><>::uid://v2fgn7ad6lg8::::res://Images/Sprites/employee.png<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn<>res://Characters/Citizens/OfficeWorker.gd<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn
 OfficeWorker_F.gd::GDScript::-1::1724870238::0::1::::Citizen2<>NPC<>::
 OfficeWorker_F.tscn::PackedScene::4322610239904280635::1724718866::0::1::::<><>::uid://b13571ojyd14m::::res://Characters/questionmark.tscn<>uid://t1vmaa41djsr::::res://Images/Sprites/employeeFemale.png<>res://Characters/Citizens/OfficeWorker_F.gd
@@ -700,23 +700,31 @@ Minister.gd::GDScript::-1::1724701470::0::1::::Minister<>NPC<>::
 SupremeLeader.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://Images/Sprites/supremeleader.png
 TransMinister.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://Images/Sprites/OfficialC.png
 WarMinister.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://Images/Sprites/General.png<>res://Characters/Ministers/Minister.gd<>res://Characters/questionmark.tscn
-::res://Characters/NPCtemplate/::1724870853
-NPC.gd::GDScript::-1::1724869967::0::1::::NPC<>CharacterBody2D<>::
-NPC.tscn::PackedScene::2188554705968836544::1724870853::0::1::::<><>::res://Characters/NPCtemplate/NPC.gd<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn
-::res://Characters/Player/::1724718866
-Player.gd::GDScript::-1::1724611726::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::1527351954996487499::1724718866::0::1::::<><>::res://Characters/Player/Player.gd<>uid://irseph1pakh1::::res://Images/Sprites/playersprite.png<>res://GUI/Scenes/Pause/Health.tscn
-::res://DialogicResources/::1724859097
-::res://DialogicResources/Characters/::1724870437
-GovernmentWorker.dch::Resource::-1::1724869832::0::1::::<><>::
-Police.dch::Resource::-1::1724870437::0::1::::<><>::
-SecretPolice.dch::Resource::-1::1724863189::0::1::::<><>::
-::res://DialogicResources/Timelines/::1724870469
+::res://Characters/NPCtemplate/::1724954178
+NPC.gd::GDScript::-1::1724871527::0::1::::NPC<>CharacterBody2D<>::
+NPC.tscn::PackedScene::2188554705968836544::1724954178::0::1::::<><>::res://Characters/NPCtemplate/NPC.gd<>uid://dkebl8ir7f5g8::::res://GUI/DialogueBox.tscn<>uid://b13571ojyd14m::::res://Characters/questionmark.tscn
+::res://Characters/Player/::1724954430
+Player.gd::GDScript::-1::1724887668::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::1527351954996487499::1724954430::0::1::::<><>::res://Characters/Player/Player.gd<>uid://irseph1pakh1::::res://Images/Sprites/playersprite.png<>uid://cqy58fgpr5lv0::::res://GUI/Scenes/Pause/Health.tscn
+::res://DialogicResources/::1724871609
+::res://DialogicResources/Characters/::1724885700
+GovernmentWorker.dch::Resource::-1::1724885700::0::1::::<><>::
+player.dch::Resource::-1::1724878645::0::1::::<><>::
+Police.dch::Resource::-1::1724871517::0::1::::<><>::
+SecretPolice.dch::Resource::-1::1724885698::0::1::::<><>::
+Soldier.dch::Resource::-1::1724885502::0::1::::<><>::
+::res://DialogicResources/Styles/::1724954292
+PremadeStyle1.tres::Resource/DialogicStyle::2219218529895439035::1724954292::0::1::::<><>::uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://by6waso0mjpjp::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>res://addons/dialogic/Resources/dialogic_style.gd
+::res://DialogicResources/Timelines/::1724885241
 timeline.dtl::Resource::-1::1724869822::0::1::::<><>::
-::res://DialogicResources/Timelines/Quest0/::1724870458
-quest0_0.dtl::Resource::-1::1724870458::0::1::::<><>::
-::res://GlobalScripts/::1724867645
-Global.gd::GDScript::-1::1724867645::0::1::::<>Node<>::
+::res://DialogicResources/Timelines/Placeholders/::1724885651
+PolicePlaceholder.dtl::Resource::-1::1724885268::0::1::::<><>::
+secretPolicePlaceholder.dtl::Resource::-1::1724885651::0::1::::<><>::
+SoldierPlaceholder.dtl::Resource::-1::1724885438::0::1::::<><>::
+::res://DialogicResources/Timelines/Quest0/::1724884945
+quest0_0.dtl::Resource::-1::1724884945::0::1::::<><>::
+::res://GlobalScripts/::1724887487
+Global.gd::GDScript::-1::1724887487::0::1::::<>Node<>::
 invitem.gd::GDScript::-1::1724610084::0::1::::<>StaticBody2D<>::
 politboro.json::JSON::-1::1724686210::0::1::::<><>::
 QuestSystem.gd::GDScript::-1::1724610084::0::1::::<>Node<>::
@@ -740,13 +748,8 @@ Soldier.dch::Resource::-1::1724796849::0::1::::<><>::
 ::res://GlobalScripts/Dialogic/Timelines/::1724796849
 quest0-1.dtl::Resource::-1::1724796849::0::1::::<><>::
 quest0-2.dtl::Resource::-1::1724796849::0::1::::<><>::
-::res://GlobalScripts/DialogueFolder/::1724796847
-PoliceDialogue.tres::Resource/Resource::8304438996831275880::1724719567::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
-Quest0Dialogue.tres::Resource/Resource::3473567018753195151::1724723486::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
-q_0_dialogue.tres::Resource/Resource::8492271345915237370::1724719567::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
-SoldierDialogue.tres::Resource/Resource::6517460382155786153::1724719567::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
-::res://GUI/::1724859539
-DialogueBox.gd::GDScript::-1::1724859539::0::1::::<>Control<>::
+::res://GUI/::1724871334
+DialogueBox.gd::GDScript::-1::1724871334::0::1::::<>Control<>::
 DialogueBox.tscn::PackedScene::7869490105645972909::1724857255::0::1::::<><>::res://GUI/DialogueBox.gd<>uid://dfd8rxsa5vs21::::res://GUI/fonts/1942_report/1942.tres<>res://addons/dialogue_nodes/objects/DialogueBox.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>res://addons/dialogue_nodes/objects/bbcodeMatrix.gd
 items.json::JSON::-1::1697915328::0::1::::<><>::
 npcs.json::JSON::-1::1697915328::0::1::::<><>::
@@ -786,17 +789,17 @@ propaganda.ttf::FontFile::5679925147021591919::1704395542::1724857576::1::::<><>
 PropagandaDialog.tres::FontFile::-1::1724610084::0::1::::<><>::res://GUI/fonts/propaganda/propaganda.ttf
 PropagandaFont.tres::FontFile::8479556910107842139::1724611148::0::1::::<><>::uid://cm6nsje8nt8v0::::res://GUI/fonts/propaganda/propaganda.ttf
 propagnd.txt::TextFile::-1::1704395542::0::1::::<><>::
-::res://GUI/Overlay/::1724550083
-DayNightCycle.tscn::PackedScene::-1::1724610084::0::1::::<><>::
+::res://GUI/Overlay/::1724953767
+DayNightCycle.tscn::PackedScene::5855496964834502028::1724953767::0::1::::<><>::
 ::res://GUI/Scenes/::1704395542
-::res://GUI/Scenes/Pause/::1724799804
-Health.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://GUI/Scenes/Pause/PauseMenu.tscn<>res://Images/GUI/inventory.png
-InventoryMenu.gd::GDScript::-1::1724610084::0::1::::<>Control<>::
-InventoryMenu.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://Images/plate.png<>res://GUI/Scenes/Pause/InventoryMenu.gd<>res://GUI/fonts/fyodor/fyodor.tres<>res://GUI/fonts/1942_report/1942.tres<>res://GUI/fonts/propaganda/PropagandaFont.tres<>res://GUI/fonts/1942_report/1942.ttf<>res://GUI/fonts/fyodor/Fyodor-Bold.ttf<>res://GUI/Scenes/Pause/Slot.gd
-PauseMenu.gd::GDScript::-1::1724610084::0::1::::<>Control<>::
-PauseMenu.tscn::PackedScene::3250119998246818022::1724799804::0::1::::<><>::uid://dynpsh0sdpi7l::::res://GUI/fonts/fyodor/Fyodor-Bold.ttf<>uid://cm6nsje8nt8v0::::res://GUI/fonts/propaganda/propaganda.ttf<>res://GUI/Scenes/Pause/PauseMenu.gd<>res://GUI/Scenes/Pause/PeopleMenu.tscn<>res://GUI/Scenes/Pause/QuestMenu.tscn<>res://GUI/Scenes/Pause/InventoryMenu.tscn
+::res://GUI/Scenes/Pause/::1724954431
+Health.tscn::PackedScene::5947288645265029231::1724954293::0::1::::<><>::uid://c0kuj15jqdcwc::::res://Images/GUI/inventory.png
+InventoryMenu.gd::GDScript::-1::1724952898::0::1::::<>Control<>::
+InventoryMenu.tscn::PackedScene::7955206906538407407::1724954431::0::1::::<><>::uid://1pjh5ndbxtf7::::res://Images/plate.png<>res://GUI/Scenes/Pause/InventoryMenu.gd<>uid://d1trfiuvy6saf::::res://GUI/fonts/fyodor/fyodor.tres<>uid://dfd8rxsa5vs21::::res://GUI/fonts/1942_report/1942.tres<>uid://ds2tcflc0ckxf::::res://GUI/fonts/propaganda/PropagandaFont.tres<>uid://dknqtnwoijfw6::::res://GUI/fonts/1942_report/1942.ttf<>uid://dynpsh0sdpi7l::::res://GUI/fonts/fyodor/Fyodor-Bold.ttf<>res://GUI/Scenes/Pause/Slot.gd
+PauseMenu.gd::GDScript::-1::1724953963::0::1::::<>Control<>::
+PauseMenu.tscn::PackedScene::3250119998246818022::1724954430::0::1::::<><>::uid://dynpsh0sdpi7l::::res://GUI/fonts/fyodor/Fyodor-Bold.ttf<>uid://cm6nsje8nt8v0::::res://GUI/fonts/propaganda/propaganda.ttf<>res://GUI/Scenes/Pause/PauseMenu.gd<>uid://sg7k53bmcss1::::res://GUI/Scenes/Pause/PeopleMenu.tscn<>res://GUI/Scenes/Pause/QuestMenu.tscn<>uid://dlltdim06bgq6::::res://GUI/Scenes/Pause/InventoryMenu.tscn
 PeopleMenu.gd::GDScript::-1::1724611726::0::1::::<>Control<>::
-PeopleMenu.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://GUI/fonts/fyodor/Fyodor-Bold.ttf<>res://GUI/fonts/fyodor/Fyodor-BoldCondensedOblique.ttf<>res://GUI/fonts/1942_report/1942.ttf<>res://GUI/Scenes/Pause/PeopleMenu.gd
+PeopleMenu.tscn::PackedScene::1277747872733116854::1724954430::0::1::::<><>::uid://dynpsh0sdpi7l::::res://GUI/fonts/fyodor/Fyodor-Bold.ttf<>uid://t5u6jk1oyt44::::res://GUI/fonts/fyodor/Fyodor-BoldCondensedOblique.ttf<>uid://dknqtnwoijfw6::::res://GUI/fonts/1942_report/1942.ttf<>res://GUI/Scenes/Pause/PeopleMenu.gd
 QuestMenu.gd::GDScript::-1::1724611727::0::1::::<>Control<>::
 QuestMenu.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://GUI/fonts/fyodor/button.tres<>res://GUI/Scenes/Pause/QuestMenu.gd<>res://GUI/fonts/1942_report/1942.ttf<>res://GUI/fonts/fyodor/Fyodor-BoldCondensedOblique.ttf<>res://GUI/fonts/fyodor/fyodor.tres<>res://GUI/fonts/fyodor/Fyodor-Bold.ttf
 Slot.gd::GDScript::-1::1724610084::0::1::::<>Panel<>::
@@ -805,7 +808,7 @@ MainMenu.gd::GDScript::-1::1724610084::0::1::::<>Control<>::
 MainMenu.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://GUI/Scenes/Title/MainMenu.gd<>res://GUI/fonts/Noto_Sans_KR/Korean2.tres<>res://Images/seal.png<>res://GUI/fonts/Black_Han_Sans/blackhanssans.tres
 Title.gd::GDScript::-1::1724610084::0::1::::<>Area2D<>::
 Title.tscn::PackedScene::-1::1724610084::0::1::::<><>::res://Images/GUI/title.png<>res://GUI/Scenes/Title/Title.gd
-::res://Images/::1724870799
+::res://Images/::1724870966
 bed.png::CompressedTexture2D::6326139936446540797::1697915328::1724857577::1::::<><>::
 bookshelf.png::CompressedTexture2D::4093538411928862968::1697915328::1724857577::1::::<><>::
 boxcar.png::CompressedTexture2D::2790739722333133167::1697915328::1724857577::1::::<><>::
@@ -858,8 +861,8 @@ station_top.png::CompressedTexture2D::2302026538008230172::1697915330::172485757
 trainstation.png::CompressedTexture2D::916558375606087862::1697915331::1724857577::1::::<><>::
 TrainYardTower.png::CompressedTexture2D::3290214009190192416::1697915331::1724857577::1::::<><>::
 yellowblock.png::CompressedTexture2D::4192848270150140705::1697915331::1724857577::1::::<><>::
-::res://Images/Bldgs/HQ/::1724857577
-govt_office.png::CompressedTexture2D::252255912773167883::1697915330::1724857577::1::::<><>::
+::res://Images/Bldgs/HQ/::1724952844
+govt_office.png::CompressedTexture2D::252255912773167883::1724884852::1724952844::1::::<><>::
 hq2.png::CompressedTexture2D::1772113513987715490::1697915330::1724857577::1::::<><>::
 hq_interior.png::CompressedTexture2D::2527355122229267882::1697915330::1724857577::1::::<><>::
 kremlin_interior.png::CompressedTexture2D::4697094106438482306::1697915330::1724857577::1::::<><>::
@@ -888,11 +891,10 @@ lostDocument.png::CompressedTexture2D::6482154141966684303::1697915331::17248575
 photo.png::CompressedTexture2D::1569161039832984447::1697915331::1724857577::1::::<><>::
 pistol.png::CompressedTexture2D::6376993128798192774::1697915331::1724857577::1::::<><>::
 watch.png::CompressedTexture2D::8494395473457723133::1697915331::1724857577::1::::<><>::
-::res://Images/Sprites/::1724857577
-businessman.png::CompressedTexture2D::5951971652310062195::1697915331::1724857577::1::::<><>::
+::res://Images/Sprites/::1724952844
 Doctor.png::CompressedTexture2D::3514423951254538182::1697915331::1724857577::1::::<><>::
-employee.png::CompressedTexture2D::1530018947728089281::1724711937::1724857577::1::::<><>::
-employeeFemale.png::CompressedTexture2D::1388558338455624945::1724712828::1724857577::1::::<><>::
+employee.png::CompressedTexture2D::1530018947728089281::1724878006::1724952844::1::::<><>::
+employeeFemale.png::CompressedTexture2D::1388558338455624945::1724886510::1724952844::1::::<><>::
 employee_f.png::CompressedTexture2D::8890068937278058865::1697915331::1724857577::1::::<><>::
 flagSpriteSheet.png::CompressedTexture2D::3048680154514609654::1724614007::1724857577::1::::<><>::
 General.png::CompressedTexture2D::7504605199849008488::1697915331::1724857577::1::::<><>::
@@ -906,11 +908,15 @@ Priest.png::CompressedTexture2D::8808926085160558151::1697915332::1724857576::1:
 prisonerA.png::CompressedTexture2D::1663721966353787240::1697915332::1724857576::1::::<><>::
 questionsheet.png::CompressedTexture2D::454294504132883418::1697915332::1724857577::1::::<><>::
 secretpolice.png::CompressedTexture2D::5638856646372933104::1697915332::1724857576::1::::<><>::
-soldier.png::CompressedTexture2D::781388936975797077::1697915332::1724857576::1::::<><>::
+soldier.png::CompressedTexture2D::781388936975797077::1724878376::1724952844::1::::<><>::
 spritesheet.png::CompressedTexture2D::6647814209941191078::1697915332::1724857576::1::::<><>::
 supremeleader.png::CompressedTexture2D::6350360799910141552::1697915332::1724857576::1::::<><>::
-::res://Images/thumbnails/::1724857576
+::res://Images/thumbnails/::1724952844
+govtWorkerThumbnail.png::CompressedTexture2D::9095246031391740864::1724878171::1724952844::1::::<><>::
+playerThumbnail.png::CompressedTexture2D::1386152812597455821::1724878505::1724952844::1::::<><>::
 policeThumbnail.png::CompressedTexture2D::8654387565181442277::1724716087::1724857576::1::::<><>::
+secretPoliceThumbnail.png::CompressedTexture2D::3191161611096150028::1724885573::1724952844::1::::<><>::
+soldierThumbnail.png::CompressedTexture2D::1218502881080122954::1724878406::1724952844::1::::<><>::
 ::res://Images/Tiles/::1724857577
 background.png::CompressedTexture2D::2307170473293202340::1697915332::1724857576::1::::<><>::
 cemetary.png::CompressedTexture2D::1331612557791244512::1697915332::1724857576::1::::<><>::
@@ -936,26 +942,26 @@ traintrackBL.png::CompressedTexture2D::6755086901263227980::1704395542::17248575
 traintrackBR.png::CompressedTexture2D::938329870883565469::1704395542::1724857576::1::::<><>::
 traintrackH.png::CompressedTexture2D::6151755281152222347::1704395542::1724857576::1::::<><>::
 traintrackV.png::CompressedTexture2D::6460542821113945514::1704395542::1724857576::1::::<><>::
-::res://Map Scenes/::1724870852
+::res://Map Scenes/::1724954431
 Base.tscn::PackedScene::170873336471780435::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://b1u5bt06174t::::res://Images/Tiles/Airstrip/airstrip.png<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>uid://bg5qx6en4cnyp::::res://Images/Tiles/wallparts.png<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/Streetlight.tscn<>res://World Objects/Accessories/MiG.tscn<>res://World Objects/Accessories/SandbagThin.tscn<>res://World Objects/Buildings/Military/Bunker.tscn<>res://World Objects/Accessories/GroupSmallCrate.tscn<>res://World Objects/Accessories/LargeCrate.tscn<>res://World Objects/Accessories/Forest.tscn<>res://World Objects/Accessories/SandbagLong.tscn<>res://World Objects/Buildings/TrainTower.tscn<>res://World Objects/Accessories/TreeGroup.tscn
-CitySouth.tscn::PackedScene::8214180974328048478::1724870852::0::1::::<><>::uid://74u04je7o25m::::res://Images/Tiles/background.png<>res://World Objects/Accessories/LargeCrate.tscn<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>res://World Objects/Accessories/GroupSmallCrate.tscn<>uid://dw63tgdl5ojsk::::res://Images/Tiles/farm.png<>res://World Objects/Buildings/YellowBlock.tscn<>uid://5n8yaxmee54w::::res://Images/Tiles/grass.png<>res://World Objects/Buildings/TrainTower.tscn<>uid://b5jf37b570g0t::::res://Images/Tiles/river.png<>res://World Objects/Portal/Portal.tscn<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>res://World Objects/Accessories/Flowers.tscn<>uid://b5i553d3xa33k::::res://Images/Tiles/road.png<>res://World Objects/Accessories/CoalPile.tscn<>res://World Objects/Accessories/Trashcan.tscn<>res://World Objects/Accessories/Forest.tscn<>res://World Objects/Buildings/station.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://World Objects/Accessories/TunnelMouth.tscn<>res://World Objects/Buildings/BlueBlock.tscn<>res://World Objects/Buildings/RedBlock.tscn<>res://World Objects/Buildings/GreenBlock.tscn<>res://Characters/Ministers/Locomotive.tscn<>uid://cyoqnn5j0fmbb::::res://Characters/Police.tscn<>uid://o71yo2p2ehrf::::res://Characters/Priest.tscn<>uid://ckbh26xlw27jq::::res://Characters/Soldier.tscn<>res://World Objects/Buildings/AIapts2.tscn<>uid://cdo5oinaqach4::::res://Characters/Citizens/OfficeWorker.tscn
+CitySouth.tscn::PackedScene::8214180974328048478::1724954431::0::1::::<><>::uid://74u04je7o25m::::res://Images/Tiles/background.png<>res://World Objects/Accessories/LargeCrate.tscn<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>res://World Objects/Accessories/GroupSmallCrate.tscn<>uid://dw63tgdl5ojsk::::res://Images/Tiles/farm.png<>res://World Objects/Buildings/YellowBlock.tscn<>uid://5n8yaxmee54w::::res://Images/Tiles/grass.png<>res://World Objects/Buildings/TrainTower.tscn<>uid://b5jf37b570g0t::::res://Images/Tiles/river.png<>res://World Objects/Portal/Portal.tscn<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>res://World Objects/Accessories/Flowers.tscn<>uid://b5i553d3xa33k::::res://Images/Tiles/road.png<>res://World Objects/Accessories/CoalPile.tscn<>uid://bwvd6pu2u7lko::::res://Images/tree.png<>res://World Objects/Accessories/Trashcan.tscn<>res://World Objects/Accessories/Forest.tscn<>res://World Objects/Buildings/station.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://World Objects/Accessories/TunnelMouth.tscn<>res://World Objects/Buildings/BlueBlock.tscn<>res://World Objects/Buildings/RedBlock.tscn<>res://World Objects/Buildings/GreenBlock.tscn<>res://Characters/Ministers/Locomotive.tscn<>uid://cyoqnn5j0fmbb::::res://Characters/Police.tscn<>uid://ckbh26xlw27jq::::res://Characters/Soldier.tscn<>res://World Objects/Buildings/AIapts2.tscn<>uid://cdo5oinaqach4::::res://Characters/Citizens/OfficeWorker.tscn<>uid://bpjyc2l8msal1::::res://Characters/SecretPolice.tscn<>uid://bmknab031jnte::::res://GUI/Scenes/Pause/PauseMenu.tscn
 Farm.tscn::PackedScene::4188793150970493343::1724634212::0::1::::<><>::uid://dw63tgdl5ojsk::::res://Images/Tiles/farm.png<>res://World Objects/Accessories/Forest.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>res://World Objects/Accessories/haystack.tscn<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>res://World Objects/Portal/Portal.tscn
 Gulag.tscn::PackedScene::4169852096048136589::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://World Objects/Portal/Portal.tscn<>uid://bg5qx6en4cnyp::::res://Images/Tiles/wallparts.png<>res://World Objects/Buildings/Military/Bunker.tscn<>res://World Objects/Accessories/Tent.tscn<>res://Characters/Soldier.tscn<>res://Characters/PrisonerA.tscn<>res://World Objects/Accessories/LargeCrate.tscn<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png
-HQ.tscn::PackedScene::6677588182346630751::1724634212::0::1::::<><>::res://World Objects/Portal/Portal.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>uid://b1u5bt06174t::::res://Images/Tiles/Airstrip/airstrip.png<>res://World Objects/Buildings/Military/Headquarters.tscn<>res://Characters/Soldier.tscn<>res://Characters/SecretPolice.tscn<>res://World Objects/Accessories/Streetlight.tscn<>uid://dqctgiuow1lol::::res://Images/Tiles/Airstrip/airstripV.png<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>res://World Objects/Accessories/Flowers.tscn<>res://World Objects/Accessories/Forest.tscn<>res://Characters/Police.tscn<>res://World Objects/Buildings/RedBlock.tscn<>res://World Objects/Buildings/AIapts2.tscn
-MiniMap.tscn::PackedScene::5841926098085322699::1724612342::0::1::::<><>::uid://dpbami1xapr7c::::res://Map Scenes/CitySouth.tscn<>res://Map Scenes/Base.tscn<>res://Map Scenes/Farm.tscn<>uid://c2ew5wouhhcx8::::res://Map Scenes/HQ.tscn<>uid://bdlj6guxck22k::::res://Map Scenes/TownSquare.tscn<>uid://d3apbgmls04rm::::res://Map Scenes/TrainYard.tscn<>res://Map Scenes/Gulag.tscn<>uid://bg1lf00qi4cnq::::res://Map Scenes/PowerPlant.tscn<>uid://cmnqj262c4wf2::::res://Map Scenes/Tunnel.tscn
+HQoutside.tscn::PackedScene::6677588182346630751::1724950154::0::1::::<><>::uid://74u04je7o25m::::res://Images/Tiles/background.png<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Buildings/RedBlock.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://br8ghxuda8u31::::res://World Objects/Buildings/Military/Headquarters.tscn<>res://World Objects/Accessories/Forest.tscn<>res://World Objects/Accessories/Streetlight.tscn<>res://World Objects/Buildings/AIapts2.tscn<>res://World Objects/Accessories/Flowers.tscn<>uid://ckbh26xlw27jq::::res://Characters/Soldier.tscn<>uid://bpjyc2l8msal1::::res://Characters/SecretPolice.tscn<>uid://cyoqnn5j0fmbb::::res://Characters/Police.tscn
+MiniMap.tscn::PackedScene::5841926098085322699::1724887413::0::1::::<><>::uid://dpbami1xapr7c::::res://Map Scenes/CitySouth.tscn<>uid://co1i2jjy1epv::::res://Map Scenes/Base.tscn<>uid://b0xc2t0v8gawt::::res://Map Scenes/Farm.tscn<>uid://c2ew5wouhhcx8::::res://Map Scenes/HQoutside.tscn<>uid://bdlj6guxck22k::::res://Map Scenes/TownSquare.tscn<>uid://d3apbgmls04rm::::res://Map Scenes/TrainYard.tscn<>uid://b0n54cfasldu8::::res://Map Scenes/Gulag.tscn<>uid://bg1lf00qi4cnq::::res://Map Scenes/PowerPlant.tscn<>uid://cmnqj262c4wf2::::res://Map Scenes/Tunnel.tscn
 PowerPlant.tscn::PackedScene::2861905735459469178::1724634212::0::1::::<><>::uid://dw63tgdl5ojsk::::res://Images/Tiles/farm.png<>uid://b5jf37b570g0t::::res://Images/Tiles/river.png<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://World Objects/Buildings/Plant.tscn<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>res://World Objects/Accessories/Forest.tscn<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>res://World Objects/Portal/Portal.tscn<>uid://ctv7rmmp720sl::::res://Images/Tiles/Railroad/traintrackH.png<>uid://cybsgw8818sgo::::res://Images/Tiles/Railroad/traintrackV.png<>res://World Objects/Accessories/TunnelMouth.tscn<>uid://br5j55i15nk5w::::res://Images/Tiles/cliffs.png
-TownSquare.tscn::PackedScene::2620297529532107484::1724634212::0::1::::<><>::uid://clnwgl3u36r80::::res://World Objects/Buildings/Monument.tscn<>res://World Objects/Buildings/Apartments.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://World Objects/Buildings/Narrow Building.tscn<>uid://b1u5bt06174t::::res://Images/Tiles/Airstrip/airstrip.png<>res://World Objects/Buildings/Factory.tscn<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>res://World Objects/Portal/Portal.tscn<>uid://drbexy6xxdl4l::::res://Images/Tiles/Airstrip/airstrip64V.png<>res://World Objects/Buildings/AIapts2.tscn<>uid://cys7sj0hcfa1p::::res://Images/Tiles/Airstrip/airstrip64H.png<>uid://dqctgiuow1lol::::res://Images/Tiles/Airstrip/airstripV.png<>res://World Objects/Accessories/Flowers.tscn<>res://World Objects/Accessories/TreeGroup.tscn<>res://World Objects/Accessories/Forest.tscn<>res://World Objects/Accessories/Streetlight.tscn<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>uid://br5j55i15nk5w::::res://Images/Tiles/cliffs.png<>res://Characters/Ministers/SupremeLeader.tscn<>res://Characters/Soldier.tscn<>res://Characters/Citizens/OfficeWorker.tscn<>res://Characters/Citizens/OfficeWorker_F.tscn<>res://Characters/Ministers/WarMinister.tscn<>res://World Objects/Buildings/AIApartments.tscn
+TownSquare.tscn::PackedScene::2620297529532107484::1724950156::0::1::::<><>::uid://clnwgl3u36r80::::res://World Objects/Buildings/Monument.tscn<>res://World Objects/Buildings/Apartments.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://World Objects/Buildings/Narrow Building.tscn<>uid://b1u5bt06174t::::res://Images/Tiles/Airstrip/airstrip.png<>res://World Objects/Buildings/Factory.tscn<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>res://World Objects/Portal/Portal.tscn<>uid://drbexy6xxdl4l::::res://Images/Tiles/Airstrip/airstrip64V.png<>res://World Objects/Buildings/AIapts2.tscn<>uid://cys7sj0hcfa1p::::res://Images/Tiles/Airstrip/airstrip64H.png<>uid://dqctgiuow1lol::::res://Images/Tiles/Airstrip/airstripV.png<>res://World Objects/Accessories/Flowers.tscn<>res://World Objects/Accessories/TreeGroup.tscn<>res://World Objects/Accessories/Forest.tscn<>res://World Objects/Accessories/Streetlight.tscn<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>uid://br5j55i15nk5w::::res://Images/Tiles/cliffs.png<>res://Characters/Ministers/SupremeLeader.tscn<>uid://ckbh26xlw27jq::::res://Characters/Soldier.tscn<>uid://cdo5oinaqach4::::res://Characters/Citizens/OfficeWorker.tscn<>uid://b2t502sb8cf0v::::res://Characters/Citizens/OfficeWorker_F.tscn<>res://Characters/Ministers/WarMinister.tscn<>res://World Objects/Buildings/AIApartments.tscn
 TrainYard.tscn::PackedScene::9125462547832226058::1724634212::0::1::::<><>::res://World Objects/Buildings/TrainTower.tscn<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/CoalCar.tscn<>res://World Objects/Accessories/CoalPile.tscn<>res://World Objects/Accessories/BoxCar.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>uid://nmsfkg1ncfsf::::res://Images/Tiles/Railroad/traintrackBR.png<>uid://c3ihkaiqemgto::::res://Images/Tiles/Railroad/traintrackBL.png<>uid://b1u5bt06174t::::res://Images/Tiles/Airstrip/airstrip.png<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://ctv7rmmp720sl::::res://Images/Tiles/Railroad/traintrackH.png<>uid://c3qcg5lwqi6w3::::res://Images/Tiles/Railroad/traincurve1.png<>uid://dqctgiuow1lol::::res://Images/Tiles/Airstrip/airstripV.png<>uid://cybsgw8818sgo::::res://Images/Tiles/Railroad/traintrackV.png<>uid://b5abu8b5f3jrh::::res://Images/Tiles/Railroad/traintrackB.png<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png
 Tunnel.tscn::PackedScene::5642933413124760645::1724634212::0::1::::<><>::uid://dw63tgdl5ojsk::::res://Images/Tiles/farm.png<>uid://b5jf37b570g0t::::res://Images/Tiles/river.png<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://b5abu8b5f3jrh::::res://Images/Tiles/Railroad/traintrackB.png<>uid://vplfn5xgja6n::::res://Images/Tiles/cobblestone.png<>uid://c3ihkaiqemgto::::res://Images/Tiles/Railroad/traintrackBL.png<>uid://ccgdt4chb1mrr::::res://Images/Tiles/road2.png<>uid://74u04je7o25m::::res://Images/Tiles/background.png<>res://World Objects/Portal/Portal.tscn<>uid://ctv7rmmp720sl::::res://Images/Tiles/Railroad/traintrackH.png<>uid://cybsgw8818sgo::::res://Images/Tiles/Railroad/traintrackV.png<>res://World Objects/Accessories/TunnelMouth.tscn<>uid://br5j55i15nk5w::::res://Images/Tiles/cliffs.png
-::res://Map Scenes/Indoors/::1724634212
-AptHallway.tscn::PackedScene::7585187034145630360::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://b6cyigldiajls::::res://Images/Bldgs/PlayerApt/apt_hallway.png<>res://World Objects/Portal/Portal.tscn
-EnergyOffice.tscn::PackedScene::-1::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/EnergyMinister.tscn<>res://World Objects/Portal/Portal.tscn<>uid://bqsofixyfp8fc::::res://Images/Bldgs/HQ/OfficeB.png<>res://World Objects/Accessories/Bookshelf.tscn<>res://World Objects/Accessories/Desk.tscn<>res://World Objects/Accessories/InvItems/Folder.tscn<>res://World Objects/Accessories/InvItems/Incriminating Photo.tscn<>res://World Objects/Accessories/InvItems/Lost Document.tscn<>res://World Objects/Accessories/Wastebin.tscn<>res://Characters/Citizens/OfficeWorker.tscn
-FinanceOffice.tscn::PackedScene::-1::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/TransMinister.tscn<>res://World Objects/Accessories/InvItems/Filmreel.tscn<>res://Characters/Citizens/OfficeWorker.tscn<>res://Characters/Police.tscn<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/Desk.tscn<>res://World Objects/Accessories/Bookshelf.tscn<>uid://0l2cl2r2jjyf::::res://Images/Bldgs/HQ/OfficeC.png<>res://World Objects/Accessories/Wastebin.tscn<>res://World Objects/Accessories/InvItems/Folder.tscn
-HQ_Inside.tscn::PackedScene::-1::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Soldier.tscn<>res://World Objects/Portal/Portal.tscn<>uid://bcajf1cord5ri::::res://Images/Bldgs/HQ/hq_interior.png<>res://Characters/SecretPolice.tscn<>res://Characters/Ministers/WarMinister.tscn<>res://Characters/Ministers/JusticeMinister.tscn
-JusticeOffice.tscn::PackedScene::-1::1724634212::0::1::::<><>::res://Characters/Police.tscn<>res://World Objects/Accessories/Desk.tscn<>res://Characters/Citizens/OfficeWorker.tscn<>res://World Objects/Accessories/Bookshelf.tscn<>res://Characters/Ministers/TransMinister.tscn<>res://World Objects/Portal/Portal.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://0l2cl2r2jjyf::::res://Images/Bldgs/HQ/OfficeC.png
-PlayerApt.tscn::PackedScene::-1::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://61qra8fjqxe4::::res://Images/Bldgs/PlayerApt/bedroom.png<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/Bed.tscn<>res://World Objects/Accessories/Wastebin.tscn<>res://World Objects/Accessories/Dresser.tscn<>res://World Objects/Accessories/Bookshelf.tscn
-TransportationOffice.tscn::PackedScene::-1::1724634212::0::1::::<><>::res://World Objects/Portal/Portal.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/FinanceMinister.tscn<>uid://bqsofixyfp8fc::::res://Images/Bldgs/HQ/OfficeB.png
-WarOffice.tscn::PackedScene::-1::1724634212::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/TransMinister.tscn<>res://Characters/Citizens/OfficeWorker.tscn<>res://Characters/Police.tscn<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/Desk.tscn<>res://World Objects/Accessories/Bookshelf.tscn<>uid://0l2cl2r2jjyf::::res://Images/Bldgs/HQ/OfficeC.png
+::res://Map Scenes/Indoors/::1724950156
+AptHallway.tscn::PackedScene::7585187034145630360::1724950154::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://b6cyigldiajls::::res://Images/Bldgs/PlayerApt/apt_hallway.png<>res://World Objects/Portal/Portal.tscn
+EnergyOffice.tscn::PackedScene::606640362538785684::1724950154::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/EnergyMinister.tscn<>res://World Objects/Portal/Portal.tscn<>uid://bqsofixyfp8fc::::res://Images/Bldgs/HQ/OfficeB.png<>res://World Objects/Accessories/Bookshelf.tscn<>res://World Objects/Accessories/Desk.tscn<>res://World Objects/Accessories/InvItems/Folder.tscn<>res://World Objects/Accessories/InvItems/Incriminating Photo.tscn<>res://World Objects/Accessories/InvItems/Lost Document.tscn<>res://World Objects/Accessories/Wastebin.tscn<>uid://cdo5oinaqach4::::res://Characters/Citizens/OfficeWorker.tscn
+FinanceOffice.tscn::PackedScene::396290627756566666::1724950155::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/TransMinister.tscn<>res://World Objects/Accessories/InvItems/Filmreel.tscn<>uid://cdo5oinaqach4::::res://Characters/Citizens/OfficeWorker.tscn<>uid://cyoqnn5j0fmbb::::res://Characters/Police.tscn<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/Desk.tscn<>res://World Objects/Accessories/Bookshelf.tscn<>uid://0l2cl2r2jjyf::::res://Images/Bldgs/HQ/OfficeC.png<>res://World Objects/Accessories/Wastebin.tscn<>res://World Objects/Accessories/InvItems/Folder.tscn
+HQ_Inside.tscn::PackedScene::8570755963247015611::1724950154::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://ckbh26xlw27jq::::res://Characters/Soldier.tscn<>res://World Objects/Portal/Portal.tscn<>uid://bcajf1cord5ri::::res://Images/Bldgs/HQ/hq_interior.png<>uid://bpjyc2l8msal1::::res://Characters/SecretPolice.tscn<>res://Characters/Ministers/WarMinister.tscn<>res://Characters/Ministers/JusticeMinister.tscn
+JusticeOffice.tscn::PackedScene::5346644759163039614::1724950155::0::1::::<><>::uid://cyoqnn5j0fmbb::::res://Characters/Police.tscn<>res://World Objects/Accessories/Desk.tscn<>uid://cdo5oinaqach4::::res://Characters/Citizens/OfficeWorker.tscn<>res://World Objects/Accessories/Bookshelf.tscn<>res://Characters/Ministers/TransMinister.tscn<>res://World Objects/Portal/Portal.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://0l2cl2r2jjyf::::res://Images/Bldgs/HQ/OfficeC.png
+PlayerApt.tscn::PackedScene::4469614791065193709::1724950155::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>uid://61qra8fjqxe4::::res://Images/Bldgs/PlayerApt/bedroom.png<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/Bed.tscn<>res://World Objects/Accessories/Wastebin.tscn<>res://World Objects/Accessories/Dresser.tscn<>res://World Objects/Accessories/Bookshelf.tscn
+TransportationOffice.tscn::PackedScene::2150076870584632104::1724950155::0::1::::<><>::res://World Objects/Portal/Portal.tscn<>uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/FinanceMinister.tscn<>uid://bqsofixyfp8fc::::res://Images/Bldgs/HQ/OfficeB.png
+WarOffice.tscn::PackedScene::8015020275101158934::1724950156::0::1::::<><>::uid://v04i7wtgqvm6::::res://Characters/Player/Player.tscn<>res://Characters/Ministers/TransMinister.tscn<>uid://cdo5oinaqach4::::res://Characters/Citizens/OfficeWorker.tscn<>uid://cyoqnn5j0fmbb::::res://Characters/Police.tscn<>res://World Objects/Portal/Portal.tscn<>res://World Objects/Accessories/Desk.tscn<>res://World Objects/Accessories/Bookshelf.tscn<>uid://0l2cl2r2jjyf::::res://Images/Bldgs/HQ/OfficeC.png
 ::res://Quests/::1724796849
 ::res://Quests/Quest0/::1724796849
 Quest0.gd::GDScript::-1::1724796849::0::1::::<>QuestSystem<>::
@@ -970,12 +976,12 @@ wood01.ogg::AudioStreamOggVorbis::1026738327646161829::1697915333::1724857576::1
 wood02.ogg::AudioStreamOggVorbis::8563492331528238856::1697915333::1724857576::1::::<><>::
 wood03.ogg::AudioStreamOggVorbis::4445957670849047150::1697915333::1724857576::1::::<><>::
 ::res://Tests/::1724857843
-::res://Tests/Unit/::1724857843
+::res://Tests/Unit/::1724871334
 glossary_resource_test.gd::GDScript::-1::1724857843::0::1::::<>GdUnitTestSuite<>::
 test_auto_advance.gd::GDScript::-1::1724857843::0::1::::<>GdUnitTestSuite<>::
-test_example.gd::GDScript::-1::1724857843::0::1::::GdUnitExampleTest<>GdUnitTestSuite<>::
+test_example.gd::GDScript::-1::1724871334::0::1::::GdUnitExampleTest<>GdUnitTestSuite<>::
 ::res://World Objects/::1723937919
-::res://World Objects/Accessories/::1724870853
+::res://World Objects/Accessories/::1724954179
 Bed.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/bed.png
 Bookshelf.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/bookshelf.png
 BoxCar.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/boxcar.png
@@ -998,7 +1004,7 @@ Streetlight.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/street
 Tank_Immovable.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/tank.png
 Tent.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/tent.png
 Trashcan.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/trashcan_simple.png
-Tree.tscn::PackedScene::8925517779227550995::1724870853::0::1::::<><>::uid://bwvd6pu2u7lko::::res://Images/tree.png
+Tree.tscn::PackedScene::8925517779227550995::1724954179::0::1::::<><>::uid://bwvd6pu2u7lko::::res://Images/tree.png
 TreeGroup.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://World Objects/Accessories/Tree.tscn
 TunnelMouth.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/tunnelexit.png
 Wastebin.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/wastebin.png
@@ -1027,11 +1033,11 @@ RedBlock.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/Bldgs/red
 station.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/Bldgs/trainstation.png<>res://Images/Bldgs/station_top2.png
 TrainTower.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/Bldgs/TrainYardTower.png
 YellowBlock.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/Bldgs/yellowblock.png
-::res://World Objects/Buildings/Military/::1723937987
+::res://World Objects/Buildings/Military/::1724950154
 Bunker.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/Bldgs/bunker.png
-Headquarters.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://Images/Bldgs/HQ/hq2.png
-::res://World Objects/Portal/::1724611726
-Portal.gd::GDScript::-1::1724611726::0::1::::<>Area2D<>::
+Headquarters.tscn::PackedScene::3648133533008326282::1724950154::0::1::::<><>::uid://dugvao8q7dgt::::res://Images/Bldgs/HQ/govt_office.png
+::res://World Objects/Portal/::1724887867
+Portal.gd::GDScript::-1::1724887867::0::1::::<>Area2D<>::
 Portal.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://World Objects/Portal/Portal.gd
 ScreenChanger.gd::GDScript::-1::1724610083::0::1::::<>CanvasLayer<>::
 ScreenChanger.tscn::PackedScene::-1::1724610083::0::1::::<><>::res://World Objects/Portal/ScreenChanger.gd

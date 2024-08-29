@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_3r5to"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
-radius = 5.05821
+radius = 5.0582
 height = 10.1164
 
 [sub_resource type="Animation" id="2"]

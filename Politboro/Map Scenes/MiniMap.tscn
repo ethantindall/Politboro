@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://cph4w0y6t33g6"]
 
 [ext_resource type="PackedScene" uid="uid://dpbami1xapr7c" path="res://Map Scenes/CitySouth.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://Map Scenes/Base.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://Map Scenes/Farm.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://c2ew5wouhhcx8" path="res://Map Scenes/HQ.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://co1i2jjy1epv" path="res://Map Scenes/Base.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://b0xc2t0v8gawt" path="res://Map Scenes/Farm.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c2ew5wouhhcx8" path="res://Map Scenes/HQoutside.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://bdlj6guxck22k" path="res://Map Scenes/TownSquare.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://d3apbgmls04rm" path="res://Map Scenes/TrainYard.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://Map Scenes/Gulag.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://b0n54cfasldu8" path="res://Map Scenes/Gulag.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://bg1lf00qi4cnq" path="res://Map Scenes/PowerPlant.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://cmnqj262c4wf2" path="res://Map Scenes/Tunnel.tscn" id="9"]
 

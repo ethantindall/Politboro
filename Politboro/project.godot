@@ -27,17 +27,22 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Characters/GovernmentWorker": "res://DialogicResources/Characters/GovernmentWorker.dch",
 "Characters/SecretPolice": "res://DialogicResources/Characters/SecretPolice.dch",
+"Characters/Soldier": "res://DialogicResources/Characters/Soldier.dch",
 "DialogicResources/Police": "res://DialogicResources/Characters/Police.dch",
 "GovernmentWorker": "res://GlobalScripts/Dialogic/Characters/GovernmentWorker.dch",
 "Player": "res://GlobalScripts/Dialogic/Characters/Player.dch",
 "Police": "res://GlobalScripts/Dialogic/Characters/Police.dch",
 "SecretPolice": "res://GlobalScripts/Dialogic/Characters/SecretPolice.dch",
-"Soldier": "res://GlobalScripts/Dialogic/Characters/Soldier.dch"
+"Soldier": "res://GlobalScripts/Dialogic/Characters/Soldier.dch",
+"player": "res://DialogicResources/Characters/player.dch"
 }
 directories/dtl_directory={
+"PolicePlaceholder": "res://DialogicResources/Timelines/Placeholders/PolicePlaceholder.dtl",
+"SoldierPlaceholder": "res://DialogicResources/Timelines/Placeholders/SoldierPlaceholder.dtl",
 "quest0-1": "res://GlobalScripts/Dialogic/Timelines/quest0-1.dtl",
 "quest0-2": "res://GlobalScripts/Dialogic/Timelines/quest0-2.dtl",
 "quest0_0": "res://DialogicResources/Timelines/Quest0/quest0_0.dtl",
+"secretPolicePlaceholder": "res://DialogicResources/Timelines/Placeholders/secretPolicePlaceholder.dtl",
 "timeline": "res://DialogicResources/Timelines/timeline.dtl"
 }
 glossary/default_case_sensitive=true

@@ -1,12 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://br8ghxuda8u31"]
 
-[ext_resource path="res://Images/Bldgs/HQ/hq2.png" type="Texture2D" id=1]
-
+[ext_resource type="Texture2D" uid="uid://dugvao8q7dgt" path="res://Images/Bldgs/HQ/govt_office.png" id="1_36uat"]
 
 [node name="HQ" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1_36uat")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array( 109.994, 39.6143, 233.018, 38.0269, 232.224, 76.9182, 249.289, 75.7277, 249.289, 93.1891, 75.0713, 91.6017, 63.1658, 72.156, -62.2389, 73.7434, -80.0971, 93.9828, -248.362, 92.7922, -249.155, 76.5214, -234.869, 76.9182, -232.884, 40.0112 )
+polygon = PackedVector2Array(119, 28, 119, 66, 26, 66, 20, 59, 18, 57, -23, 57, -25, 59, -30.7774, 66, -124, 66, -124, 27)

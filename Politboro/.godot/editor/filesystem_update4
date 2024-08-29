@@ -1,22 +1,8 @@
 res://default_env.tres
-res://Map Scenes/CitySouth.tscn
-res://Characters/Citizens/OfficeWorker.gd
-res://Characters/Citizens/OfficeWorker_F.gd
-res://Characters/Priest.gd
-res://Characters/PrisonerA.gd
-res://Characters/SecretPolice.gd
-res://Characters/Soldier.gd
-res://DialogicResources/Characters/Police.dch
-res://Characters/NPCtemplate/NPC.tscn
-res://Characters/Police.tscn
-res://Characters/SecretPolice.tscn
-res://Characters/Priest.tscn
-res://World Objects/Accessories/Tree.tscn
-res://GUI/DialogueBox.gd
-res://Tests/Unit/test_example.gd
-res://GUI/Overlay/DayNightCycle.tscn
-res://DialogicResources/Timelines/Quest0/quest0_0.dtl
-res://DialogicResources/Characters/SecretPolice.dch
-res://DialogicResources/Characters/GovernmentWorker.dch
-res://Characters/NPCtemplate/NPC.gd
+res://GUI/Scenes/Pause/PauseMenu.tscn
 res://DialogicResources/Styles/PremadeStyle1.tres
+res://Characters/Citizens/OfficeWorker.gd
+res://GUI/Scenes/Pause/PeopleMenu.tscn
+res://Characters/Player/Player.tscn
+res://Map Scenes/CitySouth.tscn
+res://GUI/Scenes/Pause/InventoryMenu.tscn

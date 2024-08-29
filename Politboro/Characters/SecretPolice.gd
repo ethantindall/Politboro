@@ -4,4 +4,4 @@ class_name SecretPolice
 
 
 func _init():
-	dialogueTimeline = "res://DialogicResources/Timelines/timeline.dtl"
+	dialogueTimeline = "res://DialogicResources/Timelines/Placeholders/secretPolicePlaceholder.dtl"

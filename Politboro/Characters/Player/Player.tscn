@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://irseph1pakh1" path="res://Images/Sprites/playersprite.png" id="2"]
-[ext_resource type="PackedScene" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cqy58fgpr5lv0" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0, 0, 0, 0.403922)
