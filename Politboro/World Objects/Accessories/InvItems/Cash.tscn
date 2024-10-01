@@ -1,42 +1,37 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cvkhwnwr1pyx5"]
 
-[ext_resource path="res://Images/InvItems/cash.png" type="Texture2D" id=1]
-[ext_resource path="res://GlobalScripts/invitem.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://b65kwgb3h8ulp" path="res://Images/InvItems/cash.png" id="1"]
+[ext_resource type="Script" path="res://GlobalScripts/invitem.gd" id="2"]
 
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(32.0942, 15.6047)
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.0471, 7.80234 )
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id="2"]
 radius = 2.04897
 
 [node name="Cash" type="StaticBody2D"]
-scale = Vector2( 2, 2 )
-script = ExtResource( 2 )
+scale = Vector2(2, 2)
+script = ExtResource("2")
 itemName = "Cash"
 imagePath = "res://Images/InvItems/cash.png"
 itemDesc = "Money, money, money by the pound."
-itemPickupTimeline = "Cash-1"
-itemValue = 10
+onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/cash.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( 0, -0.666667 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2(0, -0.666667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.00262451, -0.637911 )
-scale = Vector2( 0.1, 0.1 )
-shape = SubResource( 1 )
+position = Vector2(-0.00262451, -0.637911)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
-position = Vector2( 0.0208569, -0.552707 )
-shape = SubResource( 2 )
+position = Vector2(0.0208569, -0.552707)
+shape = SubResource("2")
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
 [connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

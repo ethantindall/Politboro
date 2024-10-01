@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0xc2t0v8gawt"]
+[gd_scene load_steps=16 format=3 uid="uid://b0xc2t0v8gawt"]
 
 [ext_resource type="Texture2D" uid="uid://dw63tgdl5ojsk" path="res://Images/Tiles/farm.png" id="1"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Forest.tscn" id="2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ccgdt4chb1mrr" path="res://Images/Tiles/road2.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="8"]
 [ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="9_brudy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufsox"]
 texture = ExtResource("7")
@@ -198,3 +199,5 @@ player_spawn_location = Vector2(13, 190)
 position = Vector2(-4.51596, 126.531)
 next_scene_path = "res://Map Scenes/PowerPlant.tscn"
 player_spawn_location = Vector2(490, 95)
+
+[node name="Pause" parent="." instance=ExtResource("9_brudy")]

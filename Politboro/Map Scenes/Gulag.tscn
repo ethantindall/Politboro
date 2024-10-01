@@ -1,14 +1,15 @@
-[gd_scene load_steps=25 format=3 uid="uid://b0n54cfasldu8"]
+[gd_scene load_steps=26 format=3 uid="uid://b0n54cfasldu8"]
 
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://bg5qx6en4cnyp" path="res://Images/Tiles/wallparts.png" id="3"]
 [ext_resource type="PackedScene" path="res://World Objects/Buildings/Military/Bunker.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Tent.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://Characters/Soldier.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier.tscn" id="6"]
 [ext_resource type="PackedScene" path="res://Characters/PrisonerA.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/LargeCrate.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="9"]
+[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="10_j8tqe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evhi4"]
 texture = ExtResource("3")
@@ -467,3 +468,5 @@ polygon = PackedVector2Array(-0.334831, 179.487, 322.697, 179.554, 320.915, -1.2
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(6.32521, 134.316, 0.425999, 134.434, 0.0720444, 148.946, 14.8201, 148.946, 14.8201, 145.524, 226.928, 145.889, 227.011, 148.851, 241.778, 149.101, 241.819, 145.931, 247.034, 141.634, 246.825, 132.791, 242.028, 137.087, 17.5801, 138.068, 17.7882, 17.8064, 302.445, 17.5609, 302.33, 137.405, 269.459, 137.488, 265.288, 132.566, 265.204, 141.743, 270.377, 146.248, 270.46, 148.584, 284.476, 148.584, 284.726, 145.414, 305.417, 145.331, 305.333, 148.584, 319.599, 148.751, 319.349, 134.151, 313.426, 134.318, 313.811, 17.4246, 316.197, 17.5649, 316.197, 3.67442, 305.603, 3.88488, 305.533, 8.65535, 14.3224, 8.79274, 14.4994, 5.37119, 3.64481, 5.37119, 3.29085, 17.4056, 6.47643, 17.6416)
+
+[node name="Pause" parent="." instance=ExtResource("10_j8tqe")]

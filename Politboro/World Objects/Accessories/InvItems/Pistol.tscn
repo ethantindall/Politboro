@@ -1,38 +1,34 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://dbi2cdqs3rxpu"]
 
-[ext_resource path="res://Images/InvItems/pistol.png" type="Texture2D" id=1]
-[ext_resource path="res://GlobalScripts/invitem.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://cw4ce61vcurr7" path="res://Images/InvItems/pistol.png" id="1"]
+[ext_resource type="Script" path="res://GlobalScripts/invitem.gd" id="2"]
 
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(31.7862, 21.7476)
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.8931, 10.8738 )
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id="2"]
 radius = 2.15203
 
 [node name="Pistol" type="StaticBody2D"]
-scale = Vector2( 2, 2 )
-script = ExtResource( 2 )
+scale = Vector2(2, 2)
+script = ExtResource("2")
 itemName = "Pistol"
 imagePath = "res://Images/InvItems/pistol.png"
 itemDesc = "A loaded revolver. Don't get caught with this."
-itemPickupTimeline = "Pistol-1"
+onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/pistol.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 0.1, 0.1 )
-shape = SubResource( 1 )
+scale = Vector2(0.1, 0.1)
+shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
-shape = SubResource( 2 )
+shape = SubResource("2")
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
 [connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

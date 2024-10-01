@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2ew5wouhhcx8"]
+[gd_scene load_steps=18 format=3 uid="uid://c2ew5wouhhcx8"]
 
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="1_3cyxr"]
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="2_h8kqq"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier.tscn" id="11_nb68d"]
 [ext_resource type="PackedScene" uid="uid://bpjyc2l8msal1" path="res://Characters/SecretPolice.tscn" id="12_65ocm"]
 [ext_resource type="PackedScene" uid="uid://cyoqnn5j0fmbb" path="res://Characters/Police.tscn" id="13_0d51g"]
+[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="14_ohfpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dthkc"]
 texture = ExtResource("1_3cyxr")
@@ -206,3 +207,5 @@ position = Vector2(137.25, 191.75)
 
 [node name="Police" parent="." instance=ExtResource("13_0d51g")]
 position = Vector2(295.75, 265.75)
+
+[node name="Pause" parent="." instance=ExtResource("14_ohfpi")]

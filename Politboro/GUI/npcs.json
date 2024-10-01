@@ -11,7 +11,7 @@
 			"Weakness": "Minister of Finance",
 			"Strength": "Minister of Transportation",
 			"Bio" : "Vlad came to power after his predecessor died in a mysterious nuclear accident.",
-			"Sprite": ""
+			"Sprite": "res://Images/Sprites/Judge.png"
 			},
 		"B" : {
 			"Name": "General Aleksi Brutanov",
@@ -23,7 +23,7 @@
 			"Weakness": "Minister of Transportation",
 			"Strength": "Minister of Justice",
 			"Bio" : "A loyal nationalist. Highly admired by his troops. They will follow him to the grave.",
-			"Sprite": ""
+			"Sprite": "res://Images/Sprites/Judge.png"
 			},
 		"C" : {
 			"Name": "Valery Unchok",
@@ -35,7 +35,7 @@
 			"Weakness": "Minister of War",
 			"Strength": "Minister of Finance",
 			"Bio" : "Minister of Justice is a misnomer if ever their was one. His sole responsibility is to run the Secret Police.",
-			"Sprite": ""
+			"Sprite": "res://Images/Sprites/Judge.png"
 			},
 		"D" : {
 			"Name": "Petya Belov",
@@ -47,7 +47,7 @@
 			"Weakness": "Minister of Justice",
 			"Strength": "Minister of Energy",
 			"Bio" : "From a long family of bankers. Rumor has it he has ties to the international banking community.",
-			"Sprite": ""
+			"Sprite": "res://Images/Sprites/OfficialB.png"
 			},
 		"E" : {
 			"Name": "Gleb Tarasov",
@@ -59,7 +59,7 @@
 			"Weakness": "Minister of Energy",
 			"Strength": "Minister of War",
 			"Bio" : "He makes the trains run on time, but is primarily famous for his use of slave labor to build infrastructure.",
-			"Sprite": ""
+			"Sprite": "res://Images/Sprites/OfficialC.png"
 			}
 		}
 	}

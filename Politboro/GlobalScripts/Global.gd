@@ -6,7 +6,7 @@ var game_running = false
 var activeQuest = 'Q0'
 var nextDialogueTimeline
 
-var player_initial_map_position = Vector2(810,198)
+var player_initial_map_position = Vector2(763,198)
 var player_inventory = []
 #var player_facing_direction = 1
 

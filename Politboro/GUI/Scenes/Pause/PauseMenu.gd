@@ -10,21 +10,21 @@ func _input(event):
 		
 #Level1
 func _on_PeopleButton_pressed():
-	get_node("People").visible = true
-	get_node("Quests").visible = false
-	get_node("Inventory").visible = false
+	get_node("RightBoard/RBoardInner/People").visible = true
+	get_node("RightBoard/RBoardInner/Quests").visible = false
+	get_node("RightBoard/RBoardInner/Inventory").visible = false
 
 	
 func _on_QuestsButton_pressed():
-	get_node("People").visible = false
-	get_node("Quests").visible = true
-	get_node("Inventory").visible = false
+	get_node("RightBoard/RBoardInner/People").visible = false
+	get_node("RightBoard/RBoardInner/Quests").visible = true
+	get_node("RightBoard/RBoardInner/Inventory").visible = false
 
 	
 func _on_ItemsButton_pressed():
-	get_node("People").visible = false
-	get_node("Quests").visible = false
-	get_node("Inventory").visible = true
+	get_node("RightBoard/RBoardInner/People").visible = false
+	get_node("RightBoard/RBoardInner/Quests").visible = false
+	get_node("RightBoard/RBoardInner/Inventory").visible = true
 
 	
 

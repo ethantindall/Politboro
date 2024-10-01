@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Bookshelf.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://0l2cl2r2jjyf" path="res://Images/Bldgs/HQ/OfficeC.png" id="9"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Wastebin.tscn" id="10"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/InvItems/Folder.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://World Objects/Accessories/InvItems/Dossier.tscn" id="11"]
 
 [node name="OfficeA" type="Node2D"]
 

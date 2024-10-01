@@ -1,5 +1,8 @@
-Node2D
+CollisionShape2D
 ColorRect
+VBoxContainer
+RichTextLabel
+Node2D
 Panel
 Control
 AnimationPlayer

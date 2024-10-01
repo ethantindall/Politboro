@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://bdlj6guxck22k"]
+[gd_scene load_steps=47 format=3 uid="uid://bdlj6guxck22k"]
 
 [ext_resource type="PackedScene" uid="uid://clnwgl3u36r80" path="res://World Objects/Buildings/Monument.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://World Objects/Buildings/Apartments.tscn" id="2"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="8"]
 [ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="9"]
 [ext_resource type="Texture2D" uid="uid://drbexy6xxdl4l" path="res://Images/Tiles/Airstrip/airstrip64V.png" id="10"]
-[ext_resource type="PackedScene" path="res://World Objects/Buildings/AIapts2.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="11"]
 [ext_resource type="Texture2D" uid="uid://cys7sj0hcfa1p" path="res://Images/Tiles/Airstrip/airstrip64H.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://dqctgiuow1lol" path="res://Images/Tiles/Airstrip/airstripV.png" id="13"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Flowers.tscn" id="14"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cdo5oinaqach4" path="res://Characters/Citizens/OfficeWorker.tscn" id="23"]
 [ext_resource type="PackedScene" uid="uid://b2t502sb8cf0v" path="res://Characters/Citizens/OfficeWorker_F.tscn" id="24"]
 [ext_resource type="PackedScene" path="res://Characters/Ministers/WarMinister.tscn" id="25"]
+[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="26_bmnl7"]
 [ext_resource type="PackedScene" path="res://World Objects/Buildings/AIApartments.tscn" id="27"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6d4w0"]
@@ -607,3 +608,5 @@ position = Vector2(451.125, 126.5)
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/Indoors/AptHallway.tscn"
 player_spawn_location = Vector2(95, 81)
+
+[node name="Pause" parent="." instance=ExtResource("26_bmnl7")]

@@ -1,40 +1,36 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://07gvnr6s8bpw"]
 
-[ext_resource path="res://GlobalScripts/invitem.gd" type="Script" id=1]
-[ext_resource path="res://Images/InvItems/bloodyknife.png" type="Texture2D" id=2]
+[ext_resource type="Script" path="res://GlobalScripts/invitem.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://br3j8avxfqkv4" path="res://Images/InvItems/bloodyknife.png" id="2"]
 
-
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id="1"]
 radius = 8.28917
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id="2"]
 radius = 2.15203
 
 [node name="BloodyKnife" type="StaticBody2D"]
 light_mask = 8
 rotation = -1.90415
-scale = Vector2( 2, 2 )
-script = ExtResource( 1 )
+scale = Vector2(2, 2)
+script = ExtResource("1")
 itemName = "Bloody Knife"
 imagePath = "res://Images/InvItems/bloodyknife.png"
 itemDesc = "A knife covered in the blood of a murder victim. Perhaps you could plant it as evidence..."
-itemPickupTimeline = "BloodyKnife-1"
+onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/bloodyKnife.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 0.1, 0.1 )
-shape = SubResource( 1 )
+scale = Vector2(0.1, 0.1)
+shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
-shape = SubResource( 2 )
+shape = SubResource("2")
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
 [connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

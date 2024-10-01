@@ -20,6 +20,7 @@ config/icon="res://Images/GUI/icon.png"
 Global="*res://GlobalScripts/Global.gd"
 QuestSystem="*res://GlobalScripts/QuestSystem.gd"
 ScreenChanger="*res://World Objects/Portal/ScreenChanger.gd"
+Invitem="*res://GlobalScripts/invitem.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
@@ -34,11 +35,21 @@ directories/dch_directory={
 "Police": "res://GlobalScripts/Dialogic/Characters/Police.dch",
 "SecretPolice": "res://GlobalScripts/Dialogic/Characters/SecretPolice.dch",
 "Soldier": "res://GlobalScripts/Dialogic/Characters/Soldier.dch",
-"player": "res://DialogicResources/Characters/player.dch"
+"player": "res://DialogicResources/Characters/player.dch",
+"youFoundAnItem": "res://DialogicResources/Characters/youFoundAnItem.dch"
 }
 directories/dtl_directory={
 "PolicePlaceholder": "res://DialogicResources/Timelines/Placeholders/PolicePlaceholder.dtl",
 "SoldierPlaceholder": "res://DialogicResources/Timelines/Placeholders/SoldierPlaceholder.dtl",
+"bloodyKnife": "res://DialogicResources/Timelines/onItemPickup/bloodyKnife.dtl",
+"cash": "res://DialogicResources/Timelines/onItemPickup/cash.dtl",
+"cleanKnife": "res://DialogicResources/Timelines/onItemPickup/cleanKnife.dtl",
+"dossier": "res://DialogicResources/Timelines/onItemPickup/dossier.dtl",
+"filmreel": "res://DialogicResources/Timelines/onItemPickup/filmreel.dtl",
+"goldwatch": "res://DialogicResources/Timelines/onItemPickup/goldwatch.dtl",
+"lostletter": "res://DialogicResources/Timelines/onItemPickup/lostletter.dtl",
+"photo": "res://DialogicResources/Timelines/onItemPickup/photo.dtl",
+"pistol": "res://DialogicResources/Timelines/onItemPickup/pistol.dtl",
 "quest0-1": "res://GlobalScripts/Dialogic/Timelines/quest0-1.dtl",
 "quest0-2": "res://GlobalScripts/Dialogic/Timelines/quest0-2.dtl",
 "quest0_0": "res://DialogicResources/Timelines/Quest0/quest0_0.dtl",
@@ -46,7 +57,7 @@ directories/dtl_directory={
 "timeline": "res://DialogicResources/Timelines/timeline.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://DialogicResources/Styles/PremadeStyle1.tres"]
+layout/style_list=["res://DialogicResources/Styles/PremadeStyle1.tres", "res://DialogicResources/Styles/PremadeStyle2.tres"]
 layout/default_style="res://DialogicResources/Styles/PremadeStyle1.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

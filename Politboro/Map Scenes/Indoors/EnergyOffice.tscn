@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bqsofixyfp8fc" path="res://Images/Bldgs/HQ/OfficeB.png" id="4"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Bookshelf.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Desk.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/InvItems/Folder.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://World Objects/Accessories/InvItems/Dossier.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/InvItems/Incriminating Photo.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/InvItems/Lost Document.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://World Objects/Accessories/InvItems/LostLetter.tscn" id="9"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Wastebin.tscn" id="10"]
 [ext_resource type="PackedScene" uid="uid://cdo5oinaqach4" path="res://Characters/Citizens/OfficeWorker.tscn" id="11"]
 

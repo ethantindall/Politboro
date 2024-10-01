@@ -3,60 +3,43 @@ extends Control
 var result_json
 var selectedData
 
-var vladSprite = preload("res://Images/Sprites/officialA.png")
-var generalSprite = preload("res://Images/Sprites/General.png")
-var valerySprite = preload("res://Images/Sprites/Judge.png")
-var petyaSprite = preload("res://Images/Sprites/OfficialB.png")
-var glebSprite = preload("res://Images/Sprites/OfficialC.png")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 
-func processJSON(rj):
-	if rj.error == OK:  # If parse OK
-		var data = rj.result
-		return data
-	else:  # If parse has errors
-		print("Error: ", rj.error)
-		print("Error Line: ", rj.error_line)
-		print("Error String: ", rj.error_string)
-
 #Level2
 func populateData(sd, sprite):
-	get_node("Folder/BioControl/VBoxContainer/NPCname").text = str(sd.Name)
-	get_node("Folder/BioControl/VBoxContainer/NPCbio").text = str(sd.Bio)
-	get_node("Folder/BioControl/VBoxContainer/NPCtitle").text = str(sd.Title)
+	get_node("Folder/BioControl/NPCname").text = str(sd.Name)
+	get_node("Folder/BioControl/NPCbio").text = str(sd.Bio)
+	get_node("Folder/BioControl/NPCtitle").text = str(sd.Title)
 	get_node("Folder/BioControl/Photo/ColorRect/NPCimage").set_texture(sprite)
-	get_node("Folder/BioControl/VBoxContainer/NPCfear").text = "Fear of You: " + str(sd.Fear) + "%"
-	get_node("Folder/BioControl/VBoxContainer/NPChatred").text ="Hatred of You: " + str(sd.Hatred) + "%"
-	get_node("Folder/BioControl/VBoxContainer/NPCloyalty").text = "Loyalty to You: " + str(sd.Loyalty) + "%"
+	get_node("Folder/BioControl/NPCfear").text = "Fear of You: " + str(sd.Fear) + "%"
+	get_node("Folder/BioControl/NPChatred").text ="Hatred of You: " + str(sd.Hatred) + "%"
+	get_node("Folder/BioControl/NPCloyalty").text = "Loyalty to You: " + str(sd.Loyalty) + "%"
 	
 func _on_VladButton_pressed():
-	populateData(processJSON(result_json).NPCs.Ministers.A, vladSprite)
+	populateData(result_json.NPCs.Ministers.A, load(result_json.NPCs.Ministers.A.Sprite))
 	
 func _on_GeneralButton_pressed():
-	populateData(processJSON(result_json).NPCs.Ministers.B,generalSprite)
+	populateData(result_json.NPCs.Ministers.B,load(result_json.NPCs.Ministers.B.Sprite))
 		
 func _on_ValeryButton_pressed():
-
-	populateData(processJSON(result_json).NPCs.Ministers.C, valerySprite)
+	populateData(result_json.NPCs.Ministers.C,load(result_json.NPCs.Ministers.C.Sprite))
 		
 func _on_PetyaButton_pressed():
-	populateData(processJSON(result_json).NPCs.Ministers.D, petyaSprite)
+	populateData(result_json.NPCs.Ministers.D,load(result_json.NPCs.Ministers.D.Sprite))
 	
 func _on_GlebButton_pressed():
-	populateData(processJSON(result_json).NPCs.Ministers.E, glebSprite)
-"""
+	populateData(result_json.NPCs.Ministers.E,load(result_json.NPCs.Ministers.E.Sprite))
+		
 func _on_People_visibility_changed():
 	#GET JSON DATA
-	var file = File.new()
-	file.open("res://GUI/npcs.json", file.READ)
+	var file = FileAccess.open("res://GUI/npcs.json",FileAccess.READ)
 	var text_json = file.get_as_text()
 	var test_json_conv = JSON.new()
 	test_json_conv.parse(text_json)
 	result_json = test_json_conv.get_data()
 	file.close()
-	#print(processJSON(result_json).NPCs.Ministers.A.Name)
-"""
+	print(result_json.NPCs.Ministers.A.Name)
