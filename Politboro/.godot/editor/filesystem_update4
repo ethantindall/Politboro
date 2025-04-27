@@ -1,11 +1,11 @@
 res://default_env.tres
-res://Map Scenes/CitySouth.tscn
+res://Characters/Player/Player.tscn
 res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
 res://Characters/Citizens/OfficeWorker.gd
 res://GUI/fonts/propaganda/PropagandaFont.tres
+res://Map Scenes/CitySouth.tscn
 res://Map Scenes/TownSquare.tscn
-res://Characters/Player/Player.tscn
 res://Map Scenes/new_map.tscn
-res://Characters/Player/player_camera.gd
+res://Characters/Player/Player.gd

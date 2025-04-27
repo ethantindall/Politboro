@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const ACCELERATION = 500
-const MAX_SPEED = 50
+const ACCELERATION = 1500
+const MAX_SPEED = 150
 const FRICTION = 600
 
 #var velocity = Vector2.ZERO
