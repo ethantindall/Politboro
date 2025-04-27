@@ -1,17 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://qxpx5vtdrh5a"]
 
-[ext_resource path="res://Images/Bldgs/blueblock.png" type="Texture2D" id=1]
-
+[ext_resource type="Texture2D" uid="uid://mx4t4u3v3776" path="res://Images/Bldgs/blueblock.png" id="1"]
 
 [node name="BlueBlock" type="StaticBody2D"]
-position = Vector2( 0, 53 )
-scale = Vector2( 0.7, 0.7 )
+position = Vector2(0, 53)
+scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( 4, -1 )
-texture = ExtResource( 1 )
+position = Vector2(4, -1)
+texture = ExtResource("1")
 flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( -8.57143, 0 )
-polygon = PackedVector2Array( -96.6071, 72.9464, -96.7398, 17.11, 112.488, 17.11, 113.082, 72.7116, -60.1786, 72.3214, -65.5975, 68.8768, -65.9983, 61.661, -88.2472, 61.8614, -88.8485, 69.0773 )
+position = Vector2(-8.57143, 0)
+polygon = PackedVector2Array(-96.6071, 72.9464, -96.7398, 17.11, 112.488, 17.11, 113.082, 72.7116, -60.1786, 72.3214, -65.5975, 68.8768, -65.9983, 61.661, -88.2472, 61.8614, -88.8485, 69.0773)

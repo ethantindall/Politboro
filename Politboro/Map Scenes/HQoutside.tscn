@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://br8ghxuda8u31" path="res://World Objects/Buildings/Military/Headquarters.tscn" id="6_5qniq"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Forest.tscn" id="7_wlirp"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Streetlight.tscn" id="8_8sb11"]
-[ext_resource type="PackedScene" path="res://World Objects/Buildings/AIapts2.tscn" id="9_cpabv"]
+[ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="9_cpabv"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Flowers.tscn" id="10_mbd5k"]
 [ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier.tscn" id="11_nb68d"]
 [ext_resource type="PackedScene" uid="uid://bpjyc2l8msal1" path="res://Characters/SecretPolice.tscn" id="12_65ocm"]

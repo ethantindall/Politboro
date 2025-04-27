@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nelxu"]
 _data = {
-"RESET": SubResource("Animation_yr0qk"),
-"waving": SubResource("Animation_2dy42")
+&"RESET": SubResource("Animation_yr0qk"),
+&"waving": SubResource("Animation_2dy42")
 }
 
 [node name="Tree" type="StaticBody2D"]

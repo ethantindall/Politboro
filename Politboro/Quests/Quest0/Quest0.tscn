@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dxni6u4158u8c"]
 
-[ext_resource path="res://Quests/Quest0/Quest0.gd" type="Script" id=1]
+[ext_resource type="Script" uid="uid://6x5uiika8yxs" path="res://Quests/Quest0/Quest0.gd" id="1"]
 
 [node name="Quest0" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [connection signal="ready" from="." to="." method="_on_Quest0_ready"]

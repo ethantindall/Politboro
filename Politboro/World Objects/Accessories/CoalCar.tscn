@@ -1,22 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bc68rpau1ogvl"]
 
-[ext_resource path="res://Images/coalcar.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://wtumo0olx50q" path="res://Images/coalcar.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 63.6222, 11.7809 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(127.244, 23.5618)
 
 [node name="CoalCar" type="StaticBody2D"]
-position = Vector2( 8, -1 )
-scale = Vector2( 1.1, 1.1 )
+position = Vector2(8, -1)
+scale = Vector2(1.1, 1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( -6.66666, 0 )
-texture = ExtResource( 1 )
+position = Vector2(-6.66666, 0)
+texture = ExtResource("1")
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -6.41615, 11.1943 )
-scale = Vector2( 0.5, 0.4 )
-shape = SubResource( 1 )
+position = Vector2(-6.41615, 11.1943)
+scale = Vector2(0.5, 0.4)
+shape = SubResource("1")

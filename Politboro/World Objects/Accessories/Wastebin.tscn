@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dov44d16c8bwj"]
 
-[ext_resource path="res://Images/wastebin.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://ccfjktf5unj5w" path="res://Images/wastebin.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3.61962, 2.66439 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(7.23924, 5.32878)
 
 [node name="Wastebin" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 1 )
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1")
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.0705843, 1.32114 )
-shape = SubResource( 1 )
+position = Vector2(-0.0705843, 1.32114)
+shape = SubResource("1")

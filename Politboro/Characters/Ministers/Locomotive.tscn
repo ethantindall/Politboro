@@ -1,148 +1,148 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=12 format=3 uid="uid://deexr5a12eh42"]
 
-[ext_resource path="res://Images/train.png" type="Texture2D" id=1]
-[ext_resource path="res://Characters/Ministers/Locomotive.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://wgyyo4aupq7k" path="res://Images/train.png" id="1"]
+[ext_resource type="Script" uid="uid://d4ftrutp3ck87" path="res://Characters/Ministers/Locomotive.gd" id="2"]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 0.403922 )
+[sub_resource type="StyleBoxFlat" id="1"]
+bg_color = Color(0, 0, 0, 0.403922)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 length = 2.0
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [0, 1]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="3"]
 length = 0.1
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 4 ]
+"values": [4]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id="4"]
 length = 0.1
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 6 ]
+"values": [6]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id="5"]
 length = 0.1
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ 7 ]
+"values": [7]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id="6"]
 length = 0.6
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.4 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ 2, 3, 5 ]
+"values": [2, 3, 5]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id="7"]
 length = 0.6
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0.4, 0.599012 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0.4, 0.599012),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ 4, 4 ]
+"values": [4, 4]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id="8"]
 length = 0.6
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.4 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ 11, 10, 6 ]
+"values": [11, 10, 6]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id="9"]
 length = 0.6
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.4 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ 9, 8, 7 ]
+"values": [9, 8, 7]
 }
 
 [node name="Train" type="StaticBody2D"]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 
 [node name="Panel" type="Panel" parent="Sprite2D"]
 show_behind_parent = true
@@ -150,21 +150,21 @@ offset_left = -71.5526
 offset_top = 26.1711
 offset_right = 100.447
 offset_bottom = 42.1711
-theme_override_styles/panel = SubResource( 1 )
+theme_override_styles/panel = SubResource("1")
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/IdleD = SubResource( 2 )
-anims/IdleL = SubResource( 3 )
-anims/IdleR = SubResource( 4 )
-anims/IdleU = SubResource( 5 )
-"anims/Move Down" = SubResource( 6 )
-"anims/Move Left" = SubResource( 7 )
-"anims/Move Right" = SubResource( 8 )
-"anims/Move Up" = SubResource( 9 )
+anims/IdleD = SubResource("2")
+anims/IdleL = SubResource("3")
+anims/IdleR = SubResource("4")
+anims/IdleU = SubResource("5")
+"anims/Move Down" = SubResource("6")
+"anims/Move Left" = SubResource("7")
+"anims/Move Right" = SubResource("8")
+"anims/Move Up" = SubResource("9")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 34.6908, 0 )
-polygon = PackedVector2Array( -88.8202, 37.3634, 54.8723, 37.3236, 59.4973, 32.3833, 61.2842, 30.3862, 61.1791, 22.2926, 64.2273, 22.1875, 65.9091, 10.4149, 66.3296, -1.67297, -101.413, -2.53735, -105.949, 4.84398, -106.159, 25.3408, -101.317, 36.0639 )
+position = Vector2(34.6908, 0)
+polygon = PackedVector2Array(-88.8202, 37.3634, 54.8723, 37.3236, 59.4973, 32.3833, 61.2842, 30.3862, 61.1791, 22.2926, 64.2273, 22.1875, 65.9091, 10.4149, 66.3296, -1.67297, -101.413, -2.53735, -105.949, 4.84398, -106.159, 25.3408, -101.317, 36.0639)

@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://csk6vqlwfuuh7"]
 
-[ext_resource path="res://Images/tank.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://bsh0cc7he7mpy" path="res://Images/tank.png" id="1"]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id="1"]
 radius = 16.0
 height = 76.0
 
 [node name="Tank" type="StaticBody2D"]
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2(0.4, 0.4)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( 0, -5 )
-texture = ExtResource( 1 )
+position = Vector2(0, -5)
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -8, 8 )
+position = Vector2(-8, 8)
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource("1")

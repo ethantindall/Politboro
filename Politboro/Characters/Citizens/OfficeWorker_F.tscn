@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://t1vmaa41djsr" path="res://Images/Sprites/employeeFemale.png" id="2_x17ru"]
-[ext_resource type="Script" path="res://Characters/Citizens/OfficeWorker_F.gd" id="3"]
+[ext_resource type="Script" uid="uid://dlqx3rkrt563e" path="res://Characters/Citizens/OfficeWorker_F.gd" id="3"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 1.0
@@ -157,15 +157,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bgbfn"]
 _data = {
-"IdleD": SubResource("2"),
-"IdleL": SubResource("3"),
-"IdleR": SubResource("4"),
-"IdleU": SubResource("5"),
-"Move Down": SubResource("6"),
-"Move Left": SubResource("7"),
-"Move Right": SubResource("8"),
-"Move Up": SubResource("9"),
-"RESET": SubResource("Animation_2d2rq")
+&"IdleD": SubResource("2"),
+&"IdleL": SubResource("3"),
+&"IdleR": SubResource("4"),
+&"IdleU": SubResource("5"),
+&"Move Down": SubResource("6"),
+&"Move Left": SubResource("7"),
+&"Move Right": SubResource("8"),
+&"Move Up": SubResource("9"),
+&"RESET": SubResource("Animation_2d2rq")
 }
 
 [sub_resource type="CircleShape2D" id="10"]

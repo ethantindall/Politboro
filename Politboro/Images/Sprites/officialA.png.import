@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvrumeraoklct"
-path="res://.godot/imported/OfficialA.png-ee8e04f18412fa1ddbf733bd733c58e6.ctex"
+path="res://.godot/imported/officialA.png-63930fbd97d9cee6ed0abb69f22cb4c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Sprites/OfficialA.png"
-dest_files=["res://.godot/imported/OfficialA.png-ee8e04f18412fa1ddbf733bd733c58e6.ctex"]
+source_file="res://Images/Sprites/officialA.png"
+dest_files=["res://.godot/imported/officialA.png-63930fbd97d9cee6ed0abb69f22cb4c9.ctex"]
 
 [params]
 

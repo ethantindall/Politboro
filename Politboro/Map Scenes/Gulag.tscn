@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" path="res://World Objects/Buildings/Military/Bunker.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/Tent.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://Characters/PrisonerA.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://4k6auq6b60ju" path="res://Characters/PrisonerA.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://World Objects/Accessories/LargeCrate.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="9"]
 [ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="10_j8tqe"]

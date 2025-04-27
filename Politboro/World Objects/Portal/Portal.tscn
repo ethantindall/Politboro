@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dcbp8b16pwci4"]
 
-[ext_resource path="res://World Objects/Portal/Portal.gd" type="Script" id=1]
+[ext_resource type="Script" uid="uid://ch2prhge060w5" path="res://World Objects/Portal/Portal.gd" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 16 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(16, 32)
 
 [node name="Portal" type="Area2D"]
 collision_layer = 32
-script = ExtResource( 1 )
+script = ExtResource("1")
 next_scene_path = "res://Map Scenes/Base.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [connection signal="area_entered" from="." to="." method="_on_Portal_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]

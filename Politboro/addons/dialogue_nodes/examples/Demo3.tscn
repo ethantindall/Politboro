@@ -1,12 +1,12 @@
 [gd_scene load_steps=23 format=3 uid="uid://dhwoh3ay4mp3c"]
 
-[ext_resource type="Script" path="res://addons/dialogue_nodes/examples/demo3.gd" id="1_2a8yf"]
+[ext_resource type="Script" uid="uid://d2cnbl5iv3m1o" path="res://addons/dialogue_nodes/examples/demo3.gd" id="1_2a8yf"]
 [ext_resource type="AudioStream" uid="uid://bin1ei6yesmjv" path="res://addons/dialogue_nodes/examples/voice.ogg" id="2_bjs48"]
 [ext_resource type="Theme" uid="uid://b4f152moh4ayu" path="res://addons/dialogue_nodes/themes/bubblyClean.theme" id="3_xmmjy"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_tmfyu"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_vs72k"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_pkic0"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBubble.gd" id="7_wf6dy"]
+[ext_resource type="Script" uid="uid://c5hpabm0txybu" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_tmfyu"]
+[ext_resource type="Script" uid="uid://d4es7oagk4wh2" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_vs72k"]
+[ext_resource type="Script" uid="uid://itcswqoso7ya" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="6_pkic0"]
+[ext_resource type="Script" uid="uid://cgmbfa2xmnvpc" path="res://addons/dialogue_nodes/objects/DialogueBubble.gd" id="7_wf6dy"]
 [ext_resource type="Resource" uid="uid://cwtdfv6yke8ri" path="res://addons/dialogue_nodes/examples/ExampleBubble.tres" id="8_qbppo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xk202"]

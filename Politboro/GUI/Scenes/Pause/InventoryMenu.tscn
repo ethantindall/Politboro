@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://dlltdim06bgq6"]
 
 [ext_resource type="Texture2D" uid="uid://1pjh5ndbxtf7" path="res://Images/plate.png" id="1"]
-[ext_resource type="Script" path="res://GUI/Scenes/Pause/InventoryMenu.gd" id="2"]
+[ext_resource type="Script" uid="uid://uj7dtwiumrdg" path="res://GUI/Scenes/Pause/InventoryMenu.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://d1trfiuvy6saf" path="res://GUI/fonts/fyodor/fyodor.tres" id="3"]
 [ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="4"]
 [ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="5"]
 [ext_resource type="FontFile" uid="uid://dknqtnwoijfw6" path="res://GUI/fonts/1942_report/1942.ttf" id="6"]
 [ext_resource type="FontFile" uid="uid://dynpsh0sdpi7l" path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" id="7"]
-[ext_resource type="Script" path="res://GUI/Scenes/Pause/Slot.gd" id="8"]
+[ext_resource type="Script" uid="uid://rwfxfibjeweb" path="res://GUI/Scenes/Pause/Slot.gd" id="8"]
 
 [sub_resource type="StyleBoxTexture" id="1"]
 texture = ExtResource("1")

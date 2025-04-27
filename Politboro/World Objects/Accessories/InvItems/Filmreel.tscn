@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0aq2im71ov8g"]
 
 [ext_resource type="Texture2D" uid="uid://djt51ecawglkb" path="res://Images/InvItems/filmreel.png" id="1"]
-[ext_resource type="Script" path="res://GlobalScripts/invitem.gd" id="2"]
+[ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
 
 [sub_resource type="CircleShape2D" id="1"]
 radius = 18.0817

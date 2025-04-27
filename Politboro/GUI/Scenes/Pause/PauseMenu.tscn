@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bmknab031jnte"]
 
 [ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="2"]
-[ext_resource type="Script" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
+[ext_resource type="Script" uid="uid://buq0807cn85jb" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://sg7k53bmcss1" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://bc6y2p3yvtiqr" path="res://GUI/Scenes/Pause/QuestMenu.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="6"]

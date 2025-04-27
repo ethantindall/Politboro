@@ -1,13 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://cqwha6i18n0pp"]
 
-[ext_resource path="res://Images/Bldgs/bunker.png" type="Texture2D" id=1]
-
+[ext_resource type="Texture2D" uid="uid://bbt40b2uwtea1" path="res://Images/Bldgs/bunker.png" id="1"]
 
 [node name="Bunker" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( -3.42798, -1.55846 )
-texture = ExtResource( 1 )
+position = Vector2(-3.42798, -1.55846)
+texture = ExtResource("1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array( -59.2064, 26.8018, -58.9091, 18.4773, -56.5307, 10.1529, 56.2953, 10.3015, 58.971, 20.1125, 59.2683, 26.0585, 40.3896, 26.0585, 40.3125, 24.25, 24.6875, 24.375, 24.7813, 26.8018 )
+polygon = PackedVector2Array(-59.2064, 26.8018, -58.9091, 18.4773, -56.5307, 10.1529, 56.2953, 10.3015, 58.971, 20.1125, 59.2683, 26.0585, 40.3896, 26.0585, 40.3125, 24.25, 24.6875, 24.375, 24.7813, 26.8018)

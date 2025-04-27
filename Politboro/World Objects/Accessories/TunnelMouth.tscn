@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dsr54lcn4x6w7"]
 
-[ext_resource path="res://Images/tunnelexit.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://b28h63pm1qaxg" path="res://Images/tunnelexit.png" id="1"]
 
 [node name="TunnelMouth" type="StaticBody2D"]
-position = Vector2( 8, -1 )
-scale = Vector2( 2, 2 )
+position = Vector2(8, -1)
+scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( -6.66666, 0 )
-texture = ExtResource( 1 )
+position = Vector2(-6.66666, 0)
+texture = ExtResource("1")
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array( -11.6719, 15.6156, -3.72595, 8.55252, -1.96018, 3.36556, -1.51873, -3.03536, -3.63766, -7.33943, -5.40343, -12.0849, -12.4665, -13.9611, -12.6431, -15.8372, 8.89932, -15.9476, 9.16418, 15.8363 )
+polygon = PackedVector2Array(-11.6719, 15.6156, -3.72595, 8.55252, -1.96018, 3.36556, -1.51873, -3.03536, -3.63766, -7.33943, -5.40343, -12.0849, -12.4665, -13.9611, -12.6431, -15.8372, 8.89932, -15.9476, 9.16418, 15.8363)

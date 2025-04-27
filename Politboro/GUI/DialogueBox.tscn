@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://dkebl8ir7f5g8"]
 
-[ext_resource type="Script" path="res://GUI/DialogueBox.gd" id="1_l8fle"]
+[ext_resource type="Script" uid="uid://btddspu4mmk74" path="res://GUI/DialogueBox.gd" id="1_l8fle"]
 [ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="2_6ln30"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_ekvdv"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_a2hi7"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_lm63s"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_nt46q"]
+[ext_resource type="Script" uid="uid://cq6gi6tom24k0" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_ekvdv"]
+[ext_resource type="Script" uid="uid://c5hpabm0txybu" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_a2hi7"]
+[ext_resource type="Script" uid="uid://d4es7oagk4wh2" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_lm63s"]
+[ext_resource type="Script" uid="uid://itcswqoso7ya" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_nt46q"]
 
 [sub_resource type="Theme" id="Theme_b6for"]
 default_font = ExtResource("2_6ln30")

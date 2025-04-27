@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cuddlcwjmkec4"]
 
 [ext_resource type="Texture2D" uid="uid://dta0pm8f6sjwn" path="res://Images/InvItems/watch.png" id="1"]
-[ext_resource type="Script" path="res://GlobalScripts/invitem.gd" id="2"]
+[ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 0.0

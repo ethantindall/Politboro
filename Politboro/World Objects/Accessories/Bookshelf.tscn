@@ -1,21 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bew7scdq1okqj"]
 
-[ext_resource path="res://Images/bookshelf.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://byk68kncax2cq" path="res://Images/bookshelf.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.5533, 5.29386 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(15.1066, 10.5877)
 
 [node name="Bookshelf" type="StaticBody2D"]
-position = Vector2( 8, -1 )
-scale = Vector2( 0.75, 0.6 )
+position = Vector2(8, -1)
+scale = Vector2(0.75, 0.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( -6.66666, 0 )
-texture = ExtResource( 1 )
+position = Vector2(-6.66666, 0)
+texture = ExtResource("1")
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -6.68579, 10.6186 )
-shape = SubResource( 1 )
+position = Vector2(-6.68579, 10.6186)
+shape = SubResource("1")

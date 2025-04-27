@@ -1,22 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://8q4h4xex35bp"]
 
-[ext_resource path="res://Images/dresser.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://4x0aqnu51hf7" path="res://Images/dresser.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.99839, 5.47906 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(9.99678, 10.9581)
 
 [node name="Dresser" type="StaticBody2D"]
-position = Vector2( 8, -1 )
-scale = Vector2( 0.75, 0.6 )
+position = Vector2(8, -1)
+scale = Vector2(0.75, 0.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( -6.66666, 0.131658 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 1 )
+position = Vector2(-6.66666, 0.131658)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1")
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -5.94851, 1.5343 )
-shape = SubResource( 1 )
+position = Vector2(-5.94851, 1.5343)
+shape = SubResource("1")

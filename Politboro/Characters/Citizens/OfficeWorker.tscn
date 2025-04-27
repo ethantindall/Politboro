@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://v2fgn7ad6lg8" path="res://Images/Sprites/employee.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="2"]
-[ext_resource type="Script" path="res://Characters/Citizens/OfficeWorker.gd" id="3"]
+[ext_resource type="Script" uid="uid://cys3w78elpdq0" path="res://Characters/Citizens/OfficeWorker.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_rso6b"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
@@ -146,14 +146,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cgvij"]
 _data = {
-"IdleD": SubResource("3"),
-"IdleL": SubResource("4"),
-"IdleR": SubResource("5"),
-"IdleU": SubResource("6"),
-"Move Down": SubResource("7"),
-"Move Left": SubResource("8"),
-"Move Right": SubResource("9"),
-"Move Up": SubResource("10")
+&"IdleD": SubResource("3"),
+&"IdleL": SubResource("4"),
+&"IdleR": SubResource("5"),
+&"IdleU": SubResource("6"),
+&"Move Down": SubResource("7"),
+&"Move Left": SubResource("8"),
+&"Move Right": SubResource("9"),
+&"Move Up": SubResource("10")
 }
 
 [sub_resource type="CircleShape2D" id="11"]

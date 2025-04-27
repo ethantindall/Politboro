@@ -21,7 +21,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_isnk2"]
 _data = {
-"question_float": SubResource("1")
+&"question_float": SubResource("1")
 }
 
 [node name="questionmark" type="Node2D"]

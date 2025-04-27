@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://c16bb3vow6vvq"]
 
-[ext_resource path="res://Images/sandbags.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://bged82nraedvx" path="res://Images/sandbags.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 9.4042 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(64, 18.8084)
 
 [node name="SandbagLong" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 11 )
-scale = Vector2( 1, 0.5 )
-shape = SubResource( 1 )
+position = Vector2(0, 11)
+scale = Vector2(1, 0.5)
+shape = SubResource("1")

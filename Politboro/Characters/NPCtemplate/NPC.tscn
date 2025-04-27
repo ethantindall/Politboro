@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://6gff80srw2xg"]
 
-[ext_resource type="Script" path="res://Characters/NPCtemplate/NPC.gd" id="2"]
+[ext_resource type="Script" uid="uid://cbnkylb7u3y8r" path="res://Characters/NPCtemplate/NPC.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="2_ya2wa"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="3"]
 
@@ -139,14 +139,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_338aw"]
 _data = {
-"IdleD": SubResource("1"),
-"IdleL": SubResource("2"),
-"IdleR": SubResource("3"),
-"IdleU": SubResource("4"),
-"Move Down": SubResource("5"),
-"Move Left": SubResource("6"),
-"Move Right": SubResource("7"),
-"Move Up": SubResource("8")
+&"IdleD": SubResource("1"),
+&"IdleL": SubResource("2"),
+&"IdleR": SubResource("3"),
+&"IdleU": SubResource("4"),
+&"Move Down": SubResource("5"),
+&"Move Left": SubResource("6"),
+&"Move Right": SubResource("7"),
+&"Move Up": SubResource("8")
 }
 
 [sub_resource type="CapsuleShape2D" id="9"]

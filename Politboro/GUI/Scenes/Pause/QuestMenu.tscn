@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bc6y2p3yvtiqr"]
 
 [ext_resource type="FontFile" uid="uid://dpaw5ergr0d7e" path="res://GUI/fonts/fyodor/button.tres" id="1"]
-[ext_resource type="Script" path="res://GUI/Scenes/Pause/QuestMenu.gd" id="2"]
+[ext_resource type="Script" uid="uid://t2jkls4arr3c" path="res://GUI/Scenes/Pause/QuestMenu.gd" id="2"]
 [ext_resource type="FontFile" uid="uid://dknqtnwoijfw6" path="res://GUI/fonts/1942_report/1942.ttf" id="3"]
 [ext_resource type="FontFile" uid="uid://t5u6jk1oyt44" path="res://GUI/fonts/fyodor/Fyodor-BoldCondensedOblique.ttf" id="4"]
 [ext_resource type="FontFile" uid="uid://d1trfiuvy6saf" path="res://GUI/fonts/fyodor/fyodor.tres" id="5"]

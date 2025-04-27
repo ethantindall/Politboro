@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://cvibv101mmn78"]
 
-[ext_resource path="res://Images/flowers.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://csb4pr54336q2" path="res://Images/flowers.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.9114, 7.07259 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(63.8228, 14.1452)
 
 [node name="Flowers" type="StaticBody2D"]
-scale = Vector2( 0.75, 0.6 )
+scale = Vector2(0.75, 0.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.569716, 24.875 )
-shape = SubResource( 1 )
+position = Vector2(-0.569716, 24.875)
+shape = SubResource("1")

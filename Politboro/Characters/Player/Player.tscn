@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=29 format=3 uid="uid://v04i7wtgqvm6"]
 
-[ext_resource type="Script" path="res://Characters/Player/Player.gd" id="1"]
+[ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://irseph1pakh1" path="res://Images/Sprites/playersprite.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://cqy58fgpr5lv0" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
+[ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0, 0, 0, 0.403922)
@@ -12,8 +13,8 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="CapsuleShape2D" id="2"]
-radius = 0.967653
-height = 2.16944
+radius = 6.66666
+height = 23.3333
 
 [sub_resource type="Animation" id="3"]
 length = 2.0
@@ -265,14 +266,14 @@ tracks/1/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k6fwu"]
 _data = {
-"IdleD": SubResource("3"),
-"IdleL": SubResource("4"),
-"IdleR": SubResource("5"),
-"IdleU": SubResource("6"),
-"Move Down": SubResource("7"),
-"Move Left": SubResource("8"),
-"Move Right": SubResource("9"),
-"Move Up": SubResource("10")
+&"IdleD": SubResource("3"),
+&"IdleL": SubResource("4"),
+&"IdleR": SubResource("5"),
+&"IdleU": SubResource("6"),
+&"Move Down": SubResource("7"),
+&"Move Left": SubResource("8"),
+&"Move Right": SubResource("9"),
+&"Move Up": SubResource("10")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="11"]
@@ -333,17 +334,14 @@ states/Move/position = Vector2(718, 122)
 transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("22")]
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(0.6, 0.6)
 collision_mask = 3
 script = ExtResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.150265, -0.0294847)
-scale = Vector2(0.18, 0.18)
 texture = ExtResource("2")
 hframes = 4
 vframes = 4
-frame = 5
 
 [node name="Panel" type="Panel" parent="Sprite2D"]
 show_behind_parent = true
@@ -355,13 +353,13 @@ theme_override_styles/panel = SubResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 16
-position = Vector2(-0.282523, 4.16905)
+position = Vector2(-1.21503e-12, 26.6667)
 rotation = 1.5708
 shape = SubResource("2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_k6fwu")
+&"": SubResource("AnimationLibrary_k6fwu")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
@@ -373,3 +371,6 @@ parameters/Move/blend_position = Vector2(0, 0)
 [node name="CanvasLayer" parent="." instance=ExtResource("3")]
 
 [node name="WalkingAudio" type="AudioStreamPlayer2D" parent="."]
+
+[node name="player_camera" type="Camera2D" parent="."]
+script = ExtResource("4_aj84o")

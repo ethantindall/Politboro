@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://b6xwrq4ocfqr8"]
 
-[ext_resource path="res://Images/crate_big.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://c2nwb8earnsta" path="res://Images/crate_big.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 16 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(32, 32)
 
 [node name="LargeCrate" type="StaticBody2D"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource("1")

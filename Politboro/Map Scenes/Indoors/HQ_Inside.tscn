@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://bcajf1cord5ri" path="res://Images/Bldgs/HQ/hq_interior.png" id="4"]
 [ext_resource type="PackedScene" uid="uid://bpjyc2l8msal1" path="res://Characters/SecretPolice.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://Characters/Ministers/WarMinister.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://Characters/Ministers/JusticeMinister.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dqsoaw3mnb8g7" path="res://Characters/Ministers/WarMinister.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://cwtf4pytepaxo" path="res://Characters/Ministers/JusticeMinister.tscn" id="7"]
 
 [node name="HQinside" type="Node2D"]
 

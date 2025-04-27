@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://g16opg733elo"]
 
-[ext_resource path="res://GUI/Scenes/Title/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://GUI/fonts/Noto_Sans_KR/Korean2.tres" type="FontFile" id=2]
-[ext_resource path="res://Images/seal.png" type="Texture2D" id=3]
-[ext_resource path="res://GUI/fonts/Black_Han_Sans/blackhanssans.tres" type="FontFile" id=4]
+[ext_resource type="Script" uid="uid://bbbtenyd7lrrd" path="res://GUI/Scenes/Title/MainMenu.gd" id="1"]
+[ext_resource type="FontFile" path="res://GUI/fonts/Noto_Sans_KR/Korean2.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://cqwoodv1378wa" path="res://Images/seal.png" id="3"]
+[ext_resource type="FontFile" path="res://GUI/fonts/Black_Han_Sans/blackhanssans.tres" id="4"]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource("1")
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -16,8 +16,8 @@ __meta__ = {
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-pivot_offset = Vector2( -142.278, -32.2474 )
-color = Color( 0.482353, 0.0392157, 0.0392157, 1 )
+pivot_offset = Vector2(-142.278, -32.2474)
+color = Color(0.482353, 0.0392157, 0.0392157, 1)
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -27,8 +27,8 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_bottom = -145.0
-pivot_offset = Vector2( 225.137, 24 )
-color = Color( 0.117647, 0.145098, 0.254902, 1 )
+pivot_offset = Vector2(225.137, 24)
+color = Color(0.117647, 0.145098, 0.254902, 1)
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -39,8 +39,8 @@ anchor_bottom = 1.0
 offset_left = -0.00112915
 offset_top = 145.0
 offset_right = -0.00112915
-pivot_offset = Vector2( 225.137, 24 )
-color = Color( 0.117647, 0.145098, 0.254902, 1 )
+pivot_offset = Vector2(225.137, 24)
+color = Color(0.117647, 0.145098, 0.254902, 1)
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -50,8 +50,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 35.0
 offset_bottom = -135.0
-pivot_offset = Vector2( -198.341, -16.4902 )
-color = Color( 0.65098, 0.65098, 0.65098, 1 )
+pivot_offset = Vector2(-198.341, -16.4902)
+color = Color(0.65098, 0.65098, 0.65098, 1)
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -61,16 +61,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 135.0
 offset_bottom = -35.0
-pivot_offset = Vector2( -198.341, -16.4902 )
-color = Color( 0.65098, 0.65098, 0.65098, 1 )
+pivot_offset = Vector2(-198.341, -16.4902)
+color = Color(0.65098, 0.65098, 0.65098, 1)
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Seal" type="Sprite2D" parent="."]
-position = Vector2( 157.907, 93.5098 )
-scale = Vector2( 3, 3 )
-texture = ExtResource( 3 )
+position = Vector2(157.907, 93.5098)
+scale = Vector2(3, 3)
+texture = ExtResource("3")
 __meta__ = {
 "_edit_lock_": true
 }
@@ -84,9 +84,9 @@ offset_left = -323.96
 offset_top = 24.8889
 offset_right = -27.96
 offset_bottom = 95.889
-pivot_offset = Vector2( 574.999, -89 )
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+pivot_offset = Vector2(574.999, -89)
+theme_override_fonts/font = ExtResource("4")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "공무원"
 align = 1
 __meta__ = {
@@ -102,9 +102,9 @@ offset_left = -328.438
 offset_top = 3.36111
 offset_right = -5.43823
 offset_bottom = 73.3611
-pivot_offset = Vector2( 574.999, -89 )
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
+pivot_offset = Vector2(574.999, -89)
+theme_override_fonts/font = ExtResource("4")
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
 text = "공무원"
 align = 1
 __meta__ = {
@@ -127,24 +127,24 @@ __meta__ = {
 offset_left = 89.0
 offset_right = 133.0
 offset_bottom = 20.0
-theme_override_fonts/font = ExtResource( 2 )
-theme_override_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
+theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
 text = "시작한다"
 
 [node name="LoadGameButton" type="Button" parent="HBoxContainer"]
 offset_left = 137.0
 offset_right = 199.0
 offset_bottom = 20.0
-theme_override_fonts/font = ExtResource( 2 )
-theme_override_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
+theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
 text = "개임을 열는다"
 
 [node name="OptionsButton" type="Button" parent="HBoxContainer"]
 offset_left = 203.0
 offset_right = 231.0
 offset_bottom = 20.0
-theme_override_fonts/font = ExtResource( 2 )
-theme_override_colors/font_color = Color( 0.741176, 0.741176, 0.741176, 1 )
+theme_override_fonts/font = ExtResource("2")
+theme_override_colors/font_color = Color(0.741176, 0.741176, 0.741176, 1)
 text = "설정"
 
 [connection signal="pressed" from="HBoxContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dxrdyw24k2col" path="res://Images/Sprites/Priest.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="2"]
-[ext_resource type="Script" path="res://Characters/Priest.gd" id="3"]
+[ext_resource type="Script" uid="uid://cjkhxvixae8j8" path="res://Characters/Priest.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_3r5to"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
@@ -143,14 +143,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_puf2l"]
 _data = {
-"IdleD": SubResource("2"),
-"IdleL": SubResource("3"),
-"IdleR": SubResource("4"),
-"IdleU": SubResource("5"),
-"Move Down": SubResource("6"),
-"Move Left": SubResource("7"),
-"Move Right": SubResource("8"),
-"Move Up": SubResource("9")
+&"IdleD": SubResource("2"),
+&"IdleL": SubResource("3"),
+&"IdleR": SubResource("4"),
+&"IdleU": SubResource("5"),
+&"Move Down": SubResource("6"),
+&"Move Left": SubResource("7"),
+&"Move Right": SubResource("8"),
+&"Move Up": SubResource("9")
 }
 
 [sub_resource type="CircleShape2D" id="10"]

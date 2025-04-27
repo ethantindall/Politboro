@@ -1,12 +1,11 @@
 res://default_env.tres
-res://World Objects/Buildings/AIapts2.tscn
+res://Map Scenes/CitySouth.tscn
+res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
 res://Characters/Citizens/OfficeWorker.gd
 res://GUI/fonts/propaganda/PropagandaFont.tres
-res://Map Scenes/CitySouth.tscn
-res://World Objects/Accessories/InvItems/Bloody Knife.tscn
-res://GUI/Scenes/Pause/InventoryMenu.tscn
-res://World Objects/Accessories/Signpost.tscn
-res://Map Scenes/TrainYard.tscn
 res://Map Scenes/TownSquare.tscn
+res://Characters/Player/Player.tscn
+res://Map Scenes/new_map.tscn
+res://Characters/Player/player_camera.gd

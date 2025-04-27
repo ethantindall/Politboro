@@ -1,23 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dnhkp6n2ub7"]
 
-[ext_resource path="res://Images/hay.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://ces1opmluv6hc" path="res://Images/hay.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.0939, 5.74349 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(24.1878, 11.487)
 
 [node name="Haystack" type="StaticBody2D"]
-position = Vector2( 8, -1 )
-scale = Vector2( 1.2, 1 )
+position = Vector2(8, -1)
+scale = Vector2(1.2, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2( -12.4668, 2.38037 )
-scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 1 )
+position = Vector2(-12.4668, 2.38037)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1")
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3.43042, 1.65035 )
-scale = Vector2( 0.5, 0.4 )
-shape = SubResource( 1 )
+position = Vector2(-3.43042, 1.65035)
+scale = Vector2(0.5, 0.4)
+shape = SubResource("1")

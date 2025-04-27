@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4kyqc32jjf6m"]
 
 [ext_resource type="Texture2D" uid="uid://du8jc5xd32xni" path="res://Images/InvItems/folder.png" id="1"]
-[ext_resource type="Script" path="res://GlobalScripts/invitem.gd" id="2"]
+[ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(34.091, 49.4346)

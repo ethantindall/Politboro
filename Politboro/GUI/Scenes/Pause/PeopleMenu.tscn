@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://t5u6jk1oyt44" path="res://GUI/fonts/fyodor/Fyodor-BoldCondensedOblique.ttf" id="2"]
 [ext_resource type="FontFile" uid="uid://dpaw5ergr0d7e" path="res://GUI/fonts/fyodor/button.tres" id="2_t6pnj"]
 [ext_resource type="FontFile" uid="uid://dknqtnwoijfw6" path="res://GUI/fonts/1942_report/1942.ttf" id="3"]
-[ext_resource type="Script" path="res://GUI/Scenes/Pause/PeopleMenu.gd" id="4"]
+[ext_resource type="Script" uid="uid://dboinoy047e2k" path="res://GUI/Scenes/Pause/PeopleMenu.gd" id="4"]
 [ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="4_xmns6"]
 [ext_resource type="Texture2D" uid="uid://b72bfah0nxn6" path="res://Images/GUI/paperclip.png" id="5_5s28b"]
 

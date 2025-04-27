@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dmgshiexcg58m"]
 
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://Characters/Ministers/TransMinister.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cq4utbyyxxj8s" path="res://Characters/Ministers/TransMinister.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cdo5oinaqach4" path="res://Characters/Citizens/OfficeWorker.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://cyoqnn5j0fmbb" path="res://Characters/Police.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="6"]
