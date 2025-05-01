@@ -1,5 +1,7 @@
 extends Control
 
+func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS  # Ensures input is handled even when paused
 
 
 func _input(event):
@@ -7,7 +9,7 @@ func _input(event):
 		var new_pause_state = not get_tree().paused
 		get_tree().paused = new_pause_state
 		self.visible = new_pause_state
-		
+
 #Level1
 func _on_PeopleButton_pressed():
 	get_node("RightBoard/RBoardInner/People").visible = true

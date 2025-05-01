@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=30 format=3 uid="uid://v04i7wtgqvm6"]
 
 [ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://irseph1pakh1" path="res://Images/Sprites/playersprite.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://cqy58fgpr5lv0" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
 [ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
+[ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/Pause2.tscn" id="5_oc658"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0, 0, 0, 0.403922)
@@ -374,3 +375,5 @@ parameters/Move/blend_position = Vector2(0, 0)
 
 [node name="player_camera" type="Camera2D" parent="."]
 script = ExtResource("4_aj84o")
+
+[node name="Pause" parent="." instance=ExtResource("5_oc658")]

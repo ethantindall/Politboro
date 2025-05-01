@@ -1,13 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmknab031jnte"]
+[gd_scene load_steps=8 format=3 uid="uid://shbipy4cnwlb"]
 
-[ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="2"]
-[ext_resource type="Script" uid="uid://buq0807cn85jb" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
-[ext_resource type="PackedScene" uid="uid://sg7k53bmcss1" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://bc6y2p3yvtiqr" path="res://GUI/Scenes/Pause/QuestMenu.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="6"]
+[ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="1_2g6or"]
+[ext_resource type="Script" uid="uid://buq0807cn85jb" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="1_dqdy5"]
+[ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="2_dqdy5"]
+[ext_resource type="PackedScene" uid="uid://sg7k53bmcss1" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="3_vpgmo"]
+[ext_resource type="PackedScene" uid="uid://bc6y2p3yvtiqr" path="res://GUI/Scenes/Pause/QuestMenu.tscn" id="4_vv4sx"]
 
-[sub_resource type="FontFile" id="3"]
-fallbacks = Array[Font]([ExtResource("2")])
+[sub_resource type="FontFile" id="FontFile_5b6tt"]
+fallbacks = Array[Font]([ExtResource("1_2g6or")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -1412,8 +1412,8 @@ cache/0/36/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/36/0/kerning_overrides/35/0 = Vector2(0, 0)
 cache/0/36/0/kerning_overrides/36/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("2")])
+[sub_resource type="FontFile" id="FontFile_d2fgy"]
+fallbacks = Array[Font]([ExtResource("1_2g6or")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -1426,26 +1426,28 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Pause" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-script = ExtResource("3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dqdy5")
 
 [node name="GrayBackground" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -2.0
-offset_top = -4.0
-offset_right = 498.0
-offset_bottom = 310.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.00784314, 0, 0, 0.533333)
 
 [node name="LeftBoard" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -204.0
-offset_top = -35.0
-offset_right = -116.0
-offset_bottom = 147.0
+offset_left = 9.0
+offset_top = 16.0
+offset_right = 97.0
+offset_bottom = 198.0
 color = Color(0.298039, 0.168627, 0.0313726, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="LeftBoard"]
@@ -1471,7 +1473,7 @@ offset_bottom = 32.9995
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.3, 0.3)
-theme_override_fonts/font = ExtResource("2")
+theme_override_fonts/font = ExtResource("1_2g6or")
 theme_override_font_sizes/font_size = 20
 text = "Press P or Esc to exit"
 autowrap_mode = 2
@@ -1491,40 +1493,40 @@ scale = Vector2(0.65, 0.7)
 
 [node name="PeopleButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("3")
+theme_override_fonts/font = SubResource("FontFile_5b6tt")
 theme_override_font_sizes/font_size = 20
 text = "People"
 
 [node name="QuestsButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("3")
+theme_override_fonts/font = SubResource("FontFile_5b6tt")
 theme_override_font_sizes/font_size = 20
 text = "Quests"
 
 [node name="ItemsButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("3")
+theme_override_fonts/font = SubResource("FontFile_5b6tt")
 theme_override_font_sizes/font_size = 20
 text = "Items"
 
 [node name="SaveButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("3")
+theme_override_fonts/font = SubResource("FontFile_5b6tt")
 theme_override_font_sizes/font_size = 20
 text = "Save"
 
 [node name="QuitButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2")
+theme_override_fonts/font = ExtResource("1_2g6or")
 theme_override_font_sizes/font_size = 20
 text = "QUIT"
 
 [node name="RightBoard" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 268.142
-offset_top = 145.137
-offset_right = 493.142
-offset_bottom = 290.138
+offset_left = 117.0
+offset_top = 66.0
+offset_right = 342.0
+offset_bottom = 211.001
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.298039, 0.168627, 0.0313726, 1)
 
@@ -1537,7 +1539,7 @@ offset_bottom = 139.001
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.501961, 0.294118, 0.0705882, 1)
 
-[node name="Inventory" parent="RightBoard/RBoardInner" instance=ExtResource("6")]
+[node name="Inventory" parent="RightBoard/RBoardInner" instance=ExtResource("2_dqdy5")]
 visible = false
 anchors_preset = 0
 anchor_right = 0.0
@@ -1549,7 +1551,7 @@ offset_bottom = -32.6275
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="People" parent="RightBoard/RBoardInner" instance=ExtResource("4")]
+[node name="People" parent="RightBoard/RBoardInner" instance=ExtResource("3_vpgmo")]
 visible = false
 anchors_preset = 0
 anchor_right = 0.0
@@ -1561,7 +1563,7 @@ offset_bottom = 143.572
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Quests" parent="RightBoard/RBoardInner" instance=ExtResource("5")]
+[node name="Quests" parent="RightBoard/RBoardInner" instance=ExtResource("4_vv4sx")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -1574,15 +1576,10 @@ grow_vertical = 1
 
 [node name="GamePausedLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 467.0
-offset_top = 33.0
-offset_right = 587.0
-offset_bottom = 47.0
+offset_left = 136.0
+offset_top = 31.0
+offset_right = 256.0
+offset_bottom = 45.0
 theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
-theme_override_fonts/font = SubResource("2")
+theme_override_fonts/font = SubResource("FontFile_d2fgy")
 text = "Game Paused"
-
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
