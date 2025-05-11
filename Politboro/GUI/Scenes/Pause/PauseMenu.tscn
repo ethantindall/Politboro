@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://shbipy4cnwlb"]
+[gd_scene load_steps=7 format=3 uid="uid://shbipy4cnwlb"]
 
 [ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="2"]
 [ext_resource type="Script" uid="uid://cx2waeb1cs06f" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
 [ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="3_ndgpg"]
+[ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="4_m2gf7"]
 
 [sub_resource type="FontFile" id="FontFile_5b6tt"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -1532,21 +1533,24 @@ theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
 [node name="RightBoard" type="ColorRect" parent="CanvasLayer"]
-offset_left = 646.0
-offset_top = 152.0
-offset_right = 1031.0
-offset_bottom = 511.0
+offset_left = 284.0
+offset_top = 99.0
+offset_right = 1193.0
+offset_bottom = 682.0
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.298039, 0.168627, 0.0313726, 1)
 
 [node name="RightInset" type="ColorRect" parent="CanvasLayer/RightBoard"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 5.0
-offset_right = 219.0
-offset_bottom = 139.001
+offset_left = 27.0
+offset_top = 19.0
+offset_right = 863.0
+offset_bottom = 568.0
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.501961, 0.294118, 0.0705882, 1)
+
+[node name="Inventory" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("4_m2gf7")]
+layout_mode = 1
 
 [node name="GamePausedLabel" type="Label" parent="CanvasLayer"]
 offset_left = 561.0

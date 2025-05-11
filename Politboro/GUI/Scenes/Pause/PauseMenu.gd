@@ -45,6 +45,7 @@ func update_ui():
 	var game_paused_label = $CanvasLayer/GamePausedLabel
 	var vbox = $CanvasLayer/LeftBoard/LeftInset/VBoxContainer
 	var exit_label = $CanvasLayer/LeftBoard/LeftInset/ExitLabel
+	var inventory_menu = $CanvasLayer/RightBoard/RightInset/Inventory
 	var margin = screen_size.x * 0.03
 	
 	# LEFT PANEL
@@ -84,4 +85,6 @@ func update_ui():
 	vbox.size = Vector2(vb_inset_width, l_inset_height)
 	vbox.position = Vector2(inset_margin,inset_margin)
 	
+	# Inventory Menu
+	inventory_menu.size = Vector2(r_inset_width,r_inset_height)
 	

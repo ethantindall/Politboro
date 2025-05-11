@@ -1,24 +1,30 @@
-[gd_scene load_steps=14 format=3 uid="uid://dlltdim06bgq6"]
+[gd_scene load_steps=17 format=3 uid="uid://d01kyujc7lx4u"]
 
-[ext_resource type="Script" uid="uid://uj7dtwiumrdg" path="res://GUI/Scenes/Pause/InventoryMenu.gd" id="2"]
-[ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="4"]
-[ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="5"]
-[ext_resource type="FontFile" uid="uid://dknqtnwoijfw6" path="res://GUI/fonts/1942_report/1942.ttf" id="6"]
-[ext_resource type="Texture2D" uid="uid://cq40jdwrpofq8" path="res://Images/InvItems/cleanknife.png" id="6_y1uuf"]
-[ext_resource type="FontFile" uid="uid://dynpsh0sdpi7l" path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" id="7"]
+[ext_resource type="Script" uid="uid://uj7dtwiumrdg" path="res://GUI/Scenes/Pause/InventoryMenu.gd" id="1_3iktt"]
+[ext_resource type="Texture2D" uid="uid://1pjh5ndbxtf7" path="res://Images/plate.png" id="2_u82nr"]
+[ext_resource type="Script" uid="uid://rwfxfibjeweb" path="res://GUI/Scenes/Pause/Slot.gd" id="3_xtnam"]
+[ext_resource type="FontFile" uid="uid://d1trfiuvy6saf" path="res://GUI/fonts/fyodor/fyodor.tres" id="4_ls5m5"]
+[ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="5_7m3ju"]
+[ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="6_77872"]
+[ext_resource type="FontFile" uid="uid://dknqtnwoijfw6" path="res://GUI/fonts/1942_report/1942.ttf" id="7_g6wys"]
+[ext_resource type="FontFile" uid="uid://dynpsh0sdpi7l" path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" id="8_o2j5m"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3j27"]
+[sub_resource type="StyleBoxTexture" id="1"]
+texture = ExtResource("2_u82nr")
+region_rect = Rect2(0, 0, 32, 32)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pae4p"]
+[sub_resource type="StyleBoxFlat" id="4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hg7kq"]
+[sub_resource type="StyleBoxFlat" id="5"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1xlr"]
+[sub_resource type="StyleBoxFlat" id="2"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31vmw"]
+[sub_resource type="StyleBoxFlat" id="3"]
 
-[sub_resource type="FontFile" id="FontFile_cakvl"]
-fallbacks = Array[Font]([ExtResource("6")])
+[sub_resource type="StyleBoxFlat" id="6"]
+
+[sub_resource type="FontFile" id="7"]
+fallbacks = Array[Font]([ExtResource("7_g6wys")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -479,8 +485,8 @@ cache/0/20/0/kerning_overrides/18/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/19/0 = Vector2(0, 0)
 cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id="FontFile_o7ns8"]
-fallbacks = Array[Font]([ExtResource("7")])
+[sub_resource type="FontFile" id="8"]
+fallbacks = Array[Font]([ExtResource("8_o2j5m")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -499,25 +505,422 @@ cache/0/22/0/scale = 1.0
 cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
 
-[node name="Control" type="Control"]
+[node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2")
+pivot_offset = Vector2(-122.686, -39.0827)
+script = ExtResource("1_3iktt")
 
-[node name="DetailRect" type="ColorRect" parent="."]
-visible = false
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OuterPanel" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-69.1896, 21.1146)
+color = Color(0.298039, 0.168627, 0.0313726, 1)
+
+[node name="InnerPanel" type="ColorRect" parent="CanvasLayer/OuterPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 25.0
+offset_right = -30.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-69.1896, 21.1146)
+color = Color(0.501961, 0.294118, 0.0705882, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/OuterPanel/InnerPanel"]
 layout_mode = 0
+offset_left = 26.0
+offset_top = 28.0
+offset_right = 1185.0
+offset_bottom = 646.0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 7
+theme_override_constants/v_separation = 6
+columns = 5
+
+[node name="Slot1" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot1"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot1"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot2" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot2"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot2"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot3" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot3"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot3"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot4" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot4"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot4"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot5" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot5"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot5"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot6" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot6"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot6"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot7" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot7"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot7"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot8" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot8"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot8"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot9" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot9"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot9"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot10" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot10"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot10"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot11" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot11"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot11"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot12" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot12"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot12"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot13" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot13"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot13"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot14" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot14"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot14"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot15" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot15"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot15"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot16" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot16"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot16"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot17" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot17"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot17"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot18" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot18"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot18"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot19" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot19"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot19"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="Slot20" type="Panel" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+script = ExtResource("3_xtnam")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot20"]
+centered = false
+
+[node name="Label" type="Label" parent="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer/GridContainer/Slot20"]
+layout_mode = 0
+offset_left = 21.4454
+offset_top = 20.208
+offset_right = 37.4454
+offset_bottom = 35.208
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ls5m5")
+
+[node name="DetailRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = 30.3335
 offset_top = 40.2975
 offset_right = 100.333
 offset_bottom = 90.2975
 color = Color(0.737255, 0.662745, 0.505882, 1)
 
-[node name="ColorRect" type="ColorRect" parent="DetailRect"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 61.7337
 offset_top = 0.242397
@@ -525,22 +928,22 @@ offset_right = 69.7337
 offset_bottom = 8.2424
 color = Color(0.694118, 0.180392, 0.180392, 1)
 
-[node name="ClosePopupButton" type="Button" parent="DetailRect"]
+[node name="ClosePopupButton" type="Button" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_right = 21.0
 offset_bottom = 23.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4")
+theme_override_fonts/font = ExtResource("5_7m3ju")
 theme_override_font_sizes/font_size = 22
-theme_override_styles/focus = SubResource("StyleBoxFlat_c3j27")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_pae4p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hg7kq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l1xlr")
-theme_override_styles/normal = SubResource("StyleBoxFlat_31vmw")
+theme_override_styles/focus = SubResource("4")
+theme_override_styles/disabled = SubResource("5")
+theme_override_styles/hover = SubResource("2")
+theme_override_styles/pressed = SubResource("3")
+theme_override_styles/normal = SubResource("6")
 text = "X"
 
-[node name="ColorRect2" type="ColorRect" parent="DetailRect"]
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 59.8312
 offset_top = 1.82622
@@ -548,7 +951,7 @@ offset_right = 67.8312
 offset_bottom = 9.82622
 color = Color(0.737255, 0.662745, 0.505882, 1)
 
-[node name="TitleLabel" type="Label" parent="DetailRect"]
+[node name="TitleLabel" type="Label" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 3.0
@@ -556,11 +959,11 @@ offset_right = 129.0
 offset_bottom = 21.0
 scale = Vector2(0.4, 0.4)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5")
+theme_override_fonts/font = ExtResource("6_77872")
 theme_override_font_sizes/font_size = 22
 text = "title"
 
-[node name="DescLabel" type="Label" parent="DetailRect"]
+[node name="DescLabel" type="Label" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 13.0
@@ -568,23 +971,23 @@ offset_right = 225.0
 offset_bottom = 93.0
 scale = Vector2(0.3, 0.3)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("FontFile_cakvl")
+theme_override_fonts/font = SubResource("7")
 theme_override_font_sizes/font_size = 20
 text = "test test test test test test"
 autowrap_mode = 2
 
-[node name="ValueLabel" type="Label" parent="DetailRect"]
+[node name="ValueLabel" type="Label" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 36.0
 offset_right = 87.0
 offset_bottom = 61.0
 scale = Vector2(0.5, 0.5)
-theme_override_fonts/font = SubResource("FontFile_o7ns8")
+theme_override_fonts/font = SubResource("8")
 theme_override_font_sizes/font_size = 22
 text = "10"
 
-[node name="DropButton" type="Button" parent="DetailRect"]
+[node name="DropButton" type="Button" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = -0.333496
 offset_top = 38.7025
@@ -592,220 +995,16 @@ offset_right = 55.6665
 offset_bottom = 61.7025
 scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4")
+theme_override_fonts/font = ExtResource("5_7m3ju")
 theme_override_font_sizes/font_size = 22
-theme_override_styles/focus = SubResource("StyleBoxFlat_c3j27")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_pae4p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hg7kq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l1xlr")
-theme_override_styles/normal = SubResource("StyleBoxFlat_31vmw")
+theme_override_styles/focus = SubResource("4")
+theme_override_styles/disabled = SubResource("5")
+theme_override_styles/hover = SubResource("2")
+theme_override_styles/pressed = SubResource("3")
+theme_override_styles/normal = SubResource("6")
 text = "DROP"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer6" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer7" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer7"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer7"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer8" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer8"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer8"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer9" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer9"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer9"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer10" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer10"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer10"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer11" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer11"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer11"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer12" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer12"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer12"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer13" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer13"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer13"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer14" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer14"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer14"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer15" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer15"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer15"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer16" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer16"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer16"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer17" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer17"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer17"]
-layout_mode = 2
-text = "Item 1"
-
-[node name="HBoxContainer18" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer18"]
-layout_mode = 2
-texture = ExtResource("6_y1uuf")
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer18"]
-layout_mode = 2
-text = "Item 1"
+[connection signal="visibility_changed" from="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
+[connection signal="visibility_changed" from="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer" to="." method="_on_scroll_container_visibility_changed"]
+[connection signal="pressed" from="CanvasLayer/DetailRect/ClosePopupButton" to="." method="_on_ClosePopupButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/DetailRect/DropButton" to="." method="_on_DropButton_pressed"]
