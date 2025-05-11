@@ -19,7 +19,7 @@ config/icon="res://Images/GUI/icon.png"
 
 Global="*res://GlobalScripts/Global.gd"
 QuestSystem="*res://GlobalScripts/QuestSystem.gd"
-ScreenChanger="*res://World Objects/Portal/ScreenChanger.gd"
+ScreenChanger="res://World Objects/Portal/ScreenChanger.gd"
 Invitem="*res://GlobalScripts/invitem.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
@@ -79,8 +79,8 @@ variables={}
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="2d"

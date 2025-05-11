@@ -407,15 +407,6 @@ layer_0/tile_data = PackedInt32Array(0, 11, 0, 65536, 11, 1, 131072, 11, 2, 1966
 position = Vector2(452.819, 147.606)
 scale = Vector2(1.5, 1.5)
 
-[node name="Camera2D" type="Camera2D" parent="Node2D/Player"]
-zoom = Vector2(10, 10)
-limit_left = 0
-limit_top = 0
-limit_right = 700
-limit_bottom = 360
-limit_smoothed = true
-position_smoothing_enabled = true
-
 [node name="Outside Edge" type="StaticBody2D" parent="Node2D"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Outside Edge"]

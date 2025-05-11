@@ -24,7 +24,6 @@ func _ready():
 	self.global_position = Global.player_initial_map_position
 	$"/root/Global".register_player(self)
 	emit_signal("player_stats_changed", self)
-	
 
 func _process(delta):
 	# Regenerates health
@@ -52,3 +51,8 @@ func _physics_process(delta):
 	set_velocity(velocity)
 	move_and_slide()
 	velocity = velocity
+
+
+func _on_fade_in_player_animation_finished(anim_name: StringName) -> void:
+	print("wow")
+	$Fade_In_Canvas/Fade_In_ColorRect.modulate.a = 0.0  # Keep it transparent after animation ends

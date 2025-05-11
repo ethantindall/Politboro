@@ -1,13 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://shbipy4cnwlb"]
+[gd_scene load_steps=9 format=3 uid="uid://shbipy4cnwlb"]
 
-[ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="1_2g6or"]
-[ext_resource type="Script" uid="uid://buq0807cn85jb" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="1_dqdy5"]
-[ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="2_dqdy5"]
-[ext_resource type="PackedScene" uid="uid://sg7k53bmcss1" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="3_vpgmo"]
-[ext_resource type="PackedScene" uid="uid://bc6y2p3yvtiqr" path="res://GUI/Scenes/Pause/QuestMenu.tscn" id="4_vv4sx"]
+[ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="2"]
+[ext_resource type="Script" uid="uid://cx2waeb1cs06f" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
+[ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="3_ndgpg"]
+[ext_resource type="PackedScene" uid="uid://sg7k53bmcss1" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bc6y2p3yvtiqr" path="res://GUI/Scenes/Pause/QuestMenu.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="6"]
 
 [sub_resource type="FontFile" id="FontFile_5b6tt"]
-fallbacks = Array[Font]([ExtResource("1_2g6or")])
+fallbacks = Array[Font]([ExtResource("2")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -1411,9 +1412,19 @@ cache/0/36/0/kerning_overrides/33/0 = Vector2(0, 0)
 cache/0/36/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/36/0/kerning_overrides/35/0 = Vector2(0, 0)
 cache/0/36/0/kerning_overrides/36/0 = Vector2(0, 0)
+cache/0/1/0/ascent = 0.0
+cache/0/1/0/descent = 0.0
+cache/0/1/0/underline_position = 0.0
+cache/0/1/0/underline_thickness = 0.0
+cache/0/1/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
 
 [sub_resource type="FontFile" id="FontFile_d2fgy"]
-fallbacks = Array[Font]([ExtResource("1_2g6or")])
+fallbacks = Array[Font]([ExtResource("2")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -1423,6 +1434,11 @@ cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
 
 [node name="Pause" type="Control"]
 layout_mode = 3
@@ -1431,106 +1447,103 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_dqdy5")
+script = ExtResource("3")
 
-[node name="GrayBackground" type="ColorRect" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="GrayBackground" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.00784314, 0, 0, 0.533333)
+color = Color(0.01, 0, 0, 0.658824)
 
-[node name="LeftBoard" type="ColorRect" parent="."]
-layout_mode = 0
+[node name="LeftBoard" type="ColorRect" parent="CanvasLayer"]
 offset_left = 9.0
 offset_top = 16.0
-offset_right = 97.0
-offset_bottom = 198.0
+offset_right = 224.0
+offset_bottom = 294.0
 color = Color(0.298039, 0.168627, 0.0313726, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="LeftBoard"]
+[node name="LeftInset" type="ColorRect" parent="CanvasLayer/LeftBoard"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 6.0
-offset_right = 83.0
-offset_bottom = 177.0
+offset_right = 204.0
+offset_bottom = 269.0
 pivot_offset = Vector2(18.3412, 56.5182)
 color = Color(0.501961, 0.294118, 0.0705882, 1)
 
-[node name="ExitLabel" type="Label" parent="LeftBoard/ColorRect5"]
+[node name="ExitLabel" type="Label" parent="CanvasLayer/LeftBoard/LeftInset"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.5
-offset_top = -18.0005
-offset_right = 116.5
-offset_bottom = 32.9995
+offset_left = -117.0
+offset_top = -56.0
+offset_right = 119.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.3, 0.3)
-theme_override_fonts/font = ExtResource("1_2g6or")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ndgpg")
 theme_override_font_sizes/font_size = 20
-text = "Press P or Esc to exit"
+text = "PRESS P OR ESC TO UNPAUSE"
+horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LeftBoard/ColorRect5"]
-clip_contents = true
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/LeftBoard/LeftInset"]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 2.0
-offset_top = -82.5
-offset_right = 113.0
-offset_bottom = 122.5
-grow_vertical = 2
-scale = Vector2(0.65, 0.7)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_right = 88.0
+offset_bottom = 216.0
+grow_horizontal = 2
 
-[node name="PeopleButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
+[node name="QuestsButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_5b6tt")
-theme_override_font_sizes/font_size = 20
-text = "People"
-
-[node name="QuestsButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("FontFile_5b6tt")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("3_ndgpg")
+theme_override_font_sizes/font_size = 40
 text = "Quests"
 
-[node name="ItemsButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
+[node name="PeopleButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_5b6tt")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
+text = "People"
+
+[node name="ItemsButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontFile_5b6tt")
+theme_override_font_sizes/font_size = 40
 text = "Items"
 
-[node name="SaveButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
+[node name="SaveButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_5b6tt")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 40
 text = "Save"
 
-[node name="QuitButton" type="Button" parent="LeftBoard/ColorRect5/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_2g6or")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 40
 text = "QUIT"
 
-[node name="RightBoard" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 117.0
-offset_top = 66.0
-offset_right = 342.0
-offset_bottom = 211.001
+[node name="RightBoard" type="ColorRect" parent="CanvasLayer"]
+offset_left = 780.0
+offset_top = 374.0
+offset_right = 1005.0
+offset_bottom = 519.001
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.298039, 0.168627, 0.0313726, 1)
 
-[node name="RBoardInner" type="ColorRect" parent="RightBoard"]
+[node name="RightInset" type="ColorRect" parent="CanvasLayer/RightBoard"]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 5.0
@@ -1539,7 +1552,7 @@ offset_bottom = 139.001
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.501961, 0.294118, 0.0705882, 1)
 
-[node name="Inventory" parent="RightBoard/RBoardInner" instance=ExtResource("2_dqdy5")]
+[node name="Inventory" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("6")]
 visible = false
 anchors_preset = 0
 anchor_right = 0.0
@@ -1551,7 +1564,7 @@ offset_bottom = -32.6275
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="People" parent="RightBoard/RBoardInner" instance=ExtResource("3_vpgmo")]
+[node name="People" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("4")]
 visible = false
 anchors_preset = 0
 anchor_right = 0.0
@@ -1563,7 +1576,7 @@ offset_bottom = 143.572
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Quests" parent="RightBoard/RBoardInner" instance=ExtResource("4_vv4sx")]
+[node name="Quests" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("5")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -1574,12 +1587,20 @@ offset_bottom = -34.0275
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="GamePausedLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 136.0
-offset_top = 31.0
-offset_right = 256.0
-offset_bottom = 45.0
+[node name="GamePausedLabel" type="Label" parent="CanvasLayer"]
+offset_left = 561.0
+offset_top = 32.0
+offset_right = 681.0
+offset_bottom = 46.0
 theme_override_colors/font_color = Color(0.784314, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontFile_d2fgy")
+theme_override_font_sizes/font_size = 50
 text = "Game Paused"
+
+[connection signal="pressed" from="CanvasLayer/LeftBoard/LeftInset/VBoxContainer/QuestsButton" to="." method="_on_quests_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LeftBoard/LeftInset/VBoxContainer/PeopleButton" to="." method="_on_people_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LeftBoard/LeftInset/VBoxContainer/ItemsButton" to="." method="_on_items_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LeftBoard/LeftInset/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LeftBoard/LeftInset/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dpbami1xapr7c"]
+[gd_scene load_steps=48 format=3 uid="uid://dpbami1xapr7c"]
 
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="1_64sce"]
 [ext_resource type="PackedScene" uid="uid://b6xwrq4ocfqr8" path="res://World Objects/Accessories/LargeCrate.tscn" id="2"]
@@ -30,7 +30,6 @@
 [ext_resource type="PackedScene" uid="uid://07gvnr6s8bpw" path="res://World Objects/Accessories/InvItems/Bloody Knife.tscn" id="28_kb031"]
 [ext_resource type="PackedScene" uid="uid://cvkhwnwr1pyx5" path="res://World Objects/Accessories/InvItems/Cash.tscn" id="29_dh0o4"]
 [ext_resource type="PackedScene" uid="uid://c4kyqc32jjf6m" path="res://World Objects/Accessories/InvItems/Dossier.tscn" id="30_mxqo8"]
-[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="30_s1esd"]
 [ext_resource type="PackedScene" uid="uid://j408gg6ev4df" path="res://World Objects/Accessories/InvItems/Clean Knife.tscn" id="30_xtylc"]
 [ext_resource type="PackedScene" uid="uid://b0aq2im71ov8g" path="res://World Objects/Accessories/InvItems/Filmreel.tscn" id="32_28lih"]
 [ext_resource type="PackedScene" uid="uid://cuddlcwjmkec4" path="res://World Objects/Accessories/InvItems/Gold Watch.tscn" id="33_vuu8q"]
@@ -358,8 +357,6 @@ scale = Vector2(0.7, 0.7)
 
 [node name="Apt3" parent="." instance=ExtResource("28")]
 position = Vector2(829.983, -24.7533)
-
-[node name="Pause" parent="." instance=ExtResource("30_s1esd")]
 
 [node name="BloodyKnife" parent="." instance=ExtResource("28_kb031")]
 position = Vector2(724, 212)

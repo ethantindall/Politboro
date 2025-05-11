@@ -1,10 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=34 format=3 uid="uid://v04i7wtgqvm6"]
 
 [ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://irseph1pakh1" path="res://Images/Sprites/playersprite.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://cqy58fgpr5lv0" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
 [ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
-[ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/Pause2.tscn" id="5_oc658"]
+[ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu3.tscn" id="5_oc658"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0, 0, 0, 0.403922)
@@ -265,6 +265,53 @@ tracks/1/keys = {
 }
 tracks/1/use_blend = true
 
+[sub_resource type="Animation" id="Animation_11ham"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k6fwu"]
 _data = {
 &"IdleD": SubResource("3"),
@@ -274,7 +321,8 @@ _data = {
 &"Move Down": SubResource("7"),
 &"Move Left": SubResource("8"),
 &"Move Right": SubResource("9"),
-&"Move Up": SubResource("10")
+&"Move Up": SubResource("10"),
+&"RESET": SubResource("Animation_11ham")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="11"]
@@ -334,6 +382,74 @@ states/Move/node = SubResource("20")
 states/Move/position = Vector2(718, 122)
 transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("22")]
 
+[sub_resource type="Animation" id="Animation_oc658"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_vpjpg"]
+resource_name = "fade"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fade_In_Canvas/Fade_In_ColorRect:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dl42p"]
+_data = {
+&"RESET": SubResource("Animation_oc658"),
+&"fade": SubResource("Animation_vpjpg")
+}
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1")
@@ -376,4 +492,21 @@ parameters/Move/blend_position = Vector2(0, 0)
 [node name="player_camera" type="Camera2D" parent="."]
 script = ExtResource("4_aj84o")
 
+[node name="Fade_In_Canvas" type="CanvasLayer" parent="."]
+
+[node name="Fade_In_ColorRect" type="ColorRect" parent="Fade_In_Canvas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+scale = Vector2(1.24593, 1.14711)
+color = Color(0, 0, 0, 0)
+
+[node name="Fade_In_Player" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dl42p")
+}
+autoplay = "fade"
+
 [node name="Pause" parent="." instance=ExtResource("5_oc658")]
+
+[connection signal="animation_finished" from="Fade_In_Player" to="." method="_on_fade_in_player_animation_finished"]
