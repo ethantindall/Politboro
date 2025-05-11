@@ -1,30 +1,24 @@
 [gd_scene load_steps=3 format=3 uid="uid://b26onlpynqw8x"]
 
 [ext_resource type="PackedScene" uid="uid://d0ft8dx230fvn" path="res://World Objects/Accessories/Tree.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/TreeGroup.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ctyagxpeb7x3u" path="res://World Objects/Accessories/TreeGroup.tscn" id="2"]
 
 [node name="Forest" type="Node2D"]
 
-[node name="TreeGroup" parent="." instance=ExtResource("2")]
-position = Vector2(-10.7995, -0.759171)
+[node name="Tree2" parent="." instance=ExtResource("1")]
+position = Vector2(289, -46)
 
 [node name="TreeGroup2" parent="." instance=ExtResource("2")]
-position = Vector2(-12.1105, 26.7722)
+position = Vector2(-73, -95)
+
+[node name="TreeGroup" parent="." instance=ExtResource("2")]
+position = Vector2(42, 10)
 
 [node name="TreeGroup3" parent="." instance=ExtResource("2")]
-position = Vector2(-12.1105, 52.618)
-
-[node name="TreeGroup4" parent="." instance=ExtResource("2")]
-position = Vector2(-10.25, -27.5)
+position = Vector2(-66, 106)
 
 [node name="Tree" parent="." instance=ExtResource("1")]
-position = Vector2(-44, 11.25)
-
-[node name="Tree2" parent="." instance=ExtResource("1")]
-position = Vector2(-60.75, -1.75)
-
-[node name="Tree3" parent="." instance=ExtResource("1")]
-position = Vector2(70.25, -16.5)
+position = Vector2(-138, -4)
 
 [node name="Tree4" parent="." instance=ExtResource("1")]
-position = Vector2(71.75, -43.25)
+position = Vector2(190, -117)

@@ -7,7 +7,7 @@ radius = 8.0
 height = 16.0
 
 [node name="Trashcan" type="StaticBody2D"]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1")

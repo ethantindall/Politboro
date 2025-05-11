@@ -21,7 +21,7 @@ var rank = "Noob"
 var inventory = []
 
 func _ready():
-	self.global_position = Global.player_initial_map_position
+	#self.global_position = Global.player_initial_map_position
 	$"/root/Global".register_player(self)
 	emit_signal("player_stats_changed", self)
 

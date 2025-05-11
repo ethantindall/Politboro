@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Politburo"
-run/main_scene="res://Map Scenes/CitySouth.tscn"
+run/main_scene="uid://g2m5kfp7p6nq"
 config/features=PackedStringArray("4.4")
 config/icon="res://Images/GUI/icon.png"
 
@@ -19,7 +19,6 @@ config/icon="res://Images/GUI/icon.png"
 
 Global="*res://GlobalScripts/Global.gd"
 QuestSystem="*res://GlobalScripts/QuestSystem.gd"
-ScreenChanger="res://World Objects/Portal/ScreenChanger.gd"
 Invitem="*res://GlobalScripts/invitem.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 

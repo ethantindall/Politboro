@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var inventory_slots = $ColorRect4/ScrollContainer/GridContainer
+@onready var inventory_slots = $CanvasLayer/ScrollContainer/GridContainer
 
 # Called when the node enters the scene tree for the first time.
 

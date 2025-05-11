@@ -6,7 +6,7 @@
 size = Vector2(32, 34.2858)
 
 [node name="Apartments" type="StaticBody2D"]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4, -1)

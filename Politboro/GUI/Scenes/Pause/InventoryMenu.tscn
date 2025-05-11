@@ -13,18 +13,21 @@
 texture = ExtResource("1")
 region_rect = Rect2(0, 0, 32, 32)
 
-[sub_resource type="StyleBoxFlat" id="6"]
+[sub_resource type="StyleBoxFlat" id="4"]
+
+[sub_resource type="StyleBoxFlat" id="5"]
 
 [sub_resource type="StyleBoxFlat" id="2"]
 
 [sub_resource type="StyleBoxFlat" id="3"]
 
-[sub_resource type="StyleBoxFlat" id="5"]
-
-[sub_resource type="StyleBoxFlat" id="4"]
+[sub_resource type="StyleBoxFlat" id="6"]
 
 [sub_resource type="FontFile" id="7"]
 fallbacks = Array[Font]([ExtResource("6")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -484,6 +487,9 @@ cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="8"]
 fallbacks = Array[Font]([ExtResource("7")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -504,22 +510,23 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 80.0
-grow_horizontal = 0
-grow_vertical = 0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset = Vector2(-122.686, -39.0827)
 script = ExtResource("2")
 
-[node name="ColorRect4" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 10.6176
-offset_top = 27.8383
-offset_right = 235.617
-offset_bottom = 172.839
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.298039, 0.168627, 0.0313726, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="ColorRect4"]
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer/ColorRect4"]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 5.0
@@ -528,29 +535,29 @@ offset_bottom = 139.001
 pivot_offset = Vector2(-69.1896, 21.1146)
 color = Color(0.501961, 0.294118, 0.0705882, 1)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect4"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ColorRect4"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 8.0
 offset_right = 217.0
 offset_bottom = 139.0
 
-[node name="GridContainer" type="GridContainer" parent="ColorRect4/ScrollContainer"]
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/ColorRect4/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 7
 theme_override_constants/v_separation = 6
 columns = 5
 
-[node name="Slot1" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot1" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot1"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot1"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot1"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot1"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -559,16 +566,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot2" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot2" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot2"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot2"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot2"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot2"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -577,16 +584,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot3" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot3" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot3"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot3"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot3"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot3"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -595,16 +602,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot4" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot4" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot4"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot4"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot4"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot4"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -613,16 +620,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot5" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot5" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot5"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot5"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot5"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot5"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -631,16 +638,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot6" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot6" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot6"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot6"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot6"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot6"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -649,16 +656,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot7" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot7" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot7"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot7"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot7"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot7"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -667,16 +674,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot8" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot8" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot8"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot8"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot8"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot8"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -685,16 +692,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot9" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot9" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot9"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot9"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot9"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot9"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -703,16 +710,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot10" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot10" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot10"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot10"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot10"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot10"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -721,16 +728,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot11" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot11" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot11"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot11"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot11"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot11"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -739,16 +746,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot12" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot12" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot12"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot12"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot12"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot12"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -757,16 +764,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot13" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot13" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot13"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot13"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot13"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot13"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -775,16 +782,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot14" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot14" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot14"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot14"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot14"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot14"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -793,16 +800,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot15" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot15" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot15"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot15"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot15"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot15"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -811,16 +818,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot16" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot16" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot16"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot16"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot16"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot16"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -829,16 +836,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot17" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot17" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot17"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot17"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot17"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot17"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -847,16 +854,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot18" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot18" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot18"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot18"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot18"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot18"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -865,16 +872,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot19" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot19" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot19"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot19"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot19"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot19"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -883,16 +890,16 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="Slot20" type="Panel" parent="ColorRect4/ScrollContainer/GridContainer"]
+[node name="Slot20" type="Panel" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("1")
 script = ExtResource("8")
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect4/ScrollContainer/GridContainer/Slot20"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot20"]
 centered = false
 
-[node name="Label" type="Label" parent="ColorRect4/ScrollContainer/GridContainer/Slot20"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect4/ScrollContainer/GridContainer/Slot20"]
 layout_mode = 0
 offset_left = 21.4454
 offset_top = 20.208
@@ -901,15 +908,14 @@ offset_bottom = 35.208
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 
-[node name="DetailRect" type="ColorRect" parent="."]
-layout_mode = 0
+[node name="DetailRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = 30.3335
 offset_top = 40.2975
 offset_right = 100.333
 offset_bottom = 90.2975
 color = Color(0.737255, 0.662745, 0.505882, 1)
 
-[node name="ColorRect" type="ColorRect" parent="DetailRect"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 61.7337
 offset_top = 0.242397
@@ -917,7 +923,7 @@ offset_right = 69.7337
 offset_bottom = 8.2424
 color = Color(0.694118, 0.180392, 0.180392, 1)
 
-[node name="ClosePopupButton" type="Button" parent="DetailRect"]
+[node name="ClosePopupButton" type="Button" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_right = 21.0
 offset_bottom = 23.0
@@ -925,14 +931,14 @@ scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("6")
+theme_override_styles/focus = SubResource("4")
+theme_override_styles/disabled = SubResource("5")
 theme_override_styles/hover = SubResource("2")
 theme_override_styles/pressed = SubResource("3")
-theme_override_styles/disabled = SubResource("5")
-theme_override_styles/focus = SubResource("4")
+theme_override_styles/normal = SubResource("6")
 text = "X"
 
-[node name="ColorRect2" type="ColorRect" parent="DetailRect"]
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 59.8312
 offset_top = 1.82622
@@ -940,7 +946,7 @@ offset_right = 67.8312
 offset_bottom = 9.82622
 color = Color(0.737255, 0.662745, 0.505882, 1)
 
-[node name="TitleLabel" type="Label" parent="DetailRect"]
+[node name="TitleLabel" type="Label" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 3.0
@@ -952,7 +958,7 @@ theme_override_fonts/font = ExtResource("5")
 theme_override_font_sizes/font_size = 22
 text = "title"
 
-[node name="DescLabel" type="Label" parent="DetailRect"]
+[node name="DescLabel" type="Label" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 13.0
@@ -965,7 +971,7 @@ theme_override_font_sizes/font_size = 20
 text = "test test test test test test"
 autowrap_mode = 2
 
-[node name="ValueLabel" type="Label" parent="DetailRect"]
+[node name="ValueLabel" type="Label" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 36.0
@@ -976,7 +982,7 @@ theme_override_fonts/font = SubResource("8")
 theme_override_font_sizes/font_size = 22
 text = "10"
 
-[node name="DropButton" type="Button" parent="DetailRect"]
+[node name="DropButton" type="Button" parent="CanvasLayer/DetailRect"]
 layout_mode = 0
 offset_left = -0.333496
 offset_top = 38.7025
@@ -986,13 +992,13 @@ scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4")
 theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("6")
+theme_override_styles/focus = SubResource("4")
+theme_override_styles/disabled = SubResource("5")
 theme_override_styles/hover = SubResource("2")
 theme_override_styles/pressed = SubResource("3")
-theme_override_styles/disabled = SubResource("5")
-theme_override_styles/focus = SubResource("4")
+theme_override_styles/normal = SubResource("6")
 text = "DROP"
 
-[connection signal="visibility_changed" from="ColorRect4/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
-[connection signal="pressed" from="DetailRect/ClosePopupButton" to="." method="_on_ClosePopupButton_pressed"]
-[connection signal="pressed" from="DetailRect/DropButton" to="." method="_on_DropButton_pressed"]
+[connection signal="visibility_changed" from="CanvasLayer/ColorRect4/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
+[connection signal="pressed" from="CanvasLayer/DetailRect/ClosePopupButton" to="." method="_on_ClosePopupButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/DetailRect/DropButton" to="." method="_on_DropButton_pressed"]

@@ -1,10 +1,19 @@
 res://default_env.tres
-res://Characters/Player/Player.tscn
+res://Map Scenes/CitySouth.tscn
 res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
 res://GUI/fonts/propaganda/PropagandaFont.tres
+res://Characters/Citizens/OfficeWorker.gd
+res://Characters/Player/Player.tscn
 res://Map Scenes/new_map.tscn
 res://World Objects/Portal/Portal.tscn
-res://Characters/Citizens/OfficeWorker.gd
-res://World Objects/Portal/Portal.gd
+res://Characters/Citizens/OfficeWorker.tscn
+res://World Objects/Accessories/Trashcan.tscn
+res://World Objects/Buildings/Narrow Building.tscn
+res://World Objects/Accessories/Tree.tscn
+res://World Objects/Accessories/Forest.tscn
+res://World Objects/Accessories/TreeGroup.tscn
+res://GUI/Scenes/Pause/InventoryMenu.tscn
+res://GUI/Scenes/Pause/PauseMenu3.tscn
+res://GUI/Scenes/Pause/InventoryMenu.gd

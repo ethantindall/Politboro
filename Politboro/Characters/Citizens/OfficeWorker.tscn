@@ -13,8 +13,8 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="CapsuleShape2D" id="2"]
-radius = 1.0
-height = 2.0
+radius = 6.0
+height = 21.4315
 
 [sub_resource type="Animation" id="3"]
 length = 2.0
@@ -157,7 +157,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="11"]
-radius = 6.43379
+radius = 17.0294
 
 [node name="OfficeWorker" type="CharacterBody2D"]
 collision_mask = 3
@@ -165,7 +165,6 @@ script = ExtResource("3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.307755, 0.915455)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("1")
 hframes = 4
 vframes = 4
@@ -180,23 +179,25 @@ offset_bottom = 33.0
 theme_override_styles/panel = SubResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.284254, 5.94179)
+position = Vector2(-1, 28)
 rotation = 1.5708
 shape = SubResource("2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_cgvij")
+&"": SubResource("AnimationLibrary_cgvij")
 }
 autoplay = "IdleD"
 
 [node name="EventArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
-position = Vector2(-0.331081, 2.51622)
+position = Vector2(-1, 28)
 shape = SubResource("11")
 
 [node name="questionmark" parent="." instance=ExtResource("2")]
+position = Vector2(0, -10)
+scale = Vector2(0.3, 0.3)
 
 [node name="DialogueBox" parent="." instance=ExtResource("4_rso6b")]
 

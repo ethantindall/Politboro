@@ -3,7 +3,7 @@ extends Camera2D
 # Define zoom limits and the speed of zoom
 var zoom_speed = 0.1
 # HOW FAR OUT YOU CAN GET. THE LOWER THE NUMBER, THE MORE YOU CAN SEE
-var min_zoom = 2
+var min_zoom = 1
 # HOW CLOSE YOU CAN GET. THE HIGHER THE NUMBER THE CLOSER YOU GET
 var max_zoom = 8
 var initial_zoom = 3
