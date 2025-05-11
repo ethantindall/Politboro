@@ -1,9 +1,10 @@
+AnimationPlayer
+AnimationTree
+ColorRect
+CanvasLayer
 VBoxContainer
 Label
-CanvasLayer
-ColorRect
 Control
-AnimationPlayer
 TileMapLayer
 Camera2D
 CollisionShape2D

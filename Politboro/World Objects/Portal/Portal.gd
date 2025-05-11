@@ -15,10 +15,12 @@ extends Area2D
 		
 func _on_Portal_body_entered(body):
 	if body.name == "Player":
-		#ScreenChanger.goDark()
+		$Fade_Out_Player.play("fade_out")
+
+	
+
+
+func _on_fade_out_player_animation_finished(anim_name: StringName) -> void:
 		Global.player_initial_map_position = player_spawn_location
-		#ScreenChanger.goLight()
-		#Global.player_facing_direction = player_direction
 		if get_tree().change_scene_to_file(next_scene_path) != OK:
 			print("Error")
-	

@@ -1,8 +1,10 @@
 res://default_env.tres
-res://GUI/Scenes/Pause/PauseMenu3.tscn
+res://Characters/Player/Player.tscn
 res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
 res://GUI/fonts/propaganda/PropagandaFont.tres
-res://Characters/Player/Player.tscn
+res://Map Scenes/new_map.tscn
+res://World Objects/Portal/Portal.tscn
 res://Characters/Citizens/OfficeWorker.gd
+res://World Objects/Portal/Portal.gd
