@@ -1,12 +1,25 @@
 extends Control
 
-
-@onready var inventory_slots = $ScrollContainer/GridContainer
-
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
 	update_ui()
+	var vboxcontainer = $ScrollContainer/VBoxContainer
+	
+	for inv_item in Global.player_inventory:
+		print(inv_item)
+		var row = HBoxContainer.new()
+		var img = TextureRect.new()
+		img.texture = load(inv_item[1])
+		img.custom_minimum_size=Vector2(50,50)
+	
+		var item_label = Label.new()
+		item_label.text = inv_item[0]
+		
+		row.add_child(img)
+		row.add_child(item_label)
+		
+		vboxcontainer.add_child(row)
 #	for inv_slot in inventory_slots.get_children():
 #		inv_slot.connect("gui_input", Callable(self, "showDeets").bind(inv_slot))
 
