@@ -82,7 +82,7 @@ func update_ui():
 	# VBoxContainer
 	var vb_inset_height = left_height - (inset_margin * 2)
 	var vb_inset_width = l_inset_width - (inset_margin * 2)
-	vbox.size = Vector2(vb_inset_width, l_inset_height)
+	vbox.size = Vector2(vb_inset_width, vb_inset_height)
 	vbox.position = Vector2(inset_margin,inset_margin)
 	
 	# Inventory Menu

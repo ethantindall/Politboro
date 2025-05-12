@@ -1004,7 +1004,7 @@ theme_override_styles/pressed = SubResource("3")
 theme_override_styles/normal = SubResource("6")
 text = "DROP"
 
-[connection signal="visibility_changed" from="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
 [connection signal="visibility_changed" from="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer" to="." method="_on_scroll_container_visibility_changed"]
+[connection signal="visibility_changed" from="CanvasLayer/OuterPanel/InnerPanel/ScrollContainer" to="." method="_on_ScrollContainer_visibility_changed"]
 [connection signal="pressed" from="CanvasLayer/DetailRect/ClosePopupButton" to="." method="_on_ClosePopupButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/DetailRect/DropButton" to="." method="_on_DropButton_pressed"]

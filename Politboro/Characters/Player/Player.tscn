@@ -510,5 +510,10 @@ libraries = {
 autoplay = "fade"
 
 [node name="Pause" parent="." instance=ExtResource("5_oc658")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="animation_finished" from="Fade_In_Player" to="." method="_on_fade_in_player_animation_finished"]

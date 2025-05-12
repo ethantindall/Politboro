@@ -1,5 +1,9 @@
+PopupMenu
+MarginContainer
+GridContainer
 Label
 TextureRect
+Button
 HBoxContainer
 ColorRect
 VBoxContainer
@@ -9,6 +13,3 @@ CollisionShape2D
 CollisionPolygon2D
 AnimationPlayer
 AnimationTree
-TileMapLayer
-Camera2D
-RichTextLabel
