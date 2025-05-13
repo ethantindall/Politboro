@@ -4,13 +4,12 @@
 [ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(32.0942, 15.6047)
+size = Vector2(32.0942, 17)
 
 [sub_resource type="CircleShape2D" id="2"]
-radius = 2.04897
+radius = 24.0294
 
 [node name="Cash" type="StaticBody2D"]
-scale = Vector2(2, 2)
 script = ExtResource("2")
 itemName = "Cash"
 imagePath = "res://Images/InvItems/cash.png"
@@ -19,12 +18,10 @@ onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/cash.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -0.666667)
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.00262451, -0.637911)
-scale = Vector2(0.1, 0.1)
+position = Vector2(-0.00262451, -0.5)
 shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]

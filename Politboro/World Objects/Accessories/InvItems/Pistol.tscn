@@ -3,14 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://cw4ce61vcurr7" path="res://Images/InvItems/pistol.png" id="1"]
 [ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
 
-[sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(31.7862, 21.7476)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vywxj"]
+height = 39.4237
 
 [sub_resource type="CircleShape2D" id="2"]
-radius = 2.15203
+radius = 27.074
 
 [node name="Pistol" type="StaticBody2D"]
-scale = Vector2(2, 2)
 script = ExtResource("2")
 itemName = "Pistol"
 imagePath = "res://Images/InvItems/pistol.png"
@@ -18,12 +17,12 @@ itemDesc = "A loaded revolver. Don't get caught with this."
 onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/pistol.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.1, 0.1)
-shape = SubResource("1")
+position = Vector2(-1, 1)
+rotation = 1.00531
+shape = SubResource("CapsuleShape2D_vywxj")
 
 [node name="EventArea" type="Area2D" parent="."]
 

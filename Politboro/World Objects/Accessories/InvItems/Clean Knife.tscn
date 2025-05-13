@@ -7,11 +7,10 @@
 radius = 8.60923
 
 [sub_resource type="CircleShape2D" id="2"]
-radius = 2.15203
+radius = 22.8473
 
 [node name="CleanKnife" type="StaticBody2D"]
 rotation = 1.25838
-scale = Vector2(2, 2)
 script = ExtResource("2")
 itemName = "Clean Knife"
 imagePath = "res://Images/InvItems/cleanknife.png"
@@ -19,11 +18,9 @@ itemDesc = "It's just a knife."
 onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/cleanKnife.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.1, 0.1)
 shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]

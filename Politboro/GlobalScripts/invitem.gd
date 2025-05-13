@@ -9,7 +9,9 @@ extends StaticBody2D
 
 var active = false
 
-
+func _ready():
+	self.scale.x = self.scale.x/2
+	self.scale.y = self.scale.y/2
 func _input(event):
 	#if get_node_or_null('DialogNode') == null:
 	if event.is_action_pressed("ui_accept") and active:

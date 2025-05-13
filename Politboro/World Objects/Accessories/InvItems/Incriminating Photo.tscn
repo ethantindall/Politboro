@@ -4,14 +4,13 @@
 [ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(21.8614, 24.9268)
+size = Vector2(18.9902, 20.5708)
 
 [sub_resource type="CircleShape2D" id="2"]
-radius = 2.15203
+radius = 22.4722
 
 [node name="IncriminatingPhoto" type="StaticBody2D"]
 rotation = 0.462512
-scale = Vector2(1.3, 1.3)
 script = ExtResource("2")
 itemName = "Incriminating Photo"
 imagePath = "res://Images/InvItems/photo.png"
@@ -19,11 +18,10 @@ itemDesc = "An incriminating photograph. Leak this to the press and someone's ca
 onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/photo.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.138494, 0.138494)
 texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.1, 0.1)
+position = Vector2(1.43561, -0.892395)
 shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]

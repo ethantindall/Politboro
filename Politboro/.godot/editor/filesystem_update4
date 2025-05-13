@@ -1,16 +1,19 @@
 res://default_env.tres
-res://GUI/Scenes/Pause/InventoryMenu.tscn
+res://World Objects/Accessories/InvItems/Filmreel.tscn
 res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
 res://GUI/fonts/propaganda/PropagandaFont.tres
+res://Characters/Citizens/OfficeWorker.gd
 res://Characters/Player/Player.tscn
 res://GUI/Scenes/Pause/PauseMenu.tscn
-res://GUI/Scenes/Pause/InvMenuOption.tscn
-res://GUI/Scenes/Pause/InventoryMenu-original.tscn
-res://World Objects/Accessories/InvItems/Bloody Knife.tscn
-res://Characters/Citizens/OfficeWorker.gd
-res://GUI/Scenes/Pause/InventoryMenu.gd
-res://GlobalScripts/Global.gd
+res://GUI/Scenes/Pause/InventoryMenu.tscn
 res://Map Scenes/new_map.tscn
-res://GUI/Scenes/Pause/PauseMenu.gd
+res://World Objects/Accessories/InvItems/Dossier.tscn
+res://World Objects/Accessories/InvItems/Gold Watch.tscn
+res://World Objects/Accessories/InvItems/Incriminating Photo.tscn
+res://World Objects/Accessories/InvItems/LostLetter.tscn
+res://World Objects/Accessories/InvItems/Pistol.tscn
+res://GUI/Scenes/Pause/InventoryMenu.gd
+res://World Objects/Accessories/InvItems/Bloody Knife.tscn
+res://GlobalScripts/Global.gd

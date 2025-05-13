@@ -8,12 +8,11 @@ radius = 4.72475
 height = 31.6206
 
 [sub_resource type="CircleShape2D" id="2"]
-radius = 2.15203
+radius = 20.67
 
 [node name="BloodyKnife" type="StaticBody2D"]
 light_mask = 8
 rotation = -1.90415
-scale = Vector2(2, 2)
 script = ExtResource("1")
 itemName = "Bloody Knife"
 imagePath = "res://Images/InvItems/bloodyknife.png"
@@ -21,11 +20,9 @@ itemDesc = "A knife covered in the blood of a murder victim. Perhaps you could p
 onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/bloodyKnife.dtl"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.1, 0.1)
 shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]

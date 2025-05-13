@@ -72,8 +72,14 @@ func _on_mouse_exit(newitem_bg):
 func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		$DetailRect.visible = true
-		$DetailRect.size = Vector2(gc.size.x/3, gc.size.y *0.7)
+		
+		# GET NAME OF ITEM
+		var title = $DetailRect/DetailRectInset/MarginContainer/VBoxContainer/HBoxContainer/TitleLabel
+		title.text = inv_item.itemName
 
+		$DetailRect.size = Vector2(gc.size.x/3, gc.size.y /2)
+
+		
 		# CALCULATE X POSITION OF DETAILRECT
 		if (newitem_bg.global_position.x + newitem_bg.size.x +$DetailRect.size.x) > get_viewport_rect().size.x:
 			$DetailRect.global_position.x = (newitem_bg.global_position.x - $DetailRect.size.x +(newitem_bg.size.x/2))
@@ -90,22 +96,20 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 		
 		$DetailRect/DetailRectInset.size=Vector2($DetailRect.size.x -20, $DetailRect.size.y-20)
 		$DetailRect/DetailRectInset.position = Vector2(10,10) 
-		$DetailRect/DetailRectInset/TitleLabel.text = inv_item.itemName
-		$DetailRect/DetailRectInset/DescLabel.text = inv_item.itemDesc
-		$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item.itemValue) + "x"
+		
+
+		#title.position = Vector2(10,10)
+		
+		#await get_tree().process_frame  # Wait for label to update layout
+		#var label_width = $DetailRect/DetailRectInset/TitleLabel.rect_size
+		#print(label_width)
+
+		#$DetailRect/DetailRectInset/DescLabel.text = inv_item.itemDesc
+		#$DetailRect/DetailRectInset/DescLabel.position = Vector2(10,$DetailRect/DetailRectInset.size.y-10-$DetailRect/DetailRectInset/DescLabel.size.y)
+		#$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item.itemValue) + "x "
+
 """
-func showDeets(event: InputEvent, slot):
-	if slot.itemName != "":		
-		var detailRect = $CanvasLayer/DetailRect
-		if event is InputEventMouseButton:
-			print(event.global_position)
-			$DetailRect/TitleLabel.text = slot.itemName
-			$DetailRect/DescLabel.text = slot.itemDesc
-			$DetailRect/ValueLabel.text = str(slot.itemValue) + "x"
-			detailRect.visible = true
-			detailRect.set_global_position(Vector2(event.global_position[0]-70, event.global_position[1]))
-
-
+size
 func _on_scroll_container_visibility_changed() -> void:
 	$DetailRect.visible = false
 	if visible == true:
@@ -130,3 +134,7 @@ func _on_DropButton_pressed():
 
 func _on_visibility_changed() -> void:
 	update_ui()
+
+
+func _on_button_button_up() -> void:
+	$DetailRect.visible = false
