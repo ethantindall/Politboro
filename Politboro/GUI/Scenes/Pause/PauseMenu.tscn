@@ -1448,6 +1448,7 @@ grow_vertical = 2
 script = ExtResource("3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="GrayBackground" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15
@@ -1503,12 +1504,14 @@ offset_bottom = 216.0
 grow_horizontal = 2
 
 [node name="QuestsButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ndgpg")
 theme_override_font_sizes/font_size = 40
 text = "Quests"
 
 [node name="PeopleButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_5b6tt")
 theme_override_font_sizes/font_size = 40
@@ -1521,6 +1524,7 @@ theme_override_font_sizes/font_size = 40
 text = "Items"
 
 [node name="SaveButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontFile_5b6tt")
 theme_override_font_sizes/font_size = 40

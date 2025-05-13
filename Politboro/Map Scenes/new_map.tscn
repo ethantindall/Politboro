@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://g2m5kfp7p6nq"]
+[gd_scene load_steps=27 format=4 uid="uid://g2m5kfp7p6nq"]
 
 [ext_resource type="Texture2D" uid="uid://bfcaybpn56v6" path="res://Images/Tiles/sprite_grass.png" id="1_ffjxk"]
 [ext_resource type="Texture2D" uid="uid://cpnmgttkujsn5" path="res://Images/Tiles/tileset_roads.png" id="1_mr5lp"]
@@ -13,6 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://chr5c58iaur1" path="res://World Objects/Buildings/Narrow Building.tscn" id="10_rvvax"]
 [ext_resource type="PackedScene" uid="uid://c84fsgtgh0qb" path="res://World Objects/Buildings/Factory.tscn" id="11_duhlk"]
 [ext_resource type="PackedScene" uid="uid://cdo5oinaqach4" path="res://Characters/Citizens/OfficeWorker.tscn" id="13_i8qxm"]
+[ext_resource type="PackedScene" uid="uid://07gvnr6s8bpw" path="res://World Objects/Accessories/InvItems/Bloody Knife.tscn" id="14_npbyo"]
+[ext_resource type="PackedScene" uid="uid://cvkhwnwr1pyx5" path="res://World Objects/Accessories/InvItems/Cash.tscn" id="15_bkla4"]
+[ext_resource type="PackedScene" uid="uid://j408gg6ev4df" path="res://World Objects/Accessories/InvItems/Clean Knife.tscn" id="16_jexke"]
+[ext_resource type="PackedScene" uid="uid://b0aq2im71ov8g" path="res://World Objects/Accessories/InvItems/Filmreel.tscn" id="17_4hagr"]
+[ext_resource type="PackedScene" uid="uid://cuddlcwjmkec4" path="res://World Objects/Accessories/InvItems/Gold Watch.tscn" id="18_njgoe"]
+[ext_resource type="PackedScene" uid="uid://cpaiqktfpc4st" path="res://World Objects/Accessories/InvItems/Incriminating Photo.tscn" id="19_jalhk"]
+[ext_resource type="PackedScene" uid="uid://b0fovkira1b72" path="res://World Objects/Accessories/InvItems/LostLetter.tscn" id="20_mnq01"]
+[ext_resource type="PackedScene" uid="uid://dbi2cdqs3rxpu" path="res://World Objects/Accessories/InvItems/Pistol.tscn" id="21_xneyn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yad8d"]
 texture = ExtResource("1_mr5lp")
@@ -309,3 +317,36 @@ position = Vector2(6037, 2384)
 
 [node name="Flowers8" parent="." instance=ExtResource("6_2jtgv")]
 position = Vector2(6214, 2368)
+
+[node name="BloodyKnife" parent="." instance=ExtResource("14_npbyo")]
+position = Vector2(5785, 1978)
+
+[node name="Cash" parent="." instance=ExtResource("15_bkla4")]
+position = Vector2(5795, 2000)
+
+[node name="CleanKnife" parent="." instance=ExtResource("16_jexke")]
+position = Vector2(5753, 2006)
+
+[node name="Filmreel" parent="." instance=ExtResource("17_4hagr")]
+position = Vector2(5763, 2060)
+
+[node name="Gold Watch" parent="." instance=ExtResource("18_njgoe")]
+position = Vector2(5672, 2047)
+
+[node name="IncriminatingPhoto" parent="." instance=ExtResource("19_jalhk")]
+position = Vector2(5694, 2060)
+
+[node name="LostLetter" parent="." instance=ExtResource("20_mnq01")]
+position = Vector2(5678, 2004)
+
+[node name="Pistol" parent="." instance=ExtResource("21_xneyn")]
+position = Vector2(5844, 2067)
+
+[node name="Pistol2" parent="." instance=ExtResource("21_xneyn")]
+position = Vector2(5831, 2085)
+
+[node name="Cash2" parent="." instance=ExtResource("15_bkla4")]
+position = Vector2(5722, 2026)
+
+[node name="Cash3" parent="." instance=ExtResource("15_bkla4")]
+position = Vector2(5845, 2051)

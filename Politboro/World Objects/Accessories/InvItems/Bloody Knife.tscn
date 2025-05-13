@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://br3j8avxfqkv4" path="res://Images/InvItems/bloodyknife.png" id="2"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
-radius = 8.28917
+radius = 4.72475
+height = 31.6206
 
 [sub_resource type="CircleShape2D" id="2"]
 radius = 2.15203

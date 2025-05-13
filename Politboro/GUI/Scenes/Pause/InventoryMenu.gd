@@ -7,9 +7,14 @@ func _ready():
 	update_ui()
 
 func update_ui():
+
 	var sc = $ScrollContainer
 	var gridcontainer = $ScrollContainer/MarginContainer/GridContainer
 	var innermargin = 10
+	
+	for child in gridcontainer.get_children():
+		gridcontainer.remove_child(child)
+		child.queue_free()  # Ensures the child is properly deleted
 
 	#SCROLL CONTAINER
 	sc.size = Vector2(get_parent().size.x, get_parent().size.y)
@@ -29,39 +34,65 @@ func update_ui():
 	gridcontainer.columns = cols
 	gridcontainer.size = Vector2(sc.size.x-(margincontainermargin/2), sc.size.y-(margincontainermargin/2))
 
-	for inv_item in Global.player_inventory:
-		#print(inv_item)
-		var newitem_bg = TextureRect.new()
-		newitem_bg.texture = load("res://Images/plate.png")
-		newitem_bg.custom_minimum_size= Vector2((gridcontainer.size.x/cols)-gridmargin, (gridcontainer.size.x/cols)-gridmargin)
-		newitem_bg.position = Vector2(gridmargin,gridmargin)
-		newitem_bg.mouse_filter = Control.MOUSE_FILTER_STOP  # Ensures the TextureRect receives input
-		
-		newitem_bg.gui_input.connect(_on_texture_clicked.bind(newitem_bg))
-		newitem_bg.mouse_entered.connect(_on_mouse_enter.bind(newitem_bg))
-		newitem_bg.mouse_exited.connect(_on_mouse_exit.bind(newitem_bg))
-		
-		gridcontainer.add_child(newitem_bg)
-		
-		# ITEM IMAGE
-		var newitem_img = TextureRect.new()
-		newitem_img.texture = load(inv_item[1])
-		newitem_img.custom_minimum_size= Vector2((gridcontainer.size.x/cols)-(gridmargin*2), (gridcontainer.size.x/cols)-(gridmargin*2))
-		newitem_img.position = Vector2(gridmargin/2,gridmargin/2)
-		newitem_bg.add_child(newitem_img)
+	if len(Global.player_inventory) ==0:
+		var label = Label.new()
+		label.text = "You have no items in your inventory."
+		label.custom_minimum_size = Vector2(200, 50)  # Adjust if needed
+		label.position = $ScrollContainer/MarginContainer.size / 2 - label.size / 2
+		gridcontainer.add_child(label)
+	else:	
+		for inv_item in Global.player_inventory:
+			print("inventory:")
+			print(inv_item)
+			var newitem_bg = TextureRect.new()
+			newitem_bg.texture = load("res://Images/plate.png")
+			newitem_bg.custom_minimum_size= Vector2((gridcontainer.size.x/cols)-gridmargin, (gridcontainer.size.x/cols)-gridmargin)
+			newitem_bg.position = Vector2(gridmargin,gridmargin)
+			newitem_bg.mouse_filter = Control.MOUSE_FILTER_STOP  # Ensures the TextureRect receives input
+			
+			newitem_bg.gui_input.connect(_on_texture_clicked.bind(newitem_bg,sc,inv_item))
+			newitem_bg.mouse_entered.connect(_on_mouse_enter.bind(newitem_bg))
+			newitem_bg.mouse_exited.connect(_on_mouse_exit.bind(newitem_bg))
+			
+			gridcontainer.add_child(newitem_bg)
+			
+			# ITEM IMAGE
+			var newitem_img = TextureRect.new()
+			newitem_img.texture = load(inv_item.imagePath)
+			newitem_img.custom_minimum_size= Vector2((gridcontainer.size.x/cols)-(gridmargin*2), (gridcontainer.size.x/cols)-(gridmargin*2))
+			newitem_img.position = Vector2(gridmargin/2,gridmargin/2)
+			newitem_bg.add_child(newitem_img)
 
 func _on_mouse_enter(newitem_bg):
-	newitem_bg.modulate = Color(.8,.8,.8, 1)  # Slight transparency effect
+	newitem_bg.modulate = Color(.8,.8,.8, 1)  
 
 func _on_mouse_exit(newitem_bg):
-	newitem_bg.modulate = Color(1, 1, 1, 1)  # Restore original opacity
+	newitem_bg.modulate = Color(1, 1, 1, 1) 
 	
-func _on_texture_clicked(event, newitem_bg):
+func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		$DetailRect.visible = not $DetailRect.visible
-		$DetailRect.position = newitem_bg.position
-		$DetailRect.size = Vector2(200,200)
+		$DetailRect.visible = true
+		$DetailRect.size = Vector2(gc.size.x/3, gc.size.y *0.7)
+
+		# CALCULATE X POSITION OF DETAILRECT
+		if (newitem_bg.global_position.x + newitem_bg.size.x +$DetailRect.size.x) > get_viewport_rect().size.x:
+			$DetailRect.global_position.x = (newitem_bg.global_position.x - $DetailRect.size.x +(newitem_bg.size.x/2))
+		else:
+			$DetailRect.global_position.x = newitem_bg.global_position.x +(newitem_bg.size.x/2)
+			
+				
+		#CALCULATE Y POSITION OF DETAIL RECT
+		if (newitem_bg.global_position.y + newitem_bg.size.y +$DetailRect.size.y) > get_viewport_rect().size.y:
+			$DetailRect.global_position.y = (newitem_bg.global_position.y - $DetailRect.size.y +(newitem_bg.size.y/2))
+		else:
+			$DetailRect.global_position.y = newitem_bg.global_position.y +(newitem_bg.size.y/2)
+		$DetailRect.z_index = 100  # Higher values render on top
 		
+		$DetailRect/DetailRectInset.size=Vector2($DetailRect.size.x -20, $DetailRect.size.y-20)
+		$DetailRect/DetailRectInset.position = Vector2(10,10) 
+		$DetailRect/DetailRectInset/TitleLabel.text = inv_item.itemName
+		$DetailRect/DetailRectInset/DescLabel.text = inv_item.itemDesc
+		$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item.itemValue) + "x"
 """
 func showDeets(event: InputEvent, slot):
 	if slot.itemName != "":		
@@ -95,3 +126,7 @@ func _on_ClosePopupButton_pressed():
 func _on_DropButton_pressed():
 	print("drop item")
 """
+
+
+func _on_visibility_changed() -> void:
+	update_ui()

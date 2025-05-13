@@ -8,7 +8,9 @@ res://Characters/Player/Player.tscn
 res://GUI/Scenes/Pause/PauseMenu.tscn
 res://GUI/Scenes/Pause/InvMenuOption.tscn
 res://GUI/Scenes/Pause/InventoryMenu-original.tscn
-res://GlobalScripts/Global.gd
+res://World Objects/Accessories/InvItems/Bloody Knife.tscn
 res://Characters/Citizens/OfficeWorker.gd
 res://GUI/Scenes/Pause/InventoryMenu.gd
+res://GlobalScripts/Global.gd
+res://Map Scenes/new_map.tscn
 res://GUI/Scenes/Pause/PauseMenu.gd
