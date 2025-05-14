@@ -1,8 +1,6 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
 var current_item
-
 
 func _ready():
 	update_ui()
@@ -80,12 +78,8 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 		title.text = inv_item.itemName
 		title.add_theme_font_size_override("font_size", 30)
 
-
-			
-
 		$DetailRect.size = Vector2(gc.size.x/3, gc.size.y /2)
 
-		
 		# CALCULATE X POSITION OF DETAILRECT
 		if (newitem_bg.global_position.x + newitem_bg.size.x +$DetailRect.size.x) > get_viewport_rect().size.x:
 			$DetailRect.global_position.x = (newitem_bg.global_position.x - $DetailRect.size.x +(newitem_bg.size.x/2))
@@ -106,37 +100,13 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 
 		title.position = Vector2(10,10)
 		
-
 		$DetailRect/DetailRectInset/DescLabel.text = inv_item.itemDesc
 		$DetailRect/DetailRectInset/DescLabel.position = Vector2(10,$DetailRect/DetailRectInset.size.y-10-$DetailRect/DetailRectInset/DescLabel.size.y)
 		$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item.itemValue) + "x "
 
-"""
-size
-func _on_scroll_container_visibility_changed() -> void:
-	$DetailRect.visible = false
-	if visible == true:
-		var itemNumber = 0
-		var arraySize = Global.player_inventory.size()
-		for inv_slot in inventory_slots.get_children():
-			if itemNumber < arraySize:
-				inv_slot.get_node("Sprite2D").set_texture(load(Global.player_inventory[itemNumber].imagePath))
-				inv_slot.itemName = Global.player_inventory[itemNumber].itemName
-				inv_slot.itemDesc = Global.player_inventory[itemNumber].itemDesc
-				inv_slot.itemValue = Global.player_inventory[itemNumber].itemValue
-			itemNumber +=1
-
-func _on_ClosePopupButton_pressed():
-		$CanvasLayer/DetailRect.visible = false
-
-
-func _on_DropButton_pressed():
-	print("drop item")
-"""
-
-
 func _on_visibility_changed() -> void:
 	update_ui()
+	$DetailRect.visible = false
 
 
 func _on_button_button_up() -> void:
@@ -145,8 +115,13 @@ func _on_button_button_up() -> void:
 
 func _on_drop_button_pressed() -> void:
 	if current_item in Global.player_inventory:
-		Global.player_inventory.erase(current_item)
-		$DetailRect.visible = false
+		#Global.player_inventory.erase(current_item)
+		current_item.itemValue -=1
+		$DetailRect/DetailRectInset/ValueLabel.text = str(current_item.itemValue) + "x "
+		if current_item.itemValue == 0:
+			$DetailRect.visible = false
+			Global.player_inventory.erase(current_item)
+
 		update_ui()
 		#queue_free()  # Optionally remove the UI slot/item
 		print("Dropped:", current_item)

@@ -52,7 +52,6 @@ func _physics_process(delta):
 	move_and_slide()
 	velocity = velocity
 	Global.player_position = self.global_position
-	print(Global.player_position)
 
 func _on_fade_in_player_animation_finished(anim_name: StringName) -> void:
 	print("wow")

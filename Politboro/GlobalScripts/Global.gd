@@ -8,6 +8,7 @@ var nextDialogueTimeline
 
 var player_initial_map_position = Vector2(763,198)
 var player_position
+var player_on_item
 
 var player_inventory = []
 #var player_facing_direction = 1
