@@ -10,3 +10,14 @@ res://GUI/Scenes/Pause/PauseMenu.tscn
 res://World Objects/Accessories/InvItems/Bloody Knife.tscn
 res://Characters/Citizens/OfficeWorker.gd
 res://World Objects/Accessories/InvItems/Cash.tscn
+res://GUI/Scenes/Pause/InventoryMenu-original.tscn
+res://GUI/Scenes/Pause/PauseMenu.gd
+res://World Objects/Accessories/InvItems/Clean Knife.tscn
+res://World Objects/Accessories/InvItems/Dossier.tscn
+res://World Objects/Accessories/InvItems/Gold Watch.tscn
+res://World Objects/Accessories/InvItems/Pistol.tscn
+res://World Objects/Accessories/InvItems/LostLetter.tscn
+res://World Objects/Accessories/InvItems/Incriminating Photo.tscn
+res://World Objects/Accessories/InvItems/Filmreel.tscn
+res://GlobalScripts/Global.gd
+res://Characters/Player/Player.gd

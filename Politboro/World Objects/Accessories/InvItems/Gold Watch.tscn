@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuddlcwjmkec4"]
+[gd_scene load_steps=4 format=3 uid="uid://cuddlcwjmkec4"]
 
 [ext_resource type="Texture2D" uid="uid://dta0pm8f6sjwn" path="res://Images/InvItems/watch.png" id="1"]
 [ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
-
-[sub_resource type="CapsuleShape2D" id="1"]
-radius = 8.0
-height = 19.8578
 
 [sub_resource type="CircleShape2D" id="2"]
 radius = 13.0384
@@ -16,14 +12,11 @@ itemName = "Gold Watch"
 imagePath = "res://Images/InvItems/watch.png"
 itemDesc = "Looks like a family heirloom, passed down for generations."
 onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/goldwatch.dtl"
+resPath = "res://World Objects/Accessories/InvItems/Gold Watch.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.324457, -0.238974)
 texture = ExtResource("1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -2)
-shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]
 

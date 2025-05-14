@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://07gvnr6s8bpw"]
+[gd_scene load_steps=4 format=3 uid="uid://07gvnr6s8bpw"]
 
 [ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://br3j8avxfqkv4" path="res://Images/InvItems/bloodyknife.png" id="2"]
-
-[sub_resource type="CapsuleShape2D" id="1"]
-radius = 4.72475
-height = 31.6206
 
 [sub_resource type="CircleShape2D" id="2"]
 radius = 20.67
@@ -18,12 +14,10 @@ itemName = "Bloody Knife"
 imagePath = "res://Images/InvItems/bloodyknife.png"
 itemDesc = "A knife covered in the blood of a murder victim. Perhaps you could plant it as evidence..."
 onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/bloodyKnife.dtl"
+resPath = "res://World Objects/Accessories/InvItems/Bloody Knife.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]
 

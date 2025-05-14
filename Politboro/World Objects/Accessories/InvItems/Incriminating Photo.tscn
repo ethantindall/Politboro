@@ -1,10 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpaiqktfpc4st"]
+[gd_scene load_steps=4 format=3 uid="uid://cpaiqktfpc4st"]
 
 [ext_resource type="Texture2D" uid="uid://wmd4afaqprs6" path="res://Images/InvItems/photo.png" id="1"]
 [ext_resource type="Script" uid="uid://xkrtk360n4ne" path="res://GlobalScripts/invitem.gd" id="2"]
-
-[sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(18.9902, 20.5708)
 
 [sub_resource type="CircleShape2D" id="2"]
 radius = 22.4722
@@ -16,13 +13,10 @@ itemName = "Incriminating Photo"
 imagePath = "res://Images/InvItems/photo.png"
 itemDesc = "An incriminating photograph. Leak this to the press and someone's career is over."
 onPickupTimeline = "res://DialogicResources/Timelines/onItemPickup/photo.dtl"
+resPath = "res://World Objects/Accessories/InvItems/Incriminating Photo.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.43561, -0.892395)
-shape = SubResource("1")
 
 [node name="EventArea" type="Area2D" parent="."]
 

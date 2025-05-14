@@ -6,7 +6,7 @@ extends StaticBody2D
 @export var itemValue = 1
 @export var itemContent: String = ""
 @export var onPickupTimeline = ""
-
+@export var resPath = ""
 var active = false
 
 func _ready():

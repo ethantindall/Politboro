@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlltdim06bgq6"]
+[gd_scene load_steps=11 format=3 uid="uid://dlltdim06bgq6"]
 
 [ext_resource type="Script" uid="uid://uj7dtwiumrdg" path="res://GUI/Scenes/Pause/InventoryMenu.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="4_71opg"]
 [ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="5"]
 [ext_resource type="FontFile" uid="uid://dynpsh0sdpi7l" path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" id="7"]
 
@@ -28,6 +29,16 @@ cache/0/40/0/descent = 0.0
 cache/0/40/0/underline_position = 0.0
 cache/0/40/0/underline_thickness = 0.0
 cache/0/40/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rh74b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1uuf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5otu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syavn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3j27"]
 
 [node name="Control" type="Control"]
 visible = false
@@ -143,5 +154,22 @@ text = "10"
 horizontal_alignment = 2
 vertical_alignment = 2
 
+[node name="DropButton" type="Button" parent="DetailRect/DetailRectInset"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 186.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_71opg")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxFlat_rh74b")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_y1uuf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y5otu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_syavn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c3j27")
+text = "DROP"
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="button_up" from="DetailRect/DetailRectInset/Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="DetailRect/DetailRectInset/DropButton" to="." method="_on_drop_button_pressed"]

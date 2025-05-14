@@ -1,6 +1,8 @@
 extends Control
 
 # Called when the node enters the scene tree for the first time.
+var current_item
+
 
 func _ready():
 	update_ui()
@@ -70,6 +72,7 @@ func _on_mouse_exit(newitem_bg):
 	
 func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		current_item = inv_item		
 		$DetailRect.visible = true
 		
 		# GET NAME OF ITEM
@@ -138,3 +141,20 @@ func _on_visibility_changed() -> void:
 
 func _on_button_button_up() -> void:
 	$DetailRect.visible = false
+
+
+func _on_drop_button_pressed() -> void:
+	if current_item in Global.player_inventory:
+		Global.player_inventory.erase(current_item)
+		$DetailRect.visible = false
+		update_ui()
+		#queue_free()  # Optionally remove the UI slot/item
+		print("Dropped:", current_item)
+		# PLACE IN WORLD
+		var scene = load(current_item.resPath)
+		if scene:
+			var dropped = scene.instantiate()
+			get_tree().current_scene.add_child(dropped)
+			dropped.global_position = Vector2(Global.player_position.x, Global.player_position.y+35)
+	else:
+		print("Item not found in inventory")
