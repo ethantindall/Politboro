@@ -1,6 +1,5 @@
 extends Control
 
-var InvMenuOption = preload("res://GUI/Scenes/Pause/InvMenuOption.tscn")
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
@@ -74,8 +73,12 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 		$DetailRect.visible = true
 		
 		# GET NAME OF ITEM
-		var title = $DetailRect/DetailRectInset/MarginContainer/VBoxContainer/HBoxContainer/TitleLabel
+		var title = $DetailRect/DetailRectInset/TitleLabel
 		title.text = inv_item.itemName
+		title.add_theme_font_size_override("font_size", 30)
+
+
+			
 
 		$DetailRect.size = Vector2(gc.size.x/3, gc.size.y /2)
 
@@ -98,15 +101,12 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 		$DetailRect/DetailRectInset.position = Vector2(10,10) 
 		
 
-		#title.position = Vector2(10,10)
+		title.position = Vector2(10,10)
 		
-		#await get_tree().process_frame  # Wait for label to update layout
-		#var label_width = $DetailRect/DetailRectInset/TitleLabel.rect_size
-		#print(label_width)
 
-		#$DetailRect/DetailRectInset/DescLabel.text = inv_item.itemDesc
-		#$DetailRect/DetailRectInset/DescLabel.position = Vector2(10,$DetailRect/DetailRectInset.size.y-10-$DetailRect/DetailRectInset/DescLabel.size.y)
-		#$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item.itemValue) + "x "
+		$DetailRect/DetailRectInset/DescLabel.text = inv_item.itemDesc
+		$DetailRect/DetailRectInset/DescLabel.position = Vector2(10,$DetailRect/DetailRectInset.size.y-10-$DetailRect/DetailRectInset/DescLabel.size.y)
+		$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item.itemValue) + "x "
 
 """
 size
