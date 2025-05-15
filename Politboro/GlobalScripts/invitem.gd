@@ -16,6 +16,7 @@ func _ready():
 func _input(event):
 	#if get_node_or_null('DialogNode') == null:
 	if event.is_action_pressed("ui_accept") and active:
+		print(self.itemName)
 		#get the timeline ready
 		var dialog = Dialogic.start(load(onPickupTimeline))
 		#for some reason you have to set Dialogic game handler and dialogic timeline to always process even when game paused

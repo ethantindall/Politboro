@@ -1,106 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://sg7k53bmcss1"]
+[gd_scene load_steps=17 format=3 uid="uid://sg7k53bmcss1"]
 
 [ext_resource type="FontFile" uid="uid://dynpsh0sdpi7l" path="res://GUI/fonts/fyodor/Fyodor-Bold.ttf" id="1"]
 [ext_resource type="FontFile" uid="uid://t5u6jk1oyt44" path="res://GUI/fonts/fyodor/Fyodor-BoldCondensedOblique.ttf" id="2"]
 [ext_resource type="FontFile" uid="uid://dpaw5ergr0d7e" path="res://GUI/fonts/fyodor/button.tres" id="2_t6pnj"]
 [ext_resource type="FontFile" uid="uid://dknqtnwoijfw6" path="res://GUI/fonts/1942_report/1942.ttf" id="3"]
+[ext_resource type="StyleBox" uid="uid://r1uanwy15i06" path="res://GUI/themes/people_menu_button_theme.tres" id="3_11e48"]
 [ext_resource type="Script" uid="uid://dboinoy047e2k" path="res://GUI/Scenes/Pause/PeopleMenu.gd" id="4"]
 [ext_resource type="FontFile" uid="uid://dfd8rxsa5vs21" path="res://GUI/fonts/1942_report/1942.tres" id="4_xmns6"]
 [ext_resource type="Texture2D" uid="uid://b72bfah0nxn6" path="res://Images/GUI/paperclip.png" id="5_5s28b"]
 
-[sub_resource type="StyleBoxFlat" id="1"]
-bg_color = Color(0.733333, 0.588235, 0.356863, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="2"]
-bg_color = Color(0.733333, 0.588235, 0.356863, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-anti_aliasing = false
-
-[sub_resource type="FontFile" id="4"]
-fallbacks = Array[Font]([ExtResource("2"), ExtResource("2")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="7"]
-fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="8"]
-fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
-
-[sub_resource type="FontFile" id="9"]
-fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
+[sub_resource type="Theme" id="Theme_feytd"]
 
 [sub_resource type="FontFile" id="6"]
 fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
@@ -654,6 +563,100 @@ cache/0/22/0/kerning_overrides/20/0 = Vector2(0, 0)
 cache/0/22/0/kerning_overrides/21/0 = Vector2(0, 0)
 cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
 
+[sub_resource type="StyleBoxFlat" id="1"]
+bg_color = Color(0.733333, 0.588235, 0.356863, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="2"]
+bg_color = Color(0.733333, 0.588235, 0.356863, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+anti_aliasing = false
+
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("2"), ExtResource("2")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="7"]
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="8"]
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="9"]
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
+
 [node name="People" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -664,12 +667,59 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4")
 
-[node name="Folder" type="Panel" parent="."]
+[node name="PeopleScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
 layout_mode = 0
-offset_left = 75.0
-offset_top = 50.0
-offset_right = 200.0
-offset_bottom = 158.0
+offset_left = 2.0
+offset_top = 51.0
+offset_right = 246.0
+offset_bottom = 301.0
+scale = Vector2(0.3, 0.3)
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PeopleScrollContainer"]
+layout_mode = 2
+
+[node name="VladButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_feytd")
+theme_override_fonts/font = SubResource("6")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/hover = ExtResource("3_11e48")
+text = "Vlad Vladostovovitch"
+
+[node name="GeneralButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+theme_override_font_sizes/font_size = 22
+text = "General Aleksi Butunov"
+
+[node name="ValeryButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+theme_override_font_sizes/font_size = 22
+text = "Valery Unchok"
+
+[node name="PetyaButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+theme_override_font_sizes/font_size = 22
+text = "Petya Belov"
+
+[node name="GlebButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
+theme_override_font_sizes/font_size = 22
+text = "Gleb Tarasov"
+
+[node name="Folder" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -125.0
+offset_bottom = 108.0
+grow_horizontal = 0
 pivot_offset = Vector2(-270.698, 28)
 theme_override_styles/panel = SubResource("1")
 
@@ -777,56 +827,12 @@ theme_override_fonts/font = SubResource("9")
 theme_override_font_sizes/font_size = 22
 text = "Hatred:"
 
-[node name="PeopleScrollContainer" type="ScrollContainer" parent="."]
-clip_contents = false
-layout_mode = 0
-offset_left = 2.0
-offset_top = 51.0
-offset_right = 246.0
-offset_bottom = 301.0
-scale = Vector2(0.3, 0.3)
-horizontal_scroll_mode = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PeopleScrollContainer"]
-layout_mode = 2
-
-[node name="VladButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("6")
-theme_override_font_sizes/font_size = 22
-text = "Vlad Vladostovovitch"
-
-[node name="GeneralButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("6")
-theme_override_font_sizes/font_size = 22
-text = "General Aleksi Butunov"
-
-[node name="ValeryButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("6")
-theme_override_font_sizes/font_size = 22
-text = "Valery Unchok"
-
-[node name="PetyaButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("6")
-theme_override_font_sizes/font_size = 22
-text = "Petya Belov"
-
-[node name="GlebButton" type="Button" parent="PeopleScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = SubResource("6")
-theme_override_font_sizes/font_size = 22
-text = "Gleb Tarasov"
-
-[node name="Paperclip" type="Sprite2D" parent="."]
-position = Vector2(194.5, 121.5)
+[node name="Paperclip" type="Sprite2D" parent="Folder"]
+position = Vector2(119.5, 71.5)
 rotation = -2.20784
 scale = Vector2(1.5625, 1.5625)
 texture = ExtResource("5_5s28b")
 
-[connection signal="visibility_changed" from="." to="." method="_on_People_visibility_changed"]
 [connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/VladButton" to="." method="_on_VladButton_pressed"]
 [connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/GeneralButton" to="." method="_on_GeneralButton_pressed"]
 [connection signal="pressed" from="PeopleScrollContainer/VBoxContainer/ValeryButton" to="." method="_on_ValeryButton_pressed"]

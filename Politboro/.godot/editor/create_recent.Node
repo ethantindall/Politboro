@@ -1,3 +1,4 @@
+CanvasLayer
 CollisionShape2D
 HBoxContainer
 VBoxContainer
@@ -9,6 +10,5 @@ PopupMenu
 GridContainer
 TextureRect
 ColorRect
-CanvasLayer
 Control
 CollisionPolygon2D

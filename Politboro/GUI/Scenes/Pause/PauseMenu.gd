@@ -13,7 +13,7 @@ func _input(event):
 #Level1
 func _on_people_button_pressed() -> void:
 	$CanvasLayer/RightBoard/RightInset/People.visible = true
-	$CanvasLayer/RightBoard/RightInset/Quests.visible = false
+	#$CanvasLayer/RightBoard/RightInset/Quests.visible = false
 	$CanvasLayer/RightBoard/RightInset/Inventory.visible = false
 
 func _on_quests_button_pressed() -> void:
@@ -22,7 +22,7 @@ func _on_quests_button_pressed() -> void:
 	$CanvasLayer/RightBoard/RightInset/Inventory.visible = false
 
 func _on_items_button_pressed() -> void:
-	#$CanvasLayer/RightBoard/RightInset/People.visible = false
+	$CanvasLayer/RightBoard/RightInset/People.visible = false
 	#$CanvasLayer/RightBoard/RightInset/Quests.visible = false
 	$CanvasLayer/RightBoard/RightInset/Inventory.visible = true
 
