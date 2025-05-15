@@ -1,12 +1,11 @@
 res://default_env.tres
-res://GUI/Scenes/Pause/PeopleMenu.tscn
+res://GUI/Scenes/Pause/People2.tscn
 res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
 res://GUI/fonts/propaganda/PropagandaFont.tres
 res://GUI/Scenes/Pause/InventoryMenu.gd
-res://Characters/Citizens/OfficeWorker.gd
 res://GUI/Scenes/Pause/PeopleMenu.gd
-res://GUI/Scenes/Pause/PauseMenu.tscn
-res://GUI/Scenes/Pause/InventoryMenu.tscn
 res://GUI/themes/people_menu_button_theme.tres
+res://GUI/Scenes/Pause/PauseMenu.tscn
+res://GUI/Scenes/Pause/PeopleMenu.tscn

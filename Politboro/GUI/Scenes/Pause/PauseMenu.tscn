@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cx2waeb1cs06f" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
 [ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="3_ndgpg"]
 [ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="4_m2gf7"]
-[ext_resource type="PackedScene" uid="uid://sg7k53bmcss1" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="5_t5c56"]
+[ext_resource type="PackedScene" uid="uid://d4mulw273is5g" path="res://GUI/Scenes/Pause/People2.tscn" id="5_t5c56"]
 
 [sub_resource type="FontFile" id="FontFile_5b6tt"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -1555,9 +1555,8 @@ color = Color(0.501961, 0.294118, 0.0705882, 1)
 [node name="Inventory" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("4_m2gf7")]
 layout_mode = 1
 
-[node name="People" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("5_t5c56")]
+[node name="People2" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("5_t5c56")]
 layout_mode = 1
-offset_left = 0.0
 
 [node name="GamePausedLabel" type="Label" parent="CanvasLayer"]
 offset_left = 561.0
