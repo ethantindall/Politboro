@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cx2waeb1cs06f" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
 [ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="3_ndgpg"]
 [ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="4_m2gf7"]
-[ext_resource type="PackedScene" uid="uid://d4mulw273is5g" path="res://GUI/Scenes/Pause/People2.tscn" id="5_t5c56"]
+[ext_resource type="PackedScene" uid="uid://d4mulw273is5g" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="5_t5c56"]
 
 [sub_resource type="FontFile" id="FontFile_5b6tt"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -1449,6 +1449,7 @@ grow_vertical = 2
 script = ExtResource("3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="GrayBackground" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15

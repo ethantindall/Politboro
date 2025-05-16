@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://bdlj6guxck22k"]
+[gd_scene load_steps=45 format=3 uid="uid://bdlj6guxck22k"]
 
 [ext_resource type="PackedScene" uid="uid://clnwgl3u36r80" path="res://World Objects/Buildings/Monument.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://bm3solrdh7hf2" path="res://World Objects/Buildings/Apartments.tscn" id="2"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dqctgiuow1lol" path="res://Images/Tiles/Airstrip/airstripV.png" id="13"]
 [ext_resource type="PackedScene" uid="uid://cvibv101mmn78" path="res://World Objects/Accessories/Flowers.tscn" id="14"]
 [ext_resource type="PackedScene" uid="uid://ctyagxpeb7x3u" path="res://World Objects/Accessories/TreeGroup.tscn" id="15"]
-[ext_resource type="PackedScene" uid="uid://b26onlpynqw8x" path="res://World Objects/Accessories/Forest.tscn" id="16"]
 [ext_resource type="PackedScene" uid="uid://25liip81j713" path="res://World Objects/Accessories/Streetlight.tscn" id="17"]
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="18"]
 [ext_resource type="Texture2D" uid="uid://br5j55i15nk5w" path="res://Images/Tiles/cliffs.png" id="19"]
@@ -443,18 +442,6 @@ position = Vector2(407.641, 258.624)
 [node name="Flowers2" parent="Node2D" instance=ExtResource("14")]
 position = Vector2(490.291, 259.218)
 
-[node name="Forest" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(39.4401, 275.491)
-
-[node name="Forest2" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(134.583, 366.888)
-
-[node name="Forest3" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(46.9317, 106.931)
-
-[node name="Forest4" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(283.128, 6.4652)
-
 [node name="TreeGroup" parent="Node2D" instance=ExtResource("15")]
 position = Vector2(348.841, 354.901)
 
@@ -594,7 +581,7 @@ offset = Vector2(-440, -306)
 polygon = PackedVector2Array(475, 296, 479, 296, 490, 318, 488, 320, 486, 321, 482, 322, 472, 322, 469, 321, 467, 320, 465, 318)
 
 [node name="PortalHomeAptBldg" parent="." instance=ExtResource("9")]
-position = Vector2(451.125, 126.5)
+position = Vector2(-362, -168)
 rotation = 1.5708
 next_scene_path = "res://Map Scenes/Indoors/AptHallway.tscn"
 player_spawn_location = Vector2(95, 81)

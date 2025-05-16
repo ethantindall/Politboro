@@ -6,6 +6,7 @@
 size = Vector2(73.389, 78.745)
 
 [node name="Apt3" type="StaticBody2D"]
+scale = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4, -1)

@@ -1,12 +1,12 @@
+res://GlobalScripts
+res://Images/Tiles
 res://GUI/Scenes/Pause
 res://GUI/themes/
 res://Images/InvItems
 res://Map Scenes
-res://Images/Tiles
 res://DialogicResources/Characters
 res://Characters
 res://DialogicResources/Styles
-res://GlobalScripts
 res://addons/dialogic/Core
 res://DialogicResources/Timelines/onItemPickup
 res://GUI/fonts/propaganda

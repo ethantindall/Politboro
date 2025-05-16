@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=36 format=3 uid="uid://v04i7wtgqvm6"]
 
 [ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://irseph1pakh1" path="res://Images/Sprites/playersprite.png" id="2"]
@@ -451,6 +451,10 @@ _data = {
 &"fade": SubResource("Animation_vpjpg")
 }
 
+[sub_resource type="Theme" id="Theme_oc658"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11ham"]
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1")
@@ -515,5 +519,31 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ClockBG" type="Panel" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme = SubResource("Theme_oc658")
+theme_override_styles/panel = SubResource("StyleBoxFlat_11ham")
+
+[node name="ClockLabel" type="Label" parent="HUD/ClockBG"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="animation_finished" from="Fade_In_Player" to="." method="_on_fade_in_player_animation_finished"]

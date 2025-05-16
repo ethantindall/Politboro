@@ -27,6 +27,8 @@ func _ready():
 
 func _process(delta):
 	# Regenerates health
+	Clock.time_changed.connect(_update_clock_display)
+
 	var new_health = min(health + health_regeneration * delta, health_max)
 	if new_health != health:
 		health = new_health
@@ -56,3 +58,12 @@ func _physics_process(delta):
 func _on_fade_in_player_animation_finished(anim_name: StringName) -> void:
 	print("wow")
 	$Fade_In_Canvas/Fade_In_ColorRect.modulate.a = 0.0  # Keep it transparent after animation ends
+
+func _update_clock_display(hour, minute):
+	var h = str(hour)
+	var m
+	if len(str(minute)) == 1:
+		m = "0" + str(minute)
+	else:
+		m = str(minute)
+	$HUD/ClockBG/ClockLabel.text = "%s:%s" % [h, m]
