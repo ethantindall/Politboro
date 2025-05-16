@@ -20,8 +20,8 @@ config/icon="res://Images/GUI/icon.png"
 Global="*res://GlobalScripts/Global.gd"
 QuestSystem="*res://GlobalScripts/QuestSystem.gd"
 Invitem="*res://GlobalScripts/invitem.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Clock="*res://GlobalScripts/clock.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 

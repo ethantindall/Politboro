@@ -14,6 +14,8 @@ var player_inventory = []
 #var player_facing_direction = 1
 
 func _ready():
+	Engine.max_fps = 60
+
 	get_window().mode = Window.MODE_MAXIMIZED if (true) else Window.MODE_WINDOWED
 
 

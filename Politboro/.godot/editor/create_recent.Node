@@ -1,8 +1,8 @@
+CanvasModulate
 ColorRect
 CanvasLayer
 Panel
 Label
-CanvasModulate
 PointLight2D
 LightOccluder2D
 MarginContainer

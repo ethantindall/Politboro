@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://g2m5kfp7p6nq"]
+[gd_scene load_steps=30 format=4 uid="uid://g2m5kfp7p6nq"]
 
 [ext_resource type="Texture2D" uid="uid://bfcaybpn56v6" path="res://Images/Tiles/sprite_grass.png" id="1_ffjxk"]
 [ext_resource type="Texture2D" uid="uid://cpnmgttkujsn5" path="res://Images/Tiles/tileset_roads.png" id="1_mr5lp"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://c54corkpeggem" path="res://World Objects/Buildings/AIApartments.tscn" id="21_jalhk"]
 [ext_resource type="PackedScene" uid="uid://dbi2cdqs3rxpu" path="res://World Objects/Accessories/InvItems/Pistol.tscn" id="21_xneyn"]
 [ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="22_mnq01"]
+[ext_resource type="PackedScene" uid="uid://c2jj4r5jp877n" path="res://GlobalScripts/DayNightCycle/DayNightCycle.tscn" id="24_mnq01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yad8d"]
 texture = ExtResource("1_mr5lp")
@@ -670,5 +671,4 @@ position = Vector2(5707, 2232)
 [node name="Streetlight2" parent="." instance=ExtResource("9_duhlk")]
 position = Vector2(6077, 1990)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.355006, 0.264462, 0.183246, 1)
+[node name="DayNightCycle" parent="." instance=ExtResource("24_mnq01")]
