@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://lermkbqx8gw0" path="res://Images/Sprites/soldier.png" id="1"]
 [ext_resource type="Script" uid="uid://bxgfqjunxvyfu" path="res://Characters/Soldier.gd" id="2"]
-[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_85xxl"]
 
 [sub_resource type="StyleBoxFlat" id="11"]

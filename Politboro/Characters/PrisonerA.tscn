@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://4k6auq6b60ju"]
+[gd_scene load_steps=28 format=3 uid="uid://4k6auq6b60ju"]
 
 [ext_resource type="Texture2D" uid="uid://xx6i06fgt52c" path="res://Images/Sprites/prisonerA.png" id="1"]
 [ext_resource type="Script" uid="uid://cyrr2h5aek8w" path="res://Characters/PrisonerA.gd" id="2"]
-[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="3"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 1.0
@@ -140,8 +140,77 @@ tracks/0/keys = {
 "values": [9, 8, 7]
 }
 
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sxy32"]
+_data = {
+&"IdleD": SubResource("2"),
+&"IdleL": SubResource("3"),
+&"IdleR": SubResource("4"),
+&"IdleU": SubResource("5"),
+&"Move Down": SubResource("6"),
+&"Move Left": SubResource("7"),
+&"Move Right": SubResource("8"),
+&"Move Up": SubResource("9")
+}
+
 [sub_resource type="CircleShape2D" id="10"]
 radius = 6.96282
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_avny4"]
+animation = &"IdleL"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7h1t3"]
+animation = &"IdleR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fdlr6"]
+animation = &"IdleD"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_73lw7"]
+animation = &"IdleU"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="15"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_avny4")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_7h1t3")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_fdlr6")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_73lw7")
+blend_point_3/pos = Vector2(0, -0.9)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_to631"]
+animation = &"Move Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ru0sn"]
+animation = &"Move Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3k6ed"]
+animation = &"Move Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dc48b"]
+animation = &"Move Left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="20"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_to631")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_ru0sn")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_3k6ed")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_dc48b")
+blend_point_3/pos = Vector2(-1, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="21"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="22"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_pojn8"]
+states/Idle/node = SubResource("15")
+states/Idle/position = Vector2(464, 122)
+states/Move/node = SubResource("20")
+states/Move/position = Vector2(718, 122)
+transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("22")]
 
 [node name="PrisonerA" type="CharacterBody2D"]
 collision_mask = 3
@@ -153,9 +222,6 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1")
 hframes = 3
 vframes = 3
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.367617, 5.85843)
@@ -163,15 +229,10 @@ rotation = 1.5708
 shape = SubResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sxy32")
+}
 autoplay = "IdleD"
-anims/IdleD = SubResource("2")
-anims/IdleL = SubResource("3")
-anims/IdleR = SubResource("4")
-anims/IdleU = SubResource("5")
-"anims/Move Down" = SubResource("6")
-"anims/Move Left" = SubResource("7")
-"anims/Move Right" = SubResource("8")
-"anims/Move Up" = SubResource("9")
 
 [node name="EventArea" type="Area2D" parent="."]
 
@@ -180,6 +241,12 @@ position = Vector2(-0.333443, 3.83458)
 shape = SubResource("10")
 
 [node name="questionmark" parent="." instance=ExtResource("3")]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_pojn8")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Idle/blend_position = Vector2(-0.206349, 0.195876)
+parameters/Move/blend_position = Vector2(0, 0)
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
 [connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

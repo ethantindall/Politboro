@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cbnkylb7u3y8r" path="res://Characters/NPCtemplate/NPC.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="2_ya2wa"]
-[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="3"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "IdleD"
@@ -168,7 +168,7 @@ vframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_338aw")
+&"": SubResource("AnimationLibrary_338aw")
 }
 autoplay = "IdleD"
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3so4qi626pic" path="res://Images/Sprites/police.png" id="1"]
 [ext_resource type="Script" uid="uid://dcsf0x8i5dk76" path="res://Characters/Police.gd" id="2"]
-[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_ijvja"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
@@ -170,7 +170,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("1")
 hframes = 4
 vframes = 4
-frame = 12
+frame = 2
 
 [node name="Panel" type="Panel" parent="Sprite2D"]
 show_behind_parent = true
@@ -187,9 +187,9 @@ shape = SubResource("2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_oggtv")
+&"": SubResource("AnimationLibrary_oggtv")
 }
-autoplay = "IdleD"
+autoplay = "Move Down"
 
 [node name="EventArea" type="Area2D" parent="."]
 

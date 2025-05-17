@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://g2m5kfp7p6nq"]
+[gd_scene load_steps=33 format=4 uid="uid://g2m5kfp7p6nq"]
 
 [ext_resource type="Texture2D" uid="uid://bfcaybpn56v6" path="res://Images/Tiles/sprite_grass.png" id="1_ffjxk"]
 [ext_resource type="Texture2D" uid="uid://cpnmgttkujsn5" path="res://Images/Tiles/tileset_roads.png" id="1_mr5lp"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://dbi2cdqs3rxpu" path="res://World Objects/Accessories/InvItems/Pistol.tscn" id="21_xneyn"]
 [ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="22_mnq01"]
 [ext_resource type="PackedScene" uid="uid://c2jj4r5jp877n" path="res://GlobalScripts/DayNightCycle/DayNightCycle.tscn" id="24_mnq01"]
+[ext_resource type="PackedScene" uid="uid://o71yo2p2ehrf" path="res://Characters/Priest.tscn" id="25_epyha"]
+[ext_resource type="PackedScene" uid="uid://4k6auq6b60ju" path="res://Characters/PrisonerA.tscn" id="26_cdogf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yad8d"]
 texture = ExtResource("1_mr5lp")
@@ -515,6 +517,11 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/2 = SubResource("TileSetAtlasSource_p5dde")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_mnq01"]
+vertices = PackedVector2Array(7690.88, 3097.77, 4842.02, 3036.21, 4845.97, 1343.79, 7671.11, 1285.2)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(4832, 3046, 7701, 3108, 7681, 1275, 4836, 1334)])
+
 [node name="NewMap" type="Node2D"]
 
 [node name="Grass_Layer" type="TileMapLayer" parent="."]
@@ -569,7 +576,7 @@ position = Vector2(5468, 2222)
 position = Vector2(6085, 2628)
 
 [node name="OfficeWorker" parent="." instance=ExtResource("13_i8qxm")]
-position = Vector2(5694, 1902)
+position = Vector2(6021, 1927)
 
 [node name="Trashcan" parent="." instance=ExtResource("8_rvvax")]
 position = Vector2(5385, 2363)
@@ -672,3 +679,14 @@ position = Vector2(5707, 2232)
 position = Vector2(6077, 1990)
 
 [node name="DayNightCycle" parent="." instance=ExtResource("24_mnq01")]
+visible = false
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+navigation_polygon = SubResource("NavigationPolygon_mnq01")
+
+[node name="Priest" parent="." instance=ExtResource("25_epyha")]
+position = Vector2(6165, 1932)
+
+[node name="PrisonerA" parent="." instance=ExtResource("26_cdogf")]
+position = Vector2(6055, 2108)

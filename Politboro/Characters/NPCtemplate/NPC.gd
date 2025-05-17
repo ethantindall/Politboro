@@ -7,13 +7,43 @@ var QMactive = false
 var entered = false
 var dialogueTimeline = ""
 
+const accel = 300
+const speed = 100
+const FRICTION = 600
+
+#@onready var nav: NavigationAgent2D = $NavigationAgent2D
+@onready var animationPlayer = $AnimationPlayer
+@onready var animationTree = $AnimationTree
+@onready var animationState = animationTree.get("parameters/playback")
+@onready var nav = NavigationAgent2D.new()
 func _ready():
+	self.add_child(nav)
+
 	if true:
 		QMactive = true
+
 
 #question mark visible
 func _process(delta):
 	$questionmark.visible = QMactive
+
+
+func _physics_process(delta):
+	if not nav.is_navigation_finished():
+		var direction = (nav.get_next_path_position() - global_position).normalized()
+		velocity = direction * speed
+		move_and_slide()
+	else:
+		velocity = Vector2.ZERO
+
+	if velocity != Vector2.ZERO:
+		animationTree.set("parameters/Idle/blend_position", velocity)
+		animationTree.set("parameters/Move/blend_position", velocity)
+		animationState.travel("Move")
+		
+	else:   
+		animationState.travel("Idle")
+		
 	
 #On input event
 func _input(event):
@@ -31,6 +61,10 @@ func _input(event):
 			get_tree().paused = true
 			#when timeline is done unpause the game handler. Not the timeline.
 			Dialogic.timeline_ended.connect(_unpause)
+
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var click_pos = get_global_mouse_position()
+		nav.target_position = click_pos
 
 		
 func _unpause():

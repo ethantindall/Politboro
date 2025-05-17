@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://o71yo2p2ehrf"]
+[gd_scene load_steps=29 format=3 uid="uid://o71yo2p2ehrf"]
 
 [ext_resource type="Texture2D" uid="uid://dxrdyw24k2col" path="res://Images/Sprites/Priest.png" id="1"]
-[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/questionmark.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="2"]
 [ext_resource type="Script" uid="uid://cjkhxvixae8j8" path="res://Characters/Priest.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_3r5to"]
 
@@ -156,6 +156,63 @@ _data = {
 [sub_resource type="CircleShape2D" id="10"]
 radius = 6.7217
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_avny4"]
+animation = &"IdleL"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7h1t3"]
+animation = &"IdleR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fdlr6"]
+animation = &"IdleD"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_73lw7"]
+animation = &"IdleU"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="15"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_avny4")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_7h1t3")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_fdlr6")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_73lw7")
+blend_point_3/pos = Vector2(0, -0.9)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_to631"]
+animation = &"Move Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ru0sn"]
+animation = &"Move Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3k6ed"]
+animation = &"Move Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dc48b"]
+animation = &"Move Left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="20"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_to631")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_ru0sn")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_3k6ed")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_dc48b")
+blend_point_3/pos = Vector2(-1, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="21"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="22"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_mskkc"]
+states/Idle/node = SubResource("15")
+states/Idle/position = Vector2(464, 122)
+states/Move/node = SubResource("20")
+states/Move/position = Vector2(718, 122)
+transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("22")]
+
 [node name="Priest" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("3")
@@ -166,7 +223,6 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1")
 hframes = 3
 vframes = 3
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.284254, 5.94179)
@@ -175,7 +231,7 @@ shape = SubResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_puf2l")
+&"": SubResource("AnimationLibrary_puf2l")
 }
 autoplay = "IdleD"
 
@@ -189,6 +245,12 @@ shape = SubResource("10")
 position = Vector2(-0.315693, -3.192)
 
 [node name="DialogueBox" parent="." instance=ExtResource("4_3r5to")]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_mskkc")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Idle/blend_position = Vector2(-0.206349, 0.195876)
+parameters/Move/blend_position = Vector2(0, 0)
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
 [connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]

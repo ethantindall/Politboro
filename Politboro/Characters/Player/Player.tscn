@@ -325,49 +325,49 @@ _data = {
 &"RESET": SubResource("Animation_11ham")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="11"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_avny4"]
 animation = &"IdleL"
 
-[sub_resource type="AnimationNodeAnimation" id="12"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7h1t3"]
 animation = &"IdleR"
 
-[sub_resource type="AnimationNodeAnimation" id="13"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fdlr6"]
 animation = &"IdleD"
 
-[sub_resource type="AnimationNodeAnimation" id="14"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_73lw7"]
 animation = &"IdleU"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="15"]
-blend_point_0/node = SubResource("11")
+blend_point_0/node = SubResource("AnimationNodeAnimation_avny4")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("12")
+blend_point_1/node = SubResource("AnimationNodeAnimation_7h1t3")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("13")
+blend_point_2/node = SubResource("AnimationNodeAnimation_fdlr6")
 blend_point_2/pos = Vector2(0, 1)
-blend_point_3/node = SubResource("14")
+blend_point_3/node = SubResource("AnimationNodeAnimation_73lw7")
 blend_point_3/pos = Vector2(0, -0.9)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="16"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_to631"]
 animation = &"Move Down"
 
-[sub_resource type="AnimationNodeAnimation" id="17"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ru0sn"]
 animation = &"Move Up"
 
-[sub_resource type="AnimationNodeAnimation" id="18"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3k6ed"]
 animation = &"Move Right"
 
-[sub_resource type="AnimationNodeAnimation" id="19"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dc48b"]
 animation = &"Move Left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="20"]
-blend_point_0/node = SubResource("16")
+blend_point_0/node = SubResource("AnimationNodeAnimation_to631")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("17")
+blend_point_1/node = SubResource("AnimationNodeAnimation_ru0sn")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("18")
+blend_point_2/node = SubResource("AnimationNodeAnimation_3k6ed")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("19")
+blend_point_3/node = SubResource("AnimationNodeAnimation_dc48b")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
@@ -464,6 +464,7 @@ position = Vector2(-0.150265, -0.0294847)
 texture = ExtResource("2")
 hframes = 4
 vframes = 4
+frame = 5
 
 [node name="Panel" type="Panel" parent="Sprite2D"]
 show_behind_parent = true
