@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://qxpx5vtdrh5a" path="res://World Objects/Buildings/BlueBlock.tscn" id="19"]
 [ext_resource type="PackedScene" uid="uid://b8x5nb4d5hak7" path="res://World Objects/Buildings/RedBlock.tscn" id="20"]
 [ext_resource type="PackedScene" uid="uid://0ycn5tkqak2i" path="res://World Objects/Buildings/GreenBlock.tscn" id="21"]
-[ext_resource type="PackedScene" uid="uid://deexr5a12eh42" path="res://Characters/Ministers/Locomotive.tscn" id="23"]
+[ext_resource type="PackedScene" uid="uid://deexr5a12eh42" path="res://World Objects/Locomotive/Locomotive.tscn" id="23"]
 [ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="28"]
 [ext_resource type="PackedScene" uid="uid://cdo5oinaqach4" path="res://Characters/Citizens/OfficeWorker.tscn" id="28_5cqrp"]
 [ext_resource type="PackedScene" uid="uid://07gvnr6s8bpw" path="res://World Objects/Accessories/InvItems/Bloody Knife.tscn" id="28_kb031"]

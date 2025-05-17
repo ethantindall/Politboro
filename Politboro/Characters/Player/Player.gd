@@ -25,6 +25,10 @@ func _ready():
 	$"/root/Global".register_player(self)
 	emit_signal("player_stats_changed", self)
 
+
+
+
+
 func _process(delta):
 	# Regenerates health
 	Clock.time_changed.connect(_update_clock_display)

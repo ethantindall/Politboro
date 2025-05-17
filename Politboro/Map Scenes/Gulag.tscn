@@ -1,15 +1,15 @@
 [gd_scene load_steps=26 format=3 uid="uid://b0n54cfasldu8"]
 
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dcbp8b16pwci4" path="res://World Objects/Portal/Portal.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://bg5qx6en4cnyp" path="res://Images/Tiles/wallparts.png" id="3"]
-[ext_resource type="PackedScene" path="res://World Objects/Buildings/Military/Bunker.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/Tent.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://4k6auq6b60ju" path="res://Characters/PrisonerA.tscn" id="7"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/LargeCrate.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://cqwha6i18n0pp" path="res://World Objects/Buildings/Military/Bunker.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dgtykylliujam" path="res://World Objects/Accessories/Tent.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier/Soldier.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://4k6auq6b60ju" path="res://Characters/PrisonerA/PrisonerA.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://b6xwrq4ocfqr8" path="res://World Objects/Accessories/LargeCrate.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="9"]
-[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="10_j8tqe"]
+[ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="10_j8tqe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evhi4"]
 texture = ExtResource("3")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=33 format=4 uid="uid://g2m5kfp7p6nq"]
+[gd_scene load_steps=39 format=4 uid="uid://g2m5kfp7p6nq"]
 
 [ext_resource type="Texture2D" uid="uid://bfcaybpn56v6" path="res://Images/Tiles/sprite_grass.png" id="1_ffjxk"]
 [ext_resource type="Texture2D" uid="uid://cpnmgttkujsn5" path="res://Images/Tiles/tileset_roads.png" id="1_mr5lp"]
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="2_mr5lp"]
+[ext_resource type="Texture2D" uid="uid://cybsgw8818sgo" path="res://Images/Tiles/Railroad/traintrackV.png" id="3_cdogf"]
 [ext_resource type="PackedScene" uid="uid://d27r68recvl7e" path="res://World Objects/Buildings/Church.tscn" id="4_5i3rf"]
 [ext_resource type="PackedScene" uid="uid://clnwgl3u36r80" path="res://World Objects/Buildings/Monument.tscn" id="5_2xi3u"]
 [ext_resource type="PackedScene" uid="uid://cvibv101mmn78" path="res://World Objects/Accessories/Flowers.tscn" id="6_2jtgv"]
@@ -24,8 +25,10 @@
 [ext_resource type="PackedScene" uid="uid://dbi2cdqs3rxpu" path="res://World Objects/Accessories/InvItems/Pistol.tscn" id="21_xneyn"]
 [ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="22_mnq01"]
 [ext_resource type="PackedScene" uid="uid://c2jj4r5jp877n" path="res://GlobalScripts/DayNightCycle/DayNightCycle.tscn" id="24_mnq01"]
-[ext_resource type="PackedScene" uid="uid://o71yo2p2ehrf" path="res://Characters/Priest.tscn" id="25_epyha"]
-[ext_resource type="PackedScene" uid="uid://4k6auq6b60ju" path="res://Characters/PrisonerA.tscn" id="26_cdogf"]
+[ext_resource type="PackedScene" uid="uid://o71yo2p2ehrf" path="res://Characters/Priest/Priest.tscn" id="25_epyha"]
+[ext_resource type="PackedScene" uid="uid://4k6auq6b60ju" path="res://Characters/PrisonerA/PrisonerA.tscn" id="26_cdogf"]
+[ext_resource type="PackedScene" uid="uid://cyoqnn5j0fmbb" path="res://Characters/Police/Police.tscn" id="28_t6ihm"]
+[ext_resource type="PackedScene" uid="uid://dfx11vxkwa0am" path="res://Characters/Ministers/Energy_Minister/EnergyMinister.tscn" id="29_rsibi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yad8d"]
 texture = ExtResource("1_mr5lp")
@@ -277,6 +280,11 @@ tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_s6sw6")
 sources/0 = SubResource("TileSetAtlasSource_yad8d")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t6ihm"]
+texture = ExtResource("3_cdogf")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5dde"]
 texture = ExtResource("1_mr5lp")
 texture_region_size = Vector2i(32, 32)
@@ -516,6 +524,16 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_nplen"]
 tile_size = Vector2i(32, 32)
 sources/2 = SubResource("TileSetAtlasSource_p5dde")
+sources/1 = SubResource("TileSetAtlasSource_t6ihm")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsibi"]
+texture = ExtResource("3_cdogf")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ysrqt"]
+tile_size = Vector2i(64, 64)
+sources/3 = SubResource("TileSetAtlasSource_rsibi")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_mnq01"]
 vertices = PackedVector2Array(7690.88, 3097.77, 4842.02, 3036.21, 4845.97, 1343.79, 7671.11, 1285.2)
@@ -534,8 +552,11 @@ tile_map_data = PackedByteArray("AADjADsAAgAIAAMAAADjADwAAgAIAAQAAADjAD0AAgAIAAU
 tile_set = SubResource("TileSet_nplen")
 metadata/_edit_lock_ = true
 
+[node name="Train_Layer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_ysrqt")
+
 [node name="Player" parent="." instance=ExtResource("2_mr5lp")]
-position = Vector2(6045, 2013)
+position = Vector2(6051, 1928)
 
 [node name="Church" parent="." instance=ExtResource("4_5i3rf")]
 position = Vector2(6111, 1609)
@@ -676,17 +697,24 @@ position = Vector2(7133, 1507)
 position = Vector2(5707, 2232)
 
 [node name="Streetlight2" parent="." instance=ExtResource("9_duhlk")]
-position = Vector2(6077, 1990)
+position = Vector2(6181, 1959)
 
 [node name="DayNightCycle" parent="." instance=ExtResource("24_mnq01")]
 visible = false
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0)
 navigation_polygon = SubResource("NavigationPolygon_mnq01")
 
 [node name="Priest" parent="." instance=ExtResource("25_epyha")]
-position = Vector2(6165, 1932)
+position = Vector2(6086, 1934)
 
 [node name="PrisonerA" parent="." instance=ExtResource("26_cdogf")]
 position = Vector2(6055, 2108)
+
+[node name="Police" parent="." instance=ExtResource("28_t6ihm")]
+position = Vector2(5964, 1925)
+
+[node name="EnergyMinister" parent="." instance=ExtResource("29_rsibi")]
+position = Vector2(6128, 1924)

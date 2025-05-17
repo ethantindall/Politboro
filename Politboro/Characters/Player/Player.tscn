@@ -464,7 +464,6 @@ position = Vector2(-0.150265, -0.0294847)
 texture = ExtResource("2")
 hframes = 4
 vframes = 4
-frame = 5
 
 [node name="Panel" type="Panel" parent="Sprite2D"]
 show_behind_parent = true
@@ -499,7 +498,6 @@ parameters/Move/blend_position = Vector2(0, 0)
 script = ExtResource("4_aj84o")
 
 [node name="Fade_In_Canvas" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Fade_In_ColorRect" type="ColorRect" parent="Fade_In_Canvas"]
 anchors_preset = 15

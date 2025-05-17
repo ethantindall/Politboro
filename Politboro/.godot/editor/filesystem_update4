@@ -1,5 +1,5 @@
 res://default_env.tres
-res://World Objects/Accessories/Streetlight.tscn
+res://Map Scenes/new_map.tscn
 res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
@@ -8,17 +8,16 @@ res://GUI/Scenes/Pause/InventoryMenu.gd
 res://GUI/Scenes/Pause/PeopleMenu.gd
 res://GUI/themes/people_menu_button_theme.tres
 res://Characters/Citizens/OfficeWorker.gd
-res://Map Scenes/TownSquare.tscn
-res://GUI/Scenes/Pause/PeopleMenu.tscn
-res://GUI/Scenes/Pause/PauseMenu.tscn
-res://GlobalScripts/DayNightCycle/DayNightCycle.tscn
-res://Characters/Police2.tscn
-res://GlobalScripts/clock.gd
 res://Characters/Police.tscn
+res://Characters/Ministers/Locomotive.tscn
+res://Characters/Ministers/Locomotive.gd
+res://World Objects/Locomotive.tscn
+res://Characters/NPCtemplate/NPC_collisions.tscn
+res://Characters/Police/Police.tscn
+res://Characters/Police/Police2.tscn
+res://Characters/Ministers/Energy_Minister/EnergyMinister.tscn
+res://Characters/Ministers/Supreme_Leader/SupremeLeader.tscn
+res://World Objects/Locomotive/Locomotive.tscn
+res://Characters/Ministers/Finance_Minister/FinanceMinister.tscn
+res://Characters/Ministers/Justice_Minister/JusticeMinister.tscn
 res://Characters/NPCtemplate/NPC.tscn
-res://Characters/Priest.tscn
-res://Characters/Citizens/OfficeWorker.tscn
-res://Map Scenes/new_map.tscn
-res://Characters/NPCtemplate/NPC.gd
-res://Characters/Player/Player.tscn
-res://Characters/PrisonerA.tscn

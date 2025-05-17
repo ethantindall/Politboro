@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://5vrpmoue7xh5"]
 
-[ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dcbp8b16pwci4" path="res://World Objects/Portal/Portal.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://diejhtr27cpsj" path="res://Characters/Ministers/FinanceMinister.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://diejhtr27cpsj" path="res://Characters/Ministers/Finance_Minister/FinanceMinister.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://bqsofixyfp8fc" path="res://Images/Bldgs/HQ/OfficeB.png" id="4"]
 
 [node name="OfficeA" type="Node2D"]
