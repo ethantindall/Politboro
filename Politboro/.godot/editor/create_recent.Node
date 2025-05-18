@@ -1,3 +1,8 @@
+Label
+Button
+ColorRect
+TextEdit
+CanvasLayer
 TileMapLayer
 DirectionalLight2D
 LightOccluder2D
@@ -5,11 +10,5 @@ PointLight2D
 NavigationAgent2D
 NavigationRegion2D
 CanvasModulate
-ColorRect
-CanvasLayer
 Panel
-Label
 MarginContainer
-HBoxContainer
-Button
-VBoxContainer

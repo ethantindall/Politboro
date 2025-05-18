@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://6gff80srw2xg"]
+[gd_scene load_steps=28 format=3 uid="uid://6gff80srw2xg"]
 
 [ext_resource type="Script" uid="uid://cbnkylb7u3y8r" path="res://Characters/NPCtemplate/NPC.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="2_ya2wa"]
@@ -156,6 +156,63 @@ height = 3.43149
 [sub_resource type="CircleShape2D" id="10"]
 radius = 7.06941
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_746di"]
+animation = &"IdleL"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jgb2y"]
+animation = &"IdleR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0awqq"]
+animation = &"IdleD"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_am3k2"]
+animation = &"IdleU"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="15"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_746di")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_jgb2y")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_0awqq")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_am3k2")
+blend_point_3/pos = Vector2(0, -0.9)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wto22"]
+animation = &"Move Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gwt7q"]
+animation = &"Move Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a3gqa"]
+animation = &"Move Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x2vc8"]
+animation = &"Move Left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="20"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_wto22")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_gwt7q")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_a3gqa")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_x2vc8")
+blend_point_3/pos = Vector2(-1, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="21"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="22"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7coqb"]
+states/Idle/node = SubResource("15")
+states/Idle/position = Vector2(464, 122)
+states/Move/node = SubResource("20")
+states/Move/position = Vector2(718, 122)
+transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("22")]
+
 [node name="NPC" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("2")
@@ -185,6 +242,12 @@ shape = SubResource("10")
 [node name="questionmark" parent="." instance=ExtResource("3")]
 
 [node name="DialogueBox" parent="." instance=ExtResource("2_ya2wa")]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_7coqb")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Idle/blend_position = Vector2(-0.206349, 0.195876)
+parameters/Move/blend_position = Vector2(0, 0)
 
 [connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
 [connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]
