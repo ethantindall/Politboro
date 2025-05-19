@@ -57,6 +57,7 @@ offset_bottom = 170.0
 text = ">>"
 
 [node name="BottomLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 762.0
 offset_top = 386.0
 offset_right = 805.0
@@ -64,6 +65,7 @@ offset_bottom = 417.0
 text = "<<"
 
 [node name="HairRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 1149.0
 offset_top = 182.0
 offset_right = 1192.0
@@ -71,6 +73,7 @@ offset_bottom = 213.0
 text = ">>"
 
 [node name="FaceRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 1147.0
 offset_top = 237.0
 offset_right = 1190.0
@@ -78,6 +81,7 @@ offset_bottom = 268.0
 text = ">>"
 
 [node name="ShirtLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 1153.0
 offset_top = 287.0
 offset_right = 1196.0
@@ -85,6 +89,7 @@ offset_bottom = 318.0
 text = ">>"
 
 [node name="BottomRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 1149.0
 offset_top = 349.0
 offset_right = 1192.0
@@ -92,6 +97,7 @@ offset_bottom = 380.0
 text = ">>"
 
 [node name="ShoesRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 1153.0
 offset_top = 412.0
 offset_right = 1196.0
@@ -99,6 +105,7 @@ offset_bottom = 443.0
 text = ">>"
 
 [node name="HairLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 765.0
 offset_top = 212.0
 offset_right = 808.0
@@ -106,6 +113,7 @@ offset_bottom = 243.0
 text = "<<"
 
 [node name="FaceLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 760.0
 offset_top = 271.0
 offset_right = 803.0
@@ -113,6 +121,7 @@ offset_bottom = 302.0
 text = "<<"
 
 [node name="HatLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 760.0
 offset_top = 142.0
 offset_right = 803.0
@@ -120,6 +129,7 @@ offset_bottom = 173.0
 text = "<<"
 
 [node name="TopLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 760.0
 offset_top = 332.0
 offset_right = 803.0
@@ -127,6 +137,7 @@ offset_bottom = 363.0
 text = "<<"
 
 [node name="ShoesLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 764.0
 offset_top = 449.0
 offset_right = 807.0
@@ -142,6 +153,7 @@ offset_bottom = 174.0
 text = "HAT:"
 
 [node name="HairLabel" type="Label" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 685.0
 offset_top = 216.0
 offset_right = 725.0
@@ -149,6 +161,7 @@ offset_bottom = 239.0
 text = "HAIR:"
 
 [node name="FaceLabel" type="Label" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 682.0
 offset_top = 278.0
 offset_right = 722.0
@@ -156,6 +169,7 @@ offset_bottom = 301.0
 text = "FACE:"
 
 [node name="TopLabel" type="Label" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 687.0
 offset_top = 334.0
 offset_right = 727.0
@@ -163,6 +177,7 @@ offset_bottom = 357.0
 text = "TOP:"
 
 [node name="BottomLabel" type="Label" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 676.0
 offset_top = 390.0
 offset_right = 750.0
@@ -170,6 +185,7 @@ offset_bottom = 413.0
 text = "BOTTOM:"
 
 [node name="ShoesLabel" type="Label" parent="CanvasLayer/Background"]
+layout_mode = 0
 offset_left = 695.0
 offset_top = 451.0
 offset_right = 735.0

@@ -1,4 +1,5 @@
 res://default_env.tres
+res://GUI/Scenes/Character Creator/CharacterCreator.tscn
 res://GlobalScripts/invitem.gd
 res://DialogicResources/Styles/PremadeStyle1.tres
 res://DialogicResources/Styles/PremadeStyle2.tres
@@ -7,6 +8,5 @@ res://GUI/Scenes/Pause/InventoryMenu.gd
 res://GUI/Scenes/Pause/PeopleMenu.gd
 res://GUI/themes/people_menu_button_theme.tres
 res://Characters/Citizens/OfficeWorker.gd
-res://GUI/Scenes/Character Creator/CharacterCreator.tscn
 res://Map Scenes/new_map.tscn
 res://GUI/Scenes/Pause/PauseMenu.tscn
