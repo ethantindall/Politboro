@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://513t8uxhdpb8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjic1"]
+radius = 5.39154
+height = 21.3333
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kx538"]
+radius = 31.3617
+
+[node name="NpcCollisions" type="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.666667, 28)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_kjic1")
+
+[node name="EventArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
+position = Vector2(0.666668, 3.33333)
+shape = SubResource("CircleShape2D_kx538")

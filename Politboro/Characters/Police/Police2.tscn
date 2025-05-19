@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jkikxscab185"]
+
+[ext_resource type="PackedScene" uid="uid://513t8uxhdpb8" path="res://Characters/NPCtemplate/NPC_collisions.tscn" id="1_ciey8"]
+
+[node name="Police2" type="Node2D"]
+
+[node name="NpcCollisions" parent="." instance=ExtResource("1_ciey8")]
