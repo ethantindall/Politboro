@@ -1,4 +1,6 @@
 Sprite2D
+AnimationPlayer
+Node2D
 Label
 Button
 ColorRect
@@ -10,6 +12,3 @@ LightOccluder2D
 PointLight2D
 NavigationAgent2D
 NavigationRegion2D
-CanvasModulate
-Panel
-MarginContainer

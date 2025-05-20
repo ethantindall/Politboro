@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://66ricjh4t04x"]
+[gd_scene load_steps=2 format=3 uid="uid://66ricjh4t04x"]
+
+[ext_resource type="Script" uid="uid://c3wiqhqt7vfyl" path="res://GUI/Scenes/Character Creator/character_creator.gd" id="1_fynwx"]
 
 [node name="CharacterCreator" type="Control"]
 layout_mode = 3
@@ -7,6 +9,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fynwx")
+metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -17,6 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.585261, 0.356474, 0.19459, 1)
+metadata/_edit_lock_ = true
 
 [node name="NameEntry" type="TextEdit" parent="CanvasLayer/Background"]
 layout_mode = 0
@@ -48,60 +53,32 @@ offset_top = 138.0
 offset_right = 1122.0
 offset_bottom = 461.0
 
+[node name="Hat" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Hair" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Face" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Top" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Bottom" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Shoes" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="HatLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 142.0
+offset_right = 803.0
+offset_bottom = 173.0
+text = "<<"
+
 [node name="HatRight" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 0
 offset_left = 1149.0
 offset_top = 139.0
 offset_right = 1192.0
 offset_bottom = 170.0
-text = ">>"
-
-[node name="BottomLeft" type="Button" parent="CanvasLayer/Background"]
-layout_mode = 0
-offset_left = 762.0
-offset_top = 386.0
-offset_right = 805.0
-offset_bottom = 417.0
-text = "<<"
-
-[node name="HairRight" type="Button" parent="CanvasLayer/Background"]
-layout_mode = 0
-offset_left = 1149.0
-offset_top = 182.0
-offset_right = 1192.0
-offset_bottom = 213.0
-text = ">>"
-
-[node name="FaceRight" type="Button" parent="CanvasLayer/Background"]
-layout_mode = 0
-offset_left = 1147.0
-offset_top = 237.0
-offset_right = 1190.0
-offset_bottom = 268.0
-text = ">>"
-
-[node name="ShirtLeft" type="Button" parent="CanvasLayer/Background"]
-layout_mode = 0
-offset_left = 1153.0
-offset_top = 287.0
-offset_right = 1196.0
-offset_bottom = 318.0
-text = ">>"
-
-[node name="BottomRight" type="Button" parent="CanvasLayer/Background"]
-layout_mode = 0
-offset_left = 1149.0
-offset_top = 349.0
-offset_right = 1192.0
-offset_bottom = 380.0
-text = ">>"
-
-[node name="ShoesRight" type="Button" parent="CanvasLayer/Background"]
-layout_mode = 0
-offset_left = 1153.0
-offset_top = 412.0
-offset_right = 1196.0
-offset_bottom = 443.0
 text = ">>"
 
 [node name="HairLeft" type="Button" parent="CanvasLayer/Background"]
@@ -112,6 +89,14 @@ offset_right = 808.0
 offset_bottom = 243.0
 text = "<<"
 
+[node name="HairRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 205.0
+offset_right = 1193.0
+offset_bottom = 236.0
+text = ">>"
+
 [node name="FaceLeft" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 0
 offset_left = 760.0
@@ -120,13 +105,13 @@ offset_right = 803.0
 offset_bottom = 302.0
 text = "<<"
 
-[node name="HatLeft" type="Button" parent="CanvasLayer/Background"]
+[node name="FaceRight" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 0
-offset_left = 760.0
-offset_top = 142.0
-offset_right = 803.0
-offset_bottom = 173.0
-text = "<<"
+offset_left = 1151.0
+offset_top = 277.0
+offset_right = 1194.0
+offset_bottom = 308.0
+text = ">>"
 
 [node name="TopLeft" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 0
@@ -136,6 +121,30 @@ offset_right = 803.0
 offset_bottom = 363.0
 text = "<<"
 
+[node name="TopRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 1154.0
+offset_top = 328.0
+offset_right = 1197.0
+offset_bottom = 359.0
+text = ">>"
+
+[node name="BottomLeft" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 386.0
+offset_right = 805.0
+offset_bottom = 417.0
+text = "<<"
+
+[node name="BottomRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 1152.0
+offset_top = 398.0
+offset_right = 1195.0
+offset_bottom = 429.0
+text = ">>"
+
 [node name="ShoesLeft" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 0
 offset_left = 764.0
@@ -143,6 +152,22 @@ offset_top = 449.0
 offset_right = 807.0
 offset_bottom = 480.0
 text = "<<"
+
+[node name="ShoesRight" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 1153.0
+offset_top = 453.0
+offset_right = 1196.0
+offset_bottom = 484.0
+text = ">>"
+
+[node name="FaceLabel" type="Label" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 278.0
+offset_right = 725.0
+offset_bottom = 301.0
+text = "FACE:"
 
 [node name="HatLabel" type="Label" parent="CanvasLayer/Background"]
 layout_mode = 0
@@ -159,14 +184,6 @@ offset_top = 216.0
 offset_right = 725.0
 offset_bottom = 239.0
 text = "HAIR:"
-
-[node name="FaceLabel" type="Label" parent="CanvasLayer/Background"]
-layout_mode = 0
-offset_left = 682.0
-offset_top = 278.0
-offset_right = 722.0
-offset_bottom = 301.0
-text = "FACE:"
 
 [node name="TopLabel" type="Label" parent="CanvasLayer/Background"]
 layout_mode = 0
@@ -191,3 +208,16 @@ offset_top = 451.0
 offset_right = 735.0
 offset_bottom = 474.0
 text = "SHOES:"
+
+[connection signal="button_up" from="CanvasLayer/Background/HatLeft" to="." method="_on_hat_left_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/HatRight" to="." method="_on_hat_right_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/HairLeft" to="." method="_on_hair_left_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/HairRight" to="." method="_on_hair_right_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/FaceLeft" to="." method="_on_face_left_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/FaceRight" to="." method="_on_face_right_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/TopLeft" to="." method="_on_top_left_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/TopRight" to="." method="_on_top_right_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/BottomLeft" to="." method="_on_bottom_left_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/BottomRight" to="." method="_on_bottom_right_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/ShoesLeft" to="." method="_on_shoes_left_button_up"]
+[connection signal="button_up" from="CanvasLayer/Background/ShoesRight" to="." method="_on_shoes_right_button_up"]
