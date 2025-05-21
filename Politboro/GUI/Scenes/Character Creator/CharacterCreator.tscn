@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://66ricjh4t04x"]
+[gd_scene load_steps=3 format=3 uid="uid://66ricjh4t04x"]
 
 [ext_resource type="Script" uid="uid://c3wiqhqt7vfyl" path="res://GUI/Scenes/Character Creator/character_creator.gd" id="1_fynwx"]
+[ext_resource type="Texture2D" uid="uid://cda07366osq5v" path="res://Images/Sprites/ALL_SPRITE_LAYERS/all.png" id="2_2nupu"]
 
 [node name="CharacterCreator" type="Control"]
 layout_mode = 3
@@ -53,17 +54,23 @@ offset_top = 138.0
 offset_right = 1122.0
 offset_bottom = 461.0
 
-[node name="Hat" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+[node name="Body" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+texture = ExtResource("2_2nupu")
+hframes = 4
+vframes = 3
+frame = 4
 
-[node name="Hair" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
-
-[node name="Face" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
-
-[node name="Top" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+[node name="Shoes" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
 
 [node name="Bottom" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
 
-[node name="Shoes" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+[node name="Top" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Face" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Hair" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
+
+[node name="Hat" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
 
 [node name="HatLeft" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 0
