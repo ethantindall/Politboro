@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://66ricjh4t04x"]
 
 [ext_resource type="Script" uid="uid://c3wiqhqt7vfyl" path="res://GUI/Scenes/Character Creator/character_creator.gd" id="1_fynwx"]
-[ext_resource type="Texture2D" uid="uid://cda07366osq5v" path="res://Images/Sprites/ALL_SPRITE_LAYERS/all.png" id="2_2nupu"]
+[ext_resource type="Texture2D" uid="uid://baqixl4y714jj" path="res://Images/Sprites/ALL_SPRITE_LAYERS/all.png" id="2_2nupu"]
 
 [node name="CharacterCreator" type="Control"]
 layout_mode = 3
@@ -56,9 +56,9 @@ offset_bottom = 461.0
 
 [node name="Body" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
 texture = ExtResource("2_2nupu")
-hframes = 4
+hframes = 5
 vframes = 3
-frame = 4
+frame = 5
 
 [node name="Shoes" type="Sprite2D" parent="CanvasLayer/Background/SpriteBG"]
 
