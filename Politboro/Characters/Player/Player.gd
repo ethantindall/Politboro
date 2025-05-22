@@ -43,10 +43,12 @@ func _ready():
 
 
 
-func set_skeleton(body_node, sprite_sheet):
+func set_skeleton(custom_node, sprite_sheet):
 	var texture = load(sprite_sheet) as Texture2D
-	body_node.texture = texture
-
+	custom_node.texture = texture
+	custom_node.hframes = 5
+	custom_node.vframes = 4
+	custom_node.frame = 5
 
 func _process(delta):
 	# Regenerates health

@@ -1,9 +1,10 @@
+AnimationTree
+AnimationPlayer
 Sprite2D
 CharacterBody2D
 Node2D
 Node
 Button
-AnimationPlayer
 Label
 ColorRect
 TextEdit
