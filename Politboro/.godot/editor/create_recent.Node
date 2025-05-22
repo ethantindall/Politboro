@@ -1,8 +1,10 @@
 Sprite2D
-AnimationPlayer
+CharacterBody2D
 Node2D
-Label
+Node
 Button
+AnimationPlayer
+Label
 ColorRect
 TextEdit
 CanvasLayer
@@ -10,5 +12,3 @@ TileMapLayer
 DirectionalLight2D
 LightOccluder2D
 PointLight2D
-NavigationAgent2D
-NavigationRegion2D

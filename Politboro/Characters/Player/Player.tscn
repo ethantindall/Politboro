@@ -1,17 +1,11 @@
-[gd_scene load_steps=36 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=37 format=3 uid="uid://v04i7wtgqvm6"]
 
 [ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://irseph1pakh1" path="res://Images/Sprites/playersprite.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://cqy58fgpr5lv0" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
 [ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
 [ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="5_oc658"]
-
-[sub_resource type="StyleBoxFlat" id="1"]
-bg_color = Color(0, 0, 0, 0.403922)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[ext_resource type="Texture2D" uid="uid://cd7b06cbriven" path="res://Images/Sprites/ALL_SPRITE_LAYERS/body.png" id="6_11ham"]
 
 [sub_resource type="CapsuleShape2D" id="2"]
 radius = 6.66666
@@ -325,49 +319,49 @@ _data = {
 &"RESET": SubResource("Animation_11ham")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_746di"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ws5dt"]
 animation = &"IdleL"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jgb2y"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2bif0"]
 animation = &"IdleR"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0awqq"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4fpj7"]
 animation = &"IdleD"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_am3k2"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rnp0n"]
 animation = &"IdleU"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="15"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_746di")
+blend_point_0/node = SubResource("AnimationNodeAnimation_ws5dt")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_jgb2y")
+blend_point_1/node = SubResource("AnimationNodeAnimation_2bif0")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_0awqq")
+blend_point_2/node = SubResource("AnimationNodeAnimation_4fpj7")
 blend_point_2/pos = Vector2(0, 1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_am3k2")
+blend_point_3/node = SubResource("AnimationNodeAnimation_rnp0n")
 blend_point_3/pos = Vector2(0, -0.9)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wto22"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_byju7"]
 animation = &"Move Down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gwt7q"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oaicg"]
 animation = &"Move Up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a3gqa"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ougf8"]
 animation = &"Move Right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x2vc8"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7rlbg"]
 animation = &"Move Left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="20"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_wto22")
+blend_point_0/node = SubResource("AnimationNodeAnimation_byju7")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_gwt7q")
+blend_point_1/node = SubResource("AnimationNodeAnimation_oaicg")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_a3gqa")
+blend_point_2/node = SubResource("AnimationNodeAnimation_ougf8")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_x2vc8")
+blend_point_3/node = SubResource("AnimationNodeAnimation_7rlbg")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
@@ -455,6 +449,13 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11ham"]
 
+[sub_resource type="StyleBoxFlat" id="1"]
+bg_color = Color(0, 0, 0, 0.403922)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1")
@@ -464,14 +465,6 @@ position = Vector2(-0.150265, -0.0294847)
 texture = ExtResource("2")
 hframes = 4
 vframes = 4
-
-[node name="Panel" type="Panel" parent="Sprite2D"]
-show_behind_parent = true
-offset_left = -11.0
-offset_top = 22.0
-offset_right = 10.0
-offset_bottom = 33.0
-theme_override_styles/panel = SubResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 16
@@ -544,5 +537,33 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Skeleton" type="Node2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="Skeleton"]
+texture = ExtResource("6_11ham")
+hframes = 5
+vframes = 4
+frame = 5
+
+[node name="Shoes" type="Sprite2D" parent="Skeleton"]
+
+[node name="Bottom" type="Sprite2D" parent="Skeleton"]
+
+[node name="Top" type="Sprite2D" parent="Skeleton"]
+
+[node name="Face" type="Sprite2D" parent="Skeleton"]
+
+[node name="Hair" type="Sprite2D" parent="Skeleton"]
+
+[node name="Hat" type="Sprite2D" parent="Skeleton"]
+
+[node name="Panel" type="Panel" parent="Skeleton"]
+show_behind_parent = true
+offset_left = -11.0
+offset_top = 22.0
+offset_right = 10.0
+offset_bottom = 33.0
+theme_override_styles/panel = SubResource("1")
 
 [connection signal="animation_finished" from="Fade_In_Player" to="." method="_on_fade_in_player_animation_finished"]

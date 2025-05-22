@@ -10,6 +10,14 @@ const FRICTION = 600
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
 
+@onready var bodyNode = $Skeleton/Body
+@onready var shoesNode = $Skeleton/Shoes
+@onready var bottomNode = $Skeleton/Bottom
+@onready var topNode = $Skeleton/Top
+@onready var faceNode = $Skeleton/Face
+@onready var hairNode = $Skeleton/Hair
+@onready var hatNode = $Skeleton/Hat
+
 signal player_stats_changed
 
 
@@ -24,9 +32,20 @@ func _ready():
 	#self.global_position = Global.player_initial_map_position
 	$"/root/Global".register_player(self)
 	emit_signal("player_stats_changed", self)
+	
+	#set_skeleton(bodyNode, Global.current_customization["body"])
+	set_skeleton(shoesNode, Global.current_customization["shoes"])
+	set_skeleton(bottomNode, Global.current_customization["bottom"])
+	set_skeleton(topNode, Global.current_customization["top"])
+	set_skeleton(faceNode, Global.current_customization["face"])
+	set_skeleton(hairNode, Global.current_customization["hair"])
+	set_skeleton(hatNode, Global.current_customization["hat"])
 
 
 
+func set_skeleton(body_node, sprite_sheet):
+	var texture = load(sprite_sheet) as Texture2D
+	body_node.texture = texture
 
 
 func _process(delta):

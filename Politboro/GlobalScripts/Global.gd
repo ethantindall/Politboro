@@ -13,6 +13,16 @@ var player_on_item
 var player_inventory = []
 #var player_facing_direction = 1
 
+var current_customization = {
+		"body": "res://Images/Sprites/ALL_SPRITE_LAYERS/body.png",
+		"hat": "",
+		"top": "",
+		"hair": "",
+		"face": "",
+		"bottom": "",
+		"shoes": ""
+	}
+
 func _ready():
 	Engine.max_fps = 60
 

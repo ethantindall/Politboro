@@ -12,3 +12,4 @@ res://GUI/Scenes/Character Creator/character_creator.gd
 res://Map Scenes/new_map.tscn
 res://GUI/Scenes/Pause/PauseMenu.tscn
 res://Characters/Player/Player.tscn
+res://Characters/Player/Player2.tscn
