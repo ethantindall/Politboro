@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cqy58fgpr5lv0" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
 [ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
 [ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="5_oc658"]
-[ext_resource type="Texture2D" uid="uid://cd7b06cbriven" path="res://Images/Sprites/ALL_SPRITE_LAYERS/body.png" id="6_11ham"]
+[ext_resource type="Texture2D" uid="uid://covk57aif38km" path="res://Images/Sprites/ALL_SPRITE_LAYERS/body.png" id="6_11ham"]
 
 [sub_resource type="CapsuleShape2D" id="2"]
 radius = 6.66666

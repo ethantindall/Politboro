@@ -6,10 +6,6 @@ const FRICTION = 600
 
 #var velocity = Vector2.ZERO
 
-@onready var animationPlayer = $AnimationPlayer
-@onready var animationTree = $AnimationTree
-@onready var animationState = animationTree.get("parameters/playback")
-
 @onready var bodyNode = $Skeleton/Body
 @onready var shoesNode = $Skeleton/Shoes
 @onready var bottomNode = $Skeleton/Bottom
@@ -17,6 +13,9 @@ const FRICTION = 600
 @onready var faceNode = $Skeleton/Face
 @onready var hairNode = $Skeleton/Hair
 @onready var hatNode = $Skeleton/Hat
+@onready var animation_player = $AnimationPlayer
+var last_direction = "D"
+var is_facing_left = false
 
 signal player_stats_changed
 
@@ -63,23 +62,39 @@ func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized() 
+	input_vector = input_vector.normalized()
 	
+	# Movement logic
 	if input_vector != Vector2.ZERO:
-		animationTree.set("parameters/Idle/blend_position", input_vector)
-		animationTree.set("parameters/Move/blend_position", input_vector)
-		animationState.travel("Move")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+
+		# Determine facing direction
+		if abs(input_vector.x) > 0:
+			last_direction = "R" if input_vector.x > 0 else "L"
+		if abs(input_vector.y) > 0:
+			last_direction = "D" if input_vector.y > 0 else "U"
 		
-	else:   
-		animationState.travel("Idle")
+		# Flip only if changed
+		if last_direction == "L" and not is_facing_left:
+			_flip_character(true)
+			
+		elif last_direction != "L" and is_facing_left:
+			_flip_character(false)
+
+	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
+	# Flip only if changed
+	if last_direction == "L" and not is_facing_left:
+		_flip_character(true)
+	elif last_direction != "L" and is_facing_left:
+		_flip_character(false)
+
 	set_velocity(velocity)
 	move_and_slide()
-	velocity = velocity
 	Global.player_position = self.global_position
-
+	
+	
 func _on_fade_in_player_animation_finished(anim_name: StringName) -> void:
 	print("wow")
 	$Fade_In_Canvas/Fade_In_ColorRect.modulate.a = 0.0  # Keep it transparent after animation ends
@@ -92,3 +107,15 @@ func _update_clock_display(hour, minute):
 	else:
 		m = str(minute)
 	$HUD/ClockBG/ClockLabel.text = "%s:%s" % [h, m]
+
+
+
+func _flip_character(to_left: bool):
+	is_facing_left = to_left
+	bodyNode.flip_h = to_left
+	shoesNode.flip_h = to_left
+	bottomNode.flip_h = to_left
+	topNode.flip_h = to_left
+	faceNode.flip_h = to_left
+	hairNode.flip_h = to_left
+	hatNode.flip_h = to_left

@@ -1,9 +1,9 @@
 extends Node
 
-var hours := 1     # Starting time (e.g., 6:00 AM)
+var hours := 7     # Starting time (e.g., 6:00 AM)
 var minutes := 0
 
-const SECONDS_PER_INGAME_MINUTE := .03
+const SECONDS_PER_INGAME_MINUTE := 1
 var _accumulator := 0.0
 
 signal time_changed(hour, minute)
