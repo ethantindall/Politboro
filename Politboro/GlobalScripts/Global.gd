@@ -24,8 +24,9 @@ var current_customization = {
 	}
 
 func _ready():
-	Engine.max_fps = 60
-
+	#Engine.max_fps = 60
+	#Engine.physics_ticks_per_second = 480
+	#Engine.max_physics_steps_per_frame = 30
 	get_window().mode = Window.MODE_MAXIMIZED if (true) else Window.MODE_WINDOWED
 
 

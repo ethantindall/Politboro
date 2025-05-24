@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://4k6auq6b60ju" path="res://Characters/PrisonerA/PrisonerA.tscn" id="26_cdogf"]
 [ext_resource type="PackedScene" uid="uid://cyoqnn5j0fmbb" path="res://Characters/Police/Police.tscn" id="28_t6ihm"]
 [ext_resource type="PackedScene" uid="uid://dfx11vxkwa0am" path="res://Characters/Ministers/Energy_Minister/EnergyMinister.tscn" id="29_rsibi"]
-[ext_resource type="PackedScene" uid="uid://cos76wb6knger" path="res://Characters/Player/Player2.tscn" id="29_ysrqt"]
+[ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="29_ysrqt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yad8d"]
 texture = ExtResource("1_mr5lp")
@@ -715,5 +715,5 @@ position = Vector2(5964, 1925)
 [node name="EnergyMinister" parent="." instance=ExtResource("29_rsibi")]
 position = Vector2(6128, 1924)
 
-[node name="Player2" parent="." instance=ExtResource("29_ysrqt")]
-position = Vector2(6080, 1990)
+[node name="Player" parent="." instance=ExtResource("29_ysrqt")]
+position = Vector2(6162, 1985)
