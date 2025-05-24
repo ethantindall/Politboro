@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=32 format=3 uid="uid://v04i7wtgqvm6"]
 
 [ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
+[ext_resource type="AnimationNodeBlendSpace2D" uid="uid://bubqn3aaxa6rl" path="res://Characters/Player/player_run_blend.tres" id="5_11ham"]
 [ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="5_oc658"]
 [ext_resource type="Texture2D" uid="uid://covk57aif38km" path="res://Images/Sprites/ALL_SPRITE_LAYERS/body.png" id="6_11ham"]
 
@@ -901,6 +902,47 @@ _data = {
 &"RESET": SubResource("Animation_rnp0n")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vpjpg"]
+animation = &"IdleU"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_14m2a"]
+animation = &"IdleD"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dl42p"]
+animation = &"IdleR"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1niqm"]
+animation = &"IdleL"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_6fff4"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_vpjpg")
+blend_point_0/pos = Vector2(0, -1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_14m2a")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_dl42p")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_1niqm")
+blend_point_3/pos = Vector2(-1, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6h4vt"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wraqo"]
+advance_mode = 2
+advance_condition = &"Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0ij6m"]
+advance_mode = 2
+advance_condition = &"Move"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2xv0b"]
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_6fff4")
+states/Idle/position = Vector2(550, 114)
+states/Move/node = ExtResource("5_11ham")
+states/Move/position = Vector2(419, 114)
+transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_6h4vt"), "Move", "Idle", SubResource("AnimationNodeStateMachineTransition_wraqo"), "Idle", "Move", SubResource("AnimationNodeStateMachineTransition_0ij6m")]
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1")
@@ -996,5 +1038,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_3rowr")
 }
 autoplay = "IdleD"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_2xv0b")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Idle = false
+parameters/conditions/Move = false
+parameters/Idle/blend_position = Vector2(-0.181551, 0.0313902)
+parameters/Move/blend_position = Vector2(0, 0)
 
 [connection signal="animation_finished" from="Fade_In_Player" to="." method="_on_fade_in_player_animation_finished"]
