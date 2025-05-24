@@ -1,7 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=22 format=3 uid="uid://v04i7wtgqvm6"]
 
 [ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://cqy58fgpr5lv0" path="res://GUI/Scenes/Pause/Health.tscn" id="3"]
 [ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
 [ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="5_oc658"]
 [ext_resource type="Texture2D" uid="uid://covk57aif38km" path="res://Images/Sprites/ALL_SPRITE_LAYERS/body.png" id="6_11ham"]
@@ -902,8 +901,6 @@ _data = {
 &"RESET": SubResource("Animation_rnp0n")
 }
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_oc658"]
-
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1")
@@ -914,17 +911,11 @@ position = Vector2(-1.21503e-12, 26.6667)
 rotation = 1.5708
 shape = SubResource("2")
 
-[node name="CanvasLayer" parent="." instance=ExtResource("3")]
-
-[node name="WalkingAudio" type="AudioStreamPlayer2D" parent="."]
-
 [node name="player_camera" type="Camera2D" parent="."]
 process_callback = 0
-position_smoothing_enabled = true
 script = ExtResource("4_aj84o")
 
 [node name="Fade_In_Canvas" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Fade_In_ColorRect" type="ColorRect" parent="Fade_In_Canvas"]
 anchors_preset = 15
@@ -1005,9 +996,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_3rowr")
 }
 autoplay = "IdleD"
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeBlendTree_oc658")
-anim_player = NodePath("../AnimationPlayer")
 
 [connection signal="animation_finished" from="Fade_In_Player" to="." method="_on_fade_in_player_animation_finished"]
