@@ -44,6 +44,7 @@ func _input(event):
 func _on_EventArea_body_entered(body):
 	if body.name == "Player":
 		active = true
+		print("WOWWSA")
 		
 
 func _on_EventArea_body_exited(body):
