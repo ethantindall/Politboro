@@ -6,7 +6,7 @@
 size = Vector2(32, 32)
 
 [node name="LargeCrate" type="StaticBody2D"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1")

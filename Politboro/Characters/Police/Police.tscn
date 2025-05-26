@@ -1,7 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://cyoqnn5j0fmbb"]
+[gd_scene load_steps=29 format=3 uid="uid://cyoqnn5j0fmbb"]
 
 [ext_resource type="Texture2D" uid="uid://d3so4qi626pic" path="res://Images/Sprites/police.png" id="1"]
-[ext_resource type="Script" uid="uid://dcsf0x8i5dk76" path="res://Characters/Police/Police.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_ijvja"]
 
@@ -218,7 +217,6 @@ transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("2
 
 [node name="Police" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.307755, 0.915455)

@@ -1,7 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://4k6auq6b60ju"]
+[gd_scene load_steps=27 format=3 uid="uid://4k6auq6b60ju"]
 
 [ext_resource type="Texture2D" uid="uid://xx6i06fgt52c" path="res://Images/Sprites/prisonerA.png" id="1"]
-[ext_resource type="Script" uid="uid://cyrr2h5aek8w" path="res://Characters/PrisonerA/PrisonerA.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="3"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
@@ -214,7 +213,6 @@ transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("2
 
 [node name="PrisonerA" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.307755, 0.915455)

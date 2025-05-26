@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://co1i2jjy1epv"]
+[gd_scene load_steps=36 format=3 uid="uid://co1i2jjy1epv"]
 
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://b1u5bt06174t" path="res://Images/Tiles/Airstrip/airstrip.png" id="2"]
@@ -6,18 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://ccgdt4chb1mrr" path="res://Images/Tiles/road2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bg5qx6en4cnyp" path="res://Images/Tiles/wallparts.png" id="5"]
-[ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/Streetlight.tscn" id="7"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/MiG.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/SandbagThin.tscn" id="9"]
-[ext_resource type="PackedScene" path="res://World Objects/Buildings/Military/Bunker.tscn" id="10"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/GroupSmallCrate.tscn" id="11"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/LargeCrate.tscn" id="12"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/Forest.tscn" id="13"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/SandbagLong.tscn" id="14"]
-[ext_resource type="PackedScene" path="res://World Objects/Buildings/TrainTower.tscn" id="15"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/TreeGroup.tscn" id="16"]
-[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="17_5v2s4"]
+[ext_resource type="PackedScene" uid="uid://dcbp8b16pwci4" path="res://World Objects/Portal/Portal.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://25liip81j713" path="res://World Objects/Accessories/Streetlight.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bv6r5g88qc6us" path="res://World Objects/Accessories/MiG.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://jr461itp0lan" path="res://World Objects/Accessories/SandbagThin.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://cqwha6i18n0pp" path="res://World Objects/Buildings/Military/Bunker.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://b0hwjiw007vee" path="res://World Objects/Accessories/GroupSmallCrate.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://b6xwrq4ocfqr8" path="res://World Objects/Accessories/LargeCrate.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://c16bb3vow6vvq" path="res://World Objects/Accessories/SandbagLong.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://ormied0s08kt" path="res://World Objects/Buildings/TrainTower.tscn" id="15"]
+[ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="17_5v2s4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6coi"]
 texture = ExtResource("4")
@@ -424,7 +422,6 @@ layer_0/tile_data = PackedInt32Array(-262133, 0, 0, -196597, 0, 1, -131061, 0, 2
 layer_1/name = "Runway"
 layer_1/tile_data = PackedInt32Array(393244, 19, 0, 393243, 19, 0, 393242, 19, 0, 393241, 19, 0, 393240, 19, 0, 393239, 19, 0, 393238, 19, 0, 393237, 19, 0, 393236, 19, 0, 393235, 19, 0, 393234, 19, 0, 393233, 19, 0, 589852, 19, 0, 589851, 19, 0, 589850, 19, 0, 589849, 19, 0, 589848, 19, 0, 589847, 19, 0, 589846, 19, 0, 589845, 19, 0, 589844, 19, 0, 589843, 19, 0, 589842, 19, 0, 589841, 19, 0, 458767, 21, 0, 393231, 21, 0, 327695, 21, 0, 262159, 21, 0, 196623, 21, 0, 131087, 21, 0, 589853, 21, 0, 524317, 21, 0, 458781, 21, 0, 393245, 21, 0, 65552, 21, 393216, 65553, 21, 393216, 65554, 21, 393216, 65555, 21, 393216, 65556, 21, 393216, 65557, 21, 393216, 65558, 21, 393216, 65559, 21, 393216, 65560, 21, 393216, 65561, 21, 393216, 65562, 21, 393216, 65563, 21, 393216, 65564, 21, 393216, 655389, 21, 131072, 720911, 23, 458752, 720912, 31, 393216, 720913, 31, 393216, 720914, 31, 393216, 720915, 31, 393216, 720921, 31, 393216, 720920, 31, 393216, 720919, 31, 393216, 720918, 31, 393216, 720917, 31, 393216, 720916, 31, 393216, 720922, 31, 393216, 720923, 31, 393216, 720924, 31, 393216)
 layer_2/name = "Walls"
-layer_2/tile_data = PackedInt32Array()
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -458,12 +455,6 @@ position = Vector2(968.67, 91.0672)
 [node name="Streetlight2" parent="Node2D" instance=ExtResource("7")]
 position = Vector2(968.04, 172.332)
 
-[node name="Forest" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(1033.86, 309.165)
-
-[node name="Forest2" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(1083.65, 141.24)
-
 [node name="LargeCrate" parent="Node2D" instance=ExtResource("12")]
 position = Vector2(923.673, 335.054)
 
@@ -490,48 +481,6 @@ position = Vector2(588.08, 82.7761)
 
 [node name="TrainTower" parent="Node2D" instance=ExtResource("15")]
 position = Vector2(726.893, 248.397)
-
-[node name="Forest3" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(956.789, 428.117)
-
-[node name="Forest4" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(809.633, 431.481)
-
-[node name="Forest5" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(670.044, 427.276)
-
-[node name="Forest6" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(521.205, 433.162)
-
-[node name="Forest7" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(389.184, 369.254)
-
-[node name="Forest8" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(393.389, 260.779)
-
-[node name="Forest9" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(399.275, 152.303)
-
-[node name="Forest10" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(401.798, 40.4637)
-
-[node name="Forest11" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(1085.45, 32.8956)
-
-[node name="Forest12" parent="Node2D" instance=ExtResource("13")]
-position = Vector2(955.948, -31.8534)
-
-[node name="TreeGroup" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(844.109, 11.8732)
-
-[node name="TreeGroup2" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(511.955, 12.7141)
-
-[node name="TreeGroup3" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(612.863, 23.6458)
-
-[node name="TreeGroup4" parent="Node2D" instance=ExtResource("16")]
-position = Vector2(714.611, 16.0777)
 
 [node name="PortalTrain" parent="." instance=ExtResource("6")]
 position = Vector2(1139.17, 241.231)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://cdo5oinaqach4"]
+[gd_scene load_steps=29 format=3 uid="uid://cdo5oinaqach4"]
 
 [ext_resource type="Texture2D" uid="uid://v2fgn7ad6lg8" path="res://Images/Sprites/employee.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="2"]
-[ext_resource type="Script" uid="uid://cys3w78elpdq0" path="res://Characters/Citizens/OfficeWorker.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_rso6b"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
@@ -218,7 +217,6 @@ transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("2
 
 [node name="OfficeWorker" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.307755, 0.915455)

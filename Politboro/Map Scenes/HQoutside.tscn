@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c2ew5wouhhcx8"]
+[gd_scene load_steps=17 format=3 uid="uid://c2ew5wouhhcx8"]
 
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="1_3cyxr"]
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="2_h8kqq"]
@@ -6,9 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b8x5nb4d5hak7" path="res://World Objects/Buildings/RedBlock.tscn" id="4_j22c1"]
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="5_l0fkv"]
 [ext_resource type="PackedScene" uid="uid://br8ghxuda8u31" path="res://World Objects/Buildings/Military/Headquarters.tscn" id="6_5qniq"]
-[ext_resource type="PackedScene" uid="uid://b26onlpynqw8x" path="res://World Objects/Accessories/Forest.tscn" id="7_wlirp"]
 [ext_resource type="PackedScene" uid="uid://25liip81j713" path="res://World Objects/Accessories/Streetlight.tscn" id="8_8sb11"]
-[ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="9_cpabv"]
+[ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/AIapts2.tscn" id="9_cpabv"]
 [ext_resource type="PackedScene" uid="uid://cvibv101mmn78" path="res://World Objects/Accessories/Flowers.tscn" id="10_mbd5k"]
 [ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier/Soldier.tscn" id="11_nb68d"]
 [ext_resource type="PackedScene" uid="uid://bpjyc2l8msal1" path="res://Characters/SecretPolice/SecretPolice.tscn" id="12_65ocm"]
@@ -142,15 +141,6 @@ scale = Vector2(1, 1.999)
 next_scene_path = "res://Map Scenes/Indoors/HQ_Inside.tscn"
 player_spawn_location = Vector2(203, 165)
 
-[node name="Forest" parent="." instance=ExtResource("7_wlirp")]
-position = Vector2(14.4285, 48.5693)
-
-[node name="Forest2" parent="." instance=ExtResource("7_wlirp")]
-position = Vector2(167.323, -8.38557)
-
-[node name="Forest3" parent="." instance=ExtResource("7_wlirp")]
-position = Vector2(483.497, 34.8512)
-
 [node name="Streetlight" parent="." instance=ExtResource("8_8sb11")]
 position = Vector2(34.9291, 212.718)
 
@@ -186,9 +176,6 @@ position = Vector2(62.4596, 236.829)
 
 [node name="Flowers5" parent="." instance=ExtResource("10_mbd5k")]
 position = Vector2(62.4596, 172.174)
-
-[node name="Forest4" parent="." instance=ExtResource("7_wlirp")]
-position = Vector2(92, 319)
 
 [node name="Streetlight6" parent="." instance=ExtResource("8_8sb11")]
 position = Vector2(293.658, 290.123)

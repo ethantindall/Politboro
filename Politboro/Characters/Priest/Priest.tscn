@@ -1,8 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://o71yo2p2ehrf"]
+[gd_scene load_steps=28 format=3 uid="uid://o71yo2p2ehrf"]
 
 [ext_resource type="Texture2D" uid="uid://dxrdyw24k2col" path="res://Images/Sprites/Priest.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="2"]
-[ext_resource type="Script" uid="uid://cjkhxvixae8j8" path="res://Characters/Priest/Priest.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_3r5to"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
@@ -215,7 +214,6 @@ transitions = ["Idle", "Move", SubResource("21"), "Move", "Idle", SubResource("2
 
 [node name="Priest" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.138474, -1.60644)

@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://b0xc2t0v8gawt"]
 
 [ext_resource type="Texture2D" uid="uid://dw63tgdl5ojsk" path="res://Images/Tiles/farm.png" id="1"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/Forest.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://b26onlpynqw8x" path="res://World Objects/Forest.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://vplfn5xgja6n" path="res://Images/Tiles/cobblestone.png" id="4"]
-[ext_resource type="PackedScene" path="res://World Objects/Accessories/haystack.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dnhkp6n2ub7" path="res://World Objects/Accessories/haystack.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://ccgdt4chb1mrr" path="res://Images/Tiles/road2.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="8"]
-[ext_resource type="PackedScene" path="res://World Objects/Portal/Portal.tscn" id="9"]
-[ext_resource type="PackedScene" uid="uid://bmknab031jnte" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="9_brudy"]
+[ext_resource type="PackedScene" uid="uid://dcbp8b16pwci4" path="res://World Objects/Portal/Portal.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="9_brudy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ufsox"]
 texture = ExtResource("7")

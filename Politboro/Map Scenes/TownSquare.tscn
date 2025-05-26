@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://74u04je7o25m" path="res://Images/Tiles/background.png" id="8"]
 [ext_resource type="PackedScene" uid="uid://dcbp8b16pwci4" path="res://World Objects/Portal/Portal.tscn" id="9"]
 [ext_resource type="Texture2D" uid="uid://drbexy6xxdl4l" path="res://Images/Tiles/Airstrip/airstrip64V.png" id="10"]
-[ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/Buildings/AIapts2.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/AIapts2.tscn" id="11"]
 [ext_resource type="Texture2D" uid="uid://cys7sj0hcfa1p" path="res://Images/Tiles/Airstrip/airstrip64H.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://dqctgiuow1lol" path="res://Images/Tiles/Airstrip/airstripV.png" id="13"]
 [ext_resource type="PackedScene" uid="uid://cvibv101mmn78" path="res://World Objects/Accessories/Flowers.tscn" id="14"]

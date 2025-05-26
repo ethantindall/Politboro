@@ -1,6 +1,6 @@
 extends Node
 
-var hours := 7     # Starting time (e.g., 6:00 AM)
+var hours := 4   # Starting time (e.g., 6:00 AM)
 var minutes := 0
 
 const SECONDS_PER_INGAME_MINUTE := 1

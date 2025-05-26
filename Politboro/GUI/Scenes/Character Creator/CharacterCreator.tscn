@@ -24,12 +24,31 @@ grow_vertical = 2
 color = Color(0.585261, 0.356474, 0.19459, 1)
 metadata/_edit_lock_ = true
 
-[node name="NameEntry" type="TextEdit" parent="CanvasLayer/Background"]
+[node name="MinistryLabel" type="Label" parent="CanvasLayer/Background"]
 layout_mode = 0
-offset_left = 141.0
-offset_top = 116.0
-offset_right = 343.0
-offset_bottom = 169.0
+offset_left = 69.0
+offset_top = 218.0
+offset_right = 174.0
+offset_bottom = 241.0
+text = "MINISTRY OF:"
+
+[node name="MinistryEntry" type="OptionButton" parent="CanvasLayer/Background/MinistryLabel"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = -3.0
+offset_right = 267.0
+offset_bottom = 28.0
+item_count = 5
+popup/item_0/text = "War"
+popup/item_0/id = 0
+popup/item_1/text = "Justice"
+popup/item_1/id = 1
+popup/item_2/text = "Transportation"
+popup/item_2/id = 2
+popup/item_3/text = "Finance"
+popup/item_3/id = 3
+popup/item_4/text = "Energy"
+popup/item_4/id = 4
 
 [node name="NameLabel" type="Label" parent="CanvasLayer/Background"]
 layout_mode = 0
@@ -39,13 +58,34 @@ offset_right = 138.0
 offset_bottom = 148.0
 text = "NAME: "
 
+[node name="NameEntry" type="TextEdit" parent="CanvasLayer/Background/NameLabel"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -9.0
+offset_right = 261.0
+offset_bottom = 44.0
+
+[node name="MinistryExplainationLabel" type="RichTextLabel" parent="CanvasLayer/Background"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 298.0
+offset_right = 461.0
+offset_bottom = 443.0
+
 [node name="StartButton" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 0
-offset_left = 1104.0
-offset_top = 571.0
-offset_right = 1215.0
-offset_bottom = 644.0
+offset_left = 1014.0
+offset_top = 541.0
+offset_right = 1125.0
+offset_bottom = 614.0
 text = "START"
+
+[node name="WarningLabel" type="Label" parent="CanvasLayer/Background/StartButton"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 90.0
+offset_right = 165.0
+offset_bottom = 138.0
 
 [node name="SpriteBG" type="ColorRect" parent="CanvasLayer/Background"]
 layout_mode = 0
@@ -220,6 +260,7 @@ offset_right = 735.0
 offset_bottom = 474.0
 text = "SHOES:"
 
+[connection signal="item_selected" from="CanvasLayer/Background/MinistryLabel/MinistryEntry" to="." method="_on_option_button_item_selected"]
 [connection signal="button_up" from="CanvasLayer/Background/StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="button_up" from="CanvasLayer/Background/HatLeft" to="." method="_on_hat_left_button_up"]
 [connection signal="button_up" from="CanvasLayer/Background/HatRight" to="." method="_on_hat_right_button_up"]

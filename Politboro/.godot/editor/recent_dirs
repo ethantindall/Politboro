@@ -1,5 +1,6 @@
-res://Characters/Player
+res://GUI/fonts/propaganda
 res://Images
+res://Characters/Player
 res://Images/Sprites/ALL_SPRITE_LAYERS
 res://GlobalScripts
 res://Images/Tiles
@@ -12,7 +13,6 @@ res://Characters
 res://DialogicResources/Styles
 res://addons/dialogic/Core
 res://DialogicResources/Timelines/onItemPickup
-res://GUI/fonts/propaganda
 res://Images/thumbnails
 res://DialogicResources
 res://

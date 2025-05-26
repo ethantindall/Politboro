@@ -3,9 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://bs3sqklxckjoi" path="res://Images/GUI/title.png" id="1"]
 [ext_resource type="Script" uid="uid://de254odc1fhyv" path="res://GUI/Scenes/Title/Title.gd" id="2"]
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(159.389, 88.1131)
 texture = ExtResource("1")

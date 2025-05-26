@@ -1040,6 +1040,7 @@ libraries = {
 autoplay = "IdleD"
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 tree_root = SubResource("AnimationNodeStateMachine_2xv0b")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/Idle = false

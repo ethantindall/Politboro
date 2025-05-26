@@ -7,11 +7,12 @@ var activeQuest = 'Q0'
 var nextDialogueTimeline
 
 var player_initial_map_position = Vector2(763,198)
-var player_position
-var player_on_item
-
+#var player_position
 var player_inventory = []
-#var player_facing_direction = 1
+var player_facing_direction = 1
+var player_name
+var player_ministry
+var player_rank
 
 var current_customization = {
 		"body": "res://Images/Sprites/ALL_SPRITE_LAYERS/body.png",

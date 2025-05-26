@@ -31,8 +31,8 @@ func _ready():
 	set_skeleton(hatNode, Global.current_customization["hat"])
 	Clock.time_changed.connect(_update_clock_display)
 
-#func _process(delta: float) -> void:
-
+	
+	
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -51,18 +51,6 @@ func _physics_process(delta):
 		$Skeleton.scale.x = 1
 
 
-	"""
-	if input_vector != Vector2.ZERO:
-		animationTree.set("parameters/Idle/blend_position", input_vector)
-		animationTree.set("parameters/Move/blend_position", input_vector)
-		animationState.travel("Move")
-		velocity = velocity.move_toward(input_vector * SPEED, ACCEL * delta)
-		
-	else:   
-		animationState.travel("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	"""
-	
 	if input_vector != Vector2.ZERO:
 		if input_vector != last_blend_position:
 			animationTree.set("parameters/Idle/blend_position", input_vector)
@@ -82,7 +70,6 @@ func _physics_process(delta):
 	
 	
 func _on_fade_in_player_animation_finished(anim_name: StringName) -> void:
-	print("wow")
 	$Fade_In_Canvas/Fade_In_ColorRect.modulate.a = 0.0  # Keep it transparent after animation ends
 
 func _update_clock_display(hour, minute):
