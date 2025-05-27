@@ -1,9 +1,9 @@
 {
-"Quests": {
+"TutorialQuests": {
 	"Q0": {
 		"Title":"Meet your Boss", 
 		"Description":"Head to the Ministry of Energy office in the Party HQ and talk to your boss.", 
-		"Completed" : "False",
+		"Status" : "NOT STARTED",
 		"Active": "True",
 		"Prereqs": {},
 		"Objectives": {
@@ -13,7 +13,7 @@
 	"Q1": {
 		"Title":"Meet the General", 
 		"Description":"General Butunov can be found at the military base, or in his office at the Party Headquarters.", 
-		"Completed" : "False",
+		"Status" : "NOT STARTED",
 		"Active": "False",
 		"Prereqs": {},
 		"Objectives": {
@@ -23,7 +23,7 @@
 	"Q2": {
 		"Title":"Locate Vladostovovitch's Missing Dossier", 
 		"Description":"Vlad has lost sensitive information. Find it before it's too late.", 
-		"Completed" : "False",
+		"Status" : "NOT STARTED",
 		"Active": "False",
 		"Prereqs": {},
 		"Objectives": {
@@ -34,7 +34,7 @@
 	"Q3": {
 		"Title":"Speak to all the Ministers",
 		"Description":"Get to know those in charge.",
-		"Completed" : "False",
+		"Status" : "NOT STARTED",
 		"Active": "False",
 		"Prereqs": {},
 		"Objectives": {
@@ -48,7 +48,7 @@
 	"Q4": {
 		"Title":"Blackmail Petya Belov",
 		"Description":"Rumors have been floating around that Petya has been associating with the international burgeouise.",
-		"Completed" : "False",
+		"Status" : "NOT STARTED",
 		"Active": "False",
 		"Prereqs": {},
 		"Objectives": {
@@ -59,12 +59,17 @@
 	"Q5": {
 		"Title":"Gain Loyalty",
 		"Description":"Gather support.",
-		"Completed" : "False",
+		"Status" : "NOT STARTED",
 		"Active": "False",
 		"Prereqs": {},
 		 "Objectives": {
 			"Objective 1": "Obtain 50% Loyalty with at least one Minister."
-				}
 			}
 		}
-	}
+	},
+"WarMinistryQuests": {},
+"JusticeMinistryQuests":{},
+"TransportationMinistryQuests": {},
+"FinanceMinistryQuests":{},
+"EnergyMinistryQuests":{}
+}

@@ -4,9 +4,9 @@ extends StaticBody2D
 var flicker_timer := 0.0
 var flicker_interval := randf_range(25.0, 35.0) # Flicker every 25–35 seconds
 
-func _ready() -> void:
-	Clock.time_changed.connect(_on_time_changed)
-	_on_time_changed(Clock.hours, Clock.minutes)  # set initial color on load
+#func _ready() -> void:
+#	Clock.time_changed.connect(_on_time_changed)
+#	_on_time_changed(Clock.hours, Clock.minutes)  # set initial color on load
 
 func _process(delta):
 	if not light.visible:

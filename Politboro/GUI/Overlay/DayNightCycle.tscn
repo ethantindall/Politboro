@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cpopgdrsmlq25"]
-
-[node name="Control" type="SubViewport"]
-disable_3d = true
-size = Vector2i(1024, 512)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0

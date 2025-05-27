@@ -29,7 +29,6 @@ func update_npc_buttons():
 		new_btn.pressed.connect(func(): show_npc_data(npc))
 		#new_btn.size.x = get_parent().size.x
 		$ColorRect/MarginContainer/HBoxContainer/mcLeft/ScrollContainer/VBoxContainer.add_child(new_btn)
-		print("button added")
 
 
 	

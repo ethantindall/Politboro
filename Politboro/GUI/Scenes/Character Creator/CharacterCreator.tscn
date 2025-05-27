@@ -38,17 +38,6 @@ offset_left = 118.0
 offset_top = -3.0
 offset_right = 267.0
 offset_bottom = 28.0
-item_count = 5
-popup/item_0/text = "War"
-popup/item_0/id = 0
-popup/item_1/text = "Justice"
-popup/item_1/id = 1
-popup/item_2/text = "Transportation"
-popup/item_2/id = 2
-popup/item_3/text = "Finance"
-popup/item_3/id = 3
-popup/item_4/text = "Energy"
-popup/item_4/id = 4
 
 [node name="NameLabel" type="Label" parent="CanvasLayer/Background"]
 layout_mode = 0

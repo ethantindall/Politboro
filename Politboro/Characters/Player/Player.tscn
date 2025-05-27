@@ -1,10 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://v04i7wtgqvm6"]
+[gd_scene load_steps=33 format=3 uid="uid://v04i7wtgqvm6"]
 
 [ext_resource type="Script" uid="uid://css1ui6rvjdq8" path="res://Characters/Player/Player.gd" id="1"]
 [ext_resource type="Script" uid="uid://blrcp1cjyrkbw" path="res://Characters/Player/player_camera.gd" id="4_aj84o"]
 [ext_resource type="AnimationNodeBlendSpace2D" uid="uid://bubqn3aaxa6rl" path="res://Characters/Player/player_run_blend.tres" id="5_11ham"]
 [ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="5_oc658"]
 [ext_resource type="Texture2D" uid="uid://covk57aif38km" path="res://Images/Sprites/ALL_SPRITE_LAYERS/body.png" id="6_11ham"]
+[ext_resource type="PackedScene" uid="uid://brhqs1hpvmcv5" path="res://QuestManager/QuestManager.tscn" id="6_vpjpg"]
 
 [sub_resource type="CapsuleShape2D" id="2"]
 radius = 6.66666
@@ -1014,16 +1015,34 @@ vframes = 4
 frame = 5
 
 [node name="Shoes" type="Sprite2D" parent="Skeleton"]
+hframes = 5
+vframes = 4
+frame = 5
 
 [node name="Bottom" type="Sprite2D" parent="Skeleton"]
+hframes = 5
+vframes = 4
+frame = 5
 
 [node name="Top" type="Sprite2D" parent="Skeleton"]
+hframes = 5
+vframes = 4
+frame = 5
 
 [node name="Face" type="Sprite2D" parent="Skeleton"]
+hframes = 5
+vframes = 4
+frame = 5
 
 [node name="Hair" type="Sprite2D" parent="Skeleton"]
+hframes = 5
+vframes = 4
+frame = 5
 
 [node name="Hat" type="Sprite2D" parent="Skeleton"]
+hframes = 5
+vframes = 4
+frame = 5
 
 [node name="Panel" type="Panel" parent="Skeleton"]
 show_behind_parent = true
@@ -1040,12 +1059,13 @@ libraries = {
 autoplay = "IdleD"
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-active = false
 tree_root = SubResource("AnimationNodeStateMachine_2xv0b")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/Idle = false
 parameters/conditions/Move = false
 parameters/Idle/blend_position = Vector2(-0.181551, 0.0313902)
 parameters/Move/blend_position = Vector2(0, 0)
+
+[node name="QuestManager" parent="." instance=ExtResource("6_vpjpg")]
 
 [connection signal="animation_finished" from="Fade_In_Player" to="." method="_on_fade_in_player_animation_finished"]

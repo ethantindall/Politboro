@@ -6,6 +6,7 @@ func _ready():
 	update_ui()
 
 func update_ui():
+	print(Global.player_inventory)
 
 	var sc = $ScrollContainer
 	var gridcontainer = $ScrollContainer/MarginContainer/GridContainer
@@ -41,8 +42,6 @@ func update_ui():
 		gridcontainer.add_child(label)
 	else:	
 		for inv_item in Global.player_inventory:
-			print("inventory:")
-			print(inv_item)
 			var newitem_bg = TextureRect.new()
 			newitem_bg.texture = load("res://Images/plate.png")
 			newitem_bg.custom_minimum_size= Vector2((gridcontainer.size.x/cols)-gridmargin, (gridcontainer.size.x/cols)-gridmargin)
@@ -57,7 +56,7 @@ func update_ui():
 			
 			# ITEM IMAGE
 			var newitem_img = TextureRect.new()
-			newitem_img.texture = load(inv_item.imagePath)
+			newitem_img.texture = load(inv_item["imagePath"])
 			newitem_img.custom_minimum_size= Vector2((gridcontainer.size.x/cols)-(gridmargin*2), (gridcontainer.size.x/cols)-(gridmargin*2))
 			newitem_img.position = Vector2(gridmargin/2,gridmargin/2)
 			newitem_bg.add_child(newitem_img)
@@ -75,7 +74,7 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 		
 		# GET NAME OF ITEM
 		var title = $DetailRect/DetailRectInset/TitleLabel
-		title.text = inv_item.itemName
+		title.text = inv_item["itemName"]
 		title.add_theme_font_size_override("font_size", 30)
 
 		$DetailRect.size = Vector2(gc.size.x/3, gc.size.y /2)
@@ -100,9 +99,9 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 
 		title.position = Vector2(10,10)
 		
-		$DetailRect/DetailRectInset/DescLabel.text = inv_item.itemDesc
+		$DetailRect/DetailRectInset/DescLabel.text = inv_item["itemDesc"]
 		$DetailRect/DetailRectInset/DescLabel.position = Vector2(10,$DetailRect/DetailRectInset.size.y-10-$DetailRect/DetailRectInset/DescLabel.size.y)
-		$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item.itemValue) + "x "
+		$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item["itemValue"]) + "x "
 
 func _on_visibility_changed() -> void:
 	update_ui()
@@ -116,9 +115,9 @@ func _on_button_button_up() -> void:
 func _on_drop_button_pressed() -> void:
 	if current_item in Global.player_inventory:
 		#Global.player_inventory.erase(current_item)
-		current_item.itemValue -=1
-		$DetailRect/DetailRectInset/ValueLabel.text = str(current_item.itemValue) + "x "
-		if current_item.itemValue == 0:
+		current_item['itemValue'] -=1
+		$DetailRect/DetailRectInset/ValueLabel.text = str(current_item["itemValue"]) + "x "
+		if current_item["itemValue"] == 0:
 			$DetailRect.visible = false
 			Global.player_inventory.erase(current_item)
 
@@ -126,10 +125,13 @@ func _on_drop_button_pressed() -> void:
 		#queue_free()  # Optionally remove the UI slot/item
 		print("Dropped:", current_item)
 		# PLACE IN WORLD
-		var scene = load(current_item.resPath)
+		var scene = load(current_item["resPath"])
 		if scene:
 			var dropped = scene.instantiate()
 			get_tree().current_scene.add_child(dropped)
-			dropped.global_position = Vector2(Global.player_position.x, Global.player_position.y+35)
+			var player = get_tree().current_scene.get_node("Player")
+			dropped.global_position = player.global_position + Vector2(0, 35)
+
+			#dropped.global_position = Vector2(Global.player_position.x, Global.player_position.y+35)
 	else:
 		print("Item not found in inventory")
