@@ -3,9 +3,9 @@ extends Node2D
 @onready var canvas_modulate = $CanvasModulate
 var tween: Tween = null
 
-#func _ready():
-#	Clock.time_changed.connect(_on_time_changed)
-#	_on_time_changed(Clock.hours, Clock.minutes)  # set initial color on load
+func _ready():
+	Clock.time_changed.connect(_on_time_changed)
+	_on_time_changed(Clock.hours, Clock.minutes)  # set initial color on load
 
 
 # CHANGE BASED ON HOUR

@@ -1,14 +1,14 @@
+MarginContainer
+Label
+ColorRect
 CanvasLayer
 Timer
 Node
 Node2D
-Label
 RichTextLabel
 OptionButton
 Button
 VBoxContainer
-MarginContainer
 Sprite2D
-ColorRect
 Control
 AnimationTree

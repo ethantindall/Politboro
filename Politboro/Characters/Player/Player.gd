@@ -29,8 +29,11 @@ func _ready():
 	set_skeleton(faceNode, Global.current_customization["face"])
 	set_skeleton(hairNode, Global.current_customization["hair"])
 	set_skeleton(hatNode, Global.current_customization["hat"])
+	
 	Clock.time_changed.connect(_update_clock_display)
-
+	
+	var QuestManager = get_node("QuestManager")  # Adjust path as needed
+	QuestManager.quest_updated.connect(_on_quest_updated)
 	
 	
 func _physics_process(delta):
@@ -75,6 +78,13 @@ func _on_fade_in_player_animation_finished(anim_name: StringName) -> void:
 func _update_clock_display(hour, minute):
 	$HUD/ClockBG/ClockLabel.text = "%02d:%02d" % [hour, minute]
 
+func _on_quest_updated(quest_name, status):
+	print("got here")
+	$HUD/QuestUpdatedAlert.visible = true
+	$HUD/QuestUpdatedAlert/QuestUpdatedLabel.text = quest_name + ": " + status
+
+	await get_tree().create_timer(5.0).timeout
+	$HUD/QuestUpdatedAlert.visible = false
 
 # --------- HELPER FUNCTIONS ---------
 func set_skeleton(custom_node, sprite_sheet):
