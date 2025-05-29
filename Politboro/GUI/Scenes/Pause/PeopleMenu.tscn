@@ -1136,8 +1136,7 @@ cache/0/90/0/underline_position = 0.0
 cache/0/90/0/underline_thickness = 0.0
 cache/0/90/0/scale = 1.0
 
-[node name="People2" type="Control"]
-visible = false
+[node name="People" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

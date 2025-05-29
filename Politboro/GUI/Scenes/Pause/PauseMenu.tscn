@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://shbipy4cnwlb"]
+[gd_scene load_steps=9 format=3 uid="uid://shbipy4cnwlb"]
 
 [ext_resource type="FontFile" uid="uid://cm6nsje8nt8v0" path="res://GUI/fonts/propaganda/propaganda.ttf" id="2"]
 [ext_resource type="Script" uid="uid://cx2waeb1cs06f" path="res://GUI/Scenes/Pause/PauseMenu.gd" id="3"]
 [ext_resource type="FontFile" uid="uid://ds2tcflc0ckxf" path="res://GUI/fonts/propaganda/PropagandaFont.tres" id="3_ndgpg"]
 [ext_resource type="PackedScene" uid="uid://dlltdim06bgq6" path="res://GUI/Scenes/Pause/InventoryMenu.tscn" id="4_m2gf7"]
 [ext_resource type="PackedScene" uid="uid://d4mulw273is5g" path="res://GUI/Scenes/Pause/PeopleMenu.tscn" id="5_t5c56"]
+[ext_resource type="PackedScene" uid="uid://bc6y2p3yvtiqr" path="res://GUI/Scenes/Pause/QuestMenu.tscn" id="6_vfdld"]
 
 [sub_resource type="FontFile" id="FontFile_5b6tt"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -1449,7 +1450,6 @@ grow_vertical = 2
 script = ExtResource("3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="GrayBackground" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15
@@ -1505,7 +1505,6 @@ offset_bottom = 216.0
 grow_horizontal = 2
 
 [node name="QuestsButton" type="Button" parent="CanvasLayer/LeftBoard/LeftInset/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_ndgpg")
 theme_override_font_sizes/font_size = 40
@@ -1556,7 +1555,10 @@ color = Color(0.501961, 0.294118, 0.0705882, 1)
 [node name="Inventory" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("4_m2gf7")]
 layout_mode = 1
 
-[node name="People2" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("5_t5c56")]
+[node name="People" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("5_t5c56")]
+layout_mode = 1
+
+[node name="Quests" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("6_vfdld")]
 layout_mode = 1
 
 [node name="GamePausedLabel" type="Label" parent="CanvasLayer"]
