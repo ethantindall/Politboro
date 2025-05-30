@@ -1,26 +1,26 @@
 {
 "TutorialQuests": {
-	"Q0": {
+	"Meet your Boss": {
 		"Title":"Meet your Boss", 
 		"Description":"Head to the Ministry of Energy office in the Party HQ and talk to your boss.", 
-		"Status" : "NOT STARTED",
+		"Status" : "IN PROGRESS",
 		"Active": "True",
 		"Prereqs": {},
 		"Objectives": {
 			"Objective 1": "Locate and speak with your boss."
 			}
 		},
-	"Q1": {
+	"Meet the General": {
 		"Title":"Meet the General", 
 		"Description":"General Butunov can be found at the military base, or in his office at the Party Headquarters.", 
-		"Status" : "NOT STARTED",
+		"Status" : "IN PROGRESS",
 		"Active": "False",
 		"Prereqs": {},
 		"Objectives": {
 			"Objective 1": "Locate and speak with General Butunov"
 			}
 		},
-	"Q2": {
+	"Locate Vladostovovitch's Missing Dossier": {
 		"Title":"Locate Vladostovovitch's Missing Dossier", 
 		"Description":"Vlad has lost sensitive information. Find it before it's too late.", 
 		"Status" : "NOT STARTED",
@@ -31,7 +31,7 @@
 			"Objective 2": "Return the Dossier to Vlad"
 			}
 		},
-	"Q3": {
+	"Speak to all the Ministers": {
 		"Title":"Speak to all the Ministers",
 		"Description":"Get to know those in charge.",
 		"Status" : "NOT STARTED",
@@ -45,7 +45,7 @@
 			"Objective 5": "Speak to Tarasov"
 			}
 		},
-	"Q4": {
+	"Blackmail Petya Belov": {
 		"Title":"Blackmail Petya Belov",
 		"Description":"Rumors have been floating around that Petya has been associating with the international burgeouise.",
 		"Status" : "NOT STARTED",
@@ -56,7 +56,7 @@
 			"Objective 2": "Confront Belov with the information."
 			}
 		},
-	"Q5": {
+	"Gain Loyalty": {
 		"Title":"Gain Loyalty",
 		"Description":"Gather support.",
 		"Status" : "NOT STARTED",

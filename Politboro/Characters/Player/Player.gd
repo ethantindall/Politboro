@@ -31,10 +31,8 @@ func _ready():
 	set_skeleton(hatNode, Global.current_customization["hat"])
 	
 	Clock.time_changed.connect(_update_clock_display)
-	
 	var QuestManager = get_node("QuestManager")  # Adjust path as needed
 	QuestManager.quest_updated.connect(_on_quest_updated)
-	
 	
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
