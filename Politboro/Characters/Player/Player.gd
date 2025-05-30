@@ -77,7 +77,7 @@ func _update_clock_display(hour, minute):
 	$HUD/ClockBG/ClockLabel.text = "%02d:%02d" % [hour, minute]
 
 func _on_quest_updated(quest_name, status):
-	print("got here")
+	#print("got here")
 	$HUD/QuestUpdatedAlert.visible = true
 	$HUD/QuestUpdatedAlert/QuestUpdatedLabel.text = quest_name + ": " + status
 

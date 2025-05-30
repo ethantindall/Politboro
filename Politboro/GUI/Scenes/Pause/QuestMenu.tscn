@@ -1188,6 +1188,11 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
 
+[node name="toggleQuestTypeButton" type="Button" parent="ColorRect/MarginContainer/HBoxContainer/mcLeft"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "VIEW COMPLETED QUESTS"
+
 [node name="mcRight" type="MarginContainer" parent="ColorRect/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1302,3 +1307,5 @@ theme_override_fonts/font = SubResource("FontFile_8ajax")
 theme_override_font_sizes/font_size = 90
 
 [connection signal="visibility_changed" from="." to="." method="_on_Quests_visibility_changed"]
+[connection signal="button_up" from="ColorRect/MarginContainer/HBoxContainer/mcLeft/toggleQuestTypeButton" to="." method="_on_toggle_quest_type_button_button_up"]
+[connection signal="visibility_changed" from="ColorRect/MarginContainer/HBoxContainer/mcLeft/toggleQuestTypeButton" to="." method="_on_toggle_quest_type_button_visibility_changed"]

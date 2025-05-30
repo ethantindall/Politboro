@@ -1,4 +1,5 @@
-res://QuestManager
+res://addons/CustomDialogicResources
+res://addons
 res://GUI/fonts/Black_Han_Sans
 res://GlobalScripts/Clock
 res://GUI/fonts/propaganda
@@ -11,12 +12,8 @@ res://GUI/Scenes/Pause
 res://GUI/themes/
 res://Images/InvItems
 res://Map Scenes
-res://DialogicResources/Characters
 res://Characters
-res://DialogicResources/Styles
 res://addons/dialogic/Core
-res://DialogicResources/Timelines/onItemPickup
 res://Images/thumbnails
-res://DialogicResources
 res://
 C:/Users/tinda/Downloads

@@ -18,12 +18,12 @@ func _input(event):
 	if event.is_action_pressed("ui_accept") and active:
 		print(self.itemName)
 		#get the timeline ready
-		var dialog = Dialogic.start(load(onPickupTimeline))
+		#var dialog = Dialogic.start(load(onPickupTimeline))
 		#for some reason you have to set Dialogic game handler and dialogic timeline to always process even when game paused
 		#check out this resource: https://www.reddit.com/r/godot/comments/16oo1rc/dialogic_pausing/
 		
-		dialog.process_mode = Node.PROCESS_MODE_ALWAYS
-		Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+		#dialog.process_mode = Node.PROCESS_MODE_ALWAYS
+		#Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 		#add the timeline to the tree
 
 		#pause the game so that the character can't move while talking

@@ -1,6 +1,7 @@
 {
 "TutorialQuests": {
 	"Meet your Boss": {
+		"ID": "quest_1",
 		"Title":"Meet your Boss", 
 		"Description":"Head to the Ministry of Energy office in the Party HQ and talk to your boss.", 
 		"Status" : "IN PROGRESS",
@@ -23,7 +24,7 @@
 	"Locate Vladostovovitch's Missing Dossier": {
 		"Title":"Locate Vladostovovitch's Missing Dossier", 
 		"Description":"Vlad has lost sensitive information. Find it before it's too late.", 
-		"Status" : "NOT STARTED",
+		"Status" : "COMPLETED",
 		"Active": "False",
 		"Prereqs": {},
 		"Objectives": {
@@ -34,7 +35,7 @@
 	"Speak to all the Ministers": {
 		"Title":"Speak to all the Ministers",
 		"Description":"Get to know those in charge.",
-		"Status" : "NOT STARTED",
+		"Status" : "COMPLETED",
 		"Active": "False",
 		"Prereqs": {},
 		"Objectives": {
