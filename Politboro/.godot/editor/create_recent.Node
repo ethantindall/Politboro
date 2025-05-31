@@ -1,3 +1,5 @@
+TileMapLayer
+TileMap
 Button
 MarginContainer
 Label
@@ -11,4 +13,3 @@ OptionButton
 VBoxContainer
 Sprite2D
 Control
-AnimationTree

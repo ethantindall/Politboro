@@ -26,13 +26,29 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Government Worker": "res://addons/CustomDialogicResources/Government Worker.dch",
-"Minister of War": "res://addons/CustomDialogicResources/Minister of War.dch",
-"Player": "res://addons/CustomDialogicResources/Player.dch",
-"Police": "res://addons/CustomDialogicResources/Police.dch",
-"Soldier": "res://addons/CustomDialogicResources/Soldier.dch"
+"Characters/Police": "res://DialogicResources/Characters/Police.dch",
+"Characters/Soldier": "res://DialogicResources/Characters/Soldier.dch",
+"GovernmentWorker": "res://DialogicResources/Characters/GovernmentWorker.dch",
+"SecretPolice": "res://DialogicResources/Characters/SecretPolice.dch",
+"player": "res://DialogicResources/Characters/player.dch",
+"youFoundAnItem": "res://DialogicResources/Characters/youFoundAnItem.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"PolicePlaceholder": "res://DialogicResources/Timelines/Placeholders/PolicePlaceholder.dtl",
+"SoldierPlaceholder": "res://DialogicResources/Timelines/Placeholders/SoldierPlaceholder.dtl",
+"bloodyKnife": "res://DialogicResources/Timelines/onItemPickup/bloodyKnife.dtl",
+"cash": "res://DialogicResources/Timelines/onItemPickup/cash.dtl",
+"cleanKnife": "res://DialogicResources/Timelines/onItemPickup/cleanKnife.dtl",
+"dossier": "res://DialogicResources/Timelines/onItemPickup/dossier.dtl",
+"filmreel": "res://DialogicResources/Timelines/onItemPickup/filmreel.dtl",
+"goldwatch": "res://DialogicResources/Timelines/onItemPickup/goldwatch.dtl",
+"lostletter": "res://DialogicResources/Timelines/onItemPickup/lostletter.dtl",
+"photo": "res://DialogicResources/Timelines/onItemPickup/photo.dtl",
+"pistol": "res://DialogicResources/Timelines/onItemPickup/pistol.dtl",
+"quest0_0": "res://DialogicResources/Timelines/Quest0/quest0_0.dtl",
+"secretPolicePlaceholder": "res://DialogicResources/Timelines/Placeholders/secretPolicePlaceholder.dtl",
+"timeline": "res://DialogicResources/Timelines/timeline.dtl"
+}
 glossary/default_case_sensitive=true
 layout/style_list=["res://DialogicResources/Styles/PremadeStyle1.tres", "res://DialogicResources/Styles/PremadeStyle2.tres"]
 layout/default_style="res://DialogicResources/Styles/PremadeStyle1.tres"

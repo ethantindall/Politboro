@@ -1,8 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://o71yo2p2ehrf"]
+[gd_scene load_steps=27 format=3 uid="uid://o71yo2p2ehrf"]
 
 [ext_resource type="Texture2D" uid="uid://dxrdyw24k2col" path="res://Images/Sprites/Priest.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_3r5to"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 5.0582
@@ -241,8 +240,6 @@ shape = SubResource("10")
 
 [node name="questionmark" parent="." instance=ExtResource("2")]
 position = Vector2(-0.315693, -3.192)
-
-[node name="DialogueBox" parent="." instance=ExtResource("4_3r5to")]
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_mskkc")

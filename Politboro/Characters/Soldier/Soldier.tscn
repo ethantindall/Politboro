@@ -1,9 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://ckbh26xlw27jq"]
+[gd_scene load_steps=29 format=3 uid="uid://ckbh26xlw27jq"]
 
 [ext_resource type="Texture2D" uid="uid://lermkbqx8gw0" path="res://Images/Sprites/soldier.png" id="1"]
 [ext_resource type="Script" uid="uid://bxgfqjunxvyfu" path="res://Characters/Soldier/Soldier.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://b13571ojyd14m" path="res://Characters/NPCtemplate/questionmark.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://dkebl8ir7f5g8" path="res://GUI/DialogueBox.tscn" id="4_85xxl"]
 
 [sub_resource type="StyleBoxFlat" id="11"]
 bg_color = Color(0, 0, 0, 0.403922)
@@ -232,7 +231,6 @@ texture = ExtResource("1")
 offset = Vector2(69.0056, 4.57728)
 hframes = 4
 vframes = 4
-frame = 12
 
 [node name="Panel" type="Panel" parent="Sprite2D"]
 show_behind_parent = true
@@ -261,8 +259,6 @@ shape = SubResource("10")
 
 [node name="questionmark" parent="." instance=ExtResource("3")]
 position = Vector2(-0.760032, 0.907255)
-
-[node name="DialogueBox" parent="." instance=ExtResource("4_85xxl")]
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_mr8uf")

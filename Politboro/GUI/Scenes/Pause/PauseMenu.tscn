@@ -1450,6 +1450,7 @@ grow_vertical = 2
 script = ExtResource("3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="GrayBackground" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15
@@ -1556,6 +1557,7 @@ color = Color(0.501961, 0.294118, 0.0705882, 1)
 layout_mode = 1
 
 [node name="People" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("5_t5c56")]
+visible = false
 layout_mode = 1
 
 [node name="Quests" parent="CanvasLayer/RightBoard/RightInset" instance=ExtResource("6_vfdld")]
