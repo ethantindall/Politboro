@@ -274,46 +274,46 @@ position = Vector2(886, 192.312)
 position = Vector2(930.401, 190.502)
 
 [node name="YellowBlock" parent="." instance=ExtResource("4")]
-position = Vector2(371.405, -9.86231)
+position = Vector2(-36, 14)
 
 [node name="RedBlock" parent="." instance=ExtResource("20")]
-position = Vector2(636.342, -31.4159)
+position = Vector2(769, -225)
 
 [node name="BlueBlock" parent="." instance=ExtResource("19")]
-position = Vector2(502.807, 127.269)
+position = Vector2(353, -178)
 
 [node name="Forest9" parent="." instance=ExtResource("10")]
-position = Vector2(970.539, -50.9242)
+position = Vector2(1180, -185)
 
 [node name="Forest10" parent="." instance=ExtResource("10")]
-position = Vector2(980.311, 87.5632)
+position = Vector2(1204, 54)
 
 [node name="Forest11" parent="." instance=ExtResource("10")]
-position = Vector2(764, 318)
+position = Vector2(737, 411)
 
 [node name="Forest12" parent="." instance=ExtResource("10")]
-position = Vector2(896, 320)
+position = Vector2(900, 493)
 
 [node name="Forest6" parent="." instance=ExtResource("10")]
 position = Vector2(124.146, 23.9281)
 
 [node name="Forest8" parent="." instance=ExtResource("10")]
-position = Vector2(126.816, -85.5287)
+position = Vector2(66, -233)
 
 [node name="Forest13" parent="." instance=ExtResource("10")]
 position = Vector2(178, 335)
 
 [node name="Forest5" parent="." instance=ExtResource("10")]
-position = Vector2(118.14, 142.061)
+position = Vector2(-141, 178)
 
 [node name="Forest7" parent="." instance=ExtResource("10")]
-position = Vector2(620.997, 333.334)
+position = Vector2(454, 554)
 
 [node name="Forest" parent="." instance=ExtResource("10")]
-position = Vector2(481.465, 306.053)
+position = Vector2(367, 477)
 
 [node name="Forest2" parent="." instance=ExtResource("10")]
-position = Vector2(331.418, 306.053)
+position = Vector2(206, 446)
 
 [node name="Forest3" parent="." instance=ExtResource("10")]
 position = Vector2(-15, 133)
@@ -331,7 +331,7 @@ position = Vector2(195.126, 184.569)
 position = Vector2(43, 315)
 
 [node name="GreenBlock" parent="." instance=ExtResource("21")]
-position = Vector2(301.492, 127.334)
+position = Vector2(93, 243)
 
 [node name="CoalPile2" parent="." instance=ExtResource("8")]
 position = Vector2(872.838, 264.725)
@@ -354,7 +354,7 @@ position = Vector2(952, 211)
 scale = Vector2(0.7, 0.7)
 
 [node name="Apt3" parent="." instance=ExtResource("28")]
-position = Vector2(829.983, -24.7533)
+position = Vector2(1126, -24)
 
 [node name="BloodyKnife" parent="." instance=ExtResource("28_kb031")]
 position = Vector2(724, 212)
@@ -384,7 +384,7 @@ position = Vector2(674, 213)
 position = Vector2(742, 243)
 
 [node name="LostLetter" parent="." instance=ExtResource("35_phep4")]
-position = Vector2(685, 245)
+position = Vector2(710, 470)
 
 [node name="Pistol" parent="." instance=ExtResource("36_3laqd")]
 position = Vector2(685, 195)

@@ -903,26 +903,26 @@ _data = {
 &"RESET": SubResource("Animation_rnp0n")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vpjpg"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mr8uf"]
 animation = &"IdleU"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_14m2a"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_osomf"]
 animation = &"IdleD"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dl42p"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5uvw2"]
 animation = &"IdleR"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1niqm"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pptmu"]
 animation = &"IdleL"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_6fff4"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_vpjpg")
+blend_point_0/node = SubResource("AnimationNodeAnimation_mr8uf")
 blend_point_0/pos = Vector2(0, -1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_14m2a")
+blend_point_1/node = SubResource("AnimationNodeAnimation_osomf")
 blend_point_1/pos = Vector2(0, 1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_dl42p")
+blend_point_2/node = SubResource("AnimationNodeAnimation_5uvw2")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_1niqm")
+blend_point_3/node = SubResource("AnimationNodeAnimation_pptmu")
 blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 

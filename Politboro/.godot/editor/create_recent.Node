@@ -1,3 +1,7 @@
+AnimationTree
+AnimationPlayer
+Node2D
+Node
 TileMapLayer
 TileMap
 Button
@@ -6,10 +10,5 @@ Label
 ColorRect
 CanvasLayer
 Timer
-Node
-Node2D
 RichTextLabel
 OptionButton
-VBoxContainer
-Sprite2D
-Control

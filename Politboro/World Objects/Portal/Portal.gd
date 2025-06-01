@@ -12,4 +12,10 @@ func _on_Portal_body_entered(body):
 	
 
 
+
 func _on_fade_out_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fade_out":
+		Global.player_initial_map_position = player_spawn_location
+		if get_tree().change_scene_to_file(next_scene_path) != OK:
+			print("Error")
+	

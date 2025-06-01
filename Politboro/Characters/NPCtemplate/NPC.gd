@@ -10,7 +10,7 @@ var dialogueTimeline = ""
 const accel = 300
 const speed = 100
 const FRICTION = 600
-
+var is_facing_left
 #@onready var nav: NavigationAgent2D = $NavigationAgent2D
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
@@ -24,8 +24,8 @@ func _ready():
 
 
 #question mark visible
-func _process(delta):
-	$questionmark.visible = QMactive
+#func _process(delta):
+#	$questionmark.visible = QMactive
 
 
 func _physics_process(delta):
@@ -42,11 +42,20 @@ func _physics_process(delta):
 		animationState.travel("Move")
 		
 	else:   
+		# Set direction blend for idle
+		animationTree.set("parameters/Idle/blend_position", Vector2.DOWN)
 		animationState.travel("Idle")
 		
-	
+	if velocity.x < 0 and not is_facing_left:
+		is_facing_left = true
+		$Skeleton.scale.x = -1
+	elif velocity.x > 0 and is_facing_left:
+		is_facing_left = false
+		$Skeleton.scale.x = 1
+
 #On input event
 func _input(event):
+	"""
 	if get_node_or_null('DialogNode') == null:
 		if event.is_action_pressed("ui_accept") and QMactive and entered:
 			#get the timeline ready
@@ -61,7 +70,7 @@ func _input(event):
 			get_tree().paused = true
 			#when timeline is done unpause the game handler. Not the timeline.
 			Dialogic.timeline_ended.connect(_unpause)
-
+	"""
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var click_pos = get_global_mouse_position()
 		nav.target_position = click_pos

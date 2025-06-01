@@ -8,7 +8,7 @@ var nextDialogueTimeline
 
 var MINISTRIES = ["War", "Justice", "Transportation", "Finance", "Energy"]
 
-var player_initial_map_position = Vector2(763,198)
+var player_initial_map_position = Vector2(0,0)
 var player_inventory = []
 #var player_position
 var player_facing_direction = 1

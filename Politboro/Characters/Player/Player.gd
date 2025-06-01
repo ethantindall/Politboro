@@ -21,6 +21,8 @@ var last_blend_position = Vector2.ZERO
 
 # -------- SYSTEM FUNCTIONS ---------
 func _ready():
+	if Global.player_initial_map_position != Vector2(0,0):
+		self.position = Global.player_initial_map_position
 	$"/root/Global".register_player(self)
 	set_skeleton(bodyNode, Global.current_customization["body"])
 	set_skeleton(shoesNode, Global.current_customization["shoes"])
