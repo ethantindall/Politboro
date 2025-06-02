@@ -4,10 +4,10 @@
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 16.0
-height = 76.0
+height = 97.0
 
 [node name="Tank" type="StaticBody2D"]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(2.5, 2.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5)

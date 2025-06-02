@@ -14,24 +14,28 @@ func _ready():
 	self.scale.y = self.scale.y/2
 	
 func _input(event):
-	#if get_node_or_null('DialogNode') == null:
 	if event.is_action_pressed("ui_accept") and active:
-		print(self.itemName)
-		#get the timeline ready
-		#var dialog = Dialogic.start(load(onPickupTimeline))
-		#for some reason you have to set Dialogic game handler and dialogic timeline to always process even when game paused
-		#check out this resource: https://www.reddit.com/r/godot/comments/16oo1rc/dialogic_pausing/
+		if Dialogic.current_timeline != null:
+			return
 		
-		#dialog.process_mode = Node.PROCESS_MODE_ALWAYS
-		#Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
-		#add the timeline to the tree
-
-		#pause the game so that the character can't move while talking
+		print(self.itemName)
+		
+		var dialog = Dialogic.start(load(onPickupTimeline))
+		dialog.process_mode = Node.PROCESS_MODE_ALWAYS
+		Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+		
+		get_tree().get_root().add_child(dialog)
+		
 		get_tree().paused = true
-		#when timeline is done unpause the game handler. Not the timeline.
+		# Disconnect first to avoid duplicate connections
+		if Dialogic.timeline_ended.is_connected(_on_dialog_finished):
+			Dialogic.timeline_ended.disconnect(_on_dialog_finished)
+		# Wait for dialog to finish before unpausing and collecting item
+		Dialogic.timeline_ended.connect(_on_dialog_finished, CONNECT_ONE_SHOT)
 
-		add_to_player_inventory()
-		get_tree().paused = false
+func _on_dialog_finished():
+	get_tree().paused = false
+	add_to_player_inventory()
 
 
 

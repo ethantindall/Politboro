@@ -4,7 +4,10 @@ class_name NPC
 
 #don't remember what this does
 var QMactive = false
-var entered = false
+var communication_area_entered = false
+var recognition_area_entered = false
+var turn_to_face_player = true
+
 var dialogueTimeline = ""
 
 const accel = 300
@@ -24,9 +27,29 @@ func _ready():
 
 
 #question mark visible
-#func _process(delta):
-#	$questionmark.visible = QMactive
+func _process(delta):
+	#$questionmark.visible = QMactive
+	if recognition_area_entered:
+		var player = get_parent().get_node("Player")
+		var direction = (player.global_position - global_position).normalized()
+		
+		# Snap to cardinal directions (4-way)
+		var snapped_direction = Vector2.ZERO
+		if abs(direction.x) > abs(direction.y):
+			snapped_direction = Vector2(sign(direction.x), 0)
+			
+			# Flip skeleton if facing left
+			if snapped_direction.x < 0:
+				$Skeleton.scale.x = -1
+			else:
+				$Skeleton.scale.x = 1
+		else:
+			snapped_direction = Vector2(0, sign(direction.y))
 
+
+
+		animationTree.set("parameters/Idle/blend_position", snapped_direction)
+		animationTree.set("parameters/Move/blend_position", snapped_direction)		 
 
 func _physics_process(delta):
 	if not nav.is_navigation_finished():
@@ -55,25 +78,33 @@ func _physics_process(delta):
 
 #On input event
 func _input(event):
-	"""
 	if get_node_or_null('DialogNode') == null:
-		if event.is_action_pressed("ui_accept") and QMactive and entered:
-			#get the timeline ready
+		if event.is_action_pressed("ui_accept") and QMactive and communication_area_entered:
+			if Dialogic.current_timeline != null:
+				return			
 			var dialog = Dialogic.start(load(dialogueTimeline))
-			#for some reason you have to set Dialogic game handler and dialogic timeline to always process even when game paused
-			#check out this resource: https://www.reddit.com/r/godot/comments/16oo1rc/dialogic_pausing/
 			dialog.process_mode = Node.PROCESS_MODE_ALWAYS
 			Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
-			#add the timeline to the tree
-			add_child(dialog)
-			#pause the game so that the character can't move while talking
+			
+			get_tree().get_root().add_child(dialog)
 			get_tree().paused = true
-			#when timeline is done unpause the game handler. Not the timeline.
-			Dialogic.timeline_ended.connect(_unpause)
-	"""
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var click_pos = get_global_mouse_position()
-		nav.target_position = click_pos
+			# Disconnect first to avoid duplicate connections
+			if Dialogic.timeline_ended.is_connected(_on_dialog_finished):
+				Dialogic.timeline_ended.disconnect(_on_dialog_finished)			
+			# Wait for dialog to finish before unpausing and collecting item
+			Dialogic.timeline_ended.connect(_on_dialog_finished, CONNECT_ONE_SHOT)
+	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+	#	var click_pos = get_global_mouse_position()
+	#	nav.target_position = click_pos
+	
+func _on_dialog_finished():
+	get_tree().paused = false
+	# Optional: remove the dialog node just in case
+	var dialog_node = get_tree().get_root().get_node_or_null("DialogNode")
+	if dialog_node:
+		dialog_node.queue_free()			
+			
+
 
 		
 func _unpause():
@@ -81,11 +112,21 @@ func _unpause():
 	QMactive = false
 	
 
-func _on_EventArea_body_entered(body):
+func _on_communication_event_area_body_entered(body):
 	if body.name == "Player":
-		entered = true
+		communication_area_entered = true
+		print("ENTERED")
 
 
-func _on_EventArea_body_exited(body):
+
+func _on_communication_event_area_body_exited(body):
 	if body.name == "Player":
-		entered = false
+		communication_area_entered = false
+
+func _on_recognition_event_area_body_entered(body: Node2D) -> void:
+	if body.name == "Player" and turn_to_face_player == true:
+		recognition_area_entered = true
+
+func _on_recognition_event_area_body_exited(body: Node2D) -> void:
+	if body.name == "Player" and turn_to_face_player == true:
+		recognition_area_entered = false

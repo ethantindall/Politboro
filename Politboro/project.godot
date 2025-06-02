@@ -18,7 +18,6 @@ config/icon="res://Images/GUI/icon.png"
 [autoload]
 
 Global="*res://GlobalScripts/Global.gd"
-Invitem="*res://GlobalScripts/invitem.gd"
 Clock="*res://GlobalScripts/Clock/clock.gd"
 QuestManager="res://GlobalScripts/QuestManager/QuestManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
@@ -26,16 +25,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Characters/Police": "res://DialogicResources/Characters/Police.dch",
-"Characters/Soldier": "res://DialogicResources/Characters/Soldier.dch",
 "GovernmentWorker": "res://DialogicResources/Characters/GovernmentWorker.dch",
+"Police": "res://DialogicResources/Characters/Police.dch",
 "SecretPolice": "res://DialogicResources/Characters/SecretPolice.dch",
+"Soldier": "res://DialogicResources/Characters/Soldier.dch",
+"character": "res://DialogicResources/character.dch",
 "player": "res://DialogicResources/Characters/player.dch",
 "youFoundAnItem": "res://DialogicResources/Characters/youFoundAnItem.dch"
 }
 directories/dtl_directory={
 "PolicePlaceholder": "res://DialogicResources/Timelines/Placeholders/PolicePlaceholder.dtl",
 "SoldierPlaceholder": "res://DialogicResources/Timelines/Placeholders/SoldierPlaceholder.dtl",
+"Timelines/timeline": "res://DialogicResources/Timelines/timeline.dtl",
 "bloodyKnife": "res://DialogicResources/Timelines/onItemPickup/bloodyKnife.dtl",
 "cash": "res://DialogicResources/Timelines/onItemPickup/cash.dtl",
 "cleanKnife": "res://DialogicResources/Timelines/onItemPickup/cleanKnife.dtl",
@@ -47,11 +48,12 @@ directories/dtl_directory={
 "pistol": "res://DialogicResources/Timelines/onItemPickup/pistol.dtl",
 "quest0_0": "res://DialogicResources/Timelines/Quest0/quest0_0.dtl",
 "secretPolicePlaceholder": "res://DialogicResources/Timelines/Placeholders/secretPolicePlaceholder.dtl",
-"timeline": "res://DialogicResources/Timelines/timeline.dtl"
+"testplaceholder": "res://DialogicResources/Timelines/Placeholders/testplaceholder.dtl",
+"timeline": "res://DialogicResources/timeline.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://DialogicResources/Styles/PremadeStyle1.tres", "res://DialogicResources/Styles/PremadeStyle2.tres"]
-layout/default_style="res://DialogicResources/Styles/PremadeStyle1.tres"
+layout/style_list=["res://DialogicResources/Styles/Premade2.tres"]
+layout/default_style="res://DialogicResources/Styles/Premade2.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -69,6 +71,10 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={}
+extensions_folder="res://addons/dialogic_additions"
+text/advance_delay=0.1
+animations/cross_fade_default_length=0.5
+audio/max_channels=4.0
 
 [display]
 

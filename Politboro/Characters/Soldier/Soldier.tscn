@@ -10,7 +10,7 @@ radius = 5.0
 height = 23.4315
 
 [sub_resource type="CircleShape2D" id="10"]
-radius = 30.5275
+radius = 79.0063
 
 [sub_resource type="StyleBoxFlat" id="11"]
 bg_color = Color(0, 0, 0, 0.403922)
@@ -233,10 +233,10 @@ position = Vector2(-1, 25)
 rotation = 1.5708
 shape = SubResource("1")
 
-[node name="EventArea" type="Area2D" parent="."]
+[node name="CommunicationEventArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EventArea"]
-position = Vector2(2, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CommunicationEventArea"]
+position = Vector2(0, 5)
 shape = SubResource("10")
 
 [node name="questionmark" parent="." instance=ExtResource("3")]
@@ -274,5 +274,13 @@ parameters/conditions/Move = false
 parameters/Idle/blend_position = Vector2(-0.196653, 0.165877)
 parameters/Move/blend_position = Vector2(0, 0)
 
-[connection signal="body_entered" from="EventArea" to="." method="_on_EventArea_body_entered"]
-[connection signal="body_exited" from="EventArea" to="." method="_on_EventArea_body_exited"]
+[node name="RecognitionEventArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecognitionEventArea"]
+position = Vector2(0, 5)
+shape = SubResource("10")
+
+[connection signal="body_entered" from="CommunicationEventArea" to="." method="_on_communication_event_area_body_entered"]
+[connection signal="body_exited" from="CommunicationEventArea" to="." method="_on_communication_event_area_body_exited"]
+[connection signal="body_entered" from="RecognitionEventArea" to="." method="_on_recognition_event_area_body_entered"]
+[connection signal="body_exited" from="RecognitionEventArea" to="." method="_on_recognition_event_area_body_exited"]

@@ -3,15 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://ccowc1al88d28" path="res://Images/mig.png" id="1"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
-height = 60.0
+height = 86.0606
 
 [node name="Mig" type="StaticBody2D"]
+scale = Vector2(4, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 7)
+position = Vector2(-3, 5)
 rotation = 1.5708
 scale = Vector2(1, 1.1)
 shape = SubResource("1")

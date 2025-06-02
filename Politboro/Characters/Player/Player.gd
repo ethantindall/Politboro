@@ -44,13 +44,9 @@ func _physics_process(delta):
 	
 	if input_vector.x < 0 and not is_facing_left:
 		is_facing_left = true
-		#for node in [bodyNode, shoesNode, bottomNode, topNode, faceNode, hairNode, hatNode]:
-		#	node.flip_h = true
 		$Skeleton.scale.x = -1
 	elif input_vector.x > 0 and is_facing_left:
 		is_facing_left = false
-		#for node in [bodyNode, shoesNode, bottomNode, topNode, faceNode, hairNode, hatNode]:
-		#	node.flip_h = false
 		$Skeleton.scale.x = 1
 
 

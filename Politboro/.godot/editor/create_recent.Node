@@ -1,3 +1,5 @@
+HBoxContainer
+VBoxContainer
 AnimationTree
 AnimationPlayer
 Node2D
@@ -10,5 +12,3 @@ Label
 ColorRect
 CanvasLayer
 Timer
-RichTextLabel
-OptionButton
