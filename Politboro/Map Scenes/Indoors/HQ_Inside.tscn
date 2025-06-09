@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dud0dl45ssesx"]
 
 [ext_resource type="PackedScene" uid="uid://v04i7wtgqvm6" path="res://Characters/Player/Player.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier/Soldier.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/WarMinistry/GeneralJang.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://dcbp8b16pwci4" path="res://World Objects/Portal/Portal.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://bcajf1cord5ri" path="res://Images/Bldgs/HQ/hq_interior.png" id="4"]
 [ext_resource type="PackedScene" uid="uid://bpjyc2l8msal1" path="res://Characters/SecretPolice/SecretPolice.tscn" id="5"]

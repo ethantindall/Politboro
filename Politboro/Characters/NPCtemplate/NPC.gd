@@ -14,7 +14,6 @@ const accel = 300
 const speed = 100
 const FRICTION = 600
 var is_facing_left
-#@onready var nav: NavigationAgent2D = $NavigationAgent2D
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
@@ -29,8 +28,9 @@ func _ready():
 #question mark visible
 func _process(delta):
 	#$questionmark.visible = QMactive
+	var player = Global.player
+
 	if recognition_area_entered:
-		var player = get_parent().get_node("Player")
 		var direction = (player.global_position - global_position).normalized()
 		
 		# Snap to cardinal directions (4-way)
@@ -93,9 +93,9 @@ func _input(event):
 				Dialogic.timeline_ended.disconnect(_on_dialog_finished)			
 			# Wait for dialog to finish before unpausing and collecting item
 			Dialogic.timeline_ended.connect(_on_dialog_finished, CONNECT_ONE_SHOT)
-	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-	#	var click_pos = get_global_mouse_position()
-	#	nav.target_position = click_pos
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var click_pos = get_global_mouse_position()
+		nav.target_position = click_pos
 	
 func _on_dialog_finished():
 	get_tree().paused = false

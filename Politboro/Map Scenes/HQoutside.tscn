@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://25liip81j713" path="res://World Objects/Accessories/Streetlight.tscn" id="8_8sb11"]
 [ext_resource type="PackedScene" uid="uid://c266sjfrjwnpp" path="res://World Objects/AIapts2.tscn" id="9_cpabv"]
 [ext_resource type="PackedScene" uid="uid://cvibv101mmn78" path="res://World Objects/Accessories/Flowers.tscn" id="10_mbd5k"]
-[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/Soldier/Soldier.tscn" id="11_nb68d"]
+[ext_resource type="PackedScene" uid="uid://ckbh26xlw27jq" path="res://Characters/WarMinistry/GeneralJang.tscn" id="11_nb68d"]
 [ext_resource type="PackedScene" uid="uid://bpjyc2l8msal1" path="res://Characters/SecretPolice/SecretPolice.tscn" id="12_65ocm"]
 [ext_resource type="PackedScene" uid="uid://cyoqnn5j0fmbb" path="res://Characters/Police/Police.tscn" id="13_0d51g"]
 [ext_resource type="PackedScene" uid="uid://shbipy4cnwlb" path="res://GUI/Scenes/Pause/PauseMenu.tscn" id="14_ohfpi"]

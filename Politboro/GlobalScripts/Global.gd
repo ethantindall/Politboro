@@ -5,7 +5,7 @@ var player
 var game_running = false
 var activeQuest = 'Q0'
 var nextDialogueTimeline
-
+var Player: Node = null
 var MINISTRIES = ["War", "Justice", "Transportation", "Finance", "Energy"]
 
 var player_initial_map_position = Vector2(0,0)
