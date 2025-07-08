@@ -6,7 +6,7 @@
 size = Vector2(43.7738, 30.8194)
 
 [node name="TrainTower" type="StaticBody2D"]
-scale = Vector2(0.75, 0.75)
+scale = Vector2(2.5, 2.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-35.0204, -127.462)

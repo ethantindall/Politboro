@@ -8,13 +8,11 @@ height = 63.8587
 
 [node name="CoalPile" type="StaticBody2D"]
 position = Vector2(8, 11)
+scale = Vector2(2.5, 2.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-8.11437, -15.2566)
 texture = ExtResource("1")
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7.95581, -2.66429)

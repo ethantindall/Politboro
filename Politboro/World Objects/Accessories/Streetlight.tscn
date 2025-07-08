@@ -37,8 +37,8 @@ scale = Vector2(0.5, 0.4)
 shape = SubResource("2")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-2, 15.3333)
-scale = Vector2(3.5, 3.5)
+position = Vector2(-2, 20.0416)
+scale = Vector2(3.5, 3.76905)
 texture = ExtResource("2_0ifal")
 texture_scale = 0.07
 

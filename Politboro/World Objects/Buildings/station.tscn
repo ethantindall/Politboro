@@ -7,7 +7,7 @@
 size = Vector2(176, 15.6626)
 
 [node name="TrainStation" type="StaticBody2D"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(1.6, 1.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-46, 0)
@@ -20,9 +20,9 @@ scale = Vector2(0.498871, 0.627315)
 polygon = PackedVector2Array(72, 72, 513.062, 72.1039, 511.645, 46.742, 128.589, 47.0238)
 
 [node name="station_top" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(-20, -44)
 scale = Vector2(0.999, 1)
-z_index = 2
 texture = ExtResource("2")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
