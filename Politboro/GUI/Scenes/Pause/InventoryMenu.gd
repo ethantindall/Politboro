@@ -102,6 +102,10 @@ func _on_texture_clicked(event, newitem_bg, gc, inv_item):
 		$DetailRect/DetailRectInset/DescLabel.text = inv_item["itemDesc"]
 		$DetailRect/DetailRectInset/DescLabel.position = Vector2(10,$DetailRect/DetailRectInset.size.y-10-$DetailRect/DetailRectInset/DescLabel.size.y)
 		$DetailRect/DetailRectInset/ValueLabel.text = str(inv_item["itemValue"]) + "x "
+		if current_item ==Global.equipped_item:
+			$DetailRect/DetailRectInset/EquipButton.text = "UNEQUIP"
+		else:
+			$DetailRect/DetailRectInset/EquipButton.text = "EQUIP"
 
 func _on_visibility_changed() -> void:
 	update_ui()
@@ -135,3 +139,66 @@ func _on_drop_button_pressed() -> void:
 			#dropped.global_position = Vector2(Global.player_position.x, Global.player_position.y+35)
 	else:
 		print("Item not found in inventory")
+# --- EQUIP / UNEQUIP LOGIC ---
+
+func equip_item(item_data):
+	if item_data in Global.player_inventory:
+		Global.equipped_item = item_data
+		print("Equipped:", item_data["itemName"])
+		
+		# Get the player node
+		var player = Global.player  # assuming you already store it in Global.player
+		if player != null:
+			var equipped_sprite = player.get_node("Skeleton/EquippedItem")
+			if equipped_sprite != null:
+				# Load the texture from the item
+				if item_data.has("imagePath") and item_data["imagePath"] != "":
+					var tex = load(item_data["imagePath"])
+					if tex:
+						equipped_sprite.texture = tex
+					else:
+						print("Failed to load texture:", item_data["imagePath"])
+				else:
+					equipped_sprite.texture = null
+			else:
+				print("EquippedItem node not found in player")
+		else:
+			print("Player node not found")
+	else:
+		print("Cannot equip item: not in inventory")
+
+
+func unequip_item():
+	if Global.equipped_item != null:
+		# Get the player node
+		var player = Global.player
+		if player != null:
+			var equipped_sprite = player.get_node("Skeleton/EquippedItem")
+			if equipped_sprite != null:
+				# Clear the sprite
+				equipped_sprite.texture = null
+			else:
+				print("EquippedItem node not found in player")
+		else:
+			print("Player node not found")
+		
+		print("Unequipped:", Global.equipped_item["itemName"])
+		Global.equipped_item = null
+	else:
+		print("No item is currently equipped")
+
+
+# --- BUTTON HANDLERS ---
+
+func _on_equip_button_pressed() -> void:
+	if current_item ==Global.equipped_item:
+		unequip_item()
+		$DetailRect/DetailRectInset/EquipButton.text = "EQUIP"
+
+	else:
+		if current_item != null:
+			equip_item(current_item)
+			$DetailRect/DetailRectInset/EquipButton.text = "UNEQUIP"
+			#$DetailRect.visible = false
+		else:
+			print("No item selected to equip")

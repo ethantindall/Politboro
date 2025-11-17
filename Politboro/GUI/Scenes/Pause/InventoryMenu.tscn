@@ -72,7 +72,6 @@ theme_override_constants/v_separation = 0
 columns = 6
 
 [node name="DetailRect" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -170,6 +169,22 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_syavn")
 theme_override_styles/normal = SubResource("StyleBoxFlat_c3j27")
 text = "DROP"
 
+[node name="EquipButton" type="Button" parent="DetailRect/DetailRectInset"]
+offset_top = 102.0
+offset_right = 186.0
+offset_bottom = 166.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_71opg")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxFlat_rh74b")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_y1uuf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y5otu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_syavn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c3j27")
+text = "EQUIP"
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="button_up" from="DetailRect/DetailRectInset/Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="DetailRect/DetailRectInset/DropButton" to="." method="_on_drop_button_pressed"]
+[connection signal="pressed" from="DetailRect/DetailRectInset/EquipButton" to="." method="_on_equip_button_pressed"]

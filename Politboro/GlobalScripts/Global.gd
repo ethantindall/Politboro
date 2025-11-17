@@ -18,6 +18,8 @@ var player_rank
 var ingame_time = {"hours":0, "minutes":0}
 var active_quests= []
 var completed_quests = []
+var equipped_item = null
+
 
 var current_customization = {
 		"body": "res://Images/Sprites/ALL_SPRITE_LAYERS/body.png",
