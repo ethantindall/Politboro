@@ -170,6 +170,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_c3j27")
 text = "DROP"
 
 [node name="EquipButton" type="Button" parent="DetailRect/DetailRectInset"]
+layout_mode = 0
 offset_top = 102.0
 offset_right = 186.0
 offset_bottom = 166.0

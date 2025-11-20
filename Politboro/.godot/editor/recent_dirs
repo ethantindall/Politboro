@@ -1,3 +1,5 @@
+res://Images
+res://GlobalScripts
 res://World Objects/Accessories/InvItems
 res://Images/InvItems
 res://Images/Sprites
@@ -9,10 +11,8 @@ res://addons
 res://GUI/fonts/Black_Han_Sans
 res://GlobalScripts/Clock
 res://GUI/fonts/propaganda
-res://Images
 res://Characters/Player
 res://Images/Sprites/ALL_SPRITE_LAYERS
-res://GlobalScripts
 res://Images/Tiles
 res://GUI/Scenes/Pause
 res://GUI/themes/

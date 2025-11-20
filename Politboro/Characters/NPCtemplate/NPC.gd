@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 class_name NPC
 
-#don't remember what this does
-var QMactive = false
 var communication_area_entered = false
 var recognition_area_entered = false
 var turn_to_face_player = true
+var ON_ALERT = false
+var last_facing_dir := Vector2.RIGHT  # default facing right
 
 var dialogueTimeline = ""
+@export var npc_id: String =""
 
 const accel = 300
 const speed = 100
@@ -20,36 +21,40 @@ var is_facing_left
 @onready var nav = NavigationAgent2D.new()
 func _ready():
 	self.add_child(nav)
-
-	if true:
-		QMactive = true
+	add_to_group("NPCs")
 
 
-#question mark visible
 func _process(delta):
-	#$questionmark.visible = QMactive
-	var player = Global.player
+	# Determine current facing
+	var facing_dir = Vector2.ZERO
 
-	if recognition_area_entered:
-		var direction = (player.global_position - global_position).normalized()
-		
-		# Snap to cardinal directions (4-way)
-		var snapped_direction = Vector2.ZERO
-		if abs(direction.x) > abs(direction.y):
-			snapped_direction = Vector2(sign(direction.x), 0)
-			
-			# Flip skeleton if facing left
-			if snapped_direction.x < 0:
-				$Skeleton.scale.x = -1
-			else:
-				$Skeleton.scale.x = 1
+	if velocity.length() > 0.1:
+		# NPC is moving -> use velocity
+		if abs(velocity.x) > abs(velocity.y):
+			facing_dir = Vector2(sign(velocity.x), 0)
 		else:
-			snapped_direction = Vector2(0, sign(direction.y))
+			facing_dir = Vector2(0, sign(velocity.y))
+		last_facing_dir = facing_dir  # store for idle
+	else:
+		# NPC is idle -> use last known facing
+		facing_dir = last_facing_dir
 
+	# Snap to cardinal directions (optional)
+	if abs(facing_dir.x) > abs(facing_dir.y):
+		facing_dir = Vector2(sign(facing_dir.x), 0)
+	else:
+		facing_dir = Vector2(0, sign(facing_dir.y))
 
+	# Flip skeleton for left/right
+	if facing_dir.x < 0:
+		$Skeleton.scale.x = -1
+	else:
+		$Skeleton.scale.x = 1
 
-		animationTree.set("parameters/Idle/blend_position", snapped_direction)
-		animationTree.set("parameters/Move/blend_position", snapped_direction)		 
+	# Rotate FOV polygon (adjusted 90° left if needed)
+	if $FOV != null:
+		$FOV.rotation = facing_dir.angle() - deg_to_rad(90)
+
 
 func _physics_process(delta):
 	if not nav.is_navigation_finished():
@@ -79,7 +84,7 @@ func _physics_process(delta):
 #On input event
 func _input(event):
 	if get_node_or_null('DialogNode') == null:
-		if event.is_action_pressed("ui_accept") and QMactive and communication_area_entered:
+		if event.is_action_pressed("ui_accept") and communication_area_entered:
 			if Dialogic.current_timeline != null:
 				return			
 			var dialog = Dialogic.start(load(dialogueTimeline))
@@ -109,7 +114,6 @@ func _on_dialog_finished():
 		
 func _unpause():
 	get_tree().paused = false
-	QMactive = false
 	
 
 func _on_communication_event_area_body_entered(body):
@@ -124,9 +128,12 @@ func _on_communication_event_area_body_exited(body):
 		communication_area_entered = false
 
 func _on_recognition_event_area_body_entered(body: Node2D) -> void:
-	if body.name == "Player" and turn_to_face_player == true:
+	if body.name == "Player":
 		recognition_area_entered = true
-
+		ON_ALERT = true
+		print("ALERT ALERT ALERT")
+		$WarningBox.texture = load("res://Images/exclaimation.png")
+		
 func _on_recognition_event_area_body_exited(body: Node2D) -> void:
-	if body.name == "Player" and turn_to_face_player == true:
+	if body.name == "Player":
 		recognition_area_entered = false

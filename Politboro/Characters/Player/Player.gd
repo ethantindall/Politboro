@@ -3,9 +3,11 @@ extends CharacterBody2D
 const ACCEL = 800
 const SPEED = 200
 const FRICTION = 1000
+const CROUCH_SPEED_MULTIPLIER = 0.45
 
 var is_facing_left = false
 var last_blend_position = Vector2.ZERO
+var is_crouching = false
 
 @onready var bodyNode = $Skeleton/Body
 @onready var shoesNode = $Skeleton/Shoes
@@ -21,7 +23,6 @@ var last_blend_position = Vector2.ZERO
 
 # -------- SYSTEM FUNCTIONS ---------
 func _ready():
-	# save to the global player var for easy grabbing 
 	Global.player = self
 	if Global.player_initial_map_position != Vector2(0,0):
 		self.position = Global.player_initial_map_position
@@ -35,15 +36,29 @@ func _ready():
 	set_skeleton(hatNode, Global.current_customization["hat"])
 	
 	Clock.time_changed.connect(_update_clock_display)
-	var QuestManager = get_node("QuestManager")  # Adjust path as needed
+	var QuestManager = get_node("QuestManager")
 	QuestManager.quest_updated.connect(_on_quest_updated)
 	
+
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized() 
-	
+	input_vector = input_vector.normalized()
+
+	# --- CROUCH DETECTION ---
+	is_crouching = Input.is_action_pressed("crouch")
+	# Update NPC FOV visibility based on crouching
+	_update_fov_visibility()
+	var target_speed = SPEED
+	if is_crouching:
+		target_speed *= CROUCH_SPEED_MULTIPLIER
+	# SCALE PLAYER WHILE CROUCHING (TEST MODE)
+	if is_crouching:
+		$Skeleton.scale.y = .5
+	else:
+		$Skeleton.scale.y = 1
+	# Flip sprite based on movement
 	if input_vector.x < 0 and not is_facing_left:
 		is_facing_left = true
 		$Skeleton.scale.x = -1
@@ -51,21 +66,32 @@ func _physics_process(delta):
 		is_facing_left = false
 		$Skeleton.scale.x = 1
 
-
+	# Movement + Animation
 	if input_vector != Vector2.ZERO:
 		if input_vector != last_blend_position:
 			animationTree.set("parameters/Idle/blend_position", input_vector)
 			animationTree.set("parameters/Move/blend_position", input_vector)
 			last_blend_position = input_vector
-		if animationState.get_current_node() != "Move":
-			animationState.travel("Move")
-		velocity = velocity.move_toward(input_vector * SPEED, ACCEL * delta)
+
+		if is_crouching:
+			if animationState.get_current_node() != "Crouch":
+				animationState.travel("Crouch")  # requires crouch anim state
+		else:
+			if animationState.get_current_node() != "Move":
+				animationState.travel("Move")
+
+		velocity = velocity.move_toward(input_vector * target_speed, ACCEL * delta)
 	else:
-		if animationState.get_current_node() != "Idle":
-			animationState.travel("Idle")
+		if is_crouching:
+			if animationState.get_current_node() != "CrouchIdle":
+				animationState.travel("CrouchIdle")  # requires crouch idle anim
+		else:
+			if animationState.get_current_node() != "Idle":
+				animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 
 	move_and_slide()
+
 	# YOU ONLY NEED TO UPDATE THIS SOMETIMES
 	#Global.player_position = self.global_position
 	
@@ -91,3 +117,9 @@ func set_skeleton(custom_node, sprite_sheet):
 	custom_node.hframes = 5
 	custom_node.vframes = 4
 	custom_node.frame = 5
+	
+func _update_fov_visibility():
+	# Get all NPCs in the current scene
+	for npc in get_tree().get_nodes_in_group("NPCs"):
+		if npc.has_node("FOV"):
+			npc.get_node("FOV").visible = is_crouching

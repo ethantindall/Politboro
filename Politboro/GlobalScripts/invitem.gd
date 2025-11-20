@@ -14,6 +14,8 @@ func _ready():
 	self.scale.y = self.scale.y/2
 	
 func _input(event):
+	if not active:
+		return
 	if event.is_action_pressed("ui_accept") and active:
 		if Dialogic.current_timeline != null:
 			return
@@ -56,6 +58,7 @@ func add_to_player_inventory():
 			break
 	if not found:
 		Global.player_inventory.append(item_data)
+	active = false
 	queue_free()
 
 		
