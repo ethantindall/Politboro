@@ -1,12 +1,12 @@
+CollisionPolygon2D
+StaticBody2D
+CollisionShape2D
+Area2D
 Sprite2D
 AnimationPlayer
-Area2D
-CollisionPolygon2D
-CollisionShape2D
 Polygon2D
 ColorRect
 AudioStreamPlayer2D
-StaticBody2D
 TileMapLayer
 Node2D
 HBoxContainer

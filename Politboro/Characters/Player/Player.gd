@@ -39,7 +39,7 @@ func _ready():
 	var QuestManager = get_node("QuestManager")
 	QuestManager.quest_updated.connect(_on_quest_updated)
 	
-
+var last_crouching_state = false
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -49,7 +49,9 @@ func _physics_process(delta):
 	# --- CROUCH DETECTION ---
 	is_crouching = Input.is_action_pressed("crouch")
 	# Update NPC FOV visibility based on crouching
-	_update_fov_visibility()
+	if is_crouching != last_crouching_state:
+		_update_fov_visibility()
+		last_crouching_state = is_crouching
 	var target_speed = SPEED
 	if is_crouching:
 		target_speed *= CROUCH_SPEED_MULTIPLIER

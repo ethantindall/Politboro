@@ -29,3 +29,4 @@ shape = SubResource("1")
 shape = SubResource("CircleShape2D_msrh1")
 
 [connection signal="body_entered" from="KnockArea" to="." method="_on_knock_area_body_entered"]
+[connection signal="body_exited" from="KnockArea" to="." method="_on_knock_area_body_exited"]

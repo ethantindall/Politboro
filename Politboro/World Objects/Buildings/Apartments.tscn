@@ -1,18 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm3solrdh7hf2"]
+[gd_scene load_steps=2 format=3 uid="uid://bm3solrdh7hf2"]
 
-[ext_resource type="Texture2D" uid="uid://bgewvux1melcb" path="res://Images/Bldgs/building2.png" id="1"]
-
-[sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(32, 34.2858)
+[ext_resource type="Texture2D" uid="uid://ckmae7ylgigh4" path="res://Images/Bldgs/new_brick_bldg_2.png" id="1_mnqi0"]
 
 [node name="Apartments" type="StaticBody2D"]
-scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4, -1)
-texture = ExtResource("1")
+texture = ExtResource("1_mnqi0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.37075, 17.6632)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(22.5, 99.4286)
 scale = Vector2(1.25, 0.75)
-shape = SubResource("1")
+polygon = PackedVector2Array(-80.4, 59.4285, -19.6, 59.4285, -17.2, 59.4285, -17.2, 31.4285, 18, 31.4285, 18, 59.4285, 81.2, 59.4285, 81.2, 47.4285, 79.6, 47.4285, 79.6, -57.9048, -78.8, -57.9048, -78.8, 47.4285, -80.4, 47.4285)

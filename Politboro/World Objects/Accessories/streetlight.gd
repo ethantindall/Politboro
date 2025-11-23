@@ -19,7 +19,7 @@ func _on_time_changed(hour: int, _minute: int) -> void:
 		print("updating streetlight")
 		light.visible = is_night
 		light.enabled = is_night
-		$ShadowSprite/Panel.visible = not is_night
+		$Sprite2D/Panel.visible = not is_night
 	
 	if is_night and not flicker_timer.is_stopped():
 		return  # Let the current flicker timer finish

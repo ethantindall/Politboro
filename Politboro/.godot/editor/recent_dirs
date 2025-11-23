@@ -1,7 +1,8 @@
 res://Images
+res://Images/Bldgs
+res://Images/InvItems
 res://GlobalScripts
 res://World Objects/Accessories/InvItems
-res://Images/InvItems
 res://Images/Sprites
 res://Characters/WarMinistry
 res://DialogicResources/Timelines/Placeholders
@@ -19,5 +20,4 @@ res://GUI/themes/
 res://Map Scenes
 res://Characters
 res://addons/dialogic/Core
-res://Images/thumbnails
 C:/Users/tinda/Downloads
